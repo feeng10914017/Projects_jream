@@ -29,23 +29,32 @@ nav > div.navbar-collapse > div.navbar-nav > a.nav-link > span {
   padding-left: 0.5rem;
   color: $info;
 }
+
+main{
+
+
+}
 main > .container {
   // width: 1440px;
   margin: 0 auto;
   margin-top: 5rem;
   padding: 0;
+  min-height: calc(100vh - 353px);
 }
 
 .footer {
   background-color: $primary;
 }
 .footer > .container {
-  padding: 1rem 0;
+  padding: 1rem 0 0 0;
+}
+.footer > .container > div {
+margin-bottom: 1.5rem;
 }
 .footer > .container > .icon {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  // margin-bottom: 2rem;
 }
 .footer > .container > .icon > .icon_circle {
   border-radius: 50%;
@@ -56,4 +65,28 @@ main > .container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.footer > .container > .navLink > .mr-auto {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer > .container > .navLink > .mr-auto > a {
+  color: $info;
+}
+.footer > .container > .navLink > .mr-auto > svg {
+  transform: rotate(90deg);
+}
+.footer > .container > div > h3 {
+  color: $info;
+  text-align: center;
+  margin: 0;
+}
+.footer > .container > div.end{
+  margin-bottom: 1rem;
+}
+.footer > .container > div > p {
+  color: $info;
+  text-align: center;
+  margin: 0;
 }
