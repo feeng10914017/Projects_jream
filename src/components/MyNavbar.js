@@ -14,7 +14,7 @@ import {
 function MyNavbar(props) {
   return (
     <>
-    <div className="banner">
+    <header class="header">
       <Navbar
         collapseOnSelect
         expand="lg"
@@ -40,8 +40,8 @@ function MyNavbar(props) {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      </div>
-    </>
+    </header>
+  </>
   )
 }
 
