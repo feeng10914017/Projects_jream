@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button'
 import LeaseImg from './images/Leoncino_250_gray.jpg'
 
 import './orderStepOne.scss'
-import OrderStep from './OrderStep'
+import OrderStep from './components/OrderStep'
 function Order() {
   return (
     <>

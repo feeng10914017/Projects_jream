@@ -1,31 +1,3 @@
-//OrderStep style
-.step {
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.step > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 0.5rem;
-}
-.step > div > div {
-  height: 3.5rem;
-  width: 3.5rem;
-  border: 1px solid #cacaca;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-.step > div > p {
-  color: #cacaca;
-}
-
-//step1 check
 .card {
   border-radius: 2px;
 }
