@@ -1,0 +1,22 @@
+nav.navbar {
+  padding: 0 1rem;
+}
+nav > a.navbar-brand {
+  padding: 0;
+  margin: 0;
+}
+nav > a > .logo {
+  height: 3rem;
+  width: 10rem;
+  margin: 1rem;
+}
+nav > div.navbar-collapse > div.navbar-nav > a.nav-link {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+}
+nav > div.navbar-collapse > div.navbar-nav > a.nav-link > h6 {
+  padding-left: 0.5rem;
+  color: $info;
+  margin: 0;
+}

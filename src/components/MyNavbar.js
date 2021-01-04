@@ -31,26 +31,26 @@ function MyNavbar(props) {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link as={NavLink} to="/news">
-                最新消息
+                <h6>最新消息</h6>
               </Nav.Link>
               <Nav.Link as={NavLink} to="/motor">
-                機車租賃
+                <h6>機車租賃</h6>
               </Nav.Link>
               <Nav.Link as={NavLink} to="/product">
-                周邊商品
+                <h6>周邊商品</h6>
               </Nav.Link>
               <Nav.Link as={NavLink} to="/location">
-                據點消息
+                <h6>據點消息</h6>
               </Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link as={NavLink} to="/login">
                 <IoPersonOutline size="18" color="#f5f5f5" />
-                <span>登入</span>
+                <h6>登入</h6>
               </Nav.Link>
               <Nav.Link eventKey={2} as={NavLink} to="/order">
                 <IoCartOutline size="20" color="#f5f5f5" />
-                <span>購物車</span>
+                <h6>購物車</h6>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

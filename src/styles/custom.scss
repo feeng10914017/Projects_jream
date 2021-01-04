@@ -7,82 +7,11 @@ $info: #f5f5f5;
 @import '~bootstrap/scss/bootstrap.scss';
 
 // 其它要導入覆蓋掉原本的預設bootstrap樣式要放在這下面
-nav.navbar {
-  padding: 0 1rem;
-}
-nav > a.navbar-brand {
-  padding: 0;
-  margin: 0;
-}
-nav > a > .logo {
-  height: 3rem;
-  width: 10rem;
-  margin: 1rem;
-}
-nav > div.navbar-collapse > div.navbar-nav > a.nav-link {
-  padding: 0.5rem 1rem;
-  // color: $info;
-  display: flex;
-  align-items: center;
-}
-nav > div.navbar-collapse > div.navbar-nav > a.nav-link > span {
-  padding-left: 0.5rem;
-  color: $info;
-}
 
-main > .container {
-  // width: 1440px;
-  margin: 0 auto;
-  padding: 0;
-  padding-top: 5rem;
-  min-height: calc(100vh - 273px);
-}
+// 版面樣式
+@import './header.scss';
+@import './content.scss';
+@import './footer.scss';
 
-.footer {
-  background-color: $primary;
-}
-.footer > .container {
-  padding: 1rem 0 0 0;
-}
-.footer > .container > div {
-  margin-bottom: 1.5rem;
-}
-.footer > .container > .icon {
-  display: flex;
-  justify-content: center;
-  // margin-bottom: 2rem;
-}
-.footer > .container > .icon > .icon_circle {
-  border-radius: 50%;
-  border: 3px solid $info;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin: 0 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.footer > .container > .navLink > .mr-auto {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.footer > .container > .navLink > .mr-auto > a {
-  color: $info;
-}
-.footer > .container > .navLink > .mr-auto > svg {
-  transform: rotate(90deg);
-}
-.footer > .container > div > h3 {
-  color: $info;
-  text-align: center;
-  margin: 0;
-}
-.footer > .container > div.end {
-  margin-bottom: 1rem;
-}
-.footer > .container > div > p {
-  color: $info;
-  text-align: center;
-  margin: 0;
-}
+//購物車樣式
+@import '../pages/order/order.scss';

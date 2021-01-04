@@ -33,27 +33,27 @@ function MyFooter(props) {
           <div class="navLink">
             <Nav className="mr-auto">
               <Nav.Link as={NavLink} to="/news">
-                最新消息
+                <p>最新消息</p>
               </Nav.Link>
               <AiOutlineMinus size="24" color="#f5f5f5" />
               <Nav.Link as={NavLink} to="/motor">
-                機車租賃
+                <p>機車租賃</p>
               </Nav.Link>
               <AiOutlineMinus size="24" color="#f5f5f5" />
               <Nav.Link as={NavLink} to="/product">
-                周邊商品
+                <p>周邊商品</p>
               </Nav.Link>
               <AiOutlineMinus size="24" color="#f5f5f5" />
               <Nav.Link as={NavLink} to="/location">
-                據點消息
+                <p>據點消息</p>
               </Nav.Link>
             </Nav>
           </div>
           <div>
-            <h3>客服電話：02-12345678</h3>
+            <h6>客服電話：0800 - 6631 - 8168</h6>
           </div>
           <div class="end">
-            <p>@123456789</p>
+            <p>© 2019 JREAM MOTOR TAIWAN CO., LTD. All Rights Reserved.</p>
           </div>
         </div>
       </footer>

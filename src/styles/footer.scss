@@ -1,0 +1,50 @@
+.footer {
+  background-color: $primary;
+}
+.footer > .container {
+  padding: 1rem 0 0 0;
+}
+.footer > .container > div {
+  margin-bottom: 1.5rem;
+}
+.footer > .container > .icon {
+  display: flex;
+  justify-content: center;
+  // margin-bottom: 2rem;
+}
+.footer > .container > .icon > .icon_circle {
+  border-radius: 50%;
+  border: 3px solid $info;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer > .container > .navLink > .mr-auto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer > .container > .navLink > .mr-auto > a > p {
+  color: $info;
+  margin: 0;
+}
+.footer > .container > .navLink > .mr-auto > svg {
+  transform: rotate(90deg);
+}
+.footer > .container > div > h6 {
+  color: $info;
+  text-align: center;
+  margin: 0;
+}
+.footer > .container > div.end {
+  margin-bottom: 1rem;
+}
+.footer > .container > div.end > p {
+  color: $info;
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+}
