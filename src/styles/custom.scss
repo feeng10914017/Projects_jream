@@ -4,7 +4,7 @@ $secondary: #242424;
 $info: #f5f5f5;
 
 // 導入bootstrap所有的樣式與預設變數
-@import "~bootstrap/scss/bootstrap.scss";
+@import '~bootstrap/scss/bootstrap.scss';
 
 // 其它要導入覆蓋掉原本的預設bootstrap樣式要放在這下面
 nav.navbar {
@@ -35,7 +35,7 @@ main > .container {
   margin: 0 auto;
   padding: 0;
   padding-top: 5rem;
-  min-height: calc(100vh - 353px);
+  min-height: calc(100vh - 273px);
 }
 
 .footer {
