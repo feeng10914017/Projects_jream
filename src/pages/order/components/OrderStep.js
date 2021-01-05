@@ -4,7 +4,6 @@ import { RiCoinsLine } from 'react-icons/ri'
 import { FiTruck } from 'react-icons/fi'
 import { AiOutlineForm } from 'react-icons/ai'
 import { AiOutlineFlag } from 'react-icons/ai'
-import { AiOutlineMinus } from 'react-icons/ai'
 import { AiOutlineLine } from 'react-icons/ai'
 import './orderStep.scss'
 function OrderStep() {

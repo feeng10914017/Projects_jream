@@ -2,21 +2,19 @@ import React, { useState, useEffect } from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
-import FormControl from 'react-bootstrap/FormControl'
 import Card from 'react-bootstrap/Card'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
-import InputGroup from 'react-bootstrap/InputGroup'
 import LeaseImg from './images/Leoncino_250_gray.jpg'
 import LeaseImg1 from './images/7418807_R-removebg-preview.png'
 
-import './orderStepOne.scss'
+import './ODI.scss'
 import OrderStep from './components/OrderStep'
-function Order() {
+function ODI() {
   return (
     <>
       <OrderStep />
-      <Card>
+      <Card className="col-10">
         <Card.Header>
           <Nav fill variant="tabs" defaultActiveKey="#first">
             <Nav.Item>
@@ -43,9 +41,9 @@ function Order() {
                   <img src={LeaseImg} />
                 </div>
                 <p class="col-2">SUZUKI</p>
-                <p class="col-2">GSX - S1000S</p>
+                <p class="col-3">GSX - S1000S</p>
                 <p class="col-2">BROWN</p>
-                <h6 class="col-3">$1000</h6>
+                <h6 class="col-2">$1000</h6>
               </Row>
               <hr />
               <Row>
@@ -70,7 +68,7 @@ function Order() {
           </div>
         </Card.Body>
 
-        <Card.Body id="product">
+        <Card.Body id="produc">
           <div class="lease">
             <Form.Group controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="" />
@@ -85,7 +83,7 @@ function Order() {
                   HDF-JD-W149
                 </p>
                 <p class="col-2">
-                  <Form.Group as={Col} controlId="formGridState">
+                  <Form.Group controlId="formGridState">
                     <Form.Label></Form.Label>
                     <Form.Control as="select" defaultValue="Choose...">
                       <option>xxl</option>
@@ -106,7 +104,7 @@ function Order() {
         </Card.Body>
       </Card>
       <Row className="justify-content-center">
-        <Button className="next place-center" variant="primary">
+        <Button className="finalBtn place-center" variant="primary">
           下一步
         </Button>
       </Row>
@@ -114,4 +112,4 @@ function Order() {
   )
 }
 
-export default Order
+export default ODI

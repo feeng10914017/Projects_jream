@@ -14,7 +14,7 @@ import Product from './pages/product/Product'
 import Location from './pages/location/Location'
 import Member from './pages/member/Member'
 import LogIn from './pages/member/Login'
-import Order from './pages/order/Order'
+import Order from './pages/order/ODIIIParent'
 function App() {
   return (
     <Router>

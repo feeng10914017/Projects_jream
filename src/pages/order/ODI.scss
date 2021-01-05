@@ -1,8 +1,5 @@
-.card {
-  border-radius: 2px;
-}
+@import './ODC.scss';
 .card-header {
-  padding: 0.75rem 2rem;
   a {
     padding: 0;
     p {
@@ -11,7 +8,6 @@
   }
 }
 .card-body {
-  padding: 2rem;
   .lease {
     display: flex;
     align-items: center;
@@ -54,9 +50,4 @@
       }
     }
   }
-}
-.next {
-  margin: 0 auto;
-  margin: 3rem auto 0 auto;
-  padding: 1rem 3rem;
 }
