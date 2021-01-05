@@ -7,7 +7,7 @@ function Favorite(props) {
   return (
     <>
       <MemberNav />
-      <button onClick={() => props.history.push('/member')}>回首頁</button>
+      <button onClick={() => props.history.push('/member')}>首頁</button>
     </>
   )
 }
