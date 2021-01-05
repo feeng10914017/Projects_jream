@@ -29,8 +29,8 @@ function Member(props) {
             </Col>
           </Row>
         </Container>
-        <h3 style={{ marginTop: '48px', marginBottom: '16px' }}>配件選購</h3>
-        <Container style={{ marginBottom: '80px' }}>
+        <h3 style={{ marginTop: '16px', marginBottom: '16px' }}>配件選購</h3>
+        <Container style={{ marginBottom: '48px' }}>
           <Row>
             <Col>
               <img src={Product} alt="Product" height="180px" width="180px" />
