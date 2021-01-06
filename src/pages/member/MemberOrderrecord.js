@@ -1,7 +1,8 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
-import { Form, Col } from 'react-bootstrap'
+import { Form, Col, Card, ListGroup } from 'react-bootstrap'
+import Product from './images/7418807_R-removebg-preview.png'
 
 function Orderrecord(props) {
   const { isAuth } = props
@@ -21,6 +22,50 @@ function Orderrecord(props) {
           <option>一年</option>
         </Form.Control>
       </Form.Group>
+      <Card style={{ width: '1100px', margin: '0 auto' }}>
+        <Card.Header>
+          <th>
+            <td>
+              <p style={{ margin: '0', marginLeft: '48px' }}>訂單</p>
+            </td>
+            <td>
+              <p style={{ margin: '0', marginLeft: '500px' }}>訂單</p>
+            </td>
+          </th>
+        </Card.Header>
+        <ListGroup variant="flush">
+          <ListGroup.Item>
+            <img
+              src={Product}
+              alt="Product"
+              height="180px"
+              width="180px"
+              style={{ margin: '32px 0 32px 48px' }}
+            />
+            Cras justo odio
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <img
+              src={Product}
+              alt="Product"
+              height="180px"
+              width="180px"
+              style={{ margin: '32px 0 32px 48px' }}
+            />
+            Cras justo odio
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <img
+              src={Product}
+              alt="Product"
+              height="180px"
+              width="180px"
+              style={{ margin: '32px 0 32px 48px' }}
+            />
+            Cras justo odio
+          </ListGroup.Item>
+        </ListGroup>
+      </Card>
       <button onClick={() => props.history.push('/member')}>回首頁</button>
     </>
   )

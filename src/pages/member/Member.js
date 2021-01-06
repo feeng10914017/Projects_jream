@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from './components/Card'
-import Moto from '../../components/images/159983596847-removebg-preview.png'
-import Product from '../../components/images/7418807_R-removebg-preview.png'
+import Moto from './images/159983596847-removebg-preview.png'
+import Product from './images/7418807_R-removebg-preview.png'
 
 import { Container, Row, Col } from 'react-bootstrap'
 import './member.scss'
