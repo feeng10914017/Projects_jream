@@ -14,7 +14,9 @@ import Product from './pages/product/Product'
 import Location from './pages/location/Location'
 import Member from './pages/member/Member'
 import LogIn from './pages/member/Login'
-import Order from './pages/order/ODIIIParent'
+import OrderI from './pages/order/ODI'
+import OrderII from './pages/order/ODII'
+import OrderIII from './pages/order/ODIII'
 function App() {
   return (
     <Router>
@@ -40,8 +42,14 @@ function App() {
             <Route path="/member">
               <Member />
             </Route>
-            <Route path="/order">
-              <Order />
+            <Route path="/orderI">
+              <OrderI />
+            </Route>
+            <Route path="/orderII">
+              <OrderII />
+            </Route>
+            <Route path="/orderIII">
+              <OrderIII />
             </Route>
             <Route path="/">
               <Home />

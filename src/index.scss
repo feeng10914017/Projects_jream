@@ -69,6 +69,16 @@ p {
   margin: 0;
 }
 
+.displayFlex {
+  display: flex;
+}
+.displayNone {
+  display: none;
+}
+.displayBlock {
+  display: block;
+}
+
 input[type='radio'],
 input[type='checkbox'] {
   width: 1rem;

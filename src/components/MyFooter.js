@@ -19,18 +19,18 @@ function MyFooter(props) {
     <>
       <footer className="footer mt-auto py-3">
         <div className="container">
-          <div class="icon">
-            <div class="icon_circle">
+          <div className="icon">
+            <div className="icon_circle">
               <GrFacebookOption size="18" color="#f5f5f5" />
             </div>
-            <div class="icon_circle">
+            <div className="icon_circle">
               <AiOutlineInstagram size="18" color="#f5f5f5" />
             </div>
-            <div class="icon_circle">
+            <div className="icon_circle">
               <AiOutlineTwitter size="18" color="#f5f5f5" />
             </div>
           </div>
-          <div class="navLink">
+          <div className="navLink">
             <Nav className="mr-auto">
               <Nav.Link as={NavLink} to="/news">
                 <p>最新消息</p>
@@ -52,7 +52,7 @@ function MyFooter(props) {
           <div>
             <h6>客服電話：0800 - 6631 - 8168</h6>
           </div>
-          <div class="end">
+          <div className="end">
             <p>© 2019 JREAM MOTOR TAIWAN CO., LTD. All Rights Reserved.</p>
           </div>
         </div>

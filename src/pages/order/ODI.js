@@ -1,112 +1,75 @@
 import React, { useState, useEffect } from 'react'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Form from 'react-bootstrap/Form'
-import Card from 'react-bootstrap/Card'
-import Nav from 'react-bootstrap/Nav'
-import Button from 'react-bootstrap/Button'
-import LeaseImg from './images/Leoncino_250_gray.jpg'
-import LeaseImg1 from './images/7418807_R-removebg-preview.png'
+import { Row, Card, Nav, Button, Form } from 'react-bootstrap'
+
+import { Link } from 'react-router-dom'
 
 import './ODI.scss'
 import OrderStep from './components/OrderStep'
-function ODI() {
+import ODIMotor from './ODI_Motor'
+import ODIProduct from './ODI_Product'
+function ODI(props) {
+  const [navState, setNavState] = useState('NavMotor')
+  const navStateOnClick = navState
+  function changeDisplay(a, b) {
+    document.getElementById(a).classList.add('displayFlex')
+    document.getElementById(b).classList.remove('displayFlex')
+    document.getElementById(a).classList.remove('displayNone')
+    document.getElementById(b).classList.add('displayNone')
+  }
+
+  //透過改變後的navState,來調整顯示的內容(使用function changeDisplay)
+  useEffect(() => {
+    // console.log('改變後的navState', navState)
+    navStateOnClick == 'NavMotor'
+      ? changeDisplay('BodyMotor', 'BodyProd')
+      : changeDisplay('BodyProd', 'BodyMotor')
+  }, [navState])
+
   return (
     <>
       <OrderStep />
       <Card className="col-10">
         <Card.Header>
-          <Nav fill variant="tabs" defaultActiveKey="#first">
+          <Nav fill variant="tabs" defaultActiveKey="#Nav_Motor">
             <Nav.Item>
-              <Nav.Link href="#motor">
+              <Nav.Link
+                href="#Nav_Motor"
+                onClick={() => {
+                  setNavState('NavMotor')
+                }}
+              >
                 <p>重機租賃</p>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#produc">
+              <Nav.Link
+                href="#Nav_Prod"
+                onClick={() => {
+                  setNavState('NavProd')
+                }}
+              >
                 <p>周邊商品</p>
               </Nav.Link>
             </Nav.Item>
           </Nav>
         </Card.Header>
-
-        <Card.Body id="motor">
-          <div class="lease">
-            <Form.Group controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="" />
-            </Form.Group>
-            <div class="cardContent">
-              <Row>
-                <div class="col-3 motorImage">
-                  <img src={LeaseImg} />
-                </div>
-                <p class="col-2">SUZUKI</p>
-                <p class="col-3">GSX - S1000S</p>
-                <p class="col-2">BROWN</p>
-                <h6 class="col-2">$1000</h6>
-              </Row>
-              <hr />
-              <Row>
-                <p class="col-3">取車地點</p>
-                <p class="col-3">台北濱江店</p>
-                <p class="col-3">還車地點</p>
-                <p class="col-3">台北濱江店</p>
-              </Row>
-              <Row>
-                <p class="col-3">取車日期</p>
-                <p class="col-3">2020/12/19</p>
-                <p class="col-3">還車日期</p>
-                <p class="col-3">2020/12/20</p>
-              </Row>
-              <Row>
-                <p class="col-3">取車時間</p>
-                <p class="col-3">13:15</p>
-                <p class="col-3">還車時間</p>
-                <p class="col-3">09:15</p>
-              </Row>
-            </div>
-          </div>
-        </Card.Body>
-
-        <Card.Body id="produc">
-          <div class="lease">
-            <Form.Group controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="" />
-            </Form.Group>
-            <div class="cardContent">
-              <Row>
-                <div class="col-2 motorImage">
-                  <img src={LeaseImg1} />
-                </div>
-                <p class="col-4">
-                  BENKIA 摩托車防水秋冬防摔衣 黑 女款 騎行服 防摔衣 秋冬款
-                  HDF-JD-W149
-                </p>
-                <p class="col-2">
-                  <Form.Group controlId="formGridState">
-                    <Form.Label></Form.Label>
-                    <Form.Control as="select" defaultValue="Choose...">
-                      <option>xxl</option>
-                      <option>...</option>
-                    </Form.Control>
-                  </Form.Group>
-                </p>
-                <p class="col-2">
-                  <Form.Group controlId="formBasicEmail">
-                    <Form.Label></Form.Label>
-                    <Form.Control type="number" placeholder="1" />
-                  </Form.Group>
-                </p>
-                <h6 class="col-2">$1000</h6>
-              </Row>
-            </div>
-          </div>
+        <Card.Body id="CardBody">
+          <ODIMotor />
+          <ODIProduct />
         </Card.Body>
       </Card>
-      <Row className="justify-content-center">
-        <Button className="finalBtn place-center" variant="primary">
-          下一步
+      <Row className="justify-content-center col-10">
+        <Button className="finalBtn place-center" variant="danger">
+          繼續購物
         </Button>
+        <Link to="/orderII">
+          <Button
+            className="finalBtn finalBtnTwo place-center"
+            variant="primary"
+          >
+            下一步
+          </Button>
+        </Link>
       </Row>
     </>
   )

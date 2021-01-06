@@ -16,7 +16,7 @@ import { NavLink } from 'react-router-dom'
 function MyNavbar(props) {
   return (
     <>
-      <header class="header">
+      <header className="header">
         <Navbar
           collapseOnSelect
           expand="lg"
@@ -48,7 +48,7 @@ function MyNavbar(props) {
                 <IoPersonOutline size="18" color="#f5f5f5" />
                 <h6>登入</h6>
               </Nav.Link>
-              <Nav.Link eventKey={2} as={NavLink} to="/order">
+              <Nav.Link eventKey={2} as={NavLink} to="/orderI">
                 <IoCartOutline size="20" color="#f5f5f5" />
                 <h6>購物車</h6>
               </Nav.Link>
