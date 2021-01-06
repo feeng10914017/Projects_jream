@@ -12,29 +12,65 @@ body {
 }
 h1 {
   font-family: unquote('Noto Sans TC');
-  font-size: 93;
+  font-size: 93px;
 }
 h2 {
   font-family: unquote('Noto Sans TC');
-  font-size: 58;
+  font-size: 58px;
 }
 h3 {
   font-family: unquote('Noto Sans TC');
-  font-size: 47;
+  font-size: 47px;
 }
 h4 {
   font-family: unquote('Noto Sans TC');
-  font-size: 33;
+  font-size: 33px;
 }
 h5 {
   font-family: unquote('Noto Sans TC');
-  font-size: 23;
+  font-size: 23px;
 }
 h6 {
   font-family: unquote('Noto Sans TC');
-  font-size: 23;
+  font-size: 19px;
 }
 p {
   font-family: unquote('Noto Sans TC');
-  font-size: 16;
+  font-size: 16px;
+}
+
+//公版 color class
+.colorPrimary {
+  color: #b02825;
+}
+.colorSecondary {
+  color: #242424;
+}
+.colorInfo {
+  color: #f5f5f5;
+}
+.colorLight {
+  color: #cacaca;
+}
+.colorDanger {
+  color: #e74c3c;
+}
+//公版 font size class
+.fontSize16 {
+  font-size: 16px;
+  margin: 0;
+}
+.fontSize14 {
+  font-size: 14px;
+  margin: 0;
+}
+.fontSize12 {
+  font-size: 12px;
+  margin: 0;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  width: 1rem;
+  height: 1rem;
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
-import MemberNav from '../../components/MemberNav'
+import MemberNav from './components/MemberNav'
 
 function Rentrecord(props) {
   const { isAuth } = props

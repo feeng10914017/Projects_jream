@@ -1,0 +1,21 @@
+@import './ODC.scss';
+.card-body {
+  .row {
+    justify-content: space-between;
+    align-items: center;
+    .form-group {
+      margin-right: 1.5rem;
+      margin-bottom: 0;
+    }
+    p {
+      margin: 0;
+      span {
+        font-size: 12px;
+        color: #cacaca;
+      }
+    }
+  }
+}
+button.finalBtn {
+  margin-left: 5rem;
+}

@@ -1,11 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Nav } from 'react-bootstrap'
+import '../member.scss'
 
 function MemberNav() {
   return (
     <>
-      <Nav className="justify-content-center" style={{ marginTop: '48px' }}>
+      <Nav className="justify-content-center">
         <Nav.Item>
           <Nav.Link as={NavLink} to="/Information">
             個人資料

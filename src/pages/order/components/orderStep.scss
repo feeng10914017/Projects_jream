@@ -1,6 +1,4 @@
-//OrderStep style
 .step {
-  margin-top: 3rem;
   margin-bottom: 1rem;
   display: flex;
   justify-content: center;
@@ -21,30 +19,18 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 0.5rem;
+  position: relative;
+}
+.step > div > div > .coin {
+  transform: translateY(-0.6rem);
+}
+.step > div > div > .truck {
+  transform: translateY(0.6rem);
+}
+.step > div > div > .divide {
+  position: absolute;
+  transform: rotate(-45deg);
 }
 .step > div > p {
   color: #cacaca;
-}
-
-//step1 check
-.card {
-  border-radius: 2px;
-}
-.card-header {
-  padding: 1rem 2rem;
-}
-.card-body {
-  .figu {
-    width: 9rem;
-    padding: 0;
-    // height: 6rem;
-    img {
-      width: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-  }
-  th {
-    text-align: center;
-  }
 }

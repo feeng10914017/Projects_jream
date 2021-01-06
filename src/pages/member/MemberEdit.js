@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
-import { Table, Button } from 'react-bootstrap'
+import { Table, Button, Alert } from 'react-bootstrap'
 
 import './member.scss'
 
@@ -55,9 +55,18 @@ function Information({
           <tr>
             <td className="MBItdC"></td>
             <td className="MBItdR">
-              <Link to="/memberEdit">
+              <Link to="/information">
+                <Button
+                  variant="primary"
+                  type="submit"
+                  style={{ marginRight: '16px' }}
+                >
+                  取消
+                </Button>
+              </Link>
+              <Link to="/information">
                 <Button variant="primary" type="submit">
-                  修改
+                  確認修改
                 </Button>
               </Link>
             </td>

@@ -14,11 +14,12 @@ import Product from './pages/product/Product'
 import Location from './pages/location/Location'
 import Member from './pages/member/Member'
 import MemberInformation from './pages/member/MemberInformation'
+import MemberEdit from './pages/member/MemberEdit'
 import MemberFavorite from './pages/member/MemberFavorite'
 import MemberRentrecord from './pages/member/MemberRentrecord'
 import MemberOrderrecord from './pages/member/MemberOrderrecord'
 import LogIn from './pages/member/Login'
-import Order from './pages/order/Order'
+import Order from './pages/order/ODIIIParent'
 function App() {
   return (
     <Router>
@@ -43,6 +44,9 @@ function App() {
             </Route>
             <Route path="/member">
               <Member />
+            </Route>
+            <Route path="/memberEdit">
+              <MemberEdit />
             </Route>
             <Route path="/information">
               <MemberInformation />
