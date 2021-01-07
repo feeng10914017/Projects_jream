@@ -9,7 +9,7 @@ import './orderStep.scss'
 function OrderStep() {
   return (
     <>
-      <div class="step">
+      <div className="step">
         <div>
           <div>
             <BiSearchAlt size="32" color="#CACACA" />

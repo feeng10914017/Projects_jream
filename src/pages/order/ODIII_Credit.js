@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
-import Form from 'react-bootstrap/Form'
+import { Row, Col, Card, Form } from 'react-bootstrap'
 import { AiOutlineLine } from 'react-icons/ai'
 
-function ODIIIChildCredit() {
+function ODIII_Credit() {
   return (
     <>
       <Card className="col-10">
@@ -22,7 +19,7 @@ function ODIIIChildCredit() {
               <Form.Control type="text" placeholder="限使用台灣核發之信用卡" />
             </Col>
           </Form.Group>
-          <div class="line"></div>
+          <div className="line"></div>
           <Form.Row className="wrap">
             <Form.Group
               className="col-6"
@@ -56,8 +53,8 @@ function ODIIIChildCredit() {
               </Col>
             </Form.Group>
           </Form.Row>
-          <div class="line"></div>
-          <p class="Caption">
+          <div className="line"></div>
+          <p className="fontSize14">
             ※
             提供VISA丶MasterCard丶JCB信用卡交易，全程使用安全加密，信用卡資料將不會儲存於網站，您可以安心使用信用卡付款。
           </p>
@@ -67,4 +64,4 @@ function ODIIIChildCredit() {
   )
 }
 
-export default ODIIIChildCredit
+export default ODIII_Credit

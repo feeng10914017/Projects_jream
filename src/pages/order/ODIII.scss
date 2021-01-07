@@ -2,11 +2,11 @@
 label {
   text-align: right;
   font-size: 14px;
+  color: #242424;
 }
 .form-control {
   outline: none;
   border: 1px solid transparent;
-  color: #cacaca;
 }
 .form-control:focus {
   border-color: transparent;
@@ -43,20 +43,25 @@ label {
   background-color: transparent;
   border-color: #b02825;
 }
-button.finalBtn {
-  margin-left: 5rem;
-}
 .colorLight {
   color: #cacaca;
 }
 .colorDanger {
   color: #e74c3c;
 }
-.Caption {
-  font-size: 14px;
-  margin: 0;
+.Recipient {
+  display: flex;
+  .form-group {
+    margin-left: 2rem;
+    margin-bottom: 0;
+    label {
+      margin-left: 0.5rem;
+      font-size: 14px;
+    }
+  }
 }
-.fontSize14 {
-  font-size: 14px;
-  margin: 0;
+.InvoiceActive {
+      color: #b02825;
+    background-color: transparent;
+    border-color: #b02825;
 }

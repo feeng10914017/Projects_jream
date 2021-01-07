@@ -19,7 +19,9 @@ import MemberFavorite from './pages/member/MemberFavorite'
 import MemberRentrecord from './pages/member/MemberRentrecord'
 import MemberOrderrecord from './pages/member/MemberOrderrecord'
 import LogIn from './pages/member/Login'
-import Order from './pages/order/ODIIIParent'
+import OrderI from './pages/order/ODI'
+import OrderII from './pages/order/ODII'
+import OrderIII from './pages/order/ODIII'
 function App() {
   return (
     <Router>
@@ -45,6 +47,7 @@ function App() {
             <Route path="/member">
               <Member />
             </Route>
+<<<<<<< HEAD
             <Route path="/memberEdit">
               <MemberEdit />
             </Route>
@@ -62,6 +65,16 @@ function App() {
             </Route>
             <Route path="/order">
               <Order />
+=======
+            <Route path="/orderI">
+              <OrderI />
+            </Route>
+            <Route path="/orderII">
+              <OrderII />
+            </Route>
+            <Route path="/orderIII">
+              <OrderIII />
+>>>>>>> e67f1c3cac349ef01a7d10024dcaad88ac9c60a3
             </Route>
             <Route path="/">
               <Home />
