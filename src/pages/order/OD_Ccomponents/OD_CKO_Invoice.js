@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Col, Card, Button, Form } from 'react-bootstrap'
 import $ from 'jquery'
-function ODIII_Invoice() {
+function OD_CKO_Invoice() {
   useEffect(() => {
     $('#Invoice')
       .find('button')
@@ -20,7 +20,7 @@ function ODIII_Invoice() {
   }, [])
   return (
     <>
-      <Card className="col-10">
+      <Card>
         <Card.Header>
           <h6>發票類型</h6>
         </Card.Header>
@@ -108,7 +108,15 @@ function ODIII_Invoice() {
           </Form.Row>
         </Card.Body>
       </Card>
+      <section className="terms">
+        <Form.Group controlId="terms">
+          <Form.Check
+            type="checkbox"
+            label="我同意辦理退貨時，由 JREAM 代為處理電子發票及銷貨退回折讓單以加速退款作業。"
+          />
+        </Form.Group>
+      </section>
     </>
   )
 }
-export default ODIII_Invoice
+export default OD_CKO_Invoice

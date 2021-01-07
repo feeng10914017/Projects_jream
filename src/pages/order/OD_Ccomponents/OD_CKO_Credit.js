@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { Row, Col, Card, Form } from 'react-bootstrap'
 import { AiOutlineLine } from 'react-icons/ai'
 
-function ODIII_Credit() {
+function OD_CKO_Credit() {
   return (
     <>
-      <Card className="col-10">
+      <Card>
         <Card.Header>
           <h6>信用卡付款</h6>
         </Card.Header>
@@ -64,4 +64,4 @@ function ODIII_Credit() {
   )
 }
 
-export default ODIII_Credit
+export default OD_CKO_Credit

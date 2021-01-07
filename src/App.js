@@ -14,9 +14,9 @@ import Product from './pages/product/Product'
 import Location from './pages/location/Location'
 import Member from './pages/member/Member'
 import LogIn from './pages/member/Login'
-import OrderI from './pages/order/ODI'
-import OrderII from './pages/order/ODII'
-import OrderIII from './pages/order/ODIII'
+import Order from './pages/order/OD_Cart'
+import OrderCheckout from './pages/order/OD_Checkout'
+import OrderCreditCard from './pages/order/OD_CreditCard'
 function App() {
   return (
     <Router>
@@ -42,14 +42,14 @@ function App() {
             <Route path="/member">
               <Member />
             </Route>
-            <Route path="/orderI">
-              <OrderI />
+            <Route path="/order/checkout">
+              <OrderCheckout />
             </Route>
-            <Route path="/orderII">
-              <OrderII />
+            <Route path="/orde/CreditCard">
+              <OrderCreditCard />
             </Route>
-            <Route path="/orderIII">
-              <OrderIII />
+            <Route path="/order">
+              <Order />
             </Route>
             <Route path="/">
               <Home />
