@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Motor() {
-  return <>aaa</>
+  return <>bbb</>
 }
 
 export default Motor
