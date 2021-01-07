@@ -1,13 +1,13 @@
 import React from 'react'
 import Google from './GoogleAPI'
-import SiderDemo from './SideNav'
+// import SiderDemo from './SideNav'
 
 function Location() {
   return (
     <>
       <div style={{ overflow: 'hidden', width: '1440px' }}>
         <Google />
-        <SiderDemo />
+        {/* <SiderDemo /> */}
       </div>
       <div></div>
     </>
