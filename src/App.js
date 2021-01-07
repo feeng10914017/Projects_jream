@@ -47,7 +47,6 @@ function App() {
             <Route path="/member">
               <Member />
             </Route>
-<<<<<<< HEAD
             <Route path="/memberEdit">
               <MemberEdit />
             </Route>
@@ -63,9 +62,8 @@ function App() {
             <Route path="/order-record">
               <MemberOrderrecord />
             </Route>
-            <Route path="/order">
-              <Order />
-=======
+            {/* <Route path="/order">
+              <Order /> */}
             <Route path="/orderI">
               <OrderI />
             </Route>
@@ -74,7 +72,6 @@ function App() {
             </Route>
             <Route path="/orderIII">
               <OrderIII />
->>>>>>> e67f1c3cac349ef01a7d10024dcaad88ac9c60a3
             </Route>
             <Route path="/">
               <Home />

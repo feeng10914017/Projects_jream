@@ -1,72 +1,47 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
 import { Form, Col, Card, ListGroup } from 'react-bootstrap'
-import Product from './images/7418807_R-removebg-preview.png'
+import OrderR from './components/OrderR'
 
-function Orderrecord(props) {
-  const { isAuth } = props
+function Orderrecord() {
   return (
     <>
       <MemberNav />
-      <Form.Group as={Col} controlId="formGridState">
-        <Form.Label style={{ width: '350px', margin: '0 auto' }}>
-          查詢：
-        </Form.Label>
-        <Form.Control
-          as="select"
-          defaultValue="Choose"
-          style={{ width: '350px', margin: '0 auto' }}
-        >
-          <option>兩個月</option>
-          <option>一年</option>
-        </Form.Control>
+      <Form.Group as={Col} controlId="formGridState" className="A-From">
+        <td>
+          <Form.Label>查詢紀錄：</Form.Label>
+        </td>
+        <td>
+          <Form.Control as="select" defaultValue="Choose">
+            <option selected>全部</option>
+            <option>兩個月內</option>
+            <option>一年內</option>
+          </Form.Control>
+        </td>
       </Form.Group>
-      <Card style={{ width: '1100px', margin: '0 auto' }}>
+      <Card className="A-ORCard1">
         <Card.Header>
           <th>
             <td>
-              <p style={{ margin: '0', marginLeft: '48px' }}>訂單</p>
+              <p>訂單</p>
             </td>
             <td>
-              <p style={{ margin: '0', marginLeft: '500px' }}>訂單</p>
+              <p className="A-ORCard2">訂單狀況</p>
             </td>
           </th>
         </Card.Header>
-        <ListGroup variant="flush">
-          <ListGroup.Item>
-            <img
-              src={Product}
-              alt="Product"
-              height="180px"
-              width="180px"
-              style={{ margin: '32px 0 32px 48px' }}
-            />
-            Cras justo odio
-          </ListGroup.Item>
-          <ListGroup.Item>
-            <img
-              src={Product}
-              alt="Product"
-              height="180px"
-              width="180px"
-              style={{ margin: '32px 0 32px 48px' }}
-            />
-            Cras justo odio
-          </ListGroup.Item>
-          <ListGroup.Item>
-            <img
-              src={Product}
-              alt="Product"
-              height="180px"
-              width="180px"
-              style={{ margin: '32px 0 32px 48px' }}
-            />
-            Cras justo odio
-          </ListGroup.Item>
+        <ListGroup variant="flush" className="A-OrderList">
+          <OrderR />
+          <OrderR />
+          <OrderR />
+          <OrderR />
+          <OrderR />
         </ListGroup>
       </Card>
-      <button onClick={() => props.history.push('/member')}>回首頁</button>
+      <Link to="/member">
+        <button>回首頁</button>
+      </Link>
     </>
   )
 }

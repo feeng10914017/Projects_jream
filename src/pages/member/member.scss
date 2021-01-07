@@ -1,3 +1,5 @@
+//卡片元件
+
 .A-card {
   margin-top: 48px;
   div {
@@ -7,6 +9,12 @@
     }
   }
 }
+
+.A-cardh5 {
+  color: #b02825;
+}
+
+//個人資料css
 
 .MBI {
   margin: 0 auto;
@@ -39,6 +47,8 @@
   padding-right: 50px;
 }
 
+//登入頁面css
+
 .A-login > div {
   margin: 0 auto;
   margin-top: 56px;
@@ -57,6 +67,8 @@
   }
 }
 
+//會員頁面css
+
 .A-member {
   h3 {
     text-align: center;
@@ -68,5 +80,171 @@
   .container {
     margin-top: 16px;
     margin-bottom: 16px;
+  }
+}
+
+//訂單紀錄css
+
+.A-From {
+  margin: 48px 0 32px 0;
+  td > Label {
+    width: 160px;
+  }
+  td > select {
+    width: 240px;
+  }
+}
+
+.A-ORCard1 {
+  width: 1152px;
+  margin: 0 auto;
+  p {
+    margin: 0;
+    margin-left: 120px;
+  }
+  .A-ORCard2 {
+    margin: 0;
+    margin-left: 360px;
+  }
+}
+
+.A-OrderList {
+  margin-bottom: 0;
+}
+
+//訂單紀錄元件
+
+.A-OrderRImg {
+  vertical-align: middle;
+  img {
+    height: 150px;
+    width: 150px;
+    margin: 32px 0 32px 120px;
+  }
+}
+
+.A-OrderRP1 {
+  vertical-align: middle;
+  p {
+    margin-left: 48px;
+    margin-bottom: 0;
+    width: 100px;
+    text-align: center;
+  }
+}
+
+.A-OrderRP2 {
+  margin-left: 48px;
+  margin-bottom: 0;
+  width: 100px;
+  text-align: center;
+  font-size: 12px;
+  color: #cacaca;
+}
+
+.A-OrderRTime {
+  vertical-align: middle;
+  p {
+    margin-left: 105px;
+    margin-bottom: 0;
+    color: #cacaca;
+  }
+}
+
+.A-OrderRPrice {
+  vertical-align: middle;
+  p {
+    margin-left: 72px;
+    margin-bottom: 0;
+  }
+}
+
+.A-OrderRStatus {
+  vertical-align: middle;
+  p {
+    margin-left: 80px;
+    margin-bottom: 0;
+    color: #7474fa;
+  }
+}
+
+.A-OrderRButton {
+  vertical-align: middle;
+  Button {
+    margin-left: 104px;
+  }
+}
+
+//租車紀錄css
+
+.A-MotoFrom {
+  margin: 48px 0 32px 0;
+  td > Label {
+    width: 160px;
+  }
+  td > select {
+    width: 240px;
+  }
+}
+
+.A-MotoCard {
+  width: 1152px;
+  margin: 0 auto;
+  .A-MotoNum {
+    margin: 0;
+    margin-left: 336px;
+  }
+  .A-MotoTimeC {
+    margin: 0;
+    margin-left: 160px;
+  }
+}
+
+.A-MotoList {
+  margin-bottom: 0;
+}
+
+//租車紀錄元件
+
+.A-MotoRImg {
+  vertical-align: middle;
+  img {
+    height: 160px;
+    width: 210px;
+    margin: 32px 0 32px 80px;
+  }
+}
+
+.A-MotoRNum {
+  vertical-align: middle;
+  p {
+    margin-left: 56px;
+    margin-bottom: 0;
+    width: 100px;
+    text-align: center;
+  }
+}
+
+.A-MotoTime {
+  vertical-align: middle;
+  p {
+    margin-left: 128px;
+    margin-bottom: 0;
+  }
+}
+
+.A-MotoStatus {
+  vertical-align: middle;
+  p {
+    margin-left: 80px;
+    margin-bottom: 0;
+    color: #7474fa;
+  }
+}
+
+.A-MotoRButton {
+  vertical-align: middle;
+  Button {
+    margin-left: 104px;
   }
 }

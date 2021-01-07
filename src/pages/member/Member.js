@@ -6,11 +6,11 @@ import Product from './images/7418807_R-removebg-preview.png'
 import { Container, Row, Col } from 'react-bootstrap'
 import './member.scss'
 
-function Member(props) {
+function Member({ username = 'Aqing' }) {
   return (
     <>
       <div className="A-member">
-        <h3>歡迎XXX!,歡迎來到會員首頁</h3>
+        <h3>HI!{username}!,歡迎來到會員首頁</h3>
         <Card />
         <h4>上次租用車款</h4>
         <Container>
