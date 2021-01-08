@@ -4,7 +4,6 @@ import Moto from './images/159983596847-removebg-preview.png'
 import Product from './images/7418807_R-removebg-preview.png'
 
 import { Container, Row, Col } from 'react-bootstrap'
-import './member.scss'
 
 function Member({ username = 'Aqing' }) {
   return (

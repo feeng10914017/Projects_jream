@@ -3,7 +3,6 @@ import { withRouter, Link } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
 import MotoR from './components/MotoR'
 import { Form, Col, Card, ListGroup, Button } from 'react-bootstrap'
-import Moto from './images/159983596847-removebg-preview.png'
 
 function Rentrecord() {
   return (
