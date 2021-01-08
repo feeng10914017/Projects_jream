@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { Row, Col, Card, Form } from 'react-bootstrap'
 import { AiOutlineLine } from 'react-icons/ai'
 
-import { countries, townships } from './data'
+import { countries, townships } from '../data'
 
-function ODIII_Person() {
+function OD_CKO_Person() {
   //location useState
   const [country, setCountry] = useState(-1)
   const [township, setTownship] = useState(-1)
@@ -50,7 +50,7 @@ function ODIII_Person() {
   return (
     <>
       {/* 訂購人 */}
-      <Card className="col-10">
+      <Card>
         <Card.Header>
           <h6>訂購人資訊</h6>
         </Card.Header>
@@ -140,9 +140,9 @@ function ODIII_Person() {
           </Form.Group>
         </Card.Body>
       </Card>
-
+      <div className="block"></div>
       {/* 收件人 */}
-      <Card className="col-10">
+      <Card>
         <Card.Header className="Recipient">
           <h6>收件人資訊</h6>
           <Form.Group controlId="isSamePerson">
@@ -237,4 +237,4 @@ function ODIII_Person() {
     </>
   )
 }
-export default ODIII_Person
+export default OD_CKO_Person
