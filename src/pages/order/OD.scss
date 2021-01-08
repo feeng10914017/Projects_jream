@@ -252,6 +252,31 @@
       .card-body {
         border: 1px solid #cacaca;
         padding: 2rem;
+        .form-group {
+          display: none;
+        }
+      }
+    }
+  }
+}
+// 訂單詳情樣式 ( OD_CartReport )
+.cartReport {
+  .card-body {
+    .row {
+      div {
+        .row {
+          p {
+            margin-bottom: 0;
+          }
+          p:first-child {
+            // text-align: right;
+            // font-weight: 600;
+            color: #b02825;
+          }
+          p:last-child {
+            padding-left: 1.5rem;
+          }
+        }
       }
     }
   }

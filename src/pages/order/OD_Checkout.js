@@ -80,7 +80,7 @@ function OD_Checkout() {
               返回購物車
             </Button>
           </Link>
-          <Link to="/orde/CreditCard">
+          <Link to="/order/CreditCard">
             <Button
               className="finalBtn finalBtnTwo place-center"
               variant="primary"

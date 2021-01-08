@@ -33,12 +33,14 @@ function OD_CreditCard() {
               重選付款方式
             </Button>
           </Link>
-          <Button
-            className="finalBtn finalBtnTwo place-center"
-            variant="primary"
-          >
-            下一步
-          </Button>
+          <Link to="/order/cartReport">
+            <Button
+              className="finalBtn finalBtnTwo place-center"
+              variant="primary"
+            >
+              下一步
+            </Button>
+          </Link>
         </Row>
       </article>
     </>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import logo_w from './images/logo_w.png'
 import { IoPersonOutline } from 'react-icons/io5'
 import { IoCartOutline } from 'react-icons/io5'
 import {
@@ -25,7 +24,11 @@ function MyNavbar(props) {
           fixed="top"
         >
           <Navbar.Brand href="#home">
-            <img className="logo" src={logo_w} alt="" />
+            <img
+              className="logo"
+              src="http://localhost:3000/images/logo/logo_w.png"
+              alt=""
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

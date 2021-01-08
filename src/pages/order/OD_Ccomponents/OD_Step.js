@@ -9,7 +9,7 @@ import { AiOutlineLine } from 'react-icons/ai'
 import '../OD.scss'
 function OD_Step(props) {
   useEffect(() => {
-    props.step >= 1 &&
+    props.step == 1 &&
       $('#step1')
         .children()
         .eq(0)
@@ -20,7 +20,7 @@ function OD_Step(props) {
         .next()
         .addClass('activeColorSecondary')
 
-    props.step >= 2 &&
+    props.step == 2 &&
       $('#step2')
         .children()
         .eq(0)
@@ -30,10 +30,7 @@ function OD_Step(props) {
         .parent()
         .next()
         .addClass('activeColorSecondary')
-        .parent()
-        .prev()
-        .addClass('activeColorPrimary')
-    props.step >= 3 &&
+    props.step == 3 &&
       $('#step3')
         .children()
         .eq(0)
@@ -43,10 +40,7 @@ function OD_Step(props) {
         .parent()
         .next()
         .addClass('activeColorSecondary')
-        .parent()
-        .prev()
-        .addClass('activeColorPrimary')
-    props.step >= 4 &&
+    props.step == 4 &&
       $('#step4')
         .children()
         .eq(0)
@@ -56,9 +50,6 @@ function OD_Step(props) {
         .parent()
         .next()
         .addClass('activeColorSecondary')
-        .parent()
-        .prev()
-        .addClass('activeColorPrimary')
   }, [])
   return (
     <>
@@ -89,7 +80,7 @@ function OD_Step(props) {
         <AiOutlineLine size="48" />
         <div id="step4">
           <div>
-            <AiOutlineFlag size="32" color="#CACACA" />
+            <AiOutlineFlag size="32" />
           </div>
           <p>4. 完成訂單</p>
         </div>
