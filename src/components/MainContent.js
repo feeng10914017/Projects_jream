@@ -24,4 +24,3 @@ function MainContent(props) {
 }
 
 export default withRouter(MainContent)
-
