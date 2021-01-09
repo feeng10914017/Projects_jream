@@ -248,3 +248,34 @@
     margin-left: 104px;
   }
 }
+
+//車輛最愛css
+
+.A-FVCard1 {
+  width: 1152px;
+  margin: 0 auto;
+  div > th > td > p {
+    margin: 0;
+    margin-left: 120px;
+  }
+}
+
+.A-FVList {
+  margin-bottom: 0;
+}
+
+.A-FVImg {
+  vertical-align: middle;
+  img {
+    height: 160px;
+    width: 210px;
+    margin: 32px 0 32px 80px;
+  }
+}
+
+.A-FVStar {
+  vertical-align: 4em;
+  height: 23px;
+  width: 23px;
+  color: #ffb400;
+}
