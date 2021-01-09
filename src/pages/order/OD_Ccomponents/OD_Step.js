@@ -53,7 +53,6 @@ function OD_Step(props) {
   }, [])
   return (
     <>
-      {console.log(props.step)}
       <div className="step">
         <div id="step1">
           <div>
