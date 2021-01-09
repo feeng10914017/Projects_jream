@@ -6,9 +6,9 @@ function MainContent(props) {
   if (props.location.pathname === '/location')
     return (
       <>
-        <main role="main" className="flex-shrink-0">
-          <div>{props.children}</div>
-        </main>
+        {/* <main role="main" className="flex-shrink-0"> */}
+        <div>{props.children}</div>
+        {/* </main> */}
       </>
     )
 
