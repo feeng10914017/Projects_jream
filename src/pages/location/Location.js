@@ -1,7 +1,7 @@
 import React from 'react'
 import Google from './GoogleAPI'
 import { Button } from 'react-bootstrap'
-
+import Storepic from './images/1.jpg'
 import './Location.css'
 import { Row, Col, Card, Form } from 'react-bootstrap'
 import * as FaIcons from 'react-icons/fa'
@@ -43,52 +43,275 @@ function Location() {
         <nav className="nav-menu ">
           <ul className="nopadding">
             <li>
-              <div className="Location_item">aaaaa</div>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
             </li>
             <li>
-              <div className="Location_item">vvvvvv</div>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
+            </li>
+
+            <li>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
             </li>
             <li>
-              <div className="Location_item">ccccccc</div>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
             </li>
             <li>
-              <div className="Location_item"></div>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
             </li>
             <li>
-              <div className="Location_item"></div>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
             </li>
             <li>
-              <div className="Location_item"></div>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
             </li>
             <li>
-              <div className="Location_item"></div>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
             </li>
             <li>
-              <div className="Location_item"></div>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
             </li>
             <li>
-              <div className="Location_item"></div>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
             </li>
             <li>
-              <div className="Location_item"></div>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
             </li>
             <li>
-              <div className="Location_item"></div>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
             </li>
             <li>
-              <div className="Location_item"></div>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
             </li>
             <li>
-              <div className="Location_item"></div>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
             </li>
             <li>
-              <div className="Location_item"></div>
-            </li>
-            <li>
-              <div className="Location_item"></div>
-            </li>
-            <li>
-              <div className="Location_item"></div>
+              <div className="Location_item">
+                <div className="photoBox">
+                  <img src={Storepic} alt="Product" />
+                </div>
+                <h5>桃園門市</h5>
+                <div className="address fontSize14">門市地址</div>
+                <div className="time fontSize14">營業時間</div>
+                <div className="phone fontSize14">連絡電話</div>
+                <div className="addressA fontSize14">
+                  320桃園市中壢區中北路200號
+                </div>
+                <div className="timeA fontSize14">上午9:00~下午9:00</div>
+                <div className="phoneA fontSize14">04 2237 0460</div>
+
+                <Button variant="primary">詳細資訊</Button>
+              </div>
             </li>
           </ul>
         </nav>

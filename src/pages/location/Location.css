@@ -35,15 +35,90 @@ li {
   justify-content: center;
 
   position: fixed;
-  padding-right: 5px;
+  padding-right: 10px;
   display: flex;
   justify-content: center;
   overflow-y: scroll;
   height: 700px;
 }
 .Location_item {
-  height: 120px;
-  width: 410px;
-  margin: 24px;
-  background-color: orangered;
+  display: flex;
+  height: 140px;
+  width: 430px;
+  margin: 24px 10px 24px 16px;
+  /* background-color: orangered; */
+  position: relative;
+  border-bottom: 2px solid #707070;
+}
+.photoBox {
+  height: 138px;
+  width: 138px;
+  background-color: green;
+  overflow: hidden;
+}
+
+.photoBox img {
+  height: 138px;
+}
+.Location_item button {
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+}
+.Location_item h5 {
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+
+.Location_item .address {
+  position: absolute;
+  left: 146px;
+  top: 40px;
+}
+.Location_item .time {
+  position: absolute;
+  left: 146px;
+  top: 68px;
+}
+.Location_item .phone {
+  position: absolute;
+  left: 146px;
+  top: 96px;
+}
+
+.Location_item .addressA {
+  position: absolute;
+  left: 220px;
+  top: 40px;
+}
+.Location_item .timeA {
+  position: absolute;
+  left: 220px;
+  top: 68px;
+}
+
+.Location_item .phoneA {
+  position: absolute;
+  left: 220px;
+  top: 96px;
+}
+
+/* scrollbar css */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 1px grey; */
+  border-left: 1px solid #cacaca;
+  border-right: 1px solid #cacaca;
+  border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e74c3c;
+  border-radius: 2px;
 }
