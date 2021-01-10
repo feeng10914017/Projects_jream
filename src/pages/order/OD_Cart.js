@@ -9,12 +9,75 @@ import CartMotor from './OD_Ccomponents/OD_CartMotor'
 import CartProduct from './OD_Ccomponents/OD_CartProduct'
 import GrandTotal from './OD_Ccomponents/OD_GrandTotal'
 
-//引入資料庫
-const cartData = require('./data/cart.json')
-//帶入資料庫
-function OD_Cart({ data = cartData }) {
-  /////////////////////////////////////////////////////////////////
+function OD_Cart() {
+  const [motorCart, setMotorCart] = useState([])
+  const [productCart, setProductCart] = useState([])
+  const [shipping, setShipping] = useState([])
   const [navState, setNavState] = useState('NavMotor')
+  //引入資料庫
+  async function getMotor() {
+    try {
+      const response = await fetch('http://localhost:5555/motorCart', {
+        method: 'get',
+      })
+      if (response.ok) {
+        // 剖析資料為JS的數值
+        const data = await response.json()
+
+        // 設定資料到MotorCart狀態
+        setMotorCart(data)
+      }
+    } catch (error) {
+      // 發生錯誤的處理情況
+      alert('無法得到伺服器資料，請稍後再重試')
+      console.log(error)
+    }
+  }
+  async function getProduct() {
+    try {
+      const response = await fetch('http://localhost:5555/productCart', {
+        method: 'get',
+      })
+      if (response.ok) {
+        // 剖析資料為JS的數值
+        const data = await response.json()
+
+        // 設定資料到ProductCart狀態
+        setProductCart(data)
+      }
+    } catch (error) {
+      // 發生錯誤的處理情況
+      alert('無法得到伺服器資料，請稍後再重試')
+      console.log(error)
+    }
+  }
+  async function getShipping() {
+    try {
+      const response = await fetch('http://localhost:5555/shipping', {
+        method: 'get',
+      })
+      if (response.ok) {
+        // 剖析資料為JS的數值
+        const data = await response.json()
+
+        // 設定資料到Shippin狀態
+        setShipping(data)
+      }
+    } catch (error) {
+      // 發生錯誤的處理情況
+      alert('無法得到伺服器資料，請稍後再重試')
+      console.log(error)
+    }
+  }
+  //帶入資料庫
+  useEffect(() => {
+    getMotor()
+    getProduct()
+    getShipping()
+  }, [])
+
+  /////////////////////////////////////////////////////////////////
+
   //透過改變後的navState,來調整顯示的內容(使用function changeDisplay)
   const navStateOnClick = navState
   function changeDisplay(a, b) {
@@ -28,7 +91,6 @@ function OD_Cart({ data = cartData }) {
       ? changeDisplay('BodyMotor', 'BodyProd')
       : changeDisplay('BodyProd', 'BodyMotor')
   }, [navState])
-
   return (
     <>
       <article className="col-10">
@@ -62,16 +124,16 @@ function OD_Cart({ data = cartData }) {
           </Card.Header>
           {/* CardBody */}
           <div id="BodyMotor">
-            <CartMotor data={data.motor} />
+            <CartMotor data={motorCart} />
           </div>
           <div id="BodyProd">
-            <CartProduct data={data.product} />
+            <CartProduct data={productCart} />
           </div>
         </Card>
         <GrandTotal
           type={navState}
-          motorData={data.motor}
-          productData={data.product}
+          data={navStateOnClick == 'NavMotor' ? motorCart : productCart}
+          shipping={shipping}
         />
 
         {/* Button */}

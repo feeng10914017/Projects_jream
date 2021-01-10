@@ -3,7 +3,7 @@ import { Row, Form, Card } from 'react-bootstrap'
 
 function OD_CartMotor(props) {
   const MotortData = props.data
-  // console.log(MotortData)
+  console.log(MotortData)
 
   const display = (
     <>
