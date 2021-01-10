@@ -17,81 +17,36 @@ function FavoriteM({
             <img src={Moto} alt="Moto" />
             <FaStar className="A-FVStar" />
           </td>
-          <td style={{ height: '80px' }}>
-            <p
-              style={{
-                marginLeft: '80px',
-                marginTop: '24px',
-                fontSize: '19px',
-              }}
-            >
+          <td className="A-FVTd1">
+            <p>
               租賃次數:
-              <span style={{ color: '#B02825', fontSize: '22px' }}>
-                {' '}
-                {rentFrequency}{' '}
-              </span>
-              次
+              <span> {rentFrequency} </span>次
             </p>
           </td>
-          <td className="">
-            <p
-              style={{
-                marginLeft: '80px',
-                marginTop: '24px',
-                fontSize: '19px',
-                color: '#707070',
-              }}
-            >
-              排氣量:{' '}
-              <span style={{ marginLeft: '32px', fontSize: '22px' }}>
-                {Displacement}
-              </span>{' '}
-              (C.C.)
+          <td className="A-FVTd2">
+            <p>
+              排氣量: <span>{Displacement}</span> (C.C.)
             </p>
           </td>
-          <td className="">
-            <p
-              style={{
-                marginLeft: '80px',
-                marginTop: '24px',
-                fontSize: '19px',
-                color: '#707070',
-              }}
-            >
-              價錢:{' '}
-              <span
-                style={{
-                  marginLeft: '32px',
-                  fontSize: '22px',
-                  color: '#B02825',
-                }}
-              >
-                {Price} /天
-              </span>
+          <td className="A-FVTd3">
+            <p>
+              價錢: <span>{Price} /天</span>
             </p>
           </td>
         </tr>
         <tr>
-          <td colSpan="3">
-            <p
-              style={{
-                marginLeft: '80px',
-                marginTop: '24px',
-                fontSize: '19px',
-              }}
-            >
-              關於Ninja® 400 的最新消息
-            </p>
+          <td colSpan="3" className="A-FVTL">
+            <p>關於Ninja® 400 的最新消息</p>
             <ul>
-              <li style={{ marginLeft: '60px' }}>
+              <li>
                 Ninja®
                 400似乎是一種巧合，但如果我們從更大的角度看待問題，這似乎是一種不可避免的事實。
               </li>
-              <li style={{ marginLeft: '60px' }}>
+              <li>
                 Ninja®
                 400似乎是一種巧合，但如果我們從更大的角度看待問題，這似乎是一種不可避免的事實。
               </li>
-              <li style={{ marginLeft: '60px' }}>
+              <li>
                 Ninja®
                 400似乎是一種巧合，但如果我們從更大的角度看待問題，這似乎是一種不可避免的事實。
               </li>
@@ -100,9 +55,7 @@ function FavoriteM({
         </tr>
         <tr>
           <td colSpan="4">
-            <Button style={{ float: 'right', margin: '16px 16px 16px 0' }}>
-              再租一次
-            </Button>
+            <Button className="A-FVTLB">再租一次</Button>
           </td>
         </tr>
       </ListGroup.Item>

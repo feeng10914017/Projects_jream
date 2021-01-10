@@ -23,6 +23,8 @@ function Favorite() {
         </Card.Header>
         <ListGroup variant="flush" className="A-FVList">
           <FavoriteM />
+          <FavoriteM />
+          <FavoriteM />
         </ListGroup>
       </Card>
       <Link to="/member">

@@ -279,3 +279,61 @@
   width: 23px;
   color: #ffb400;
 }
+
+//車輛最愛元件
+
+.A-FVTd1 {
+  height: 80px;
+  p {
+    margin-left: 80px;
+    margin-top: 24px;
+    font-size: 19px;
+    span {
+      color: #b02825;
+      font-size: 22px;
+    }
+  }
+}
+
+.A-FVTd2 {
+  p {
+    margin-left: 80px;
+    margin-top: 24px;
+    font-size: 19px;
+    color: #707070;
+    span {
+      margin-left: 32px;
+      font-size: 22px;
+    }
+  }
+}
+
+.A-FVTd3 {
+  p {
+    margin-left: 80px;
+    margin-top: 24px;
+    font-size: 19px;
+    color: #707070;
+    span {
+      margin-left: 32px;
+      font-size: 22px;
+      color: #b02825;
+    }
+  }
+}
+
+.A-FVTL {
+  p {
+    margin-left: 80px;
+    margin-top: 24px;
+    font-size: 19px;
+  }
+  ul > li {
+    margin-left: 60px;
+  }
+}
+
+.A-FVTLB {
+  float: right;
+  margin: 16px 16px 16px 0;
+}
