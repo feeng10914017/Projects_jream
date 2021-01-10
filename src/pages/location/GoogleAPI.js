@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react'
+import * as parkData from './data/skateboard-parks.json'
 import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
@@ -33,10 +34,12 @@ export class MapContainer extends React.Component {
     return (
       <Map
         google={this.props.google}
-        style={{ width: '100%', height: '105.6%', position: 'relative' }}
-        zoom={8}
+        style={{ width: '100%', height: '100%', position: 'relative' }}
+        zoom={8.3}
         initialCenter={{
           // lat: 24.797296,
+          // lat: 24.2,
+
           lat: 23.797296,
           lng: 121.03121,
         }}
@@ -63,6 +66,22 @@ export class MapContainer extends React.Component {
           WEBSIT="http://localhost:3000/news"
           onClick={this.onMarkerClick}
         />
+        <Marker
+          title={'The marker`s title will appear as a tooltip.'}
+          name={'PUPU'}
+          position={{ lat: 23.020694578539796, lng: 120.23467868749272 }}
+          // WEBSIT="https://www.youtube.com/watch?v=ontX4zfVqK8&ab_channel=TraversyMedia"
+          WEBSIT="http://localhost:3000/news"
+          onClick={this.onMarkerClick}
+        />
+        <Marker
+          title={'The marker`s title will appear as a tooltip.'}
+          name={'PUPU'}
+          position={{ lat: 22.01362973300851, lng: 120.74360749936547 }}
+          // WEBSIT="https://www.youtube.com/watch?v=ontX4zfVqK8&ab_channel=TraversyMedia"
+          WEBSIT="http://localhost:3000/news"
+          onClick={this.onMarkerClick}
+        />
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
@@ -72,7 +91,7 @@ export class MapContainer extends React.Component {
             <p>{this.state.selectedPlace.title}</p>
 
             <Button variant="primary" href={this.state.selectedPlace.WEBSIT}>
-              {this.state.selectedPlace.name}
+              詳細資訊
             </Button>
           </div>
         </InfoWindow>

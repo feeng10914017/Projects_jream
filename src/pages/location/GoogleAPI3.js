@@ -19,10 +19,10 @@ function Map() {
         setSelectedPark(null)
       }
     }
-    window.addEventListener('keydown', listener)
+    // window.addEventListener('keydown', listener)
 
     return () => {
-      window.removeEventListener('keydown', listener)
+      // window.removeEventListener('keydown', listener)
     }
   }, [])
 
@@ -42,10 +42,6 @@ function Map() {
           onClick={() => {
             setSelectedPark(park)
           }}
-          // icon={{
-          //   url: `/skateboarding.svg`,
-          //   scaledSize: new window.google.maps.Size(25, 25),
-          // }}
         />
       ))}
 
