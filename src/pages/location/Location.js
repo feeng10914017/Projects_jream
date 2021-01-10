@@ -43,13 +43,13 @@ function Location() {
         <nav className="nav-menu ">
           <ul className="nopadding">
             <li>
-              <div className="Location_item"></div>
+              <div className="Location_item">aaaaa</div>
             </li>
             <li>
-              <div className="Location_item"></div>
+              <div className="Location_item">vvvvvv</div>
             </li>
             <li>
-              <div className="Location_item"></div>
+              <div className="Location_item">ccccccc</div>
             </li>
             <li>
               <div className="Location_item"></div>
