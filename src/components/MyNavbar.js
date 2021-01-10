@@ -24,11 +24,13 @@ function MyNavbar(props) {
           fixed="top"
         >
           <Navbar.Brand href="#home">
-            <img
-              className="logo"
-              src="http://localhost:3000/images/logo/logo_w.png"
-              alt=""
-            />
+            <Nav.Link as={NavLink} to="/">
+              <img
+                className="logo"
+                src="http://localhost:3000/images/logo/logo_w.png"
+                alt=""
+              />
+            </Nav.Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
