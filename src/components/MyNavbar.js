@@ -22,7 +22,7 @@ function MyNavbar(props) {
           expand="lg"
           bg="primary"
           variant="dark"
-          fixed="top"
+          // fixed="top"
         >
           <Navbar.Brand href="#home">
             <img className="logo" src={logo_w} alt="" />
