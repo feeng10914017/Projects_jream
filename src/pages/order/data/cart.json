@@ -9,6 +9,7 @@
             "model":"GSX - S1000S",
             "color":"BROWN",
             "rentalPrice":"1000",
+            "rentalAmount":"2",
             "rentalLocation":"台北濱江店",
             "rentalDate":"2021-01-09",
             "rentalTime":"14:16:00",
@@ -46,6 +47,7 @@
             "productAmount": 1,
             "productPrice":"1000"
         }
-    ]
+    ],
+    "shipping":"1"
     
 }

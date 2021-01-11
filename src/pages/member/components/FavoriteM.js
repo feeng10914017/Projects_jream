@@ -8,6 +8,8 @@ function FavoriteM({
   rentFrequency = '3',
   Displacement = '500',
   Price = '1000',
+  MotoN = 'Ninja® 400',
+  News = 'Ninja®400似乎是一種巧合，但如果我們從更大的角度看待問題，這似乎是一種不可避免的事實。',
 }) {
   return (
     <>
@@ -36,20 +38,11 @@ function FavoriteM({
         </tr>
         <tr>
           <td colSpan="3" className="A-FVTL">
-            <p>關於Ninja® 400 的最新消息</p>
+            <p>關於{MotoN} 的最新消息</p>
             <ul>
-              <li>
-                Ninja®
-                400似乎是一種巧合，但如果我們從更大的角度看待問題，這似乎是一種不可避免的事實。
-              </li>
-              <li>
-                Ninja®
-                400似乎是一種巧合，但如果我們從更大的角度看待問題，這似乎是一種不可避免的事實。
-              </li>
-              <li>
-                Ninja®
-                400似乎是一種巧合，但如果我們從更大的角度看待問題，這似乎是一種不可避免的事實。
-              </li>
+              <li>{News}</li>
+              <li>{News}</li>
+              <li>{News}</li>
             </ul>
           </td>
         </tr>

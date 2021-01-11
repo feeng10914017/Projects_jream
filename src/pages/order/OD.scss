@@ -70,20 +70,11 @@
 .lease {
   display: flex;
   align-items: center;
-  .form-group {
-    margin-right: 1.5rem;
-  }
-  .cardContent {
-    width: 100%;
-    hr {
-      margin: 1.5rem 0;
-    }
+  margin: 0;
+  label {
+    margin-bottom: 0;
     .row {
-      display: flex;
       align-items: center;
-      margin: 0 1rem;
-      margin-top: 1rem;
-
       img {
         width: 100%;
         object-fit: cover;
@@ -92,21 +83,21 @@
       .col-1,
       .col-2,
       .col-3,
-      .col-4,
-      .col-5 {
+      .col-4 {
         margin: 0;
-        padding-left: 2.5rem;
+        padding-left: 2rem;
         padding-right: 0;
         line-height: 100%;
-      }
-      .motorImage {
-        padding: 0;
       }
       h6 {
         text-align: end;
         color: #b02825;
       }
     }
+  }
+  hr {
+    margin: 1.5rem 0;
+    margin-left: 2.5rem;
   }
 }
 // 購物車總結樣式 ( OD_GrandTotal )

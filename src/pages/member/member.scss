@@ -49,21 +49,46 @@
 
 //登入頁面css
 
-.A-login > div {
-  margin: 0 auto;
+.A-login {
+  // margin: 0 auto;
   margin-top: 56px;
   height: 480px;
-  width: 960px;
-  border: 1px solid #000000;
+  width: 1140px;
+  border: 1px solid #d8d8d8;
   border-radius: 3px;
+
+  .A-SIG {
+    position: absolute;
+    left: 268px;
+    top: 400px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 3px 0 0 16px;
+    width: 100px;
+    height: 30px;
+  }
+
+  .A-SIG:hover {
+    background-color: #b02825;
+    border: 1px solid #b02825;
+  }
+
+  img {
+    width: 640px;
+    height: 480px;
+    // opacity: 0.3;
+  }
 
   form {
     margin: 0 auto;
-    margin-top: 80px;
-    margin-left: 560px;
+    margin-left: 720px;
     padding: 0;
     max-width: 600px;
     width: 350px;
+    position: absolute;
+    top: 280px;
   }
 }
 

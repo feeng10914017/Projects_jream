@@ -12,11 +12,14 @@ function OD_CartProduct(props) {
           return (
             <>
               <Card.Body key={index}>
-                <div className="lease">
-                  <Form.Group controlId={'checkBoxProduct' + v.id}>
-                    <Form.Check type="checkbox" label="" />
-                  </Form.Group>
-                  <div className="cardContent">
+                <Form.Group
+                  controlId={'checkBoxProduct' + v.id}
+                  className="lease"
+                >
+                  <div>
+                    <Form.Control type="checkbox" />
+                  </div>
+                  <Form.Label>
                     <Row>
                       <div className="col-2 motorImage">
                         <img
@@ -25,31 +28,24 @@ function OD_CartProduct(props) {
                         />
                       </div>
                       <p className="col-4">{v.productName}</p>
-                      <p className="col-2">
-                        <Form.Group controlId="formGridState">
-                          <Form.Label></Form.Label>
-                          <Form.Control
-                            as="select"
-                            defaultValue={v.productSize}
-                          >
-                            <option>xxl</option>
-                            <option>...</option>
-                          </Form.Control>
-                        </Form.Group>
-                      </p>
-                      <p className="col-2">
-                        <Form.Group controlId="formBasicEmail">
-                          <Form.Label></Form.Label>
-                          <Form.Control
-                            type="number"
-                            placeholder={v.productAmount}
-                          />
-                        </Form.Group>
-                      </p>
+                      <div className="col-2">
+                        <Form.Control as="select" defaultValue={v.productSize}>
+                          <option>xxl</option>
+                          <option>...</option>
+                        </Form.Control>
+                      </div>
+
+                      <div className="col-2">
+                        <Form.Control
+                          type="number"
+                          placeholder={v.productAmount}
+                        />
+                      </div>
+
                       <h6 className="col-2">$ {v.productPrice}</h6>
                     </Row>
-                  </div>
-                </div>
+                  </Form.Label>
+                </Form.Group>
               </Card.Body>
               {/* 在每個商品間添加分隔線 */}
               <div className="col-11 m-auto" key={index}>
