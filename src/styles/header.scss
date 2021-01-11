@@ -1,22 +1,101 @@
-nav.navbar {
-  padding: 0 1rem;
+//一般header的樣式
+.header {
+  nav.navbar {
+    padding: 0 1rem;
+    .navbar-brand {
+      padding: 0;
+      margin: 0;
+      a {
+        padding: 0;
+        img {
+          height: 3rem;
+          width: 10rem;
+          margin: 1rem;
+        }
+      }
+    }
+    .navbar-collapse {
+      .navbar-nav {
+        a.nav-link {
+          padding: 0.5rem 1rem;
+          display: flex;
+          align-items: center;
+          h6 {
+            padding-left: 0.5rem;
+            color: $info;
+            margin: 0;
+          }
+          svg {
+            color: $info;
+          }
+        }
+      }
+    }
+  }
 }
-nav > a.navbar-brand {
-  padding: 0;
-  margin: 0;
+//首頁header的樣式
+.bannerHeader {
+  nav.navbar {
+    padding: 0 1rem;
+    border-bottom: 3px solid #b02825;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f5f5f5+0,f5f5f5+100&0.9+5,0.1+95 */
+    background: -moz-linear-gradient(
+      top,
+      rgba(245, 245, 245, 0.9) 0%,
+      rgba(245, 245, 245, 0.9) 5%,
+      rgba(245, 245, 245, 0.1) 95%,
+      rgba(245, 245, 245, 0.1) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(245, 245, 245, 0.9) 0%,
+      rgba(245, 245, 245, 0.9) 5%,
+      rgba(245, 245, 245, 0.1) 95%,
+      rgba(245, 245, 245, 0.1) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      rgba(245, 245, 245, 0.9) 0%,
+      rgba(245, 245, 245, 0.9) 5%,
+      rgba(245, 245, 245, 0.1) 95%,
+      rgba(245, 245, 245, 0.1) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f5f5f5', endColorstr='#1af5f5f5',GradientType=0 ); /* IE6-9 */
+
+    .navbar-brand {
+      padding: 0;
+      margin: 0;
+      a {
+        padding: 0;
+        img {
+          height: 3rem;
+          width: 10rem;
+          margin: 1rem;
+        }
+      }
+    }
+    .navbar-collapse {
+      .navbar-nav {
+        a.nav-link {
+          padding: 0.5rem 1rem;
+          display: flex;
+          align-items: center;
+          h6 {
+            padding-left: 0.5rem;
+            color: $primary;
+            margin: 0;
+          }
+          svg {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
 }
-nav > a > .logo {
-  height: 3rem;
-  width: 10rem;
-  margin: 1rem;
-}
-nav > div.navbar-collapse > div.navbar-nav > a.nav-link {
-  padding: 0.5rem 1rem;
-  display: flex;
-  align-items: center;
-}
-nav > div.navbar-collapse > div.navbar-nav > a.nav-link > h6 {
-  padding-left: 0.5rem;
-  color: $info;
-  margin: 0;
+
+.bannerHeaderTwo.active {
+  position: fixed;
+  top: 200px;
+  width: 100%;
 }
