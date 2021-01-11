@@ -24,6 +24,7 @@ import Order from './pages/order/OD_Cart'
 import OrderCheckout from './pages/order/OD_Checkout'
 import OrderCreditCard from './pages/order/OD_CreditCard'
 import OrderCartReport from './pages/order/OD_CartReport'
+import OrderHomeDelivery from './pages/order/OD_HomeDelivery'
 function App() {
   return (
     <Router>
@@ -62,6 +63,7 @@ function App() {
               <Route path="/rent-record">
                 <MemberRentrecord />
               </Route>
+              {/* order */}
               <Route path="/order-record">
                 <MemberOrderrecord />
               </Route>
@@ -74,7 +76,10 @@ function App() {
               <Route path="/order/CreditCard">
                 <OrderCreditCard />
               </Route>
-              <Route path="/order">
+              <Route path="/order/HomeDelivery">
+                <OrderHomeDelivery />
+              </Route>
+              <Route path="/order" exact>
                 <Order />
               </Route>
               <Route path="/">

@@ -14,6 +14,7 @@ function OD_Cart() {
   const [productCart, setProductCart] = useState([])
   const [shipping, setShipping] = useState([])
   const [navState, setNavState] = useState('NavMotor')
+
   //引入資料庫
   async function getMotor() {
     try {
@@ -69,14 +70,13 @@ function OD_Cart() {
       console.log(error)
     }
   }
+
   //帶入資料庫
   useEffect(() => {
     getMotor()
     getProduct()
     getShipping()
   }, [])
-
-  /////////////////////////////////////////////////////////////////
 
   //透過改變後的navState,來調整顯示的內容(使用function changeDisplay)
   const navStateOnClick = navState
@@ -91,6 +91,9 @@ function OD_Cart() {
       ? changeDisplay('BodyMotor', 'BodyProd')
       : changeDisplay('BodyProd', 'BodyMotor')
   }, [navState])
+
+  /////////////////////////////////////////////////////////////////
+
   return (
     <>
       <article className="col-10">
@@ -141,7 +144,13 @@ function OD_Cart() {
           <Button className="finalBtn place-center" variant="danger">
             繼續購物
           </Button>
-          <Link to="/order/checkout">
+          <Link
+            to={
+              navStateOnClick == 'NavMotor'
+                ? '/order/CreditCard'
+                : '/order/checkout'
+            }
+          >
             <Button
               className="finalBtn finalBtnTwo place-center"
               variant="primary"
