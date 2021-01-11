@@ -52,7 +52,7 @@ function OD_CartReport() {
                   <p className="col-sm-4">訂單金額</p>
                   <p className="col-sm-8">NT$ 140,000</p>
                 </Row>
-                <div className="line"></div>
+                <div className="line col auto col-sm-12"></div>
               </div>
               <div className="col-lg-6">
                 <Row>

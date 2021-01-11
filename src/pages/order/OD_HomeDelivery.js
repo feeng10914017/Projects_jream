@@ -5,14 +5,13 @@ import { Link } from 'react-router-dom'
 //引入頁面元件
 import OrderStep from './OD_Ccomponents/OD_Step'
 import CkoutPerson from './OD_Ccomponents/OD_CKO_Person'
-import CkoutCredit from './OD_Ccomponents/OD_CKO_Credit'
 import CkoutInvoice from './OD_Ccomponents/OD_CKO_Invoice'
 import CkoutDetail from './OD_Ccomponents/OD_CKO_Detail'
 
 //引入樣式表
 import './OD.scss'
 
-function OD_CreditCard() {
+function OD_HomeDelivery() {
   return (
     <>
       <article className="col-10 CheckTwo">
@@ -20,8 +19,6 @@ function OD_CreditCard() {
         {/* <CkoutDetail /> */}
         <Form>
           <CkoutPerson />
-          <div className="block"></div>
-          <CkoutCredit />
           <div className="block"></div>
           <CkoutInvoice />
         </Form>
@@ -47,4 +44,4 @@ function OD_CreditCard() {
   )
 }
 
-export default OD_CreditCard
+export default OD_HomeDelivery
