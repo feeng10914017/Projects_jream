@@ -7,7 +7,7 @@ import {
   InfoWindow,
 } from 'react-google-maps'
 import * as parkData from './data/skateboard-parks.json'
-import mapStyles from './mapStyles'
+
 import { Button } from 'react-bootstrap'
 
 function Map() {
@@ -30,7 +30,7 @@ function Map() {
     <GoogleMap
       defaultZoom={10}
       defaultCenter={{ lat: 45.4211, lng: -75.6903 }}
-      defaultOptions={{ styles: mapStyles }}
+      defaultOptions={{}}
     >
       {parkData.features.map((park) => (
         <Marker

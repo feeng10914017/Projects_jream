@@ -6,6 +6,15 @@
 li {
   list-style: none;
 }
+.width_1 {
+  width: 476px;
+}
+.width_2 {
+  width: 1px !important;
+  height: 'calc(100vh - 80px)' !important;
+  z-index: 100 !important;
+  overflow: hidden;
+}
 
 .SearchingBox {
   position: relative;
@@ -41,6 +50,21 @@ li {
   overflow-y: scroll;
   height: 700px;
 }
+/* scrollbar css */
+.nav-menu::-webkit-scrollbar {
+  width: 10px;
+}
+.nav-menu::-webkit-scrollbar-track {
+  border-left: 1px solid #cacaca;
+  border-right: 1px solid #cacaca;
+  border-radius: 2px;
+}
+
+.nav-menu::-webkit-scrollbar-thumb {
+  background: #e74c3c;
+  border-radius: 2px;
+}
+
 .Location_item {
   display: flex;
   height: 140px;
@@ -101,24 +125,4 @@ li {
   position: absolute;
   left: 220px;
   top: 96px;
-}
-
-/* scrollbar css */
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  /* box-shadow: inset 0 0 1px grey; */
-  border-left: 1px solid #cacaca;
-  border-right: 1px solid #cacaca;
-  border-radius: 2px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #e74c3c;
-  border-radius: 2px;
 }
