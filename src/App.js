@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
 //排版用元件 全部都使用
 import MyNavbar from './components/MyNavbar'
@@ -8,7 +8,7 @@ import MainContent from './components/MainContent'
 import ScrollToTop from './components/ScrollToTop'
 
 //頁面元件
-import Home from './pages/home/Home'
+import Home from './pages/Home'
 import News from './pages/news/News'
 import Motor from './pages/motor/Motor'
 import Product from './pages/product/Product'
@@ -25,14 +25,18 @@ import OrderCheckout from './pages/order/OD_Checkout'
 import OrderCreditCard from './pages/order/OD_CreditCard'
 import OrderCartReport from './pages/order/OD_CartReport'
 import OrderHomeDelivery from './pages/order/OD_HomeDelivery'
+import { propTypes } from 'react-bootstrap/esm/Image'
 function App() {
   return (
     <Router>
       <>
-        <MyNavbar />
-        <MainContent>
-          <ScrollToTop>
+        <ScrollToTop>
+          <MyNavbar />
+          <MainContent>
             <Switch>
+              <Route path="/" exact>
+                <Home />
+              </Route>
               <Route path="/news">
                 <News />
               </Route>
@@ -79,16 +83,13 @@ function App() {
               <Route path="/order/HomeDelivery">
                 <OrderHomeDelivery />
               </Route>
-              <Route path="/order" exact>
+              <Route path="/order">
                 <Order />
               </Route>
-              <Route path="/">
-                <Home />
-              </Route>
             </Switch>
-          </ScrollToTop>
-        </MainContent>
-        <MyFooter />
+          </MainContent>
+          <MyFooter />
+        </ScrollToTop>
       </>
     </Router>
   )
