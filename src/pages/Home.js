@@ -1,8 +1,27 @@
 import React, { useState, useEffect } from 'react'
+import $ from 'jquery'
 import Banner from '../components/video/homeBanner.mp4'
+import BnWhite from '../components/home/BannerWhite'
+import BnRed from '../components/home/BannerRed'
 function Home() {
+  // useEffect(() => {
+  //   let navbarPosition = $('#bannerRed').offset().top
+  //   // console.log(navbarPosition)
+  //   $(window).on('scroll', function () {
+  //     let scrollTop = $(this).scrollTop()
+  //     console.log(scrollTop)
+  //     if (scrollTop >= navbarPosition) {
+  //       $('.navbar').addClass('active')
+  //       console.log('+')
+  //     } else {
+  //       $('.navbar').removeClass('active')
+  //       console.log('-')
+  //     }
+  //   })
+  // }, [])
   return (
     <>
+      {/* <BnWhite /> */}
       <video
         autoplay="autoplay"
         loop="true"
@@ -20,6 +39,8 @@ function Home() {
       >
         <source src={Banner} type="video/mp4" />
       </video>
+      <div id='bannerRed'></div>
+      {/* <BnRed /> */}
     </>
   )
 }

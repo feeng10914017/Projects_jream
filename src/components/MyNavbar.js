@@ -16,21 +16,24 @@ import { withRouter, NavLink } from 'react-router-dom'
 function MyNavbar(props) {
   const { location } = props
   // console.log(location.pathname)
+
   useEffect(() => {
-    let navbarPosition = $('.bannerHeaderTwo').offset().top
+    let navbarPosition = $('.bannerHeader').offset().top
     // console.log(navbarPosition)
     $(window).on('scroll', function () {
       let scrollTop = $(this).scrollTop()
       console.log(scrollTop)
       if (scrollTop >= navbarPosition) {
         $('.navbar').addClass('active')
-        console.log('+')
+        $('.logo').attr('src', 'http://localhost:3000/images/logo/logo_w.png')
+        // console.log('+')
       } else {
         $('.navbar').removeClass('active')
-        console.log('-')
+        // console.log('-')
       }
     })
   }, [])
+
   //一般header
   const display = (
     <>
@@ -40,7 +43,7 @@ function MyNavbar(props) {
           expand="lg"
           bg="primary"
           variant="dark"
-          // fixed="top"
+        // fixed="top"
         >
           <Navbar.Brand href="#home">
             <Nav.Link as={NavLink} to="/">
@@ -83,60 +86,56 @@ function MyNavbar(props) {
     </>
   )
 
-  //首頁header
-  const honeDisplay = (
-    <>
-      <header className="bannerHeader">
-        <Navbar
-          collapseOnSelect
-          expand="lg"
-          variant="dark"
-          // fixed="top"
-          className
-        >
-          <Navbar.Brand href="#home">
-            <Nav.Link as={NavLink} to="/">
-              <img
-                className="logo"
-                src="http://localhost:3000/images/logo/logo_r.png"
-                alt=""
-              />
+  const homeDisplay = (
+    <><header className="bannerHeader">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        variant="dark"
+        fixed="top"
+
+      >
+        <Navbar.Brand href="#home">
+          <Nav.Link as={NavLink} to="/">
+            <img
+              className="logo"
+              src="http://localhost:3000/images/logo/logo_r.png"
+              alt=""
+            />
+          </Nav.Link>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link as={NavLink} to="/news">
+              <h6>最新消息</h6>
             </Nav.Link>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link as={NavLink} to="/news">
-                <h6>最新消息</h6>
-              </Nav.Link>
-              <Nav.Link as={NavLink} to="/motor">
-                <h6>機車租賃</h6>
-              </Nav.Link>
-              <Nav.Link as={NavLink} to="/product">
-                <h6>周邊商品</h6>
-              </Nav.Link>
-              <Nav.Link as={NavLink} to="/location">
-                <h6>據點消息</h6>
-              </Nav.Link>
-            </Nav>
-            <Nav>
-              <Nav.Link as={NavLink} to="/login">
-                <IoPersonOutline size="18" />
-                <h6>登入</h6>
-              </Nav.Link>
-              <Nav.Link eventKey={2} as={NavLink} to="/order">
-                <IoCartOutline size="20" />
-                <h6>購物車</h6>
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </header>
-      <div style={{ height: '300px' }}></div>
-      <div className="bannerHeaderTwo">{display}</div>
+            <Nav.Link as={NavLink} to="/motor">
+              <h6>機車租賃</h6>
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/product">
+              <h6>周邊商品</h6>
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/location">
+              <h6>據點消息</h6>
+            </Nav.Link>
+          </Nav>
+          <Nav>
+            <Nav.Link as={NavLink} to="/login">
+              <IoPersonOutline size="18" />
+              <h6>登入</h6>
+            </Nav.Link>
+            <Nav.Link eventKey={2} as={NavLink} to="/order">
+              <IoCartOutline size="20" />
+              <h6>購物車</h6>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </header>
     </>
   )
-  return <>{location.pathname == '/' ? honeDisplay : display}</>
+  return <>{location.pathname == '/' ? homeDisplay : display}</>
 }
 
 export default withRouter(MyNavbar)
