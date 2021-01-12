@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom'
 import './OD.scss'
 import OrderStep from './OD_Ccomponents/OD_Step'
 import GrandTotal from './OD_Ccomponents/OD_GrandTotal'
+
 function OD_Checkout() {
+  const [checkType, setCheckType] = useState('')
   return (
     <>
       <article className="col-10">
@@ -50,6 +52,9 @@ function OD_Checkout() {
                     label="信用卡付款"
                     name="invoice"
                     id="credit"
+                    onClick={() => {
+                      setCheckType('credit')
+                    }}
                   />
                   <p>
                     <span>滿1000元免運費，運費 $0</span>
@@ -62,6 +67,9 @@ function OD_Checkout() {
                     label="宅配 貨到付款"
                     name="invoice"
                     id="delivery"
+                    onClick={() => {
+                      setCheckType('delivery')
+                    }}
                   />
                   <p>
                     <span>滿1000元免運費，運費 $0</span>
@@ -71,7 +79,7 @@ function OD_Checkout() {
             </Form>
           </Card.Body>
         </Card>
-        <GrandTotal />
+        {/* <GrandTotal /> */}
 
         {/* Button */}
         <Row className="justify-content-center col-10 finalBtnParent">
@@ -80,7 +88,18 @@ function OD_Checkout() {
               返回購物車
             </Button>
           </Link>
-          <Link to="/order/CreditCard">
+          <Link
+            to={() => {
+              switch (checkType) {
+                case 'credit':
+                  return '/order/CreditCard'
+                case 'delivery':
+                  return '/order/HomeDelivery'
+                default:
+                  return
+              }
+            }}
+          >
             <Button
               className="finalBtn finalBtnTwo place-center"
               variant="primary"

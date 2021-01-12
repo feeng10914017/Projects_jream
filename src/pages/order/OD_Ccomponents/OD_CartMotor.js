@@ -5,6 +5,45 @@ function OD_CartMotor(props) {
   const MotortData = props.data
   console.log(MotortData)
 
+  async function motorCart(id) {
+    // 構造出一個準備要送到伺服器的物件data
+    const newMember = {
+      // name,
+      // email,
+      // username,
+      // password,
+    }
+
+    // 要使用try-catch來作錯誤處理
+    try {
+      // 從伺服器得到資料
+      const response = await fetch('http://localhost:5555/users/' + id, {
+        method: 'put',
+        body: JSON.stringify(newMember),
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      })
+
+      // ok只能判斷201-299狀態碼的情況
+      if (response.ok) {
+        // 剖析資料為JS的數值
+        const data = await response.json()
+        console.log(data)
+
+        // 設定資料到member狀態
+        if (data.id) alert('更新成功')
+
+        // history.push('/member')
+      }
+    } catch (error) {
+      // 發生錯誤的處理情況
+      alert('無法得到伺服器資料，請稍後再重試')
+      console.log(error)
+    }
+  }
+
   const display = (
     <>
       {MotortData.length > 0 ? (

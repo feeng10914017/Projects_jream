@@ -17,7 +17,7 @@ function OD_CreditCard() {
     <>
       <article className="col-10 CheckTwo">
         <OrderStep step="3" />
-        <CkoutDetail />
+        {/* <CkoutDetail /> */}
         <Form>
           <CkoutPerson />
           <div className="block"></div>

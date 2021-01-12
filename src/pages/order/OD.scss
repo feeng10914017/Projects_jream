@@ -93,6 +93,12 @@
         text-align: end;
         color: #b02825;
       }
+      .inputAmount {
+        border: 1px solid #b02825;
+      }
+      .inputAmount:read-only {
+        background: none;
+      }
     }
   }
   hr {

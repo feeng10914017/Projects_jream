@@ -7,7 +7,7 @@ function OD_GrandTotal(props) {
   //計算商品總和
   let sum = 0
   data.map((v, index) => {
-    sum = sum + Number(v.productPrice)
+    sum = sum + Number(v.productPrice) * Number(v.productAmount)
   })
   //計算運費
   let shipping = ''
