@@ -40,7 +40,7 @@ export const Locationdata = [
     path: '/member',
     lat: 23.968842279661512,
     lng: 120.96951541325002,
-    address: '320桃園市中壢區中北路200號',
+    address: '台北市文山區指南路三段',
     opentime: '上午9:00~下午9:00',
     img: '/images/4.jpg',
     phone: '04-2237-0464',

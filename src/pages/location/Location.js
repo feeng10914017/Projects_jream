@@ -62,7 +62,15 @@ function Location() {
                     <div className="timeA fontSize14">{item.opentime}</div>
                     <div className="phoneA fontSize14">{item.phone}</div>
 
-                    <Button variant="primary">詳細資訊</Button>
+                    <Button
+                      variant="primary"
+                      onClick={() => {
+                        setLat(item.lat)
+                        setLng(item.lng)
+                      }}
+                    >
+                      詳細資訊
+                    </Button>
                   </div>
                 </li>
               )
