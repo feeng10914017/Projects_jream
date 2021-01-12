@@ -2,31 +2,34 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap'
 
+import './member.scss'
+
 function Login() {
   return (
     <>
-      <Form style={{ marginTop: '80px' }}>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>帳號:</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group controlId="formBasicPassword">
-          <Form.Label>密碼:</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-        <Form.Group controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-        <Link to="/member">
-          <Button variant="primary" type="submit">
-            登入
-          </Button>
-        </Link>
-      </Form>
+      <div className="A-login">
+        <div>
+          <Form>
+            <Form.Group controlId="formBasicEmail">
+              <Form.Label>帳號:</Form.Label>
+              <Form.Control type="email" placeholder="Account" />
+            </Form.Group>
+            <Form.Group controlId="formBasicPassword">
+              <Form.Label>密碼:</Form.Label>
+              <Form.Control type="password" placeholder="Password" />
+            </Form.Group>
+            <Form.Group controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="保持登入" />
+            </Form.Group>
+            <Link to="/member">
+              <Button variant="primary" type="submit">
+                登入
+              </Button>
+            </Link>
+            <p class="mt-5 mb-3 text-muted text-center">&copy; 2020-2021</p>
+          </Form>
+        </div>
+      </div>
     </>
   )
 }

@@ -1,0 +1,57 @@
+
+{
+    "memberID":[1],
+    "motorCart":[
+        {
+            "id":"0",
+            "img":"Leoncino_250_gray.jpg",
+            "company":"SUZUKI",
+            "model":"GSX - S1000S",
+            "color":"BROWN",
+            "rentalPrice":"1000",
+            "rentalAmount":"1",
+            "rentalLocation":"台北濱江店",
+            "rentalDate":"2021-01-09",
+            "rentalTime":"14:16:00",
+            "returnLocation":"台北濱江店",
+            "returnDate":"2021-01-10",
+            "returnTime":"14:16:00",
+            "valid":0
+            
+        }
+    ],
+    "productCart":[
+        {
+            "id":"0",
+            "img":"7418807_R-removebg-preview.png",
+            "productName":"BENKIA 摩托車防水秋冬防摔衣 黑 女款 騎行服 防摔衣 秋冬款 HDF-JD-W149",
+            "productSize":"XXL",
+            "productColor":"BROWN",
+            "productAmount": 1,
+            "productPrice":"1000",
+            "valid":0
+        },
+        {
+            "id":"1",
+            "img":"7418807_R-removebg-preview.png",
+            "productName":"BENKIA 摩托車防水秋冬防摔衣 黑 女款 騎行服 防摔衣 秋冬款 HDF-JD-W149",
+            "productSize":"XXL",
+            "productColor":"BROWN",
+            "productAmount": 6,
+            "productPrice":"1000",
+            "valid":0
+        },
+        {
+            "id":"2",
+            "img":"7418807_R-removebg-preview.png",
+            "productName":"BENKIA 摩托車防水秋冬防摔衣 黑 女款 騎行服 防摔衣 秋冬款 HDF-JD-W149",
+            "productSize":"XXL",
+            "productColor":"BROWN",
+            "productAmount": 8,
+            "productPrice":"1000",
+            "valid":0
+        }
+    ],
+    "shipping":[]
+    
+}
