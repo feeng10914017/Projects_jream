@@ -1,5 +1,6 @@
 import { React, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+// import GoogleLogin from 'react-google-login'
 
 import './member.scss'
 import './login.scss'
@@ -10,6 +11,9 @@ function Login(props) {
       document.querySelector('.cont').classList.toggle('s--signup')
     })
   })
+  // const responseGoogle = (response) => {
+  //   console.log(response)
+  // }
   return (
     <>
       {/* <p className="tip">Click on button in image container</p> */}
@@ -30,9 +34,27 @@ function Login(props) {
               Sign In
             </button>
           </Link>
+          {/* <GoogleLogin
+            clientId="901766639548-dbbqmn3rl36n9aos6lk09vqa41u0k2g7.apps.googleusercontent.com"
+            render={(renderProps) => (
+              <button
+                onClick={renderProps.onClick}
+                disabled={renderProps.disabled}
+                className="loginBtn loginBtn--google"
+              >
+                Login with Google
+              </button>
+            )}
+            buttonText="Google"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            cookiePolicy={'single_host_origin'}
+            isSignedIn={true}
+          /> */}
           <button type="button" className="fb-btn A-Btn">
             Connect with <span>facebook</span>
           </button>
+
           <p class="mt-5 mb-3 text-muted text-center">&copy; 2020-2021</p>
         </div>
         <div className="sub-cont">
