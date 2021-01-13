@@ -51,7 +51,7 @@
 
 .A-login {
   // margin: 0 auto;
-  margin-top: 56px;
+  margin: 56px 0 56px 0;
   height: 480px;
   width: 1140px;
   border: 1px solid #d8d8d8;
@@ -99,12 +99,14 @@
     text-align: center;
   }
   h4 {
-    margin-top: 48px;
-    margin-bottom: 16px;
+    margin: 48px 0 16px 0;
+    // margin-top: 48px;
+    // margin-bottom: 16px;
   }
   .container {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin: 16px 0 16px 0;
+    // margin-top: 16px;
+    // margin-bottom: 16px;
   }
 }
 
@@ -124,12 +126,12 @@
   width: 1152px;
   margin: 0 auto;
   p {
-    margin: 0;
-    margin-left: 120px;
+    margin: 0 0 0 120px;
+    // margin-left: 120px;
   }
   .A-ORCard2 {
-    margin: 0;
-    margin-left: 360px;
+    margin: 0 0 0 360px;
+    // margin-left: 360px;
   }
 }
 
@@ -151,16 +153,18 @@
 .A-OrderRP1 {
   vertical-align: middle;
   p {
-    margin-left: 48px;
-    margin-bottom: 0;
+    margin: 0 0 0 48px;
+    // margin-left: 48px;
+    // margin-bottom: 0;
     width: 100px;
     text-align: center;
   }
 }
 
 .A-OrderRP2 {
-  margin-left: 48px;
-  margin-bottom: 0;
+  margin: 0 0 0 48px;
+  // margin-left: 48px;
+  // margin-bottom: 0;
   width: 100px;
   text-align: center;
   font-size: 12px;
@@ -170,8 +174,9 @@
 .A-OrderRTime {
   vertical-align: middle;
   p {
-    margin-left: 105px;
-    margin-bottom: 0;
+    margin: 0 0 0 105px;
+    // margin-left: 105px;
+    // margin-bottom: 0;
     color: #cacaca;
   }
 }
@@ -179,16 +184,18 @@
 .A-OrderRPrice {
   vertical-align: middle;
   p {
-    margin-left: 72px;
-    margin-bottom: 0;
+    margin: 0 0 0 72px;
+    // margin-left: 72px;
+    // margin-bottom: 0;
   }
 }
 
 .A-OrderRStatus {
   vertical-align: middle;
   p {
-    margin-left: 80px;
-    margin-bottom: 0;
+    margin: 0 0 0 80px;
+    // margin-left: 80px;
+    // margin-bottom: 0;
     color: #7474fa;
   }
 }
@@ -216,12 +223,13 @@
   width: 1152px;
   margin: 0 auto;
   .A-MotoNum {
-    margin: 0;
-    margin-left: 336px;
+    margin: 0 0 0 336px;
+    // margin: 0;
+    // margin-left: 336px;
   }
   .A-MotoTimeC {
-    margin: 0;
-    margin-left: 160px;
+    margin: 0 0 0 160px;
+    // margin-left: 160px;
   }
 }
 
@@ -243,8 +251,9 @@
 .A-MotoRNum {
   vertical-align: middle;
   p {
-    margin-left: 56px;
-    margin-bottom: 0;
+    margin: 0 0 0 56px;
+    // margin-left: 56px;
+    // margin-bottom: 0;
     width: 100px;
     text-align: center;
   }
@@ -253,16 +262,18 @@
 .A-MotoTime {
   vertical-align: middle;
   p {
-    margin-left: 128px;
-    margin-bottom: 0;
+    margin: 0 0 0 128px;
+    // margin-left: 128px;
+    // margin-bottom: 0;
   }
 }
 
 .A-MotoStatus {
   vertical-align: middle;
   p {
-    margin-left: 80px;
-    margin-bottom: 0;
+    margin: 0 0 0 80px;
+    // margin-left: 80px;
+    // margin-bottom: 0;
     color: #7474fa;
   }
 }
@@ -280,8 +291,8 @@
   width: 1152px;
   margin: 0 auto;
   div > th > td > p {
-    margin: 0;
-    margin-left: 120px;
+    margin: 0 0 0 120px;
+    // margin-left: 120px;
   }
 }
 
@@ -310,8 +321,9 @@
 .A-FVTd1 {
   height: 80px;
   p {
-    margin-left: 80px;
-    margin-top: 24px;
+    margin: 24px 0 0 80px;
+    // margin-left: 80px;
+    // margin-top: 24px;
     font-size: 19px;
     span {
       color: #b02825;
@@ -322,8 +334,9 @@
 
 .A-FVTd2 {
   p {
-    margin-left: 80px;
-    margin-top: 24px;
+    margin: 24px 0 0 80px;
+    // margin-left: 80px;
+    // margin-top: 24px;
     font-size: 19px;
     color: #707070;
     span {
@@ -335,8 +348,9 @@
 
 .A-FVTd3 {
   p {
-    margin-left: 80px;
-    margin-top: 24px;
+    margin: 24px 0 0 80px;
+    // margin-left: 80px;
+    // margin-top: 24px;
     font-size: 19px;
     color: #707070;
     span {
@@ -349,8 +363,9 @@
 
 .A-FVTL {
   p {
-    margin-left: 80px;
-    margin-top: 24px;
+    margin: 24px 0 0 80px;
+    // margin-left: 80px;
+    // margin-top: 24px;
     font-size: 19px;
   }
   ul > li {
