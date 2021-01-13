@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Form, Button, Image } from 'react-bootstrap'
 
@@ -6,13 +6,11 @@ import './member.scss'
 
 var background = { backgroundSize: 'cover' }
 
-function Login() {
+function Login(props) {
   return (
     <div className="A-login">
       <div style={{ width: 'auto', position: 'relative' }}>
-        <Link to="/sign">
-          <div className="A-SIG">圖片文字</div>
-        </Link>
+        <Button className="A-SIG">圖片文字</Button>
         <Image
           style={background}
           responsive
