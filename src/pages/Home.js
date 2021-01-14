@@ -55,7 +55,8 @@ function Home() {
           </div>
         </Col>
       </Container>
-      <article className="homeSquare1">
+
+      <section className="homeSquare1">
         <Container>
           {/* marquee */}
           <Col md={{ span: 10, offset: 1 }} className="Marquee">
@@ -75,10 +76,10 @@ function Home() {
             </h4>
             <section className="step123"></section>
           </article>
-          <article className="homeBlock">
-            <Col md={8}>
+          <article className="homeBlock hBlock1">
+            <Col md={9}>
               <Row>
-                <div className="homeLineS"></div>
+                <div className="homeLineSL"></div>
                 <h3>RECOMMEND</h3>
                 <div className="homeLineM"></div>
               </Row>
@@ -86,18 +87,61 @@ function Home() {
             </Col>
           </article>
         </Container>
-      </article>
-      <Parallax bgImage={bgImg1} strength={250}>
+      </section>
+      <Parallax bgImage={bgImg1} strength={250} className='zIndex1'>
+        <div style={{ height: 800 }}></div>
+      </Parallax>
+
+      <section className="homeSquare2">
+        <Container>
+          <article className="homeBlock">
+            <Col md={{ span: 9, offset: 3 }}>
+              <Row>
+                <div className="homeLineM"></div>
+                <h3>FEATURED</h3>
+                <div className="homeLineSR"></div>
+              </Row>
+              <div className="blockContainer"></div>
+            </Col>
+          </article>
+
+          {/* 關於我們 */}
+          <article className="homeAbout">
+            <Col md={{ span: 10, offset: 1 }}>
+              <Row>
+                <div className="homeLineM"></div>
+                <h3>ABOUT</h3>
+                <div className="homeLineM"></div>
+              </Row>
+              <div className="blockContainer">
+                <h6>現代人工作壓力大，有些人會選擇在假日騎車或是開車出遊，在這當中有許多人會選擇騎乘重機出遊，藉由騎乘的過程來釋放平時的壓力。</h6>
+                <br />
+                <h6>但一台重機價格不斐，所以我們希望藉由這個平台，吸引有著重機夢但經濟預算不允許，或是假日想要騎著重機跑跑山路、海線欣賞風景、亦或是享受騎乘時快感的人，有一個值得信任租賃平台讓他/她們去租賃重機。</h6>
+              </div>
+            </Col>
+          </article>
+        </Container>
+      </section>
+      <Parallax bgImage={bgImg2} strength={300} className='zIndex1'>
         <div style={{ height: 800 }}>
-          <div style={insideStyles}>HTML inside the parallax</div>
+
         </div>
       </Parallax>
-      <h2>| | |</h2>
-      <Parallax bgImage={bgImg2} strength={300}>
-        <div style={{ height: 800 }}>
-          <div style={insideStyles}>Dynamic Blur</div>
-        </div>
-      </Parallax>
+
+      <section className="homeSquare3">
+        <Container>
+          <article className="homeBlock hBlock1">
+            <Col md={9}>
+              <Row>
+                <div className="homeLineSL"></div>
+                <h3>CONTACT&nbsp;&nbsp;US</h3>
+                <div className="homeLineM"></div>
+              </Row>
+              <div className="blockContainer"></div>
+            </Col>
+          </article>
+        </Container>
+      </section>
     </>
   )
 }
