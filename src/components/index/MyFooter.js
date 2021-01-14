@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { GrFacebookOption } from 'react-icons/gr'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { AiOutlineTwitter } from 'react-icons/ai'
 import { AiOutlineMinus } from 'react-icons/ai'
-import {
-  Navbar,
-  Nav,
-  Form,
-  FormControl,
-  Button,
-  NavDropdown,
-} from 'react-bootstrap'
+import { Nav } from 'react-bootstrap'
 
 import { NavLink } from 'react-router-dom'
 
