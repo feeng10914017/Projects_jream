@@ -11,7 +11,7 @@ function Card() {
             <div className="card-body">
               <h5 className="card-title A-cardh5">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
+                  // xmlns="http://www.w3.org/2000/svg"
                   width="28"
                   height="28"
                   fill="currentColor"

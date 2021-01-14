@@ -138,6 +138,9 @@ function MyNavbar(props) {
   )
   return (
     <>
+      {/* {location.pathname == '/' || location.pathname == '/motor'
+        ? homeDisplay
+        : display} */}
       {location.pathname == '/' ? homeDisplay : display}
       {/* {display} */}
     </>
