@@ -1,38 +1,14 @@
-import React, { useState, useEffect } from 'react'
-import $ from 'jquery'
+import React from 'react'
+
 import { IoPersonOutline } from 'react-icons/io5'
 import { IoCartOutline } from 'react-icons/io5'
-import {
-  Navbar,
-  Nav,
-  Form,
-  FormControl,
-  Button,
-  NavDropdown,
-} from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 
 import { withRouter, NavLink } from 'react-router-dom'
 
 function MyNavbar(props) {
   const { location } = props
   // console.log(location.pathname)
-
-  // useEffect(() => {
-  //   let navbarPosition = $('.bannerHeader').offset().top
-  //   // console.log(navbarPosition)
-  //   $(window).on('scroll', function () {
-  //     let scrollTop = $(this).scrollTop()
-  //     console.log(scrollTop)
-  //     if (scrollTop >= navbarPosition) {
-  //       $('.navbar').addClass('active')
-  //       $('.logo').attr('src', 'http://localhost:3000/images/logo/logo_w.png')
-  //       // console.log('+')
-  //     } else {
-  //       $('.navbar').removeClass('active')
-  //       // console.log('-')
-  //     }
-  //   })
-  // }, [])
 
   //一般header
   const display = (
@@ -138,7 +114,10 @@ function MyNavbar(props) {
   )
   return (
     <>
-      {location.pathname == '/' ? homeDisplay : display}
+      {/* {location.pathname === '/' || location.pathname == '/motor'
+        ? homeDisplay
+        : display} */}
+      {location.pathname === '/' ? homeDisplay : display}
       {/* {display} */}
     </>
   )
