@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Carousel } from 'react-bootstrap'
+import '../product.css'
 
 function ControlledCarousel() {
   const [index, setIndex] = useState(0)
@@ -10,7 +11,7 @@ function ControlledCarousel() {
 
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
+      <Carousel.Item style={{ height: 'calc(66vh - 80px )' }}>
         <img className="d-block w-100 " src="/images/1.jpg" alt="First slide" />
 
         <Carousel.Caption>
@@ -18,10 +19,10 @@ function ControlledCarousel() {
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item style={{ height: 'calc(66vh - 80px )' }}>
         <img
-          className="d-block w-100 h-50"
-          src="/images/2.jpg"
+          className="d-block w-100 "
+          src="https://kickstart.bikeexif.com/wp-content/uploads/2014/11/see-see-motorcycle-shop-3.jpg"
           alt="Second slide"
         />
 
@@ -30,12 +31,8 @@ function ControlledCarousel() {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 h-50"
-          src="/images/3.jpg"
-          alt="Third slide"
-        />
+      <Carousel.Item style={{ height: 'calc(66vh - 80px )' }}>
+        <img className="d-block w-100 " src="/images/3.jpg" alt="Third slide" />
 
         <Carousel.Caption>
           <h3>Third slide label</h3>

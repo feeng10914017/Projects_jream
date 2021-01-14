@@ -1,10 +1,14 @@
+.Carousel img {
+  height: 50%;
+}
+
 /* ---------------Products--------------- */
 .products {
   width: 100%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 15px 0;
+  margin: 0px 0;
 }
 .products .card {
   max-width: 250px;

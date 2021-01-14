@@ -10,12 +10,13 @@ import './product.css'
 function App(props) {
   return (
     <DataProvider>
-      <Carousel />
-      <Container>
-        <div className="App ">
+      <Carousel style={{ height: '30vh' }} />
+
+      <div className="App ">
+        <Container>
           {props.type === 'details' ? <Details /> : <Products />}
-        </div>
-      </Container>
+        </Container>
+      </div>
     </DataProvider>
   )
 }
