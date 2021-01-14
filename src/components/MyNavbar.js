@@ -37,7 +37,7 @@ function MyNavbar(props) {
   //一般header
   const display = (
     <>
-      <header className="header">
+      <header className="header ">
         <Navbar
           collapseOnSelect
           expand="lg"
@@ -88,13 +88,19 @@ function MyNavbar(props) {
 
   const homeDisplay = (
     <>
-      <header className="bannerHeader">
-        <Navbar collapseOnSelect expand="lg" variant="dark" fixed="top">
+      <header className="header">
+        <Navbar
+          collapseOnSelect
+          expand="lg"
+          variant="dark"
+          fixed="top"
+          bg="primary"
+        >
           <Navbar.Brand href="#home">
             <Nav.Link as={NavLink} to="/">
               <img
                 className="logo"
-                src="http://localhost:3000/images/logo/logo_r.png"
+                src="http://localhost:3000/images/logo/logo_w.png"
                 alt=""
               />
             </Nav.Link>
@@ -130,7 +136,15 @@ function MyNavbar(props) {
       </header>
     </>
   )
-  return <>{location.pathname == '/' ? homeDisplay : display}</>
+  return (
+    <>
+      {/* {location.pathname == '/' || location.pathname == '/motor'
+        ? homeDisplay
+        : display} */}
+      {location.pathname == '/' ? homeDisplay : display}
+      {/* {display} */}
+    </>
+  )
 }
 
 export default withRouter(MyNavbar)

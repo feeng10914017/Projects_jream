@@ -113,7 +113,7 @@ export const DataProvider = (props) => {
     },
     {
       _id: '7',
-      title: 'Wacth Product 06',
+      title: 'Wacth Product 07',
       images: [
         'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
         'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
@@ -131,7 +131,7 @@ export const DataProvider = (props) => {
     },
     {
       _id: '8',
-      title: 'Wacth Product 06',
+      title: 'Wacth Product 08',
       images: [
         'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
         'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
@@ -149,7 +149,7 @@ export const DataProvider = (props) => {
     },
     {
       _id: '9',
-      title: 'Wacth Product 06',
+      title: 'Wacth Product 09',
       images: [
         'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
         'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
@@ -167,7 +167,7 @@ export const DataProvider = (props) => {
     },
     {
       _id: '10',
-      title: 'Wacth Product 06',
+      title: 'Wacth Product 10',
       images: [
         'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
         'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
@@ -185,7 +185,7 @@ export const DataProvider = (props) => {
     },
     {
       _id: '11',
-      title: 'Wacth Product 06',
+      title: 'Wacth Product 11',
       images: [
         'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
         'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
@@ -203,7 +203,7 @@ export const DataProvider = (props) => {
     },
     {
       _id: '12',
-      title: 'Wacth Product 06',
+      title: 'Wacth Product 12',
       images: [
         'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
         'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
@@ -221,7 +221,7 @@ export const DataProvider = (props) => {
     },
     {
       _id: '13',
-      title: 'Wacth Product 06',
+      title: 'Wacth Product 13',
       images: [
         'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
         'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
@@ -239,7 +239,7 @@ export const DataProvider = (props) => {
     },
     {
       _id: '14',
-      title: 'Wacth Product 06',
+      title: 'Wacth Product 14',
       images: [
         'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
         'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
@@ -257,7 +257,7 @@ export const DataProvider = (props) => {
     },
     {
       _id: '15',
-      title: 'Wacth Product 06',
+      title: 'Wacth Product 15',
       images: [
         'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
         'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
@@ -275,7 +275,7 @@ export const DataProvider = (props) => {
     },
     {
       _id: '16',
-      title: 'Wacth Product 06',
+      title: 'Wacth Product 16',
       images: [
         'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
         'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
@@ -293,7 +293,7 @@ export const DataProvider = (props) => {
     },
     {
       _id: '17',
-      title: 'Wacth Product 06',
+      title: 'Wacth Product 17',
       images: [
         'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
         'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
@@ -311,7 +311,7 @@ export const DataProvider = (props) => {
     },
     {
       _id: '18',
-      title: 'Wacth Product 06',
+      title: 'Wacth Product 18',
       images: [
         'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
         'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
@@ -329,7 +329,7 @@ export const DataProvider = (props) => {
     },
     {
       _id: '19',
-      title: 'Wacth Product 06',
+      title: 'Wacth Product 19',
       images: [
         'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
         'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
@@ -347,7 +347,7 @@ export const DataProvider = (props) => {
     },
     {
       _id: '20',
-      title: 'Wacth Product 06',
+      title: 'Wacth Product 20',
       images: [
         'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
         'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',

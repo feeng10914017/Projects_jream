@@ -1,3 +1,7 @@
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
 .Carousel img {
   height: 50%;
 }
@@ -17,7 +21,7 @@
   height: 480px;
   /* box-shadow: 0 0 5px #ccc; */
   padding: 15px;
-  margin: 15px;
+  margin: 10px;
   cursor: pointer;
 }
 .card img {

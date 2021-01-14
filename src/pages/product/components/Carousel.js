@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { Carousel } from 'react-bootstrap'
+import { withRouter } from 'react-router-dom'
 import '../product.css'
 
-function ControlledCarousel() {
+function ControlledCarousel(props) {
   const [index, setIndex] = useState(0)
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex)
   }
+  if (props.location.pathname === '/location') return <></>
 
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
@@ -47,4 +49,5 @@ function ControlledCarousel() {
 
 // render(<ControlledCarousel />)
 
-export default ControlledCarousel
+// export default ControlledCarousel
+export default withRouter(ControlledCarousel)

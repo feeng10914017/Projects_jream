@@ -11,6 +11,14 @@ function MainContent(props) {
         {/* </main> */}
       </>
     )
+  if (props.location.pathname === '/product/Detail/id?')
+    return (
+      <>
+        {/* <main role="main" className="flex-shrink-0"> */}
+        <div>{props.children}</div>
+        {/* </main> */}
+      </>
+    )
   if (props.location.pathname === '/product')
     return (
       <>
@@ -25,7 +33,7 @@ function MainContent(props) {
   //一般內容
   const display = (
     <>
-      <main role="main" className="flex-shrink-0">
+      <main role="main" className="flex-shrink-0 blockContainer">
         <Container>{props.children}</Container>
         {/* <div>{props.children}</div> */}
         {/* <div className="container"></div> */}

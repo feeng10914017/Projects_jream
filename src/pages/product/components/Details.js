@@ -43,8 +43,8 @@ function Details(props) {
           />
 
           <div className="box-details">
-            <h2 title={product.title}>{product.title}</h2>
-            <h3>${product.price}</h3>
+            <h4 title={product.title}>{product.title}</h4>
+            <h5>${product.price}</h5>
             <Colors colors={product.colors} />
             <Sizes sizes={product.sizes} />
             <p>{product.description}</p>
