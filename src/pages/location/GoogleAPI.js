@@ -72,10 +72,21 @@ export class MapContainer extends React.Component {
         lng: -122.419416,
       },
     }
-    this.markerOne = React.createRef()
+    //this.markerOne = React.createRef()
+    this.markers = React.createRef([])
+    this.markers.current = []
+
+    this.infoWindowOne = React.createRef()
+  }
+
+  addToRefs = (el) => {
+    if (el && !this.markers.current.includes(el)) {
+      this.markers.current.push(el)
+    }
   }
 
   onMarkerClick = (props, marker, e) => {
+    console.log(marker)
     this.setState((prevState) => ({
       selectedPlace: props,
       activeMarker: marker,
@@ -108,6 +119,13 @@ export class MapContainer extends React.Component {
     }
     if (prevProps.currentLocation !== this.props.currentLocation) {
       this.recenterMap()
+      console.log(this.props.id)
+      console.log(this.markers.current)
+      // const index = this.markers.current.findIndex(
+      //   (marker) => +marker.props.itemid === this.props.id
+      // )
+
+      // console.log(index)
     }
   }
 
@@ -118,13 +136,27 @@ export class MapContainer extends React.Component {
     const google = this.props.google
     const maps = google.maps
 
-    console.log(this.props, this.map)
+    //console.log(this.props, this.map)
 
     if (map) {
-      console.log(this.markerOne.current.marker)
+      //  console.log(this.markerOne.current.marker)
+      //  console.log(this.state.activeMarker)
       let center = new maps.LatLng(curr.lat, curr.lng)
       map.panTo(center)
       map.setZoom(12)
+
+      const index = this.markers.current.findIndex(
+        (marker) => +marker.props.itemid === this.props.id
+      )
+
+      console.log(index)
+      console.log(this.markers.current[index])
+
+      if (index > -1) {
+        let markerCurrent = this.markers.current[index].marker
+        let infowindowCurrent = this.infoWindowOne.current.infowindow
+        infowindowCurrent.open(map, markerCurrent)
+      }
 
       // this.setState({
       //   showingInfoWindow: true,
@@ -182,7 +214,8 @@ export class MapContainer extends React.Component {
                 position={{ lat: item.lat, lng: item.lng }}
                 WEBSIT="http://localhost:3000/member"
                 onClick={this.onMarkerClick}
-                ref={this.markerOne}
+                ref={this.addToRefs}
+                itemid={item.id}
               />
             )
           })}
@@ -190,10 +223,11 @@ export class MapContainer extends React.Component {
           <InfoWindow
             marker={this.state.activeMarker}
             visible={this.state.showingInfoWindow}
+            ref={this.infoWindowOne}
           >
             <div>
-              <h4>{this.state.selectedPlace.name}</h4>
-              <p>{this.state.selectedPlace.title}</p>
+              <h4>{this.props.name}</h4>
+              <p>{this.props.address}</p>
 
               <Button variant="primary" href={this.state.selectedPlace.WEBSIT}>
                 詳細資訊

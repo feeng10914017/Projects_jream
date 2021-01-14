@@ -11,6 +11,14 @@ function MainContent(props) {
         {/* </main> */}
       </>
     )
+  if (props.location.pathname === '/product')
+    return (
+      <>
+        {/* <main role="main" className="flex-shrink-0"> */}
+        <div>{props.children}</div>
+        {/* </main> */}
+      </>
+    )
 
   const { location } = props
 

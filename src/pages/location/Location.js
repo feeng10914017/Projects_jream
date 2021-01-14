@@ -8,6 +8,9 @@ import { Locationdata } from './data/locationdata.js'
 function Location() {
   const [lat, setLat] = useState(0)
   const [lng, setLng] = useState(0)
+  const [id, setId] = useState(0)
+  const [name, setName] = useState('')
+  const [address, setAddress] = useState('')
 
   return (
     <div className="d-flex">
@@ -64,6 +67,10 @@ function Location() {
                       onClick={() => {
                         setLat(item.lat)
                         setLng(item.lng)
+                        setId(item.id)
+                        setAddress(item.address)
+                        setName(item.name)
+                        console.log(item.id)
                       }}
                     >
                       詳細資訊
@@ -80,7 +87,12 @@ function Location() {
         className="width_2 nopadding"
         style={{ height: 'calc(100vh - 80px)' }}
       >
-        <Google currentLocation={{ lat, lng }} />
+        <Google
+          currentLocation={{ lat, lng }}
+          id={id}
+          name={name}
+          address={address}
+        />
       </div>
     </div>
   )
