@@ -2,12 +2,11 @@ import { React, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 // import GoogleLogin from 'react-google-login'
 
-import './member.scss'
 import './login.scss'
 
-function Login(props) {
+function Login() {
   useEffect(() => {
-    document.querySelector('.img__btn').addEventListener('click', function () {
+    document.querySelector('.img__btn').addEventListener('click', () => {
       document.querySelector('.cont').classList.toggle('s--signup')
     })
   })
@@ -16,7 +15,6 @@ function Login(props) {
   // }
   return (
     <>
-      {/* <p className="tip">Click on button in image container</p> */}
       <div className="cont">
         <div className="form sign-in">
           <h2>Welcome back,</h2>

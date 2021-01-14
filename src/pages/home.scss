@@ -51,9 +51,49 @@
     }
   }
 }
+.homeLineSL {
+  width: 3rem;
+  height: 3rem;
+  border-top: 3px solid #b02825;
+  border-left: 3px solid #b02825;
+  transform: translateY(1.5rem);
+}
+.homeLineSR {
+  width: 3rem;
+  height: 3rem;
+  border-top: 3px solid #b02825;
+  border-right: 3px solid #b02825;
+  transform: translateY(1.5rem);
+}
+.homeLineM {
+  width: 9rem;
+  height: 3rem;
+  border-top: 3px solid #b02825;
+  transform: translateY(1.5rem);
+}
+.homeBlock {
+  .col-md-9 {
+    .row {
+      align-items: center;
+      margin-bottom: 3rem;
+      h3 {
+        margin: 0 1rem;
+      }
+    }
+    .blockContainer {
+      height: 27rem;
+      background-color: chartreuse;
+    }
+  }
+}
+.zIndex1 {
+  img {
+    z-index: -1;
+  }
+}
 .homeSquare1 {
   background: rgb(255, 255, 255);
-  height: 100vh;
+  height: 90vh;
   position: relative;
   .container {
     transform: translateY(-4rem);
@@ -88,7 +128,7 @@
     }
     //首頁步驟
     .homeStep {
-      padding: 5rem 0;
+      padding: 7.5rem 0;
       h4 {
         margin: 0;
         color: #242424;
@@ -99,34 +139,52 @@
         background: lightblue;
       }
     }
+  }
+}
+.homeSquare2 {
+  background: rgb(255, 255, 255);
+  height: 80vh;
+  .container {
+    transform: translateY(-20rem);
     .homeBlock {
-      .col-md-8 {
+      .col-md-9 {
+        .row {
+          justify-content: flex-end;
+        }
+      }
+    }
+    .homeAbout {
+      margin-top: 12.5rem;
+      .col-md-10 {
         .row {
           align-items: center;
-          margin-bottom: 3rem;
-          h3 {
-            margin: 0 1rem;
-          }
+          margin-bottom: 1.5rem;
+          justify-content: center;
         }
-        .blockContainer {
-          height: 47rem;
-          width: 100%;
-          background-color: chartreuse;
+        h3 {
+          margin: 0 1rem;
+        }
+      }
+      .blockContainer {
+        background-color: #f5f5f5;
+        box-shadow: 8px 0 rgba(176, 40, 37, 0.75), 16px 0 rgba(0, 0, 0, 0.1),
+          -8px 0 rgba(176, 40, 37, 0.75), -16px 0 rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem;
+        h6 {
+          line-height: 3rem;
         }
       }
     }
   }
 }
-.homeLineS {
-  width: 3rem;
-  height: 3rem;
-  border-top: 3px solid #b02825;
-  border-left: 3px solid #b02825;
-  transform: translateY(1.5rem);
-}
-.homeLineM {
-  width: 9rem;
-  height: 3rem;
-  border-top: 3px solid #b02825;
-  transform: translateY(1.5rem);
+.homeSquare3 {
+  background: rgb(255, 255, 255);
+  height: 20rem;
+  .container {
+    transform: translateY(-20rem);
+  }
 }

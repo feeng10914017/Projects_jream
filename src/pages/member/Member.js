@@ -3,7 +3,7 @@ import Card from './components/Card'
 import Moto from './images/159983596847-removebg-preview.png'
 import Product from './images/7418807_R-removebg-preview.png'
 
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 function Member({ username = 'Aqing' }) {
   return (
