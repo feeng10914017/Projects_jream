@@ -1,33 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Parallax } from 'react-parallax'
-import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Container, Row, Col } from 'react-bootstrap'
 
 //import video
-import Banner from '../components/video/homeBanner.mp4'
-
-//bootstrap-icon
+import Banner from '../components/home/video/homeBanner.mp4'
+//import components
+import BannerSearch from '../components/home/BannerSearch'
+//import react-icon
 import { GiSelect } from 'react-icons/gi'
 import { RiMotorbikeFill, RiArrowRightSFill } from 'react-icons/ri'
 import { MdDateRange } from 'react-icons/md'
 import { FaStoreAlt } from 'react-icons/fa'
 
-//import style
-import './home.scss'
-
 function Home() {
-  // const styles = {
-  //   fontFamily: 'sans-serif',
-  //   textAlign: 'center',
-  // }
-  const insideStyles = {
-    background: 'white',
-    padding: 20,
-    position: 'absolute',
-    top: '50%',
-    left: '5%',
-    transform: 'translate(-50%,-50%)',
-  }
   const bgImg1 = 'http://localhost:3000/images/home/bgImg1.jpg'
   const bgImg2 = 'http://localhost:3000/images/home/bgImg2.jpg'
   return (
@@ -36,9 +21,9 @@ function Home() {
       <div className="ParallaxVideo">
         <video autoplay="autoplay" loop="true" muted="true">
           <source src={Banner} type="video/mp4" />
-          <h1>Video Background</h1>
         </video>
       </div>
+
       {/* bannerContent */}
       <Container className="bannerTitle">
         <Col md={{ span: 5, offset: 7 }}>
@@ -46,23 +31,7 @@ function Home() {
           <p>
             想騎乘的慾望，不應受到環境左右而引響，快將將一切拋置腦後，享受映入眼簾的美景與被風撫摸的快感吧！
           </p>
-          <div className="BannerSearch">
-            <Row>
-              <h6>還車時間：</h6>
-            </Row>
-            <Row>
-              <h6>租車時間：</h6>
-            </Row>
-            <Row>
-              <h6>城市：</h6>
-            </Row>
-
-            <Link to={'/member'}>
-              <Button className="bannerSearchBtn" variant="primary" block>
-                下一步
-              </Button>
-            </Link>
-          </div>
+          <BannerSearch />
         </Col>
       </Container>
 
@@ -82,7 +51,10 @@ function Home() {
           {/* step */}
           <article className="homeStep">
             <Row>
-              <img src="http://localhost:3000/images/home/stepThreeFingers.svg" />
+              <img
+                src="http://localhost:3000/images/home/stepThreeFingers.svg"
+                alt=""
+              />
               <h4>簡單&nbsp;3&nbsp;步驟&nbsp;&nbsp;&nbsp;即可租車</h4>
             </Row>
             <section className="step123">
@@ -150,7 +122,10 @@ function Home() {
               </Col>
               <Col md={{ span: 2, offset: 1 }} className="well1">
                 <div>
-                  <img src="http://localhost:3000/images/home/well.png" />
+                  <img
+                    src="http://localhost:3000/images/home/well.png"
+                    alt=""
+                  />
                 </div>
               </Col>
             </Row>
@@ -168,7 +143,10 @@ function Home() {
             <Row>
               <Col md={4} className="well2">
                 <div>
-                  <img src="http://localhost:3000/images/home/well.png" />
+                  <img
+                    src="http://localhost:3000/images/home/well.png"
+                    alt=""
+                  />
                 </div>
               </Col>
               <Col md={8}>
@@ -222,7 +200,10 @@ function Home() {
               </Col>
               <Col md={{ span: 2, offset: 1 }} className="well3">
                 <div>
-                  <img src="http://localhost:3000/images/home/well.png" />
+                  <img
+                    src="http://localhost:3000/images/home/well.png"
+                    alt=""
+                  />
                 </div>
               </Col>
             </Row>
