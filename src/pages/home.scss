@@ -72,7 +72,7 @@
   transform: translateY(1.5rem);
 }
 .homeBlock {
-  .col-md-9 {
+  .col-md-8 {
     .row {
       align-items: center;
       margin-bottom: 3rem;
@@ -128,15 +128,71 @@
     }
     //首頁步驟
     .homeStep {
-      padding: 7.5rem 0;
-      h4 {
-        margin: 0;
-        color: #242424;
+      padding: 5.25rem 0;
+      .row {
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 5rem;
+          margin-right: 1.5rem;
+        }
+        h4 {
+          margin: 0;
+          color: #242424;
+        }
       }
+
       .step123 {
-        height: 11.5rem;
         margin-top: 3rem;
-        background: lightblue;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        section {
+          .stepIcon {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            .stepInline {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+          .stepCaption {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+            div {
+              width: 2.25rem;
+              height: 2.25rem;
+              margin-right: 1rem;
+              background: #242424;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              h5 {
+                color: #f5f5f5;
+                margin-bottom: 0;
+              }
+            }
+            h5 {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+    .well1 {
+      // display: flex;
+      // align-items: flex-end;
+      div {
+        transform: rotate(180deg);
+        img {
+          width: 100%;
+        }
       }
     }
   }
@@ -147,7 +203,14 @@
   .container {
     transform: translateY(-20rem);
     .homeBlock {
-      .col-md-9 {
+      .well2 {
+        display: flex;
+        align-items: flex-end;
+        div {
+          transform: translateY(10rem);
+        }
+      }
+      .col-md-8 {
         .row {
           justify-content: flex-end;
         }
@@ -186,5 +249,17 @@
   height: 20rem;
   .container {
     transform: translateY(-20rem);
+    .row {
+      .well3 {
+        display: flex;
+        align-items: flex-end;
+        div {
+          transform: rotate(-90deg);
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
