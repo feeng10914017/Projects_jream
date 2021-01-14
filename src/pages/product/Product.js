@@ -5,14 +5,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { DataProvider } from './components/DataProvider'
 import Details from './components/Details'
 import './product.css'
-function App() {
+function App(props) {
   return (
     <DataProvider>
       <div className="App">
-        <Router>
-          <Products />
-          <Details />
-        </Router>
+        {/* <Router> */}
+        {props.type === 'details' ? <Details /> : <Products />}
+
+        {/* </Router> */}
       </div>
     </DataProvider>
   )

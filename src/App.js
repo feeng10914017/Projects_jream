@@ -18,7 +18,9 @@ import Home from './pages/Home'
 import News from './pages/news/News'
 import Motor from './pages/motor/Motor'
 import Product from './pages/product/Product'
+import Details from './pages/product/components/Details'
 import Location from './pages/location/Location'
+
 import Member from './pages/member/Member'
 import MemberInformation from './pages/member/MemberInformation'
 import MemberEdit from './pages/member/MemberEdit'
@@ -49,12 +51,15 @@ function App() {
               <Route path="/motor">
                 <Motor />
               </Route>
-              <Route path="/product">
-                <Product />
+
+              <Route path="/product/Detail/:id?">
+                <Product type="details" />
               </Route>
-              <Route path="/products/:id">
-                <Product />
+
+              <Route exact path="/product">
+                <Product type="products" />
               </Route>
+
               <Route path="/location">
                 <Location />
               </Route>
