@@ -92,6 +92,26 @@
       }
     }
   }
+  nav.navbar.active {
+    background: $primary;
+    .navbar-collapse {
+      .navbar-nav {
+        a.nav-link {
+          padding: 0.5rem 1rem;
+          display: flex;
+          align-items: center;
+          h6 {
+            padding-left: 0.5rem;
+            color: $info;
+            margin: 0;
+          }
+          svg {
+            color: $info;
+          }
+        }
+      }
+    }
+  }
 }
 
 .bannerHeaderTwo.active {

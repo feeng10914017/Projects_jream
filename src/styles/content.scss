@@ -5,11 +5,11 @@ main > .container {
   // margin-top: 5rem;
   padding: 3rem 0;
   // min-height: calc(100vh - 253px);
-  min-height: 300vh;
+  min-height: calc(100vh - 336px);
 }
 
 .noneContainer {
   margin: 0 auto;
   padding: 0;
-  min-height: 300vh;
+  min-height: calc(100vh - 336px);
 }

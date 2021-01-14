@@ -16,25 +16,28 @@ import { withRouter, NavLink } from 'react-router-dom'
 function MyNavbar(props) {
   const { location } = props
   // console.log(location.pathname)
-  useEffect(() => {
-    let navbarPosition = $('.bannerHeaderTwo').offset().top
-    // console.log(navbarPosition)
-    $(window).on('scroll', function () {
-      let scrollTop = $(this).scrollTop()
-      console.log(scrollTop)
-      if (scrollTop >= navbarPosition) {
-        $('.navbar').addClass('active')
-        console.log('+')
-      } else {
-        $('.navbar').removeClass('active')
-        console.log('-')
-      }
-    })
-  }, [])
+
+  // useEffect(() => {
+  //   let navbarPosition = $('.bannerHeader').offset().top
+  //   // console.log(navbarPosition)
+  //   $(window).on('scroll', function () {
+  //     let scrollTop = $(this).scrollTop()
+  //     console.log(scrollTop)
+  //     if (scrollTop >= navbarPosition) {
+  //       $('.navbar').addClass('active')
+  //       $('.logo').attr('src', 'http://localhost:3000/images/logo/logo_w.png')
+  //       // console.log('+')
+  //     } else {
+  //       $('.navbar').removeClass('active')
+  //       // console.log('-')
+  //     }
+  //   })
+  // }, [])
+
   //一般header
   const display = (
     <>
-      <header className="header">
+      <header className="header ">
         <Navbar
           collapseOnSelect
           expand="lg"
@@ -83,22 +86,21 @@ function MyNavbar(props) {
     </>
   )
 
-  //首頁header
-  const honeDisplay = (
+  const homeDisplay = (
     <>
-      <header className="bannerHeader">
+      <header className="header">
         <Navbar
           collapseOnSelect
           expand="lg"
           variant="dark"
-          // fixed="top"
-          className
+          fixed="top"
+          bg="primary"
         >
           <Navbar.Brand href="#home">
             <Nav.Link as={NavLink} to="/">
               <img
                 className="logo"
-                src="http://localhost:3000/images/logo/logo_r.png"
+                src="http://localhost:3000/images/logo/logo_w.png"
                 alt=""
               />
             </Nav.Link>
@@ -132,11 +134,14 @@ function MyNavbar(props) {
           </Navbar.Collapse>
         </Navbar>
       </header>
-      <div style={{ height: '300px' }}></div>
-      <div className="bannerHeaderTwo">{display}</div>
     </>
   )
-  return <>{location.pathname == '/' ? honeDisplay : display}</>
+  return (
+    <>
+      {location.pathname == '/' ? homeDisplay : display}
+      {/* {display} */}
+    </>
+  )
 }
 
 export default withRouter(MyNavbar)
