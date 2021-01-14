@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 import Google from './GoogleAPI'
 import { Button } from 'react-bootstrap'
-import Storepic from './images/1.jpg'
 import './Location.css'
 import { Row, Col, Card, Form } from 'react-bootstrap'
-import * as FaIcons from 'react-icons/fa'
-
 import { Locationdata } from './data/locationdata.js'
 
 function Location() {

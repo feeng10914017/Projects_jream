@@ -209,6 +209,6 @@ const LoadingContainer = (props) => (
   <div class="hello" style={{ height: '100px' }}></div>
 )
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCBqaQ5bkbz5ECTqswDwKmm2sK_H1E0OQU',
+  apiKey: process.env.REACT_APP_GOOGLE_KEY,
   LoadingContainer: LoadingContainer,
 })(MapContainer)
