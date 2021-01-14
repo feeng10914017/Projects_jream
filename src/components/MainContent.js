@@ -7,7 +7,7 @@ function MainContent(props) {
   //一般內容
   const display = (
     <>
-      <main role="main" className="flex-shrink-0">
+      <main role="main" className="flex-shrink-0 blockContainer">
         <Container>{props.children}</Container>
         {/* <div className="container"></div> */}
       </main>
