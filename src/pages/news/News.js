@@ -1,7 +1,7 @@
 import React from 'react'
 
 function News() {
-  return <></>
+  return <>aaaa</>
 }
 
 export default News
