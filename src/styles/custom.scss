@@ -11,8 +11,10 @@ $danger: #e74c3c;
 // 其它要導入覆蓋掉原本的預設bootstrap樣式要放在這下面
 
 // 版面樣式
-@import './header.scss';
-@import './content.scss';
-@import './footer.scss';
-//購物車樣式
+@import './index/header.scss';
+@import './index/content.scss';
+@import './index/footer.scss';
 
+//首頁樣式
+@import './home/home.scss';
+//購物車樣式
