@@ -5,6 +5,11 @@
 .Carousel img {
   height: 50%;
 }
+/* ---------------productcontain---------------- */
+
+.productcontian {
+  padding-top: 48px;
+}
 
 /* ---------------Products--------------- */
 .products {
@@ -71,13 +76,15 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 50px;
+  padding: 16px;
 }
 .details .img-container {
-  max-width: 400px;
+  /* max-width: 400px; */
+  max-width: 320px;
   width: 100%;
   margin: 20px;
-  height: 450px;
+  /* height: 450px; */
+  height: 360px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -91,7 +98,7 @@
 .box-details {
   max-width: 500px;
   width: 100%;
-  margin: 20px;
+  margin: 16px;
 }
 .box-details h2 {
   text-transform: uppercase;
@@ -225,3 +232,4 @@
   margin-right: 50px;
   color: crimson;
 }
+/* ******Carousel************ */

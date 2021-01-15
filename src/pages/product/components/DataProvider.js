@@ -363,6 +363,24 @@ export const DataProvider = (props) => {
       price: 106,
       count: 1,
     },
+    {
+      _id: '21',
+      title: 'Wacth Product 21',
+      images: [
+        'https://www.upsieutoc.com/images/2020/07/18/img6.jpg',
+        'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
+        'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
+        'https://www.upsieutoc.com/images/2020/07/18/img4.jpg',
+      ],
+      description:
+        'How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.',
+      content:
+        'Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.',
+      colors: ['red', 'black', 'teal'],
+      sizes: ['XL', 'L', 'M', 'XM', 'LX'],
+      price: 106,
+      count: 1,
+    },
   ])
 
   const [cart, setCart] = useState([])

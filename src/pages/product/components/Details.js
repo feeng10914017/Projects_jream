@@ -22,8 +22,11 @@ function Details(props) {
 
   const handleMouseMove = (e) => {
     const { left, top, width, height } = e.target.getBoundingClientRect()
-    const x = ((e.pageX - left) / width) * 100
-    const y = ((e.pageY - top) / height) * 100
+    // console.log(left, top, width, height)
+    // console.log(e.pageX, e.pageY)
+    // console.log(e.pageX - left, e.pageY - top)
+    const x = ((e.clientX - left) / width) * 100
+    const y = ((e.clientY - top) / height) * 100
     imgDiv.current.style.backgroundPosition = `${x}% ${y}%`
   }
 

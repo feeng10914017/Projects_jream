@@ -13,7 +13,7 @@ function App(props) {
     <DataProvider>
       <Carousel />
 
-      <div className="App ">
+      <div className="productcontian ">
         <Container>
           <Row>
             <Col sm={2} className="nopadding ">
