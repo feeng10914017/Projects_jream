@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { Parallax } from 'react-parallax'
 import { Container, Row, Col } from 'react-bootstrap'
 
+
 //import video
 import Banner from '../components/home/video/homeBanner.mp4'
 //import components
 import BannerSearch from '../components/home/BannerSearch'
+import ContactUs from '../components/home/ContactUs'
 //import react-icon
 import { GiSelect } from 'react-icons/gi'
 import { RiMotorbikeFill, RiArrowRightSFill } from 'react-icons/ri'
@@ -15,6 +17,7 @@ import { FaStoreAlt } from 'react-icons/fa'
 function Home() {
   const bgImg1 = 'http://localhost:3000/images/home/bgImg1.jpg'
   const bgImg2 = 'http://localhost:3000/images/home/bgImg2.jpg'
+
   return (
     <>
       {/* bannerVideo */}
@@ -103,9 +106,9 @@ function Home() {
                 </div>
                 <div className="stepCaption">
                   <div>
-                    <h5>3 </h5>
+                    <h5>3</h5>
                   </div>
-                  <h5>最後選取車店家</h5>
+                  <h5>再選店家</h5>
                 </div>
               </section>
             </section>
@@ -196,7 +199,7 @@ function Home() {
                   <h3>CONTACT&nbsp;&nbsp;US</h3>
                   <div className="homeLineM"></div>
                 </Row>
-                <div className="blockContainer"></div>
+                <ContactUs />
               </Col>
               <Col md={{ span: 2, offset: 1 }} className="well3">
                 <div>

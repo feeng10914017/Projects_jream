@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Row, Col, Card, Nav, Button, Form, Table } from 'react-bootstrap'
+import { Row, Card, Nav, Button } from 'react-bootstrap'
 
 import { Link } from 'react-router-dom'
 
@@ -87,7 +87,7 @@ function OD_Cart() {
     document.getElementById(b).classList.add('displayNone')
   }
   useEffect(() => {
-    navStateOnClick == 'NavMotor'
+    navStateOnClick === 'NavMotor'
       ? changeDisplay('BodyMotor', 'BodyProd')
       : changeDisplay('BodyProd', 'BodyMotor')
   }, [navState])
@@ -135,7 +135,7 @@ function OD_Cart() {
         </Card>
         <GrandTotal
           type={navState}
-          data={navStateOnClick == 'NavMotor' ? motorCart : productCart}
+          data={navStateOnClick === 'NavMotor' ? motorCart : productCart}
           shipping={shipping}
         />
 
@@ -146,7 +146,7 @@ function OD_Cart() {
           </Button>
           <Link
             to={
-              navStateOnClick == 'NavMotor'
+              navStateOnClick === 'NavMotor'
                 ? '/order/CreditCard'
                 : '/order/checkout'
             }

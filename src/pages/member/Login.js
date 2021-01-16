@@ -15,7 +15,7 @@ function Login() {
   // }
   return (
     <>
-      <div className="cont">
+      <article className="cont">
         <div className="form sign-in">
           <h2>Welcome back,</h2>
           <label>
@@ -55,6 +55,7 @@ function Login() {
 
           <p class="mt-5 mb-3 text-muted text-center">&copy; 2020-2021</p>
         </div>
+
         <div className="sub-cont">
           <div className="img">
             <div className="img__text m--up">
@@ -94,7 +95,7 @@ function Login() {
             </button>
           </div>
         </div>
-      </div>
+      </article>
     </>
   )
 }
