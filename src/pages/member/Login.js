@@ -33,7 +33,7 @@ function Login() {
             </button>
           </Link>
           {/* <GoogleLogin
-            clientId="901766639548-dbbqmn3rl36n9aos6lk09vqa41u0k2g7.apps.googleusercontent.com"
+            clientId="901766639548-oqt7m6s60istu1u7170qf52a1dsealcm.apps.googleusercontent.com"
             render={(renderProps) => (
               <button
                 onClick={renderProps.onClick}

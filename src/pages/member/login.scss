@@ -265,6 +265,7 @@ h2 {
   width: 100%;
   font-size: 26px;
   text-align: center;
+  color: #cfcfcf;
 }
 
 label {
@@ -329,22 +330,5 @@ input {
 
   @include signUpActive {
     transform: translate3d(0, 0, 0);
-  }
-}
-
-.icon-link {
-  position: absolute;
-  left: 5px;
-  bottom: 5px;
-  width: 32px;
-
-  img {
-    width: 100%;
-    vertical-align: top;
-  }
-
-  &--twitter {
-    left: auto;
-    right: 5px;
   }
 }
