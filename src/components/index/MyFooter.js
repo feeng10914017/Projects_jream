@@ -9,7 +9,7 @@ import { Nav } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 
 function MyFooter(props) {
-  console.log(props)
+  // console.log(props)
   if (props.location.pathname === '/location') return <> </>
   return (
     <>
