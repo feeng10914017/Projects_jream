@@ -7,6 +7,7 @@ import Banner from '../components/home/video/homeBanner.mp4'
 //import components
 import BannerSearch from '../components/home/BannerSearch'
 import ContactUs from '../components/home/ContactUs'
+import NesMarquee from '../components/home/NesMarquee'
 //import react-icon
 import { GiSelect } from 'react-icons/gi'
 import { RiMotorbikeFill, RiArrowRightSFill } from 'react-icons/ri'
@@ -40,16 +41,12 @@ function Home() {
       <section className="homeSquare1">
         <Container>
           {/* marquee */}
-          <Col md={{ span: 10, offset: 1 }} className="Marquee">
-            <p>
-              2020-10-18 HONDA CB1000R發表：TFT儀表、外觀小拉皮，Black
-              Edition還配備快排！測試
-            </p>
-          </Col>
+          <NesMarquee />
           {/* scroll down */}
           <div className="scrollDown">
             <h6>scroll down</h6>
           </div>
+
           {/* step */}
           <article className="homeStep">
             <Row className="stepTitle">
@@ -157,7 +154,6 @@ function Home() {
               <div className="blockContainer"></div>
             </Col>
           </article>
-
           {/* ABOUT */}
           <article className="homeAbout">
             <Col md={{ span: 10, offset: 1 }}>
