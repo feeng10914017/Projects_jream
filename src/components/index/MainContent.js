@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 function MainContent(props) {
-  console.log(props)
+  // console.log(props)
   if (props.location.pathname === '/location')
     return (
       <>

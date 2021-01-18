@@ -3,7 +3,7 @@ import { Row, Form, Card } from 'react-bootstrap'
 
 function OD_CartMotor(props) {
   const MotortData = props.data
-  console.log(MotortData)
+  // console.log(MotortData)
 
   async function motorCart(id) {
     // 構造出一個準備要送到伺服器的物件data
