@@ -1,0 +1,69 @@
+{
+  "member": [
+    {
+      "memberId": 1,
+      "account": "jream001",
+      "password": "abc123",
+      "memberName": "王冠伸",
+      "memberNickname": "",
+      "memberBirth": "1988-12-17",
+      "memberGender": "男",
+      "memberEmail": "toceyevo@gmail.com",
+      "memberPhone": "0946614473",
+      "memberTelephone": "(02)2316154",
+      "memberAddress": "新北市新莊區新北大道三段269號"
+    },
+    {
+      "memberId": 2,
+      "account": "jream002",
+      "password": "abc123",
+      "memberName": "陳彥智",
+      "memberNickname": "",
+      "memberBirth": "1999-03-15",
+      "memberGender": "男",
+      "memberEmail": "a002@gmail.com",
+      "memberPhone": "0975849214",
+      "memberTelephone": "(02)2315468",
+      "memberAddress": "台北市文山區福興路95巷17號2樓"
+    },
+    {
+      "memberId": 3,
+      "account": "jream003",
+      "password": "abc123",
+      "memberName": "林千皓",
+      "memberNickname": "",
+      "memberBirth": "1996-09-21",
+      "memberGender": "男",
+      "memberEmail": "a003@gmail.com",
+      "memberPhone": "0980311776",
+      "memberTelephone": "(02)2311546",
+      "memberAddress": "高雄市苓雅區林森二路34巷29號"
+    },
+    {
+      "memberId": 4,
+      "account": "jream004",
+      "password": "abc123",
+      "memberName": "蕭以方",
+      "memberNickname": "",
+      "memberBirth": "1993-08-24",
+      "memberGender": "男",
+      "memberEmail": "a004@gmail.com",
+      "memberPhone": "0950641049",
+      "memberTelephone": "(02)2315364",
+      "memberAddress": "台北市大安區延吉街32號"
+    },
+    {
+      "memberId": 5,
+      "account": "jream005",
+      "password": "abc123",
+      "memberName": "馮信豪",
+      "memberNickname": "",
+      "memberBirth": "1993-03-26",
+      "memberGender": "男",
+      "memberEmail": "a005@gmail.com",
+      "memberPhone": "0964291628",
+      "memberTelephone": "(02)2313543",
+      "memberAddress": "台北市松山區光復北路165巷6號3樓"
+    }
+  ]
+}
