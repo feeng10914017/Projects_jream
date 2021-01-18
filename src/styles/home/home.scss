@@ -15,10 +15,10 @@
   min-height: calc(100vh - 5rem);
   display: flex;
   align-items: center;
-  .col-md-5 {
+  .col-lg-5 {
     text-align: center;
     margin-bottom: 5rem;
-    h2 {
+    h3 {
       margin-bottom: 1rem;
       color: #f5f5f5;
       text-shadow: 0.25rem 0.25rem 0.2rem #b02825;
@@ -34,6 +34,7 @@
 .BannerSearchBar {
   background: rgba(36, 36, 36, 0.47);
   padding: 2rem;
+  width: 100%;
   h6 {
     text-align: left;
     color: #f5f5f5;
@@ -42,6 +43,7 @@
   }
   div.ant-picker {
     margin-bottom: 1.5rem;
+    width: 100%;
   }
   div.ant-select {
     margin-bottom: 2rem;
@@ -54,18 +56,305 @@
     padding: 0.75rem 1rem;
   }
 }
-.homeLineSL {
-  width: 3rem;
+// scrollDown
+.scrollDown {
+  // transform: translateY(-4rem);
+  width: 15rem;
+  padding: 0 1.5rem;
+  border-bottom: 3px solid #b02825;
+  box-shadow: 1px 3px #f5f5f5;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 0;
+  left: -7.5rem;
+  h6 {
+    margin-bottom: 1rem;
+    color: #b02825;
+    text-shadow: 1px 3px #f5f5f5;
+  }
+}
+// 跑馬燈
+.homeMarquee {
+  transform: translateY(-4rem);
+  background: #f5f5f5;
+  height: 4rem;
+  padding: 0;
+  box-shadow: 0 9px rgba(176, 40, 37, 0.75), 0 18px rgba(36, 36, 36, 0.1),
+    0 -3px rgba(176, 40, 37, 0.75), 0 -6px rgba(36, 36, 36, 0.1);
+  // 內容文字排版
+  .breaking-news-headline {
+    display: block;
+    position: absolute;
+    margin-top: -2.45rem;
+    margin-left: 12rem;
+    color: #242424;
+    height: 1.5rem;
+    overflow: hidden;
+  }
+
+  .breaking-news-title {
+    position: absolute;
+    background-color: #b02825;
+    color: #f5f5f5;
+    text-align: center;
+    height: 100%;
+    width: 6rem;
+    top: 0px;
+    margin-top: 0;
+    margin-left: 3rem;
+    padding-top: 1.5rem;
+    z-index: 3;
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0px;
+      height: 0px;
+      top: 0;
+      left: -1.5rem;
+      border-left: 1.5rem solid transparent;
+      border-right: 0px solid transparent;
+      border-bottom: 4rem solid #b02825;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0px;
+      height: 0px;
+      right: -1.5rem;
+      top: 0;
+      border-right: 1.5rem solid transparent;
+      border-left: 0px solid transparent;
+      border-top: 4rem solid #b02825;
+    }
+  }
+
+  #breaking-news-colour {
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+  }
+
+  #breaking-news-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    &:before {
+      content: '';
+      width: 12rem;
+      height: 100%;
+      background-color: #f5f5f5;
+      position: absolute;
+      z-index: 2;
+    }
+  }
+
+  .animated {
+    -webkit-animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-duration: 0.2s;
+    -moz-animation-fill-mode: both;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-delay: 0.5s;
+    animation-duration: 0.2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+  }
+
+  .delay-animated {
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-duration: 0.4s;
+    -moz-animation-fill-mode: both;
+    -moz-animation-iteration-count: 1;
+    -webkit-animation-delay: 0.3s;
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 0.3s;
+  }
+
+  .scroll-animated {
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-duration: 3s;
+    -moz-animation-fill-mode: both;
+    -moz-animation-iteration-count: 1;
+    -webkit-animation-delay: 0.5s;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+  }
+
+  .delay-animated2 {
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-duration: 0.4s;
+    -moz-animation-fill-mode: both;
+    -moz-animation-iteration-count: 1;
+    -webkit-animation-delay: 0.5s;
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+  }
+
+  .delay-animated3 {
+    -webkit-animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-duration: 5s;
+    -moz-animation-fill-mode: both;
+    -moz-animation-iteration-count: 1;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 3s;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+  }
+
+  .fadein {
+    -webkit-animation-name: fadein;
+    -moz-animation-name: fadein;
+    -o-animation-name: fadein;
+    animation-name: fadein;
+  }
+  @keyframes fadein {
+    from {
+      margin-left: 1000px;
+    }
+    to {
+    }
+  }
+  @-webkit-keyframes fadein {
+    from {
+      margin-left: 1000px;
+    }
+    to {
+    }
+  }
+  @-moz-keyframes fadein {
+    from {
+      margin-left: 1000px;
+    }
+    to {
+    }
+  }
+
+  .slidein {
+    -webkit-animation-name: slidein;
+    -moz-animation-name: slidein;
+    -o-animation-name: slidein;
+    animation-name: slidein;
+  }
+
+  @keyframes marquee {
+    0% {
+      left: 0;
+    }
+    20% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+
+  .marquee {
+    animation: marquee 10s linear infinite;
+    -webkit-animation-duration: 10s;
+    -moz-animation-duration: 10s;
+    -webkit-animation-delay: 0.5s;
+    animation-duration: 10s;
+    animation-delay: 3s;
+  }
+  @keyframes slidein {
+    from {
+      margin-left: 800px;
+    }
+    to {
+      margin-top: 0px;
+    }
+  }
+  @-webkit-keyframes slidein {
+    from {
+      margin-left: 800px;
+    }
+    to {
+      margin-top: 0px;
+    }
+  }
+  @-moz-keyframes slidein {
+    from {
+      margin-left: 800px;
+    }
+    to {
+      margin-top: 0px;
+    }
+  }
+
+  .slideup {
+    -webkit-animation-name: slideup;
+    -moz-animation-name: slideup;
+    -o-animation-name: slideup;
+    animation-name: slideup;
+  }
+  @keyframes slideup {
+    from {
+      margin-top: 3rem;
+    }
+    to {
+      margin-top: 0;
+    }
+  }
+  @-webkit-keyframes slideup {
+    from {
+      margin-top: 3rem;
+    }
+    to {
+      margin-top: 0;
+    }
+  }
+  @-moz-keyframes slideup {
+    from {
+      margin-top: 3rem;
+    }
+    to {
+      margin-top: 0;
+    }
+  }
+}
+//homeLine
+.homeLineRR {
+  width: 100%;
+  height: 3rem;
+  border-top: 3px solid #b02825;
+  border-right: 3px solid #b02825;
+  transform: translateY(1.5rem);
+  margin: 0;
+}
+.homeLineLL {
+  width: 100%;
   height: 3rem;
   border-top: 3px solid #b02825;
   border-left: 3px solid #b02825;
   transform: translateY(1.5rem);
+  margin: 0;
 }
-.homeLineSR {
-  width: 3rem;
+.homeLine {
+  width: 100%;
   height: 3rem;
   border-top: 3px solid #b02825;
-  border-right: 3px solid #b02825;
   transform: translateY(1.5rem);
 }
 .homeLineM {
@@ -75,10 +364,11 @@
   transform: translateY(1.5rem);
 }
 .homeBlock {
-  .col-md-8 {
+  .col-md-8,
+  .col-md-10 {
     .row {
       align-items: center;
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
       h3 {
         margin: 0 1rem;
       }
@@ -96,45 +386,15 @@
 }
 .homeSquare1 {
   background: rgb(255, 255, 255);
-  height: 90vh;
   position: relative;
   .container {
-    transform: translateY(-4rem);
-    // 跑馬燈
-    .Marquee {
-      // width: 100%;
-      height: 4rem;
-      background: #f5f5f5;
-
-      box-shadow: 0 8px rgba(176, 40, 37, 0.75), 0 16px rgba(36, 36, 36, 0.1),
-        0 -4px rgba(176, 40, 37, 0.75), 0 -8px rgba(36, 36, 36, 0.1);
-      padding: 1.25rem 1.5rem;
-      p {
-        margin-bottom: 0;
-      }
-    }
-    // 向下線條
-    .scrollDown {
-      width: 15rem;
-      padding: 0 1.5rem;
-      border-bottom: 3px solid #b02825;
-      box-shadow: 1px 3px #f5f5f5;
-      transform: rotate(90deg);
-      position: absolute;
-      top: 0;
-      left: -7.5rem;
-      h6 {
-        margin-bottom: 1rem;
-        color: #b02825;
-        text-shadow: 1px 3px #f5f5f5;
-      }
-    }
     //首頁步驟
     .homeStep {
-      padding: 5.25rem 0;
-      .row {
+      padding: 1.25rem 0 0 0;
+      .stepTitle {
         justify-content: center;
         align-items: center;
+        margin-bottom: 1.5rem;
         img {
           height: 5rem;
           margin-right: 1.5rem;
@@ -144,13 +404,11 @@
           color: #242424;
         }
       }
-
       .step123 {
-        margin-top: 3rem;
-        display: flex;
-        justify-content: space-evenly;
         align-items: center;
-        section {
+        .col-md-12 {
+          margin-top: 2rem;
+          padding: 0;
           .stepIcon {
             position: relative;
             display: flex;
@@ -163,14 +421,13 @@
             }
           }
           .stepCaption {
-            display: flex;
             justify-content: center;
             align-items: center;
             margin-top: 1rem;
             div {
-              width: 2.25rem;
-              height: 2.25rem;
-              margin-right: 1rem;
+              width: 2rem;
+              height: 2rem;
+              margin-right: 0.5rem;
               background: #242424;
               border-radius: 50%;
               display: flex;
@@ -178,7 +435,6 @@
               align-items: center;
               h5 {
                 color: #f5f5f5;
-                margin-bottom: 0;
               }
             }
             h5 {
@@ -188,39 +444,36 @@
         }
       }
     }
-    .well1 {
-      // display: flex;
-      // align-items: flex-end;
-      div {
-        transform: rotate(180deg);
-        img {
-          width: 100%;
-        }
+    //RECOMMEND
+    .hBlock1 {
+      transform: translateY(12.5rem);
+      .blockContainer {
+        box-shadow: 4px 4px rgba(176, 40, 37, 0.75), 8px 8px rgba(0, 0, 0, 0.1);
       }
     }
   }
 }
 .homeSquare2 {
   background: rgb(255, 255, 255);
-  height: 80vh;
   .container {
-    transform: translateY(-20rem);
-    .homeBlock {
-      .well2 {
-        display: flex;
-        align-items: flex-end;
-        div {
-          transform: translateY(10rem);
+    // FEATURED
+    .hBlock2 {
+      transform: translateY(-17.5rem);
+      .row {
+        flex-direction: row-reverse;
+        .homeLine.offset-3 {
+          margin-left: 0%;
+          margin-right: 25%;
         }
       }
-      .col-md-8 {
-        .row {
-          justify-content: flex-end;
-        }
+      .blockContainer {
+        box-shadow: -4px 4px rgba(176, 40, 37, 0.75),
+          -8px 8px rgba(0, 0, 0, 0.1);
       }
     }
+    // about
     .homeAbout {
-      margin-top: 12.5rem;
+      transform: translateY(5rem);
       .col-md-10 {
         .row {
           align-items: center;
@@ -249,10 +502,11 @@
 }
 .homeSquare3 {
   background: rgb(255, 255, 255);
-  height: 20rem;
+  height: 25rem;
   .container {
-    transform: translateY(-20rem);
-    .row {
+    //CONTACT US
+    .homeBlock {
+      transform: translateY(-17.5rem);
       article.blockContainer {
         padding: 2rem;
         box-shadow: 4px 4px rgba(176, 40, 37, 0.75), 8px 8px rgba(0, 0, 0, 0.1);
@@ -288,16 +542,56 @@
           }
         }
       }
-      .well3 {
-        display: flex;
-        align-items: flex-end;
-        div {
-          transform: rotate(-90deg);
-          img {
-            width: 100%;
-          }
-        }
-      }
     }
   }
+}
+//井字號
+#well01 {
+  position: relative;
+}
+#well01:before {
+  content: '';
+  position: absolute;
+  background: url('http://localhost:3000/images/home/well.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 20%;
+  top: -90%;
+  left: -5%;
+  z-index: -1;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#well02 {
+  position: relative;
+}
+#well02:before {
+  content: '';
+  position: absolute;
+  background: url('http://localhost:3000/images/home/well.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 30%;
+  top: 105%;
+  left: 5%;
+  z-index: -1;
+}
+#well03 {
+  position: relative;
+}
+#well03:before {
+  content: '';
+  position: absolute;
+  background: url('http://localhost:3000/images/home/well.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 10%;
+  top: -165%;
+  left: 35%;
+  z-index: 99;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
