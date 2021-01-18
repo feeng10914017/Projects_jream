@@ -19,6 +19,7 @@
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
+    "react-easy-back-to-top": "^1.0.2",
     "react-google-login": "^5.2.2",
     "react-google-maps": "^9.4.5",
     "react-holder": "^1.0.0",

@@ -445,7 +445,8 @@
       }
       .step123 {
         align-items: center;
-        .col-md-12 {
+        justify-content: center;
+        .col-12 {
           margin-top: 2rem;
           padding: 0;
           .stepIcon {
@@ -479,6 +480,10 @@
             h5 {
               margin-bottom: 0;
             }
+          }
+          section {
+            display: flex;
+            justify-content: center;
           }
         }
       }
