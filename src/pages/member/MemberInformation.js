@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
 import { Table, Button } from 'react-bootstrap'

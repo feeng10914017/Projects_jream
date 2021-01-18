@@ -1,10 +1,48 @@
-import { React, useEffect } from 'react'
+import Axios from 'axios'
+import { response } from 'express'
+import { React, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 // import GoogleLogin from 'react-google-login'
 
 import './login.scss'
+var express = require('express')
+var app = express()
+const bodyParser = require('body-parser')
+const mysql = require('mysql')
 
-function Login() {
+function Login(props) {
+  const [account, setAccount] = useState()
+  const [password, setPassword] = useState()
+  const { isAuth, setIsAuth } = props
+  const [logonStatus, setloginStatus] = useState()
+
+  Axios.defaults.withCredentials = true
+
+  const login = () => {
+    Axios.post('http://localhost:5555/member', {
+      account: account,
+      password: password,
+    })
+      .then((response) => {
+        // console.log(response)
+        if (response.data.message) {
+          setloginStatus(response.data.message)
+        } else {
+          setloginStatus(response.data[0].message)
+          setIsAuth(true)
+        }
+      })
+      .then(() => {
+        props.history.push('/member')
+      })
+  }
+
+  app.post('/login', (req, res) => {
+    const account = req.body.account
+    const password = req.body.password
+    // db.query()
+  })
+
   useEffect(() => {
     document.querySelector('.img__btn').addEventListener('click', () => {
       document.querySelector('.cont').classList.toggle('s--signup')
