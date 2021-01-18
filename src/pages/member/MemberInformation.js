@@ -55,7 +55,7 @@ function Information({
           <tr>
             <td className="MBItdC"></td>
             <td className="MBItdR">
-              <Link to="/memberEdit">
+              <Link to="/member/Edit">
                 <Button variant="primary" type="submit">
                   修改
                 </Button>

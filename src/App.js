@@ -66,26 +66,26 @@ function App() {
               </Route>
 
               {/* member */}
+              <Route path="/member/Edit">
+                <MemberEdit />
+              </Route>
+              <Route path="/member/information">
+                <MemberInformation />
+              </Route>
+              <Route path="/member/favorite">
+                <MemberFavorite />
+              </Route>
+              <Route path="/member/rent-record">
+                <MemberRentrecord />
+              </Route>
+              <Route path="/member/order-record">
+                <MemberOrderrecord />
+              </Route>
               <Route path="/member">
                 <Member />
               </Route>
-              <Route path="/memberEdit">
-                <MemberEdit />
-              </Route>
-              <Route path="/information">
-                <MemberInformation />
-              </Route>
-              <Route path="/favorite">
-                <MemberFavorite />
-              </Route>
-              <Route path="/rent-record">
-                <MemberRentrecord />
-              </Route>
 
               {/* order */}
-              <Route path="/order-record">
-                <MemberOrderrecord />
-              </Route>
               <Route path="/order/cartReport">
                 <OrderCartReport />
               </Route>
