@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
-import { Table, Button, Alert } from 'react-bootstrap'
+import { Table, Button } from 'react-bootstrap'
 
 import './member.scss'
 
@@ -22,35 +22,51 @@ function Information({
         <tbody className="MBItr">
           <tr>
             <td className="MBItdC">姓名</td>
-            <td className="MBItdL">{name}</td>
+            <td className="MBItdL">
+              <input type="text" value={name} />
+            </td>
           </tr>
           <tr>
             <td className="MBItdC">暱稱</td>
-            <td className="MBItdL">{nickname}</td>
+            <td className="MBItdL">
+              <input type="text" value={nickname} />
+            </td>
           </tr>
           <tr>
             <td className="MBItdC">生日</td>
-            <td className="MBItdL">{birth}</td>
+            <td className="MBItdL">
+              <input type="text" value={birth} />
+            </td>
           </tr>
           <tr>
             <td className="MBItdC">性別</td>
-            <td className="MBItdL">{gender}</td>
+            <td className="MBItdL">
+              <input type="text" value={gender} />
+            </td>
           </tr>
           <tr>
             <td className="MBItdC">信箱</td>
-            <td className="MBItdL">{email}</td>
+            <td className="MBItdL">
+              <input type="email" value={email} />
+            </td>
           </tr>
           <tr>
             <td className="MBItdC">手機</td>
-            <td className="MBItdL">{phone}</td>
+            <td className="MBItdL">
+              <input type="text" value={phone} />
+            </td>
           </tr>
           <tr>
             <td className="MBItdC">電話</td>
-            <td className="MBItdL">{telephone}</td>
+            <td className="MBItdL">
+              <input type="text" value={telephone} />
+            </td>
           </tr>
           <tr>
             <td className="MBItdC">地址</td>
-            <td className="MBItdL">{address}</td>
+            <td className="MBItdL">
+              <input type="text" value={address} />
+            </td>
           </tr>
           <tr>
             <td className="MBItdC"></td>
