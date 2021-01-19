@@ -12,15 +12,10 @@ import Home from './pages/Home'
 import LogIn from './pages/member/Login'
 import News from './pages/news/News'
 import Motor from './pages/motor/Motor'
-<<<<<<< HEAD
 import MotorList from './pages/motor/Product'
 
 import Product from './pages/product/Product'
 import Details from './pages/product/components/Details'
-=======
-import Product from './pages/product/ProductList'
-import Detail from './pages/product/ProductDetail'
->>>>>>> d7f9c34c5b6ef8fd5562f73c586a45d145372524
 import Location from './pages/location/Location'
 
 import Member from './pages/member/Member'
@@ -85,13 +80,10 @@ function App() {
               <Route path="/motor/:type?/:page?">
                 <Motor />
               </Route>
-<<<<<<< HEAD
               <Route path="/motorlist/:type?/:id?">
                 <MotorList />
               </Route>
 
-=======
->>>>>>> d7f9c34c5b6ef8fd5562f73c586a45d145372524
               {/* product */}
               <Route path="/product/Detail/:id?">
                 <Detail id="1" />
