@@ -14,7 +14,7 @@ function LoginG() {
     // alert(`登入成功 welcome ${res.profileObj.name}.`)
     console.log('Login Success: currentUser:', res.profileObj)
     refreshTokenSetup(res)
-    history.push('/member')
+    history.push('/member') //這裡以後會跳轉到首頁
   }
 
   const onFailure = (res) => {

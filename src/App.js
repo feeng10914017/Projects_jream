@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 //排版用元件 全部都使用
@@ -28,7 +28,32 @@ import OrderCreditCard from './pages/order/OD_CreditCard'
 import OrderHomeDelivery from './pages/order/OD_HomeDelivery'
 import OrderCartReport from './pages/order/OD_CartReport'
 
+//登入元件(測試用)
+import useToken from './pages/member/components/useToken'
+
 function App() {
+  //判別登入狀態
+  const { token, setToken } = useToken()
+
+  // if (!token) {
+  //   return (
+  //     <Router>
+  //       <>
+  //         <ScrollToTop>
+  //           <MyNavbar />
+  //           <MainContent>
+  //             <Switch>
+  //               <Route path="/login">
+  //                 <LogIn setToken={setToken} />
+  //               </Route>
+  //             </Switch>
+  //           </MainContent>
+  //         </ScrollToTop>
+  //       </>
+  //     </Router>
+  //   )
+  // }
+
   return (
     <Router>
       <>
