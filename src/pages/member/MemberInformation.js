@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
 import { Table, Button } from 'react-bootstrap'
@@ -15,6 +15,7 @@ function Information({
   telephone = '(02)08000000',
   address = '桃園市中壢區某某路某某巷XX號',
 }) {
+  const [count, setCount] = useState()
   return (
     <>
       <MemberNav />
@@ -55,7 +56,7 @@ function Information({
           <tr>
             <td className="MBItdC"></td>
             <td className="MBItdR">
-              <Link to="/memberEdit">
+              <Link to="/member/Edit">
                 <Button variant="primary" type="submit">
                   修改
                 </Button>

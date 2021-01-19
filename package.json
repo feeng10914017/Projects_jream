@@ -11,18 +11,29 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.10.2",
+<<<<<<< HEAD
     "axios": "^0.21.1",
+=======
+    "aws-amplify": "^3.3.14",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+>>>>>>> d7f9c34c5b6ef8fd5562f73c586a45d145372524
     "bootstrap": "^4.5.3",
     "express": "^4.17.1",
     "google-map-react": "^2.1.9",
     "google-maps-react": "^2.0.6",
     "jquery": "^3.5.1",
     "json-server": "^0.16.3",
+    "mysql": "^2.18.1",
     "rc-scroll-anim": "^2.7.6",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
+<<<<<<< HEAD
     "react-dropzone": "^11.2.4",
+=======
+    "react-easy-back-to-top": "^1.0.2",
+>>>>>>> d7f9c34c5b6ef8fd5562f73c586a45d145372524
     "react-google-login": "^5.2.2",
     "react-google-maps": "^9.4.5",
     "react-holder": "^1.0.0",
@@ -35,8 +46,12 @@
     "reactjs-localstorage": "^1.0.1",
     "redux": "^4.0.5",
     "sass": "^1.32.4",
+<<<<<<< HEAD
     "sweetalert2": "^10.13.0",
     "sweetalert2-react-content": "^3.2.2",
+=======
+    "styled-components": "^5.2.1",
+>>>>>>> d7f9c34c5b6ef8fd5562f73c586a45d145372524
     "web-vitals": "^0.2.4"
   },
   "scripts": {

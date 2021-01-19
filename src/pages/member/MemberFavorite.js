@@ -25,6 +25,7 @@ function Favorite() {
           <FavoriteM />
           <FavoriteM />
           <FavoriteM />
+          <FavoriteM />
         </ListGroup>
       </Card>
       <Link to="/member">

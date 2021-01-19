@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 //排版用元件 全部都使用
@@ -12,10 +12,15 @@ import Home from './pages/Home'
 import LogIn from './pages/member/Login'
 import News from './pages/news/News'
 import Motor from './pages/motor/Motor'
+<<<<<<< HEAD
 import MotorList from './pages/motor/Product'
 
 import Product from './pages/product/Product'
 import Details from './pages/product/components/Details'
+=======
+import Product from './pages/product/ProductList'
+import Detail from './pages/product/ProductDetail'
+>>>>>>> d7f9c34c5b6ef8fd5562f73c586a45d145372524
 import Location from './pages/location/Location'
 
 import Member from './pages/member/Member'
@@ -30,7 +35,33 @@ import OrderCreditCard from './pages/order/OD_CreditCard'
 import OrderHomeDelivery from './pages/order/OD_HomeDelivery'
 import OrderCartReport from './pages/order/OD_CartReport'
 
+//登入元件(測試用)
+// import useToken from './pages/member/components/useToken'
 function App() {
+  //判別登入狀態
+  // const { token, setToken } = useToken()
+  // console.log(useToken())
+
+  // if (!token) {
+  //   return (
+  //     <Router>
+  //       <>
+  //         <ScrollToTop>
+  //           <MyNavbar />
+  //           <MainContent>
+  //             <Switch>
+  //               <Route path="/login">
+  //                 <LogIn setToken={setToken} />
+  //               </Route>
+  //             </Switch>
+  //           </MainContent>
+  //           <MyFooter />
+  //         </ScrollToTop>
+  //       </>
+  //     </Router>
+  //   )
+  // }
+
   return (
     <Router>
       <>
@@ -54,17 +85,20 @@ function App() {
               <Route path="/motor/:type?/:page?">
                 <Motor />
               </Route>
+<<<<<<< HEAD
               <Route path="/motorlist/:type?/:id?">
                 <MotorList />
               </Route>
 
+=======
+>>>>>>> d7f9c34c5b6ef8fd5562f73c586a45d145372524
               {/* product */}
               <Route path="/product/Detail/:id?">
-                <Product type="details" />
+                <Detail id="1" />
               </Route>
 
               <Route exact path="/product">
-                <Product type="products" />
+                <Product />
               </Route>
 
               <Route path="/location">
@@ -72,26 +106,26 @@ function App() {
               </Route>
 
               {/* member */}
+              <Route path="/member/Edit">
+                <MemberEdit />
+              </Route>
+              <Route path="/member/information">
+                <MemberInformation />
+              </Route>
+              <Route path="/member/favorite">
+                <MemberFavorite />
+              </Route>
+              <Route path="/member/rent-record">
+                <MemberRentrecord />
+              </Route>
+              <Route path="/member/order-record">
+                <MemberOrderrecord />
+              </Route>
               <Route path="/member">
                 <Member />
               </Route>
-              <Route path="/memberEdit">
-                <MemberEdit />
-              </Route>
-              <Route path="/information">
-                <MemberInformation />
-              </Route>
-              <Route path="/favorite">
-                <MemberFavorite />
-              </Route>
-              <Route path="/rent-record">
-                <MemberRentrecord />
-              </Route>
 
               {/* order */}
-              <Route path="/order-record">
-                <MemberOrderrecord />
-              </Route>
               <Route path="/order/cartReport">
                 <OrderCartReport />
               </Route>
