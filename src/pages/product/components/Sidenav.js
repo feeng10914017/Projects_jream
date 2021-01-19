@@ -1,69 +1,80 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import * as FaIcons from 'react-icons/fa'
-import * as AiIcons from 'react-icons/ai'
-import { SidebarData } from './SidebarData'
-import SubMenu from './SubMenu'
-import { IconContext } from 'react-icons/lib'
-import { Row, Col, Card, Form } from 'react-bootstrap'
-
-const Nav = styled.div`
-  background: #15171c;
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-`
-
-const NavIcon = styled(Link)`
-  margin-left: 2rem;
-  font-size: 2rem;
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-`
-
-const SidebarNav = styled.nav`
-  background: #15171c;
-  ${'' /* width: 250px; */}
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  ${'' /* position: fixed; */}
-  ${'' /* top: 0; */}
-  ${'' /* left: ${({ sidebar }) => (sidebar ? '0' : '-100%')}; */}
-  transition: 350ms;
-  z-index: 10;
-`
-
-const SidebarWrap = styled.div`
-  width: 100%;
-`
-
-const Sidebar = () => {
-  const [sidebar, setSidebar] = useState(false)
-
-  const showSidebar = () => setSidebar(!sidebar)
-
+import React from 'react'
+import { Accordion, Button, Card } from 'react-bootstrap'
+import '../product.css'
+function Sidenav() {
   return (
-    <>
-      <IconContext.Provider value={{ color: '#fff' }}>
-        <SidebarNav sidebar={sidebar}>
-          <SidebarWrap>
-            {/* <NavIcon to="#">
-              <AiIcons.AiOutlineClose onClick={showSidebar} />
-            </NavIcon> */}
-            <input type="text" placeholder="Search.." name="search" />
-            {SidebarData.map((item, index) => {
-              return <SubMenu item={item} key={index} />
-            })}
-          </SidebarWrap>
-        </SidebarNav>
-      </IconContext.Provider>
-    </>
+    <Accordion className="nopadding">
+      <Card className="nopadding">
+        <Card.Header className="nopadding">
+          <Accordion.Toggle
+            as={Card.Header}
+            variant="link"
+            eventKey="0"
+            className="nopadding"
+          >
+            <h5>Click me!</h5>
+          </Accordion.Toggle>
+        </Card.Header>
+        <Accordion.Collapse eventKey="0">
+          <Card.Body>Hello! I'm the body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="0">
+          <Card.Body>Hello! I'm the body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="0">
+          <Card.Body>Hello! I'm the body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="0">
+          <Card.Body>Hello! I'm the body</Card.Body>
+        </Accordion.Collapse>
+      </Card>
+      <Card className="nopadding">
+        <Card.Header className="nopadding">
+          <Accordion.Toggle
+            as={Card.Header}
+            variant="link"
+            eventKey="1"
+            className="nopadding"
+          >
+            <h5>Click me!</h5>
+          </Accordion.Toggle>
+        </Card.Header>
+        <Accordion.Collapse eventKey="1">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+      </Card>
+      <Card className="nopadding">
+        <Card.Header className="nopadding">
+          <Accordion.Toggle
+            as={Card.Header}
+            variant="link"
+            eventKey="2"
+            className="nopadding"
+          >
+            <h5>Click me!</h5>
+          </Accordion.Toggle>
+        </Card.Header>
+        <Accordion.Collapse eventKey="2">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="2">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="2">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="2">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="2">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="2">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+      </Card>
+    </Accordion>
   )
 }
 
-export default Sidebar
+export default Sidenav

@@ -138,7 +138,9 @@ function Detail(props) {
             >
               <option value="-1" disabled selected hidden>
                 Please Select
+          
               </option>
+              
               {FindProductData().colors.map((item, index) => {
                 return (
                   <option value={item} style={{ backgroundColor: item }}>
@@ -148,6 +150,7 @@ function Detail(props) {
               })}
             </select>
           </div>
+          
           {/*------------------大小選擇---------------------- */}
           <div>
             {/* 大小選擇 : */}
@@ -205,7 +208,7 @@ function Detail(props) {
         </div>
       </div>
       <div>
-        <div className="box-details">
+        <div className="box-details fontSize16">
           <p>商品內容: {FindProductData().description}</p>
           <p>商品內容: {FindProductData().content}</p>
         </div>

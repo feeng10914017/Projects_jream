@@ -53,12 +53,13 @@
 }
 .P_img-container {
   max-width: 434px;
-  width: 100%;
+  height: 100%;
   margin: 20px;
   height: 434px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-size: 95%;
 }
 .P_img-container:hover {
   background-size: 150%;
@@ -68,13 +69,15 @@
 
 /* -------------Detail small photo-------------- */
 .P_D_smallPhoto {
-  width: 80px;
   height: 80px;
   /* display: block; */
   object-fit: cover;
   margin: 5px;
   overflow: hidden;
-  border: gray 1px solid;
+  /* border: gray 1px solid; */
+}
+.P_D_smallPhoto .active {
+  border: solid red 1px;
 }
 /* ----------------Detail box ----------------------*/
 .P_details .box-details {
