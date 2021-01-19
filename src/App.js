@@ -14,8 +14,8 @@ import News from './pages/news/News'
 import Motor from './pages/motor/Motor'
 import MotorList from './pages/motor/Product'
 
-import Product from './pages/product/Product'
-import Details from './pages/product/components/Details'
+import Product from './pages/product/ProductList'
+import Detail from './pages/product/ProductDetail'
 import Location from './pages/location/Location'
 
 import Member from './pages/member/Member'
