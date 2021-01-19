@@ -3,13 +3,10 @@ import { Row, Button, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 //引入頁面元件
-import OrderStep from './OD_Ccomponents/OD_Step'
-import CkoutPerson from './OD_Ccomponents/OD_CKO_Person'
-import CkoutInvoice from './OD_Ccomponents/OD_CKO_Invoice'
-import CkoutDetail from './OD_Ccomponents/OD_CKO_Detail'
-
-//引入樣式表
-import './OD.scss'
+import OrderStep from '../../components/order/CartStep'
+import CkoutPerson from '../../components/order/CheckOut_Person'
+import CkoutInvoice from '../../components/order/CheckOut_Invoice'
+import CkoutDetail from '../../components/order/CheckOut_Detail'
 
 function OD_HomeDelivery() {
   return (

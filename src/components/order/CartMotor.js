@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Form, Card } from 'react-bootstrap'
 
-function OD_CartMotor(props) {
+function CartMotor(props) {
   const MotortData = props.data
   // console.log(MotortData)
 
@@ -104,4 +104,4 @@ function OD_CartMotor(props) {
   return <>{display}</>
 }
 
-export default OD_CartMotor
+export default CartMotor

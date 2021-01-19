@@ -3,11 +3,10 @@ import { Row, Card, Nav, Button } from 'react-bootstrap'
 import { reactLocalStorage } from 'reactjs-localstorage'
 import { Link } from 'react-router-dom'
 
-import './OD.scss'
-import OrderStep from './OD_Ccomponents/OD_Step'
-import CartMotor from './OD_Ccomponents/OD_CartMotor'
-import CartProduct from './OD_Ccomponents/OD_CartProduct'
-import GrandTotal from './OD_Ccomponents/OD_GrandTotal'
+import OrderStep from '../../components/order/CartStep'
+import CartMotor from '../../components/order/CartMotor'
+import CartProduct from '../../components/order/CartProduct'
+import GrandTotal from '../../components/order/CheckOut_GrandTotal'
 
 function OD_Cart() {
   const [navState, setNavState] = useState('NavMotor')

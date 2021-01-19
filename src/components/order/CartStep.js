@@ -6,7 +6,7 @@ import { FiTruck } from 'react-icons/fi'
 import { AiOutlineForm } from 'react-icons/ai'
 import { AiOutlineFlag } from 'react-icons/ai'
 import { AiOutlineLine } from 'react-icons/ai'
-import '../OD.scss'
+
 function OD_Step(props) {
   useEffect(() => {
     props.step == 1 &&
