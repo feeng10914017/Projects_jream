@@ -29,11 +29,11 @@ import OrderHomeDelivery from './pages/order/OD_HomeDelivery'
 import OrderCartReport from './pages/order/OD_CartReport'
 
 //登入元件(測試用)
-import useToken from './pages/member/components/useToken'
-
+// import useToken from './pages/member/components/useToken'
 function App() {
   //判別登入狀態
-  const { token, setToken } = useToken()
+  // const { token, setToken } = useToken()
+  // console.log(useToken())
 
   // if (!token) {
   //   return (
@@ -48,6 +48,7 @@ function App() {
   //               </Route>
   //             </Switch>
   //           </MainContent>
+  //           <MyFooter />
   //         </ScrollToTop>
   //       </>
   //     </Router>

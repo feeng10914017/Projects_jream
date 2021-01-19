@@ -22,11 +22,11 @@ function Login({ setToken }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const token = await loginUser({
-      email,
-      password,
-    })
-    setToken(token)
+    // const token = await loginUser({
+    //   email,
+    //   password,
+    // })
+    // setToken(token)
   }
 
   useEffect(() => {
@@ -115,6 +115,7 @@ function Login({ setToken }) {
     </>
   )
 }
+
 Login.propTypes = {
   setToken: PropTypes.func.isRequired,
 }
