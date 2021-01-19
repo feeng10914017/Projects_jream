@@ -49,21 +49,46 @@
 
 //登入頁面css
 
-.A-login > div {
-  margin: 0 auto;
-  margin-top: 56px;
+.A-login {
+  // margin: 0 auto;
+  margin: 56px 0 56px 0;
   height: 480px;
-  width: 960px;
-  border: 1px solid #000000;
+  width: 1140px;
+  border: 1px solid #d8d8d8;
   border-radius: 3px;
+
+  .A-SIG {
+    position: absolute;
+    left: 268px;
+    top: 400px;
+    color: #fff;
+    // border: 1px solid #fff;
+    border-radius: 3px;
+    font-weight: bold;
+    // padding: 3px 0 0 16px;
+    width: 100px;
+    height: 40px;
+  }
+
+  .A-SIG:hover {
+    // background-color: #b02825;
+    // border: 1px solid #b02825;
+  }
+
+  img {
+    width: 640px;
+    height: 480px;
+    // opacity: 0.3;
+  }
 
   form {
     margin: 0 auto;
-    margin-top: 80px;
-    margin-left: 560px;
+    margin-left: 720px;
     padding: 0;
     max-width: 600px;
     width: 350px;
+    position: absolute;
+    top: 280px;
   }
 }
 
@@ -74,12 +99,14 @@
     text-align: center;
   }
   h4 {
-    margin-top: 48px;
-    margin-bottom: 16px;
+    margin: 48px 0 16px 0;
+    // margin-top: 48px;
+    // margin-bottom: 16px;
   }
-  .container {
-    margin-top: 16px;
-    margin-bottom: 16px;
+  .row {
+    margin: 16px 0 16px 0;
+    // margin-top: 16px;
+    // margin-bottom: 16px;
   }
 }
 
@@ -99,12 +126,12 @@
   width: 1152px;
   margin: 0 auto;
   p {
-    margin: 0;
-    margin-left: 120px;
+    margin: 0 0 0 120px;
+    // margin-left: 120px;
   }
   .A-ORCard2 {
-    margin: 0;
-    margin-left: 360px;
+    margin: 0 0 0 360px;
+    // margin-left: 360px;
   }
 }
 
@@ -126,16 +153,18 @@
 .A-OrderRP1 {
   vertical-align: middle;
   p {
-    margin-left: 48px;
-    margin-bottom: 0;
+    margin: 0 0 0 48px;
+    // margin-left: 48px;
+    // margin-bottom: 0;
     width: 100px;
     text-align: center;
   }
 }
 
 .A-OrderRP2 {
-  margin-left: 48px;
-  margin-bottom: 0;
+  margin: 0 0 0 48px;
+  // margin-left: 48px;
+  // margin-bottom: 0;
   width: 100px;
   text-align: center;
   font-size: 12px;
@@ -145,8 +174,9 @@
 .A-OrderRTime {
   vertical-align: middle;
   p {
-    margin-left: 105px;
-    margin-bottom: 0;
+    margin: 0 0 0 105px;
+    // margin-left: 105px;
+    // margin-bottom: 0;
     color: #cacaca;
   }
 }
@@ -154,16 +184,18 @@
 .A-OrderRPrice {
   vertical-align: middle;
   p {
-    margin-left: 72px;
-    margin-bottom: 0;
+    margin: 0 0 0 72px;
+    // margin-left: 72px;
+    // margin-bottom: 0;
   }
 }
 
 .A-OrderRStatus {
   vertical-align: middle;
   p {
-    margin-left: 80px;
-    margin-bottom: 0;
+    margin: 0 0 0 80px;
+    // margin-left: 80px;
+    // margin-bottom: 0;
     color: #7474fa;
   }
 }
@@ -191,12 +223,13 @@
   width: 1152px;
   margin: 0 auto;
   .A-MotoNum {
-    margin: 0;
-    margin-left: 336px;
+    margin: 0 0 0 336px;
+    // margin: 0;
+    // margin-left: 336px;
   }
   .A-MotoTimeC {
-    margin: 0;
-    margin-left: 160px;
+    margin: 0 0 0 160px;
+    // margin-left: 160px;
   }
 }
 
@@ -218,8 +251,9 @@
 .A-MotoRNum {
   vertical-align: middle;
   p {
-    margin-left: 56px;
-    margin-bottom: 0;
+    margin: 0 0 0 56px;
+    // margin-left: 56px;
+    // margin-bottom: 0;
     width: 100px;
     text-align: center;
   }
@@ -228,16 +262,18 @@
 .A-MotoTime {
   vertical-align: middle;
   p {
-    margin-left: 128px;
-    margin-bottom: 0;
+    margin: 0 0 0 128px;
+    // margin-left: 128px;
+    // margin-bottom: 0;
   }
 }
 
 .A-MotoStatus {
   vertical-align: middle;
   p {
-    margin-left: 80px;
-    margin-bottom: 0;
+    margin: 0 0 0 80px;
+    // margin-left: 80px;
+    // margin-bottom: 0;
     color: #7474fa;
   }
 }
@@ -247,4 +283,97 @@
   Button {
     margin-left: 104px;
   }
+}
+
+//車輛最愛css
+
+.A-FVCard1 {
+  width: 1152px;
+  margin: 0 auto;
+  div > th > td > p {
+    margin: 0 0 0 120px;
+    // margin-left: 120px;
+  }
+}
+
+.A-FVList {
+  margin-bottom: 0;
+}
+
+.A-FVImg {
+  vertical-align: middle;
+  img {
+    height: 160px;
+    width: 210px;
+    margin: 32px 0 32px 80px;
+  }
+}
+
+.A-FVStar {
+  vertical-align: 4em;
+  height: 23px;
+  width: 23px;
+  color: #ffb400;
+}
+
+//車輛最愛元件
+
+.A-FVTd1 {
+  height: 80px;
+  p {
+    margin: 24px 0 0 80px;
+    // margin-left: 80px;
+    // margin-top: 24px;
+    font-size: 19px;
+    span {
+      color: #b02825;
+      font-size: 22px;
+    }
+  }
+}
+
+.A-FVTd2 {
+  p {
+    margin: 24px 0 0 80px;
+    // margin-left: 80px;
+    // margin-top: 24px;
+    font-size: 19px;
+    color: #707070;
+    span {
+      margin-left: 32px;
+      font-size: 22px;
+    }
+  }
+}
+
+.A-FVTd3 {
+  p {
+    margin: 24px 0 0 80px;
+    // margin-left: 80px;
+    // margin-top: 24px;
+    font-size: 19px;
+    color: #707070;
+    span {
+      margin-left: 32px;
+      font-size: 22px;
+      color: #b02825;
+    }
+  }
+}
+
+.A-FVTL {
+  p {
+    margin: 24px 0 0 80px;
+    // margin-left: 80px;
+    // margin-top: 24px;
+    font-size: 19px;
+  }
+  ul > li {
+    margin-left: 100px;
+  }
+}
+
+.A-FVTLB {
+  float: right;
+  margin: 16px 16px 16px 0;
 }

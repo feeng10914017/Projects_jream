@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Parallax } from 'react-parallax'
 import { Container, Row, Col } from 'react-bootstrap'
+import BackToTop from 'react-easy-back-to-top'
 
 //import video
 import Banner from '../components/home/video/homeBanner.mp4'
 //import components
 import BannerSearch from '../components/home/BannerSearch'
+import ContactUs from '../components/home/ContactUs'
+import NesMarquee from '../components/home/NesMarquee'
 //import react-icon
 import { GiSelect } from 'react-icons/gi'
 import { RiMotorbikeFill, RiArrowRightSFill } from 'react-icons/ri'
@@ -15,6 +18,7 @@ import { FaStoreAlt } from 'react-icons/fa'
 function Home() {
   const bgImg1 = 'http://localhost:3000/images/home/bgImg1.jpg'
   const bgImg2 = 'http://localhost:3000/images/home/bgImg2.jpg'
+
   return (
     <>
       {/* bannerVideo */}
@@ -24,41 +28,36 @@ function Home() {
         </video>
       </div>
 
-      {/* bannerContent */}
-      <Container className="bannerTitle">
-        <Col md={{ span: 5, offset: 7 }}>
-          <h2>踏上夢想的旅程</h2>
-          <p>
-            想騎乘的慾望，不應受到環境左右而引響，快將將一切拋置腦後，享受映入眼簾的美景與被風撫摸的快感吧！
-          </p>
-          <BannerSearch />
-        </Col>
-      </Container>
+      <section className="scrollDownParent">
+        {/* bannerContent */}
+        <Container className="bannerTitle">
+          <Col lg={{ span: 5, offset: 7 }} md={{ span: 8, offset: 2 }}>
+            <h3>踏上夢想的旅程</h3>
+            <p>
+              想騎乘的慾望，不應受到環境左右而引響，快將將一切拋置腦後，享受映入眼簾的美景與被風撫摸的快感吧！
+            </p>
+            <BannerSearch />
+          </Col>
+        </Container>
+        {/* scroll down */}
+        <h6 className="scrollDown scrollDownText">scroll&nbsp;down</h6>
+      </section>
 
       <section className="homeSquare1">
         <Container>
           {/* marquee */}
-          <Col md={{ span: 10, offset: 1 }} className="Marquee">
-            <p>
-              2020-10-18 HONDA CB1000R發表：TFT儀表、外觀小拉皮，Black
-              Edition還配備快排！測試
-            </p>
-          </Col>
-          {/* scroll down */}
-          <div className="scrollDown">
-            <h6>scroll down</h6>
-          </div>
+          <NesMarquee />
           {/* step */}
           <article className="homeStep">
-            <Row>
+            <Row className="stepTitle">
               <img
                 src="http://localhost:3000/images/home/stepThreeFingers.svg"
                 alt=""
               />
               <h4>簡單&nbsp;3&nbsp;步驟&nbsp;&nbsp;&nbsp;即可租車</h4>
             </Row>
-            <section className="step123">
-              <section>
+            <Row className="step123">
+              <Col lg={2} md={3} xs={12}>
                 <div className="stepIcon">
                   <GiSelect size="7.5rem" color="#cacaca" />
                   <RiMotorbikeFill
@@ -67,15 +66,19 @@ function Home() {
                     className="stepInline"
                   />
                 </div>
-                <div className="stepCaption">
+                <Row className="stepCaption">
                   <div>
                     <h5>1</h5>
                   </div>
                   <h5>先選車</h5>
-                </div>
-              </section>
-              <RiArrowRightSFill size="3rem" color="#cacaca" />
-              <section>
+                </Row>
+              </Col>
+              <Col lg={1} md={1} xs={12}>
+                <section>
+                  <RiArrowRightSFill size="3rem" color="#cacaca" />
+                </section>
+              </Col>
+              <Col lg={2} md={3} xs={12}>
                 <div className="stepIcon">
                   <GiSelect size="7.5rem" color="#cacaca" />
                   <MdDateRange
@@ -84,15 +87,19 @@ function Home() {
                     className="stepInline"
                   />
                 </div>
-                <div className="stepCaption">
+                <Row className="stepCaption">
                   <div>
                     <h5>2</h5>
                   </div>
-                  <h5>再選日期</h5>
-                </div>
-              </section>
-              <RiArrowRightSFill size="3rem" color="#cacaca" />
-              <section>
+                  <h5>選日期</h5>
+                </Row>
+              </Col>
+              <Col lg={1} md={1} xs={12}>
+                <section>
+                  <RiArrowRightSFill size="3rem" color="#cacaca" />
+                </section>
+              </Col>
+              <Col lg={2} md={3} xs={12}>
                 <div className="stepIcon">
                   <GiSelect size="7.5rem" color="#cacaca" />
                   <FaStoreAlt
@@ -101,72 +108,70 @@ function Home() {
                     className="stepInline"
                   />
                 </div>
-                <div className="stepCaption">
+                <Row className="stepCaption">
                   <div>
-                    <h5>3 </h5>
+                    <h5>3</h5>
                   </div>
-                  <h5>最後選取車店家</h5>
-                </div>
-              </section>
-            </section>
-          </article>
-          <article className="homeBlock hBlock1">
-            <Row>
-              <Col md={8}>
-                <Row>
-                  <div className="homeLineSL"></div>
-                  <h3>RECOMMEND</h3>
-                  <div className="homeLineM"></div>
+                  <h5>再選店家</h5>
                 </Row>
-                <div className="blockContainer"></div>
-              </Col>
-              <Col md={{ span: 2, offset: 1 }} className="well1">
-                <div>
-                  <img
-                    src="http://localhost:3000/images/home/well.png"
-                    alt=""
-                  />
-                </div>
               </Col>
             </Row>
+          </article>
+          {/* RECOMMEND */}
+          <article className="homeBlock hBlock1" id="well01">
+            <Col lg={8} md={10}>
+              <Row>
+                <Col lg={1} md={1} xs={1} className="homeLineLL"></Col>
+                <h3>RECOMMEND</h3>
+                <Col
+                  lg={{ span: 5, offset: 3 }}
+                  md={{ span: 8, offset: 3 }}
+                  xs={{ span: 8, offset: 3 }}
+                  className="homeLine"
+                ></Col>
+              </Row>
+              <div className="blockContainer"></div>
+            </Col>
           </article>
         </Container>
       </section>
 
-      <Parallax bgImage={bgImg1} strength={250} className="zIndex1">
+      <Parallax bgImage={bgImg1} strength={250} className="zIndex1 Parallax01">
         <div style={{ height: 800 }}></div>
       </Parallax>
 
       <section className="homeSquare2">
         <Container>
-          <article className="homeBlock">
-            <Row>
-              <Col md={4} className="well2">
-                <div>
-                  <img
-                    src="http://localhost:3000/images/home/well.png"
-                    alt=""
-                  />
-                </div>
-              </Col>
-              <Col md={8}>
-                <Row>
-                  <div className="homeLineM"></div>
-                  <h3>FEATURED</h3>
-                  <div className="homeLineSR"></div>
-                </Row>
-                <div className="blockContainer"></div>
-              </Col>
-            </Row>
+          {/* FEATURED */}
+          <article className="homeBlock hBlock2" id="well02">
+            <Col lg={{ span: 8, offset: 4 }} md={{ span: 10, offset: 2 }}>
+              <Row>
+                <Col lg={1} md={1} xs={1} className="homeLineRR"></Col>
+                <h3>FEATURED</h3>
+                <Col
+                  lg={{ span: 5, offset: 0 }}
+                  md={{ span: 8, offset: 3 }}
+                  xs={{ span: 8, offset: 3 }}
+                  className="homeLine"
+                ></Col>
+              </Row>
+              <div className="blockContainer"></div>
+            </Col>
           </article>
-
-          {/* 關於我們 */}
+          {/* ABOUT */}
           <article className="homeAbout">
             <Col md={{ span: 10, offset: 1 }}>
               <Row>
-                <div className="homeLineM"></div>
+                <Col lg={2} md={7} xs={6} className="homeLine"></Col>
+                {/* <Col md={12} xs={12}> */}
                 <h3>ABOUT</h3>
-                <div className="homeLineM"></div>
+                {/* </Col> */}
+                <Col
+                  lg={{ span: 2, offset: 0 }}
+                  md={{ span: 7, offset: 5 }}
+                  xs={{ span: 7, offset: 5 }}
+                  className="homeLine"
+                ></Col>
               </Row>
               <div className="blockContainer">
                 <h6>
@@ -188,28 +193,39 @@ function Home() {
 
       <section className="homeSquare3">
         <Container>
-          <article className="homeBlock hBlock1">
-            <Row>
-              <Col md={8}>
-                <Row>
-                  <div className="homeLineSL"></div>
-                  <h3>CONTACT&nbsp;&nbsp;US</h3>
-                  <div className="homeLineM"></div>
-                </Row>
-                <div className="blockContainer"></div>
-              </Col>
-              <Col md={{ span: 2, offset: 1 }} className="well3">
-                <div>
-                  <img
-                    src="http://localhost:3000/images/home/well.png"
-                    alt=""
-                  />
-                </div>
-              </Col>
-            </Row>
+          {/* CONTACT US */}
+          <article className="homeBlock" id="well03">
+            <Col lg={8} md={10}>
+              <Row>
+                <Col lg={1} md={1} xs={1} className="homeLineLL"></Col>
+                <h3>CONTACT&nbsp;&nbsp;US</h3>
+                <Col
+                  lg={{ span: 5, offset: 3 }}
+                  md={{ span: 8, offset: 3 }}
+                  xs={{ span: 8, offset: 3 }}
+                  className="homeLine"
+                ></Col>
+              </Row>
+              <ContactUs />
+            </Col>
           </article>
         </Container>
       </section>
+
+      <BackToTop
+        text="Top"
+        color="#f5f5f5"
+        backgroundColor="#b02825"
+        border="3px solid #cacaca"
+        hover={{
+          color: '#242424',
+          backgroundColor: '#f5f5f5',
+          border: '3px solid #b02825',
+        }}
+        position={{ bottom: '0%', right: '0%' }}
+        margin="32px"
+        fontSize="19px"
+      />
     </>
   )
 }

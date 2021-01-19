@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { withRouter } from 'react-router-dom'
 import { GrFacebookOption } from 'react-icons/gr'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { AiOutlineTwitter } from 'react-icons/ai'
@@ -8,6 +9,8 @@ import { Nav } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 
 function MyFooter(props) {
+  // console.log(props)
+  if (props.location.pathname === '/location') return <> </>
   return (
     <>
       <footer className="footer mt-auto py-3">
@@ -54,4 +57,5 @@ function MyFooter(props) {
   )
 }
 
-export default MyFooter
+// export default MyFooter
+export default withRouter(MyFooter)

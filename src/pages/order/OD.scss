@@ -80,15 +80,6 @@
         object-fit: cover;
         object-position: center center;
       }
-      .col-1,
-      .col-2,
-      .col-3,
-      .col-4 {
-        margin: 0;
-        padding-left: 2rem;
-        padding-right: 0;
-        line-height: 100%;
-      }
       h6 {
         text-align: end;
         color: #b02825;
@@ -98,6 +89,29 @@
       }
       .inputAmount:read-only {
         background: none;
+      }
+      .btn-outline-primary:focus,
+      .btn:focus {
+        box-shadow: none;
+      }
+      .col-lg-11 {
+        p,
+        input,
+        select,
+        button,
+        h6 {
+          margin: 0.5rem 0;
+        }
+        .row {
+          .productTitle {
+            .row {
+              justify-content: space-between;
+              p {
+                max-width: calc(100% - 56px);
+              }
+            }
+          }
+        }
       }
     }
   }
