@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Parallax } from 'react-parallax'
 import { Container, Row, Col } from 'react-bootstrap'
+import BackToTop from 'react-easy-back-to-top'
 
 //import video
 import Banner from '../components/home/video/homeBanner.mp4'
@@ -27,26 +28,25 @@ function Home() {
         </video>
       </div>
 
-      {/* bannerContent */}
-      <Container className="bannerTitle">
-        <Col lg={{ span: 5, offset: 7 }} md={{ span: 8, offset: 2 }}>
-          <h3>踏上夢想的旅程</h3>
-          <p>
-            想騎乘的慾望，不應受到環境左右而引響，快將將一切拋置腦後，享受映入眼簾的美景與被風撫摸的快感吧！
-          </p>
-          <BannerSearch />
-        </Col>
-      </Container>
+      <section className="scrollDownParent">
+        {/* bannerContent */}
+        <Container className="bannerTitle">
+          <Col lg={{ span: 5, offset: 7 }} md={{ span: 8, offset: 2 }}>
+            <h3>踏上夢想的旅程</h3>
+            <p>
+              想騎乘的慾望，不應受到環境左右而引響，快將將一切拋置腦後，享受映入眼簾的美景與被風撫摸的快感吧！
+            </p>
+            <BannerSearch />
+          </Col>
+        </Container>
+        {/* scroll down */}
+        <h6 className="scrollDown scrollDownText">scroll&nbsp;down</h6>
+      </section>
 
       <section className="homeSquare1">
         <Container>
           {/* marquee */}
           <NesMarquee />
-          {/* scroll down */}
-          <div className="scrollDown">
-            <h6>scroll down</h6>
-          </div>
-
           {/* step */}
           <article className="homeStep">
             <Row className="stepTitle">
@@ -57,7 +57,7 @@ function Home() {
               <h4>簡單&nbsp;3&nbsp;步驟&nbsp;&nbsp;&nbsp;即可租車</h4>
             </Row>
             <Row className="step123">
-              <Col lg={{ span: 2, offset: 2 }} md={12}>
+              <Col lg={2} md={3} xs={12}>
                 <div className="stepIcon">
                   <GiSelect size="7.5rem" color="#cacaca" />
                   <RiMotorbikeFill
@@ -73,10 +73,12 @@ function Home() {
                   <h5>先選車</h5>
                 </Row>
               </Col>
-              <Col lg={1} md={12}>
-                <RiArrowRightSFill size="3rem" color="#cacaca" />
+              <Col lg={1} md={1} xs={12}>
+                <section>
+                  <RiArrowRightSFill size="3rem" color="#cacaca" />
+                </section>
               </Col>
-              <Col lg={2} md={12}>
+              <Col lg={2} md={3} xs={12}>
                 <div className="stepIcon">
                   <GiSelect size="7.5rem" color="#cacaca" />
                   <MdDateRange
@@ -89,13 +91,15 @@ function Home() {
                   <div>
                     <h5>2</h5>
                   </div>
-                  <h5>再選日期</h5>
+                  <h5>選日期</h5>
                 </Row>
               </Col>
-              <Col lg={1} md={12}>
-                <RiArrowRightSFill size="3rem" color="#cacaca" />
+              <Col lg={1} md={1} xs={12}>
+                <section>
+                  <RiArrowRightSFill size="3rem" color="#cacaca" />
+                </section>
               </Col>
-              <Col lg={2} md={12}>
+              <Col lg={2} md={3} xs={12}>
                 <div className="stepIcon">
                   <GiSelect size="7.5rem" color="#cacaca" />
                   <FaStoreAlt
@@ -158,9 +162,16 @@ function Home() {
           <article className="homeAbout">
             <Col md={{ span: 10, offset: 1 }}>
               <Row>
-                <div className="homeLineM"></div>
+                <Col lg={2} md={7} xs={6} className="homeLine"></Col>
+                {/* <Col md={12} xs={12}> */}
                 <h3>ABOUT</h3>
-                <div className="homeLineM"></div>
+                {/* </Col> */}
+                <Col
+                  lg={{ span: 2, offset: 0 }}
+                  md={{ span: 7, offset: 5 }}
+                  xs={{ span: 7, offset: 5 }}
+                  className="homeLine"
+                ></Col>
               </Row>
               <div className="blockContainer">
                 <h6>
@@ -180,10 +191,10 @@ function Home() {
         <div style={{ height: 800 }}></div>
       </Parallax>
 
-      <section className="homeSquare3" id="well03">
+      <section className="homeSquare3">
         <Container>
           {/* CONTACT US */}
-          <article className="homeBlock">
+          <article className="homeBlock" id="well03">
             <Col lg={8} md={10}>
               <Row>
                 <Col lg={1} md={1} xs={1} className="homeLineLL"></Col>
@@ -200,6 +211,21 @@ function Home() {
           </article>
         </Container>
       </section>
+
+      <BackToTop
+        text="Top"
+        color="#f5f5f5"
+        backgroundColor="#b02825"
+        border="3px solid #cacaca"
+        hover={{
+          color: '#242424',
+          backgroundColor: '#f5f5f5',
+          border: '3px solid #b02825',
+        }}
+        position={{ bottom: '0%', right: '0%' }}
+        margin="32px"
+        fontSize="19px"
+      />
     </>
   )
 }
