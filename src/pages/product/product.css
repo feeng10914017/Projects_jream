@@ -131,11 +131,15 @@
   background-color: gray;
 }
 /* Amount selector */
-.amount span {
+.P_amount {
+  padding: 16px 0;
+  margin-right: 100px;
+}
+.P_amount span {
   color: crimson;
   padding: 0 45px;
 }
-.amount .count {
+.P_amount .count {
   width: 40px;
   height: 30px;
   border: 1px solid #555;
@@ -143,4 +147,10 @@
   background: #555;
   cursor: pointer;
   color: white !important;
+}
+/* addtocart btn color */
+.addtocart-btn {
+  background: #e74c3c;
+  color: white !important;
+  padding: 16px 48px;
 }

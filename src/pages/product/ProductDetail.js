@@ -120,7 +120,7 @@ function Detail(props) {
           <h3 className="text-secondary">{FindProductData().title}</h3>
           <div className="text-danger" style={{ textAlign: 'right' }}>
             <span>NT$</span>
-            <h4>{FindProductData().price}</h4>
+            <h4 className="text-danger">{FindProductData().price}</h4>
           </div>
 
           {/* <div>商品內容: {FindProductData().description}</div> */}
@@ -168,61 +168,40 @@ function Detail(props) {
               })}
             </select>
           </div>
-          {/*------------------數量選擇---------------------- */}
-          {/* <div>
-            數量選擇 :
-            <select
-              required
-              value={productAmount}
-              onChange={(event) => {
-                // 設定要轉換為數字(索引值)
-                setProductAmount(+event.target.value)
+
+          {/*-------------------- 數量選擇----------------------- */}
+          <div className="d-flex" sytle={{ justifyContent: 'space-around' }}>
+            <div className="P_amount">
+              <button className="count" onClick={() => reduction()}>
+                -
+              </button>
+              <span>{productAmount}</span>
+              <button className="count" onClick={() => increase()}>
+                +
+              </button>
+            </div>
+            {/* -----------------加入購物車---------------- */}
+            <button
+              type="button"
+              className="btn addtocart-btn"
+              onClick={() => {
+                updateCartToLocalStorage({
+                  id: FindProductData().id,
+                  name: FindProductData().title,
+                  color: productColor,
+                  size: productSize,
+                  amount: productAmount,
+                  price: FindProductData().price,
+                  totalprice: productAmount * FindProductData().price,
+                  // 給後面的陣列
+                  colorOptions: FindProductData().colors,
+                  sizeOptions: FindProductData().sizes,
+                })
               }}
             >
-              <option value="-1" disabled selected hidden>
-                Please Select
-              </option>
-              {FindProductData().count.map((item, index) => {
-                return <option>{item}</option>
-              })}
-            </select>
-          </div> */}
-          {/*-------------------- 數量選擇2----------------------- */}
-          {/* {FindProductData().count((item, index) => {
-            return ( */}
-          <div className="amount">
-            <button className="count" onClick={() => reduction()}>
-              -
-            </button>
-            <span>{productAmount}</span>
-            <button className="count" onClick={() => increase()}>
-              +
+              加入購物車
             </button>
           </div>
-          {/* ) */}
-          {/* })} */}
-
-          <button
-            type="button"
-            className="btn btn-success"
-            onClick={() => {
-              updateCartToLocalStorage({
-                id: FindProductData().id,
-                name: FindProductData().title,
-                color: productColor,
-                size: productSize,
-                amount: productAmount,
-                price: FindProductData().price,
-                totalprice: productAmount * FindProductData().price,
-                // 給後面的陣列
-                colorOptions: FindProductData().colors,
-                sizeOptions: FindProductData().sizes,
-                Amount: FindProductData().count,
-              })
-            }}
-          >
-            加入購物車
-          </button>
         </div>
       </div>
       <div>
