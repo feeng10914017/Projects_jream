@@ -1,29 +1,118 @@
-import React, { useState, useEffect } from 'react'
-import { Row, Col, Card, Nav, Button, Form, Table } from 'react-bootstrap'
+import React from 'react'
+import { Accordion, Button, Card } from 'react-bootstrap'
+import '../product.css'
 function Sidenav() {
   return (
-    <Row>
-      <div>
-        <ul>
-          <li>安全帽</li>
-          <li>騎士套</li>
-          <li>
-            防摔衣
-            <ul>
-              <li>夏季防摔衣</li>
-              <li>冬季防摔衣</li>
-              <li>四季防摔衣</li>
-              <li>休閒防摔衣</li>
-            </ul>
-          </li>
-          <li>防摔褲</li>
-          <li>騎士車靴</li>
-          <li>騎士護具</li>
-          <li>騎士包</li>
-          <li>雨具</li>
-        </ul>
-      </div>
-    </Row>
+    <Accordion className="nopadding">
+      <Card className="nopadding">
+        <Card.Header className="nopadding">
+          <Accordion.Toggle
+            as={Card.Header}
+            variant="link"
+            eventKey="0"
+            className="nopadding"
+          >
+            <h5>Click me!</h5>
+          </Accordion.Toggle>
+        </Card.Header>
+        <Accordion.Collapse eventKey="0">
+          <Card.Body>Hello! I'm the body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="0">
+          <Card.Body>Hello! I'm the body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="0">
+          <Card.Body>Hello! I'm the body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="0">
+          <Card.Body>Hello! I'm the body</Card.Body>
+        </Accordion.Collapse>
+      </Card>
+      <Card className="nopadding">
+        <Card.Header className="nopadding">
+          <Accordion.Toggle
+            as={Card.Header}
+            variant="link"
+            eventKey="1"
+            className="nopadding"
+          >
+            <h5>Click me!</h5>
+          </Accordion.Toggle>
+        </Card.Header>
+        <Accordion.Collapse eventKey="1">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="1">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="1">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="1">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+      </Card>
+      <Card className="nopadding">
+        <Card.Header className="nopadding">
+          <Accordion.Toggle
+            as={Card.Header}
+            variant="link"
+            eventKey="2"
+            className="nopadding"
+          >
+            <h5>Click me!</h5>
+          </Accordion.Toggle>
+        </Card.Header>
+        <Accordion.Collapse eventKey="2">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="2">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="2">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="2">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="2">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="2">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+      </Card>
+      <Card className="nopadding">
+        <Card.Header className="nopadding">
+          <Accordion.Toggle
+            as={Card.Header}
+            variant="link"
+            eventKey="3"
+            className="nopadding"
+          >
+            <h5>Click me!</h5>
+          </Accordion.Toggle>
+        </Card.Header>
+        <Accordion.Collapse eventKey="3">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="3">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="3">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="3">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="3">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="3">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+      </Card>
+    </Accordion>
   )
 }
 

@@ -12,8 +12,8 @@ import Home from './pages/Home'
 import LogIn from './pages/member/Login'
 import News from './pages/news/News'
 import Motor from './pages/motor/Motor'
-import Product from './pages/product/Product'
-import Details from './pages/product/components/Details'
+import Product from './pages/product/ProductList'
+import Detail from './pages/product/ProductDetail'
 import Location from './pages/location/Location'
 
 import Member from './pages/member/Member'
@@ -78,13 +78,13 @@ function App() {
               <Route path="/motor">
                 <Motor />
               </Route>
-
+              {/* product */}
               <Route path="/product/Detail/:id?">
-                <Product type="details" />
+                <Detail id="1" />
               </Route>
 
               <Route exact path="/product">
-                <Product type="products" />
+                <Product />
               </Route>
 
               <Route path="/location">
