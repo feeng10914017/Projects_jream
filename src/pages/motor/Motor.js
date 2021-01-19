@@ -28,7 +28,7 @@ function Motor() {
   return (
     <>
       <MotorThreeD />
-      <MotorSBar />
+      {/* <MotorSBar /> */}
       {/* <MotorCard /> */}
       {paginationBasic}
       <hr />

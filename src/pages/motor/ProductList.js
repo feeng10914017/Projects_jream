@@ -14,7 +14,8 @@ import {
   AiOutlineCloseCircle,
   AiFillHeart,
 } from 'react-icons/ai'
-import '../../css/shop.scss'
+
+import '../../css/motor.scss'
 import Swal from 'sweetalert2'
 // import addToLike from './addToLike'
 // import unazen from './unazen'
@@ -32,14 +33,8 @@ function ProductList(props) {
   const [orderBy, setOrderBy] = useState('itemId')
   const [mbAzen_arr_state, setMbAzen_arr_state] = useState([])
 
-  const searchParams = new URLSearchParams(props.location.search)
-  //如果url有type的話就抓下來
-  // if(searchParams.get('type')){
-  //   let typeURL = searchParams.get('type')
-  //   console.log('typeURL',typeURL)
-  //   setType(typeURL)
-  // }
-  //   const [search_query, setSearch_query] = useState('456')
+  // const searchParams = new URLSearchParams(props.location.search)
+
   //  加入購物車
   async function updateCartToLocalStorage(value) {
     setDataLoading(true)
@@ -99,6 +94,7 @@ function ProductList(props) {
     //     credentials: 'include',
     //   })
     // }
+
     //新分業方法
     if (type !== 0 || vendor !== 'V000' || price !== '') {
       request = new Request(
@@ -137,9 +133,9 @@ function ProductList(props) {
 
   //一開始就會載入資料,記得設定cors
   //當換頁時setcurrentpage到新的值就會觸發getDataFromServer
-  useEffect(() => {
-    getClassifiedDataFromServer(currentpage)
-  }, [currentpage, vendor, price, orderBy])
+  // useEffect(() => {
+  //   getClassifiedDataFromServer(currentpage)
+  // }, [currentpage, vendor, price, orderBy])
 
   //每次mycart資料有變動就會3秒後關掉載入指示
   useEffect(() => {
@@ -149,9 +145,9 @@ function ProductList(props) {
   }, [mycart])
 
   //分類type有變動就會觸發
-  useEffect(() => {
-    getClassifiedDataFromServer(currentpage)
-  }, [type])
+  // useEffect(() => {
+  //   getClassifiedDataFromServer(currentpage)
+  // }, [type])
 
   //創造頁數list
   let pageNumbers = []
@@ -164,25 +160,12 @@ function ProductList(props) {
     setCurrentpage(value)
   }
 
-  //切換Type
-  // const handletype = value => {
-  //   setType(value)
-  //   setCurrentpage(1)
-  // }
-
   function handletype(value) {
     setType(value)
     setCurrentpage(1)
   }
 
   // console.log('type=', type)
-
-  // 利用內建的API來得到URLSearchParams物件
-  // const searchParams = new URLSearchParams(props.location.search)
-  console.log(props)
-
-  let search = props.location.search
-  console.log('search= ', search)
 
   //顯示排序方式
   let orderbydisplay
@@ -261,23 +244,23 @@ function ProductList(props) {
   //顯示遊戲類型
   let typedisplay
   switch (type) {
-    case 5:
-      typedisplay = '運動'
-      break
     case 1:
-      typedisplay = '休閒'
-      break
-    case 3:
-      typedisplay = '血腥'
-      break
-    case 4:
-      typedisplay = '冒險'
+      typedisplay = 'YAMAHA'
       break
     case 2:
-      typedisplay = '動作'
+      typedisplay = 'HONDA'
+      break
+    case 3:
+      typedisplay = 'SUZUKI'
+      break
+    case 4:
+      typedisplay = 'KAWASAKI'
+      break
+    case 5:
+      typedisplay = 'DUCATI'
       break
     case 6:
-      typedisplay = '競速'
+      typedisplay = 'BMW'
       break
 
     default:
@@ -382,23 +365,23 @@ function ProductList(props) {
                       mbAzen_arr_state.indexOf(`${value.itemId}`) !== -1 ? (
                         <Link
                           className="col-2"
-                          // onClick={() => {
-                          //   if (
-                          //     JSON.parse(
-                          //       localStorage.getItem('LoginUserData')
-                          //     ) !== null
-                          //   ) {
-                          //     azen(value.itemId)
-                          //     unazen({
-                          //       userId: JSON.parse(
-                          //         localStorage.getItem('LoginUserData')
-                          //       ).mbId,
-                          //       unlikeproductId: value.itemId,
-                          //     })
-                          //   } else {
-                          //     Swal.fire('請先登入')
-                          //   }
-                          // }}
+                          onClick={() => {
+                            if (
+                              JSON.parse(
+                                localStorage.getItem('LoginUserData')
+                              ) !== null
+                            ) {
+                              azen(value.itemId)
+                              // unazen({
+                              //   userId: JSON.parse(
+                              //     localStorage.getItem('LoginUserData')
+                              //   ).mbId,
+                              //   unlikeproductId: value.itemId,
+                              // })
+                            } else {
+                              Swal.fire('請先登入')
+                            }
+                          }}
                         >
                           <AiFillHeart
                             style={{ color: '#F9A451', fontSize: '24px' }}
@@ -407,23 +390,23 @@ function ProductList(props) {
                       ) : (
                         <Link
                           className="col-2"
-                          // onClick={() => {
-                          //   if (
-                          //     JSON.parse(
-                          //       localStorage.getItem('LoginUserData')
-                          //     ) !== null
-                          //   ) {
-                          //     addToLike({
-                          //       userId: JSON.parse(
-                          //         localStorage.getItem('LoginUserData')
-                          //       ).mbId,
-                          //       likeproductId: value.itemId,
-                          //     })
-                          //     azen(value.itemId)
-                          //   } else {
-                          //     Swal.fire('請先登入')
-                          //   }
-                          // }}
+                          onClick={() => {
+                            if (
+                              JSON.parse(
+                                localStorage.getItem('LoginUserData')
+                              ) !== null
+                            ) {
+                              // addToLike({
+                              //   userId: JSON.parse(
+                              //     localStorage.getItem('LoginUserData')
+                              //   ).mbId,
+                              //   likeproductId: value.itemId,
+                              // })
+                              azen(value.itemId)
+                            } else {
+                              Swal.fire('請先登入')
+                            }
+                          }}
                         >
                           <AiOutlineHeart
                             style={{ color: '#F9A451', fontSize: '24px' }}
@@ -509,40 +492,20 @@ function ProductList(props) {
       </div>
     </>
   )
+
   //每次total資料有變動就會500ms後關掉載入提示
   return (
     <>
-      {/* <Link
-        className="btn btn-primary"
-        // to={{ search: search + `&&type=1` }}
-        to={{ search: `type=1` }}
-        onClick={() => {
-          handletype(1)
-        }}
-      >
-        類別1
-      </Link>
-      <Link
-        className="btn btn-primary"
-        // to={{ search: search + `&&type=1` }}
-        to={{ search: `type=2` }}
-        onClick={() => {
-          handletype(2)
-        }}
-      >
-        類別2
-      </Link>
-      <h3>產品類型 = {searchParams.get('type')}</h3> */}
       <Slider
         handletype={function (value) {
           handletype(value)
         }}
       />
 
-      <div className="d-flex container">
+      <div className="d-flex">
         {type !== 0 ? (
-          <div className="s-filterClearBtn">
-            類型: {typedisplay}
+          <div className="m-filterClearBtn">
+            廠牌: {typedisplay}
             <button onClick={() => setType(0)}>
               <AiOutlineCloseCircle />
             </button>
@@ -551,7 +514,7 @@ function ProductList(props) {
           ''
         )}
         {vendor !== 'V000' ? (
-          <div className="s-filterClearBtn">
+          <div className="m-filterClearBtn">
             發行商123:{vendordisplay}
             <button onClick={() => setVendor('V000')}>
               <AiOutlineCloseCircle />
@@ -561,7 +524,7 @@ function ProductList(props) {
           '123'
         )}
         {price !== 9999 ? (
-          <div className="s-filterClearBtn">
+          <div className="m-filterClearBtn">
             價格:{pricedisplay}
             <button onClick={() => setPrice(9999)}>
               <AiOutlineCloseCircle />
@@ -571,7 +534,7 @@ function ProductList(props) {
           ''
         )}
         {orderBy !== 'itemId' ? (
-          <div className="s-filterClearBtn">
+          <div className="m-filterClearBtn">
             排序:{orderbydisplay}
             <button onClick={() => setOrderBy('itemId')}>
               <AiOutlineCloseCircle />
@@ -582,13 +545,13 @@ function ProductList(props) {
         )}
       </div>
       <div className="container">
-        <Filterbar
+        {/* <Filterbar
           setMyproduct={setMyproduct}
           setTotalpage={setTotalpage}
           setVendor={setVendor}
           setPrice={setPrice}
           setOrderBy={setOrderBy}
-        />
+        /> */}
       </div>
       <div className="container">{dataLoading ? loading : display}</div>
     </>

@@ -14,7 +14,7 @@ import {
   AiOutlineCaretRight,
   AiOutlineArrowsAlt,
 } from 'react-icons/ai'
-import '../../css/shop.scss'
+import '../../css/motor.scss'
 import Swal from 'sweetalert2' //sweetalert2
 import $ from 'jquery'
 // import Lightbox from 'react-image-lightbox' //lightbox

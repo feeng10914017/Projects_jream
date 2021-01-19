@@ -6,29 +6,6 @@ p,
 a:hover {
   text-decoration: none;
 }
-h1,
-.h1 {
-  font-size: 40px;
-}
-h2,
-.h2 {
-  font-size: 32px;
-}
-h3,
-.h3 {
-  font-size: 28px;
-}
-h4,
-.h4 {
-  font-size: 24px;
-}
-h5,
-.h5 {
-  font-size: 20px;
-}
-h6 {
-  font-size: 16px;
-}
 
 .s-clearFilterBtn {
   //清除篩選功能
@@ -225,12 +202,12 @@ h6 {
 
 .s-slider-box {
   width: 100%;
-  min-height: 75vh;
-  background-image: url('http://localhost:3000/images/shop/bigImage/1_MONSTER HUNTER_ WORLD_0.jpg');
+  min-height: 25vh;
+  // background-image: url('http://localhost:3000/images/shop/bigImage/1_MONSTER HUNTER_ WORLD_0.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   filter: grayscale(50%);
-  transition: 2s;
+  transition: 1s;
 
   flex-wrap: wrap;
 }
@@ -250,10 +227,13 @@ h6 {
   background: white;
   transition: 0.5s;
   border: 1px solid lightgrey;
+
   a {
     position: absolute;
-    top: 45%;
-    left: 45%;
+    top: 40%;
+    left: 40%;
+    color: #b02825;
+    font-size: 23px;
   }
 }
 .sbox-s h2 {
@@ -261,14 +241,7 @@ h6 {
   top: 30%;
   left: 30%;
 }
-/* .sbox1:hover,.sbox2:hover{
-      width: 80%;
-      height: 80%;
-      margin: 10%;
-      border-radius: 20px;
-      opacity: 50%;
-  
-  } */
+
 .s-slider-box:hover .sbox-s {
   /* width: 80%;
     height: 70%; */
@@ -301,13 +274,13 @@ h6 {
     background-color: white;
   }
 }
-.s-filterClearBtn {
-  margin: 5px;
+.m-filterClearBtn {
+  margin: 10px 10px 0 0;
   width: 200px;
-  // height: 50px;
-  font-size: 16px;
-  color: #f9a451;
-  border: 1px solid #f9a451;
+  height: 50px;
+  font-size: 19px;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
   text-align: center;
   background-color: white;
   button {
@@ -317,7 +290,7 @@ h6 {
     // border-radius: 50%;
     border: none;
     background-color: transparent;
-    color: #f9a451;
+    color: #e74c3c;
   }
 }
 //頁數element
@@ -370,20 +343,7 @@ h6 {
     }
   }
 }
-// .s-productlist-card {
-//   &:hover {
-//     transform: scale(0.9);
-//     border-radius: 25px;
-//     transition: 1s;
-//   }
-//   img {
-//     &:hover {
-//       transform: scale(0.9);
-//       border-radius: 25px;
-//       transition: 1s;
-//     }
-//   }
-// }
+
 //商品細節頁
 .s-bigImg {
   width: 100%;

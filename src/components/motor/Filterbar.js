@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import '../../css/shop.scss'
+import '../../css/motor.scss'
 import { AiOutlineSearch } from 'react-icons/ai' //search_icon
 
 function Filterbar(props) {
