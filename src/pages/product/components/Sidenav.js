@@ -1,30 +1,69 @@
-import React, { useState, useEffect } from 'react'
-import { Row, Col, Card, Nav, Button, Form, Table } from 'react-bootstrap'
-function Sidenav() {
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import * as FaIcons from 'react-icons/fa'
+import * as AiIcons from 'react-icons/ai'
+import { SidebarData } from './SidebarData'
+import SubMenu from './SubMenu'
+import { IconContext } from 'react-icons/lib'
+import { Row, Col, Card, Form } from 'react-bootstrap'
+
+const Nav = styled.div`
+  background: #15171c;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`
+
+const NavIcon = styled(Link)`
+  margin-left: 2rem;
+  font-size: 2rem;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`
+
+const SidebarNav = styled.nav`
+  background: #15171c;
+  ${'' /* width: 250px; */}
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  ${'' /* position: fixed; */}
+  ${'' /* top: 0; */}
+  ${'' /* left: ${({ sidebar }) => (sidebar ? '0' : '-100%')}; */}
+  transition: 350ms;
+  z-index: 10;
+`
+
+const SidebarWrap = styled.div`
+  width: 100%;
+`
+
+const Sidebar = () => {
+  const [sidebar, setSidebar] = useState(false)
+
+  const showSidebar = () => setSidebar(!sidebar)
+
   return (
-    <Row>
-      <div>
-        <ul>
-          <li>安全帽</li>
-          <li>騎士套</li>
-          <li>
-            防摔衣
-            <ul>
-              <li>夏季防摔衣</li>
-              <li>冬季防摔衣</li>
-              <li>四季防摔衣</li>
-              <li>休閒防摔衣</li>
-            </ul>
-          </li>
-          <li>防摔褲</li>
-          <li>騎士車靴</li>
-          <li>騎士護具</li>
-          <li>騎士包</li>
-          <li>雨具</li>
-        </ul>
-      </div>
-    </Row>
+    <>
+      <IconContext.Provider value={{ color: '#fff' }}>
+        <SidebarNav sidebar={sidebar}>
+          <SidebarWrap>
+            {/* <NavIcon to="#">
+              <AiIcons.AiOutlineClose onClick={showSidebar} />
+            </NavIcon> */}
+            <input type="text" placeholder="Search.." name="search" />
+            {SidebarData.map((item, index) => {
+              return <SubMenu item={item} key={index} />
+            })}
+          </SidebarWrap>
+        </SidebarNav>
+      </IconContext.Provider>
+    </>
   )
 }
 
-export default Sidenav
+export default Sidebar

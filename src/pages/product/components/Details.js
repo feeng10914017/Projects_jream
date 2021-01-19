@@ -1,6 +1,7 @@
 import React, { useContext, useState, useRef } from 'react'
 import { useParams } from 'react-router-dom'
 import { DataContext } from './DataProvider'
+// import * as ProductData from './ProductData.json'
 import Colors from './Colors'
 import Sizes from './Sizes'
 import DetailsThumb from './DetailsThumb'
@@ -12,6 +13,7 @@ function Details(props) {
   const value = useContext(DataContext)
   const [products] = value.products
   const addCart = value.addCart
+  
 
   const [index, setIndex] = useState(0)
   const imgDiv = useRef()

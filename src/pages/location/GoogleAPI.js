@@ -220,16 +220,26 @@ export class MapContainer extends React.Component {
             )
           })}
 
-          <InfoWindow
-            marker={this.state.activeMarker}
-            visible={this.state.showingInfoWindow}
-            ref={this.infoWindowOne}
-          >
+          <InfoWindow marker={this.state.activeMarker} ref={this.infoWindowOne}>
             <div>
               <h4>{this.props.name}</h4>
               <p>{this.props.address}</p>
 
-              <Button variant="primary" href={this.state.selectedPlace.WEBSIT}>
+              <Button variant="primary" href={this.state.selectedPlace.path}>
+                詳細資訊
+              </Button>
+            </div>
+          </InfoWindow>
+
+          <InfoWindow
+            marker={this.state.activeMarker}
+            visible={this.state.showingInfoWindow}
+          >
+            <div>
+              <h4>{this.state.selectedPlace.name}</h4>
+              <p>{this.state.selectedPlace.title}</p>
+
+              <Button variant="primary" href={this.state.selectedPlace.path}>
                 詳細資訊
               </Button>
             </div>
