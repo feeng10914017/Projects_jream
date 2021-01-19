@@ -1,6 +1,6 @@
 [
   {
-    "_id": 1,
+    "id": 1,
     "title": "Wacth Product 01",
     "images": [
       "https://www.upsieutoc.com/images/2020/07/18/img1.jpg",
@@ -15,10 +15,10 @@
     "colors": ["red", "black", "teal"],
     "sizes": ["XL", "L", "M", "XM", "LX"],
     "price": 101,
-    "count": 1
+    "count": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   },
   {
-    "_id": 2,
+    "id": 2,
     "title": "Wacth Product 02",
     "images": [
       "https://www.upsieutoc.com/images/2020/07/18/img2.jpg",
@@ -26,16 +26,16 @@
       "https://www.upsieutoc.com/images/2020/07/18/img3.jpg",
       "https://www.upsieutoc.com/images/2020/07/18/img4.jpg"
     ],
-    "description": "kevin is a good boy ",
+    "description": "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node. Hellow world.",
     "content":
       "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
     "colors": ["red", "black", "teal"],
     "sizes": ["XL", "L", "M", "XM", "LX"],
     "price": 102,
-    "count": 1
+    "count": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   },
   {
-    "_id": 3,
+    "id": 3,
     "title": "Wacth Product 03",
     "images": [
       "https://www.upsieutoc.com/images/2020/07/18/img3.jpg",
@@ -50,10 +50,10 @@
     "colors": ["red", "black", "teal"],
     "sizes": ["XL", "L", "M", "XM", "LX"],
     "price": 103,
-    "count": 1
+    "count": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   },
   {
-    "_id": 4,
+    "id": 4,
     "title": "Wacth Product 04",
     "images": [
       "https://www.upsieutoc.com/images/2020/07/18/img3.jpg",
@@ -67,11 +67,11 @@
       "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
     "colors": ["red", "black", "teal"],
     "sizes": ["XL", "L", "M", "XM", "LX"],
-    "price": 103,
-    "count": 1
+    "price": 104,
+    "count": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   },
   {
-    "_id": 5,
+    "id": 5,
     "title": "Wacth Product 05",
     "images": [
       "https://www.upsieutoc.com/images/2020/07/18/img3.jpg",
@@ -85,11 +85,11 @@
       "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
     "colors": ["red", "black", "teal"],
     "sizes": ["XL", "L", "M", "XM", "LX"],
-    "price": 103,
-    "count": 1
+    "price": 105,
+    "count": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   },
   {
-    "_id": 6,
+    "id": 6,
     "title": "Wacth Product 06",
     "images": [
       "https://www.upsieutoc.com/images/2020/07/18/img3.jpg",
@@ -103,11 +103,11 @@
       "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
     "colors": ["red", "black", "teal"],
     "sizes": ["XL", "L", "M", "XM", "LX"],
-    "price": 103,
-    "count": 1
+    "price": 106,
+    "count": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   },
   {
-    "_id": 7,
+    "id": 7,
     "title": "Wacth Product 07",
     "images": [
       "https://www.upsieutoc.com/images/2020/07/18/img3.jpg",
@@ -121,11 +121,11 @@
       "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
     "colors": ["red", "black", "teal"],
     "sizes": ["XL", "L", "M", "XM", "LX"],
-    "price": 103,
-    "count": 1
+    "price": 107,
+    "count": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   },
   {
-    "_id": 8,
+    "id": 8,
     "title": "Wacth Product 08",
     "images": [
       "https://www.upsieutoc.com/images/2020/07/18/img3.jpg",
@@ -139,8 +139,80 @@
       "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
     "colors": ["red", "black", "teal"],
     "sizes": ["XL", "L", "M", "XM", "LX"],
-    "price": 103,
-    "count": 1
+    "price": 108,
+    "count": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  },
+  {
+    "id": 9,
+    "title": "Wacth Product 09",
+    "images": [
+      "https://www.upsieutoc.com/images/2020/07/18/img3.jpg",
+      "https://www.upsieutoc.com/images/2020/07/18/img2.jpg",
+      "https://www.upsieutoc.com/images/2020/07/18/img1.jpg",
+      "https://www.upsieutoc.com/images/2020/07/18/img4.jpg"
+    ],
+    "description":
+      "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
+    "content":
+      "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
+    "colors": ["red", "black", "teal"],
+    "sizes": ["XL", "L", "M", "XM", "LX"],
+    "price": 108,
+    "count": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  },
+  {
+    "id": 10,
+    "title": "Wacth Product 10",
+    "images": [
+      "https://www.upsieutoc.com/images/2020/07/18/img3.jpg",
+      "https://www.upsieutoc.com/images/2020/07/18/img2.jpg",
+      "https://www.upsieutoc.com/images/2020/07/18/img1.jpg",
+      "https://www.upsieutoc.com/images/2020/07/18/img4.jpg"
+    ],
+    "description":
+      "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
+    "content":
+      "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
+    "colors": ["red", "black", "teal"],
+    "sizes": ["XL", "L", "M", "XM", "LX"],
+    "price": 108,
+    "count": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  },
+  {
+    "id": 11,
+    "title": "Wacth Product 11",
+    "images": [
+      "https://www.upsieutoc.com/images/2020/07/18/img3.jpg",
+      "https://www.upsieutoc.com/images/2020/07/18/img2.jpg",
+      "https://www.upsieutoc.com/images/2020/07/18/img1.jpg",
+      "https://www.upsieutoc.com/images/2020/07/18/img4.jpg"
+    ],
+    "description":
+      "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
+    "content":
+      "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
+    "colors": ["red", "black", "teal"],
+    "sizes": ["XL", "L", "M", "XM", "LX"],
+    "price": 108,
+    "count": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  },
+  {
+    "id": 12,
+    "title": "Wacth Product 12",
+    "images": [
+      "https://www.upsieutoc.com/images/2020/07/18/img3.jpg",
+      "https://www.upsieutoc.com/images/2020/07/18/img2.jpg",
+      "https://www.upsieutoc.com/images/2020/07/18/img1.jpg",
+      "https://www.upsieutoc.com/images/2020/07/18/img4.jpg"
+    ],
+    "description":
+      "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
+    "content":
+      "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
+    "colors": ["red", "black", "teal"],
+    "sizes": ["XL", "L", "M", "XM", "LX"],
+    "price": 108,
+    "count": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   }
   
  

@@ -11,55 +11,6 @@ const containerStyle = {
 }
 
 export class MapContainer extends React.Component {
-  // state = {
-  //   showingInfoWindow: false,
-  //   activeMarker: {},
-  //   selectedPlace: {},
-  //   currentLocation: {
-  //     lat: 37.774929,
-  //     lng: -122.419416,
-  //   },
-  // }
-
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (prevProps.google !== this.props.google) {
-  //     this.loadMap()
-  //   }
-  //   if (prevState.currentLocation !== this.state.currentLocation) {
-  //     this.recenterMap()
-  //   }
-  // }
-
-  // recenterMap() {
-  //   const map = this.map
-  //   const curr = this.state.currentLocation
-
-  //   const google = this.props.google
-  //   const maps = google.maps
-
-  //   if (map) {
-  //     let center = new maps.LatLng(curr.lat, curr.lng)
-  //     map.panTo(center)
-  //   }
-  // }
-
-  // onMarkerClick = (props, marker, e) =>
-  //   this.setState({
-  //     selectedPlace: props,
-  //     activeMarker: marker,
-  //     showingInfoWindow: true,
-  //   })
-
-  // onMapClicked = (props) => {
-  //   if (this.state.showingInfoWindow) {
-  //     this.setState({
-  //       showingInfoWindow: false,
-  //       activeMarker: null,
-  //     })
-  //   }
-  // }
-  // -----------above is old-------------
-
   constructor() {
     super()
 

@@ -45,7 +45,7 @@ function Location() {
             </Button>
           </Row>
         </div>
-        <nav className="nav-menu ">
+        <nav className="L_nav-menu ">
           <ul className="nopadding">
             {Locationdata.map((item, index) => {
               return (
