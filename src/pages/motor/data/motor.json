@@ -1,0 +1,112 @@
+{
+  "motor": [
+    {
+      "motorId": 1,
+      "motorCategory": "YAMAHA",
+      "motorName": "BOLT950",
+      "motorPrice": 1000
+    },
+    {
+      "motorId": 2,
+      "motorCategory": "YAMAHA",
+      "motorName": "Imperiake 400 紅",
+      "motorPrice": 1500
+    },
+    {
+      "motorId": 3,
+      "motorCategory": "YAMAHA",
+      "motorName": "BOLT950",
+      "motorPrice": 2000
+    },
+    {
+      "motorId": 4,
+      "motorCategory": "YAMAHA",
+      "motorName": "BOLT950",
+      "motorPrice": 2500
+    },
+    {
+      "motorId": 5,
+      "motorCategory": "YAMAHA",
+      "motorName": "Imperiake 400 紅",
+      "motorPrice": 3000
+    },
+    {
+      "motorId": 6,
+      "motorCategory": "YAMAHA",
+      "motorName": "Leoncino_250_gray",
+      "motorPrice": 2500
+    },
+    {
+      "motorId": 7,
+      "motorCategory": "YAMAHA",
+      "motorName": "Leoncino_250_gray",
+      "motorPrice": 2000
+    },
+    {
+      "motorId": 8,
+      "motorCategory": "YAMAHA",
+      "motorName": "BOLT950",
+      "motorPrice": 1500
+    },
+    {
+      "motorId": 9,
+      "motorCategory": "YAMAHA",
+      "motorName": "BOLT950",
+      "motorPrice": 1000
+    },
+    {
+      "motorId": 10,
+      "motorCategory": "YAMAHA",
+      "motorName": "BOLT950",
+      "motorPrice": 1500
+    },
+    {
+      "motorId": 11,
+      "motorCategory": "YAMAHA",
+      "motorName": "Leoncino_250_gray",
+      "motorPrice": 2000
+    },
+    {
+      "motorId": 12,
+      "motorCategory": "YAMAHA",
+      "motorName": "BOLT950",
+      "motorPrice": 2500
+    },
+    {
+      "motorId": 13,
+      "motorCategory": "YAMAHA",
+      "motorName": "BOLT950",
+      "motorPrice": 3000
+    },
+    {
+      "motorId": 14,
+      "motorCategory": "YAMAHA",
+      "motorName": "BOLT950",
+      "motorPrice": 2500
+    },
+    {
+      "motorId": 15,
+      "motorCategory": "YAMAHA",
+      "motorName": "BOLT950",
+      "motorPrice": 2000
+    },
+    {
+      "motorId": 16,
+      "motorCategory": "YAMAHA",
+      "motorName": "BOLT950",
+      "motorPrice": 1500
+    },
+    {
+      "motorId": 17,
+      "motorCategory": "YAMAHA",
+      "motorName": "BOLT950",
+      "motorPrice": 1000
+    },
+    {
+      "motorId": 18,
+      "motorCategory": "YAMAHA",
+      "motorName": "BOLT950",
+      "motorPrice": 1000
+    }
+  ]
+}
