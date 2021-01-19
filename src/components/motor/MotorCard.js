@@ -5,28 +5,29 @@ function MotorCard() {
   const [motorCard, setMotorCard] = useState([])
 
   //引入資料庫
-  async function getMotor() {
-    try {
-      const response = await fetch('http://localhost:5555/motor', {
-        method: 'get',
-      })
-      if (response.ok) {
-        // 剖析資料為JS的數值
-        const data = await response.json()
+  // async function getMotor() {
+  //   try {
+  //     const response = await fetch('http://localhost:5555/motor', {
+  //       method: 'get',
+  //     })
+  //     if (response.ok) {
+  //       // 剖析資料為JS的數值
+  //       const data = await response.json()
 
-        // 設定資料到MotorCart狀態
-        setMotorCard(data)
-      }
-    } catch (error) {
-      // 發生錯誤的處理情況
-      alert('無法得到伺服器資料，請稍後再重試')
-      console.log(error)
-    }
-  }
+  //       // 設定資料到MotorCart狀態
+  //       setMotorCard(data)
+  //     }
+  //   } catch (error) {
+  //     // 發生錯誤的處理情況
+  //     alert('無法得到伺服器資料，請稍後再重試')
+  //     console.log(error)
+  //   }
+  // }
+
   //帶入資料庫
-  useEffect(() => {
-    getMotor()
-  }, [])
+  // useEffect(() => {
+  //   getMotor()
+  // }, [])
 
   const cardMotor =
     motorCard.length > 0 &&

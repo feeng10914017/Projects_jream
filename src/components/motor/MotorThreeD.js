@@ -21,12 +21,9 @@ class MotorThreeD extends React.Component {
         <header className="App-header">
           <h4 className="App-title">熱門車款</h4>
         </header>
-        <br />
-        <div style={{ height: '400px', width: '100%' }}>
+        <div style={{ height: '500px', width: '100%' }}>
           <Carousel slides={slides} autoplay={true} interval={3000} />
         </div>
-        <br />
-        <br />
       </div>
     )
   }
