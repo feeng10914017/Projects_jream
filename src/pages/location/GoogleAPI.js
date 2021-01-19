@@ -18,10 +18,6 @@ export class MapContainer extends React.Component {
       showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
-      currentLocation: {
-        lat: 37.774929,
-        lng: -122.419416,
-      },
     }
     //this.markerOne = React.createRef()
     this.markers = React.createRef([])
@@ -38,6 +34,8 @@ export class MapContainer extends React.Component {
 
   onMarkerClick = (props, marker, e) => {
     console.log(marker)
+    this.props.setDataFromLeft(false)
+    this.recenterMap()
     this.setState((prevState) => ({
       selectedPlace: props,
       activeMarker: marker,
@@ -72,11 +70,6 @@ export class MapContainer extends React.Component {
       this.recenterMap()
       console.log(this.props.id)
       console.log(this.markers.current)
-      // const index = this.markers.current.findIndex(
-      //   (marker) => +marker.props.itemid === this.props.id
-      // )
-
-      // console.log(index)
     }
   }
 
@@ -87,11 +80,7 @@ export class MapContainer extends React.Component {
     const google = this.props.google
     const maps = google.maps
 
-    //console.log(this.props, this.map)
-
     if (map) {
-      //  console.log(this.markerOne.current.marker)
-      //  console.log(this.state.activeMarker)
       let center = new maps.LatLng(curr.lat, curr.lng)
       map.panTo(center)
       map.setZoom(12)
@@ -108,40 +97,16 @@ export class MapContainer extends React.Component {
         let infowindowCurrent = this.infoWindowOne.current.infowindow
         infowindowCurrent.open(map, markerCurrent)
       }
-
-      // this.setState({
-      //   showingInfoWindow: true,
-      //   activeMarker: this.markerOne.current
-      // });
     }
   }
 
-  //   onMarkerMounted = element => {
-  //     console.log(element.marker,999)
-  //   this.onMarkerClick(element.props, element.marker, element);
-  // };
-
-  // onMarkerClick = (props, marker, e) =>
-  //   this.setState({
-  //     selectedPlace: props,
-  //     activeMarker: marker,
-  //     showingInfoWindow: true,
-  //   })
-
-  onMapClicked = (props) => {
-    if (this.state.showingInfoWindow) {
-      this.setState({
-        showingInfoWindow: false,
-        activeMarker: null,
-      })
-    }
-  }
   render() {
+    const { dataFromLeft } = this.props
+
     return (
       <div className="map_class1">
         <Map
           google={this.props.google}
-          // style={{ width: '100%', height: '100%' }}
           zoom={8.3}
           initialCenter={{
             lat: 23.797296,
@@ -150,19 +115,13 @@ export class MapContainer extends React.Component {
           containerStyle={containerStyle}
           onReady={this.onMapReady}
         >
-          {/* <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
-            position={{ lat: 24.96956174638972, lng: 121.51736957182294 }}
-            WEBSIT="http://localhost:3000/member"
-            onClick={this.onMarkerClick}
-          /> */}
-          {Locationdata.map((item, index) => {
+          {Locationdata.map((item) => {
             return (
               <Marker
-                title={item.address}
+                address={item.address}
                 name={item.name}
                 position={{ lat: item.lat, lng: item.lng }}
+                opentime={item.opentime}
                 WEBSIT="http://localhost:3000/member"
                 onClick={this.onMarkerClick}
                 ref={this.addToRefs}
@@ -171,28 +130,29 @@ export class MapContainer extends React.Component {
             )
           })}
 
-          <InfoWindow marker={this.state.activeMarker} ref={this.infoWindowOne}>
-            <div>
-              <h4>{this.props.name}</h4>
-              <p>{this.props.address}</p>
-
-              <Button variant="primary" href={this.state.selectedPlace.path}>
-                詳細資訊
-              </Button>
-            </div>
-          </InfoWindow>
-
           <InfoWindow
             marker={this.state.activeMarker}
             visible={this.state.showingInfoWindow}
+            ref={this.infoWindowOne}
           >
             <div>
-              <h4>{this.state.selectedPlace.name}</h4>
-              <p>{this.state.selectedPlace.title}</p>
+              <h4>
+                {dataFromLeft ? this.props.name : this.state.selectedPlace.name}
+              </h4>
+              <p>
+                {dataFromLeft
+                  ? this.props.address
+                  : this.state.selectedPlace.address}
+              </p>
+              <p>
+                {dataFromLeft
+                  ? this.props.opentime
+                  : this.state.selectedPlace.opentime}
+              </p>
 
-              <Button variant="primary" href={this.state.selectedPlace.path}>
+              {/* <Button variant="primary" href={this.state.selectedPlace.path}>
                 詳細資訊
-              </Button>
+              </Button> */}
             </div>
           </InfoWindow>
         </Map>

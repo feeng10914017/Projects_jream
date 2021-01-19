@@ -6,11 +6,15 @@ import { Row, Col, Card, Form } from 'react-bootstrap'
 import { Locationdata } from './data/locationdata.js'
 
 function Location() {
-  const [lat, setLat] = useState(0)
-  const [lng, setLng] = useState(0)
-  const [id, setId] = useState(0)
-  const [name, setName] = useState('')
-  const [address, setAddress] = useState('')
+  const [item, setItem] = useState({
+    id: 0,
+    name: '',
+    lat: 0,
+    lng: 0,
+    address: '',
+    opentime: '',
+  })
+  const [dataFromLeft, setDataFromLeft] = useState(true)
 
   return (
     <div className="d-flex">
@@ -47,30 +51,26 @@ function Location() {
         </div>
         <nav className="L_nav-menu ">
           <ul className="nopadding">
-            {Locationdata.map((item, index) => {
+            {Locationdata.map((location, index) => {
               return (
                 <li key={index}>
                   <div className="Location_item">
                     <div className="photoBox">
-                      <img src={item.img} alt="Product" />
+                      <img src={location.img} alt="Product" />
                     </div>
-                    <h5>{item.name}</h5>
+                    <h5>{location.name}</h5>
                     <div className="address fontSize14">門市地址</div>
                     <div className="time fontSize14">營業時間</div>
                     <div className="phone fontSize14">連絡電話</div>
-                    <div className="addressA fontSize14">{item.address}</div>
-                    <div className="timeA fontSize14">{item.opentime}</div>
-                    <div className="phoneA fontSize14">{item.phone}</div>
+                    <div className="addressA fontSize14">{location.address}</div>
+                    <div className="timeA fontSize14">{location.opentime}</div>
+                    <div className="phoneA fontSize14">{location.phone}</div>
 
                     <Button
                       variant="primary"
                       onClick={() => {
-                        setLat(item.lat)
-                        setLng(item.lng)
-                        setId(item.id)
-                        setAddress(item.address)
-                        setName(item.name)
-                        console.log(item.id)
+                        setItem(location)
+                        setDataFromLeft(true)
                       }}
                     >
                       詳細資訊
@@ -88,10 +88,13 @@ function Location() {
         style={{ height: 'calc(100vh - 80px)' }}
       >
         <Google
-          currentLocation={{ lat, lng }}
-          id={id}
-          name={name}
-          address={address}
+          currentLocation={{ lat: item.lat, lng: item.lng }}
+          id={item.id}
+          name={item.name}
+          address={item.address}
+          opentime={item.opentime}
+          dataFromLeft={dataFromLeft}
+          setDataFromLeft={setDataFromLeft}
         />
       </div>
     </div>

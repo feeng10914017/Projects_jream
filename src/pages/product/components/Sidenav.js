@@ -42,6 +42,15 @@ function Sidenav() {
         <Accordion.Collapse eventKey="1">
           <Card.Body>Hello! I'm another body</Card.Body>
         </Accordion.Collapse>
+        <Accordion.Collapse eventKey="1">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="1">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="1">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
       </Card>
       <Card className="nopadding">
         <Card.Header className="nopadding">
@@ -70,6 +79,36 @@ function Sidenav() {
           <Card.Body>Hello! I'm another body</Card.Body>
         </Accordion.Collapse>
         <Accordion.Collapse eventKey="2">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+      </Card>
+      <Card className="nopadding">
+        <Card.Header className="nopadding">
+          <Accordion.Toggle
+            as={Card.Header}
+            variant="link"
+            eventKey="3"
+            className="nopadding"
+          >
+            <h5>Click me!</h5>
+          </Accordion.Toggle>
+        </Card.Header>
+        <Accordion.Collapse eventKey="3">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="3">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="3">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="3">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="3">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+        <Accordion.Collapse eventKey="3">
           <Card.Body>Hello! I'm another body</Card.Body>
         </Accordion.Collapse>
       </Card>
