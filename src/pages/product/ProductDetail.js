@@ -21,7 +21,18 @@ function Detail(props) {
   //購物車商品=>大小  單價  數量
   const [productColor, setProductColor] = useState('-1')
   const [productSize, setProductSize] = useState('-1')
-  const [productAmount, setProductAmount] = useState('')
+  const [productAmount, setProductAmount] = useState(1)
+
+  //商品數量計數器
+  const reduction = (id) => {
+    let tmp = productAmount
+    productAmount === 1 ? setProductAmount(tmp) : setProductAmount(tmp - 1)
+  }
+
+  const increase = (id) => {
+    let tmp = productAmount
+    setProductAmount(tmp + 1)
+  }
   // 讓小圖片變大檢視
   const [index, setIndex] = useState(0)
   const imgDiv = useRef()
@@ -158,7 +169,7 @@ function Detail(props) {
             </select>
           </div>
           {/*------------------數量選擇---------------------- */}
-          <div>
+          {/* <div>
             數量選擇 :
             <select
               required
@@ -175,7 +186,21 @@ function Detail(props) {
                 return <option>{item}</option>
               })}
             </select>
+          </div> */}
+          {/*-------------------- 數量選擇2----------------------- */}
+          {/* {FindProductData().count((item, index) => {
+            return ( */}
+          <div className="amount">
+            <button className="count" onClick={() => reduction()}>
+              -
+            </button>
+            <span>{productAmount}</span>
+            <button className="count" onClick={() => increase()}>
+              +
+            </button>
           </div>
+          {/* ) */}
+          {/* })} */}
 
           <button
             type="button"

@@ -130,3 +130,17 @@
   color: rgb(255, 255, 255);
   background-color: gray;
 }
+/* Amount selector */
+.amount span {
+  color: crimson;
+  padding: 0 45px;
+}
+.amount .count {
+  width: 40px;
+  height: 30px;
+  border: 1px solid #555;
+  outline: none;
+  background: #555;
+  cursor: pointer;
+  color: white !important;
+}
