@@ -17,4 +17,7 @@ $danger: #e74c3c;
 
 //首頁樣式
 @import './home/home.scss';
+
 //購物車樣式
+@import './order/OD.scss';
+@import './order/ODCustom.scss';

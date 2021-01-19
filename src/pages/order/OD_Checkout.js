@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Row, Card, Button, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-import './OD.scss'
-import OrderStep from './OD_Ccomponents/OD_Step'
-import GrandTotal from './OD_Ccomponents/OD_GrandTotal'
+import OrderStep from '../../components/order/CartStep'
+import GrandTotal from '../../components/order/CheckOut_GrandTotal'
 
 function OD_Checkout() {
   const [checkType, setCheckType] = useState('')

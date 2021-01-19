@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Card, Accordion } from 'react-bootstrap'
 import $ from 'jquery'
 
-import ODIMotor from './OD_CartMotor'
-import ODICardTotal from './OD_GrandTotal'
+import ODIMotor from './CartMotor'
+import ODICardTotal from '../../components/order/CheckOut_GrandTotal'
 import { AiOutlineDown } from 'react-icons/ai'
 
 function OD_CKO_Detail() {

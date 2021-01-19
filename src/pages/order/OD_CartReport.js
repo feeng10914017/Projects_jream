@@ -3,10 +3,7 @@ import { Row, Button, Card, Form, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 //引入頁面元件
-import OrderStep from './OD_Ccomponents/OD_Step'
-
-//引入樣式表
-import './OD.scss'
+import OrderStep from '../../components/order/CartStep'
 
 function OD_CartReport() {
   return (
