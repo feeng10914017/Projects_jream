@@ -89,10 +89,7 @@
       .inputAmount:read-only {
         background: none;
       }
-      .btn-outline-primary:focus,
-      .btn:focus {
-        box-shadow: none;
-      }
+
       .col-lg-11 {
         p,
         input,
@@ -117,6 +114,10 @@
   hr {
     margin: 1.5rem 0;
     margin-left: 2.5rem;
+  }
+  .btn-outline-primary:focus,
+  .btn:focus {
+    box-shadow: none;
   }
 }
 // 購物車總結樣式 ( OD_GrandTotal )

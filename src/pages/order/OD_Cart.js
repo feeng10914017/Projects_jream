@@ -12,6 +12,7 @@ function OD_Cart() {
   const [ListType, setListType] = useState('Motor')
   const [motorCart, setMotorCart] = useState([])
   const [productCart, setProductCart] = useState([])
+  const [motorCartDisplay, setMotorCartDisplay] = useState([])
   const [productCartDisplay, setProductCartDisplay] = useState([])
   const [checkedCart, setCheckedCart] = useState([])
   const localShipping = reactLocalStorage.get('shipping')
@@ -39,7 +40,7 @@ function OD_Cart() {
       {
         id: 2,
         name: 'Wacth Product 01 ',
-        images: 'https://www.upsieutoc.com/images/2020/07/18/img1.jpg',
+        img: 'https://www.upsieutoc.com/images/2020/07/18/img1.jpg',
         color: 'red',
         size: 'XL',
         price: 10001,
@@ -50,7 +51,7 @@ function OD_Cart() {
       {
         id: 3,
         name: 'Wacth Product 02',
-        images: 'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
+        img: 'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
         color: 'black',
         size: 'L',
         price: 102,
@@ -61,7 +62,7 @@ function OD_Cart() {
       {
         id: 4,
         name: 'Wacth Product 03',
-        images: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
+        img: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
         color: 'teal',
         size: 'M',
         price: 103,
@@ -72,7 +73,7 @@ function OD_Cart() {
       {
         id: 4,
         name: 'Wacth Product 03',
-        images: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
+        img: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
         color: 'teal',
         size: 'M',
         price: 103,
@@ -83,7 +84,7 @@ function OD_Cart() {
       {
         id: 4,
         name: 'Wacth Product 03',
-        images: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
+        img: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
         color: 'teal',
         size: 'M',
         price: 103,
@@ -94,7 +95,7 @@ function OD_Cart() {
       {
         id: 5,
         name: 'Wacth Product 04',
-        images: 'https://www.upsieutoc.com/images/2020/07/18/img4.jpg',
+        img: 'https://www.upsieutoc.com/images/2020/07/18/img4.jpg',
         color: 'red',
         size: 'XM',
         price: 104,
@@ -105,7 +106,7 @@ function OD_Cart() {
       {
         id: 6,
         name: 'Wacth Product 05',
-        images: 'https://www.upsieutoc.com/images/2020/07/18/img5.jpg',
+        img: 'https://www.upsieutoc.com/images/2020/07/18/img5.jpg',
         color: 'black',
         size: 'LX',
         price: 105,
@@ -123,6 +124,9 @@ function OD_Cart() {
     const newProductCart = localStorage.getItem('productCart') || '[]'
     setMotorCart(JSON.parse(newMotorCart))
     setProductCart(JSON.parse(newProductCart))
+    localStorage.setItem('motorCart', newMotorCart)
+    localStorage.setItem('productCart', newProductCart)
+    localStorage.setItem('finalProductCart', '[]')
   }
   useEffect(() => {
     getCartFromLocalStorage()
@@ -166,6 +170,14 @@ function OD_Cart() {
 
     localStorage.setItem('productCart', JSON.stringify(newProductCartDisplay))
   }, [productCart])
+  //reorganize the motorCart
+  useEffect(() => {
+    let newMotorCartDisplay = []
+    newMotorCartDisplay = motorCart
+    setMotorCartDisplay(newMotorCartDisplay)
+
+    localStorage.setItem('motorCart', JSON.stringify(newMotorCartDisplay))
+  }, [motorCart])
 
   // update productCart Amount to localStorage
   const updateCartAmountToLocalStorage = (item, isAdded = true) => {
@@ -248,8 +260,10 @@ function OD_Cart() {
     checked
       ? (newCheckedItem = [...newCheckedItem, currentCart[index]])
       : newIndex !== -1 && newCheckedItem.splice(newIndex, 1)
-    // console.log(newCheckedItem)
+    console.log(newCheckedItem)
     setCheckedCart(newCheckedItem)
+
+    localStorage.setItem('finalProductCart', JSON.stringify(newCheckedItem))
   }
 
   //update productCart checkedItem data
@@ -267,7 +281,15 @@ function OD_Cart() {
     }
 
     setCheckedCart(newCheckedCart)
-    // console.log(checkedCart)
+    localStorage.setItem('finalProductCart', JSON.stringify(newCheckedCart))
+  }
+
+  // delet motor data
+  const motorDeleteBtn = () => {
+    console.log('hi')
+    const doNotHaveMotor = '[]'
+    setMotorCart(JSON.parse(doNotHaveMotor))
+    localStorage.setItem('motorCart', doNotHaveMotor)
   }
 
   const display = (
@@ -304,7 +326,7 @@ function OD_Cart() {
           </Card.Header>
           {/* CardBody */}
           <div id="BodyMotor">
-            <CartMotor data={motorCart} />
+            <CartMotor data={motorCart} motorDeleteBtn={motorDeleteBtn} />
           </div>
           <div id="BodyProd" className="py-4">
             {productCartDisplay.length > 0 ? (
@@ -341,7 +363,7 @@ function OD_Cart() {
 
         <GrandTotal
           type={ListType}
-          data={ListTypeOnClick === 'Motor' ? motorCart : checkedCart}
+          data={ListTypeOnClick === 'Motor' ? motorCartDisplay : checkedCart}
           shipping={localShipping}
         />
 
