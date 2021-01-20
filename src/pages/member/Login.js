@@ -1,7 +1,6 @@
 import { React, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import LoginG from './components/Login-G'
-import LogoutG from './components/Logout-G'
 import PropTypes from 'prop-types'
 import './login.scss'
 
@@ -61,9 +60,8 @@ function Login({ setToken }) {
             <button type="submit" className="submit A-Btn Login-button">
               Sign In
             </button>
-            {/* </Link> */}
             <LoginG />
-            <LogoutG />
+            {/* <LogoutG /> */}
             {/* <button type="button" className="fb-btn A-Btn Login-button">
             Connect with <span>facebook</span>
           </button> */}
@@ -116,8 +114,8 @@ function Login({ setToken }) {
   )
 }
 
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired,
-}
+// Login.propTypes = {
+//   setToken: PropTypes.func.isRequired,
+// }
 
 export default Login
