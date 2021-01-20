@@ -4,20 +4,26 @@ import { Row } from 'react-bootstrap'
 function OD_GrandTotal(props) {
   const data = props.data
   const type = props.type
+  // console.log(type)
+  // console.log(data)
+
+  const [shipping, setShipping] = useState('')
   //計算商品總和
   let sum = 0
   data.map((v, index) => {
-    sum = sum + Number(v.productPrice) * Number(v.productAmount)
+    sum = sum + Number(v.price) * Number(v.amount)
   })
   //計算運費
-  let shipping = ''
-  props.shipping == false && (shipping = 0)
-  console.log(type)
-  console.log(data)
+  useEffect(() => {
+    const newShipping = localStorage.getItem('shipping')
+    console.log('newShipping', newShipping, shipping)
+    newShipping !== '' ? setShipping(newShipping) : setShipping('未選擇')
+  }, [shipping])
+
   const display = (
     <>
       {data.length > 0 ? (
-        type == 'NavMotor' ? (
+        type === 'Motor' ? (
           <section className="cartTotal text-right">
             <Row className="mb-3">
               <div className="col-6"></div>
@@ -49,7 +55,7 @@ function OD_GrandTotal(props) {
             <Row>
               <div className="col-8"></div>
               <p className="col-2">運費</p>
-              <p className="col-2">$ {props.shipping == false && '未選擇'}</p>
+              <p className="col-2">$ {shipping}</p>
             </Row>
 
             <div className="line"></div>
@@ -59,7 +65,10 @@ function OD_GrandTotal(props) {
                 小計<span></span>
               </p>
               <p className="col-2 colorPrimary">
-                NT$ <span>{sum + shipping}</span>
+                NT${' '}
+                <span>
+                  {shipping === '未選擇' ? sum : sum + Number(shipping)}
+                </span>
               </p>
             </Row>
           </section>
