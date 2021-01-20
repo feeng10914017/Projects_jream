@@ -6,23 +6,27 @@ import '../../css/motor.scss'
 function Slider(props) {
   useEffect(() => {
     const background_list = [
-      '/images/motor/LOGO/YAMAHA.png',
-      '/images/motor/LOGO/SUZUKI.png',
-      '/images/motor/LOGO/HONDA.png',
-      '/images/motor/LOGO/YAMAHA.png',
-      '/images/motor/LOGO/YAMAHA.png',
-      '/images/motor/LOGO/YAMAHA.png',
+      '/images/motor/LOGO/800px-Yamaha_Motor_logo.svg.png',
+      '/images/motor/LOGO/800px-Honda_logo.svg.png',
+      '/images/motor/LOGO/800px-Suzuki_logo.svg.png',
+      '/images/motor/LOGO/Kawasaki-logo.svg.png',
+      '/images/motor/LOGO/.png',
+      '/images/motor/LOGO/.png',
     ]
     console.log(background_list[0])
     let index = 0
     $('.sbox-s')
       .mouseenter(function () {
         $(this)
-          .css({ background: 'white', opacity: '80%', transform: 'scale(0.7)' })
+          .css({
+            background: 'white',
+            opacity: '80%',
+            transform: 'scale(0.7)',
+          })
           .parent()
           .siblings()
           .find('.sbox-s')
-          .css({ background: 'white', opacity: '50%', transform: 'scale(0.8)' })
+          .css({ background: 'white', opacity: '0%', transform: 'scale(0.8)' })
 
         //目前是第幾個sbox-s
         index = $(this).index('.sbox-s')

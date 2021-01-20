@@ -443,7 +443,7 @@ function ProductList(props) {
       <div className="row my-3">
         <div className="col-12 d-flex">
           {/* 新的頁數bar開始 */}
-          <ul className="d-flex flex-wrap">
+          {/* <ul className="d-flex flex-wrap">
             <li className="s-pageItem">
               <Link className="" onClick={() => paginate(currentpage - 1)}>
                 <AiOutlineCaretLeft />
@@ -486,7 +486,7 @@ function ProductList(props) {
                 <AiOutlineCaretRight />
               </Link>
             </li>
-          </ul>
+          </ul> */}
           {/* 新的頁數bar結束 */}
         </div>
       </div>
@@ -544,16 +544,16 @@ function ProductList(props) {
           ''
         )}
       </div>
-      <div className="container">
-        {/* <Filterbar
+      <div>
+        <Filterbar
           setMyproduct={setMyproduct}
           setTotalpage={setTotalpage}
           setVendor={setVendor}
           setPrice={setPrice}
           setOrderBy={setOrderBy}
-        /> */}
+        />
       </div>
-      <div className="container">{dataLoading ? loading : display}</div>
+      <div>{dataLoading ? loading : display}</div>
     </>
   )
 }
