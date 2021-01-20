@@ -328,35 +328,58 @@ function OD_Cart() {
           <div id="BodyMotor">
             <CartMotor data={motorCart} motorDeleteBtn={motorDeleteBtn} />
           </div>
-          <div id="BodyProd" className="py-4">
+          <div id="BodyProd">
             {productCartDisplay.length > 0 ? (
-              productCartDisplay.map((v, index) => {
-                return (
-                  <>
-                    <CartProduct
-                      index={index}
-                      data={v}
-                      updateCartAmountToLocalStorage={
-                        updateCartAmountToLocalStorage
-                      }
-                      deletItemToLocalStorage={deletItemToLocalStorage}
-                      updateCartSizeToLocalStorage={
-                        updateCartSizeToLocalStorage
-                      }
-                      checkedItem={checkedItem}
-                    />
-                    <div className="col-11 m-auto" key={index}>
-                      {productCart.length - 1 === index ? (
-                        ''
-                      ) : (
-                        <div className="line"></div>
-                      )}
-                    </div>
-                  </>
-                )
-              })
+              <div className="py-4">
+                {productCartDisplay.map((v, index) => {
+                  return (
+                    <>
+                      <CartProduct
+                        index={index}
+                        data={v}
+                        updateCartAmountToLocalStorage={
+                          updateCartAmountToLocalStorage
+                        }
+                        deletItemToLocalStorage={deletItemToLocalStorage}
+                        updateCartSizeToLocalStorage={
+                          updateCartSizeToLocalStorage
+                        }
+                        checkedItem={checkedItem}
+                      />
+                      <div className="col-11 m-auto" key={index}>
+                        {productCart.length - 1 === index ? (
+                          ''
+                        ) : (
+                          <div className="line"></div>
+                        )}
+                      </div>
+                    </>
+                  )
+                })}
+              </div>
             ) : (
-              <p>nothing</p>
+              <Card.Body className="leaseNothing">
+                <Row>
+                  <div>
+                    <h5>這裡好空</h5>
+                    <h5>可以餵我&nbsp;&nbsp;&nbsp;&nbsp;吃東西嗎？</h5>
+                    <Link to={'/product'}>
+                      <Button
+                        className="nothingBtn place-center mt-2"
+                        variant="primary"
+                      >
+                        馬上來
+                      </Button>
+                    </Link>
+                  </div>
+                  <section>
+                    <img
+                      src="http://localhost:3000/images/order/undraw_empty_xct9.svg"
+                      alt=""
+                    />
+                  </section>
+                </Row>
+              </Card.Body>
             )}
           </div>
         </Card>

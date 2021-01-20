@@ -1,6 +1,7 @@
 import React from 'react'
 import { Row, Form, Card, Button } from 'react-bootstrap'
 import { IoCloseSharp } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 
 function CartMotor(props) {
   const MotortData = props.data
@@ -96,7 +97,29 @@ function CartMotor(props) {
           )
         })
       ) : (
-        <p>nothing</p>
+        <Card.Body className="leaseNothing">
+          <Row>
+            <section>
+              <img
+                src="http://localhost:3000/images/order/undraw_dream_world_cin1.svg"
+                alt=""
+              />
+            </section>
+
+            <div>
+              <h5>快~ 動動你的手指</h5>
+              <h5>追逐自己的夢想去</h5>
+              <Link to={'/motor'}>
+                <Button
+                  className="nothingBtn place-center mt-2"
+                  variant="primary"
+                >
+                  馬上去
+                </Button>
+              </Link>
+            </div>
+          </Row>
+        </Card.Body>
       )}
     </>
   )

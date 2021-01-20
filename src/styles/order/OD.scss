@@ -64,62 +64,87 @@
       }
     }
   }
-}
-// 租賃買賣選擇呈現樣式 ( OD_CartMotor OD_CartProduct )
-.lease {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  label {
-    margin-bottom: 0;
-    .row {
-      align-items: center;
-      img {
-        width: 100%;
-        object-fit: cover;
-        object-position: center center;
-      }
-      h6 {
-        text-align: end;
-        color: #b02825;
-      }
-      .inputAmount {
-        border: 1px solid #b02825;
-      }
-      .inputAmount:read-only {
-        background: none;
-      }
-
-      .col-lg-11 {
-        p,
-        input,
-        select,
-        button,
-        h6 {
-          margin: 0.5rem 0;
+  .lease {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    label {
+      margin-bottom: 0;
+      .row {
+        align-items: center;
+        img {
+          width: 100%;
+          object-fit: cover;
+          object-position: center center;
         }
-        .row {
-          .productTitle {
-            .row {
-              justify-content: space-between;
-              p {
-                max-width: calc(100% - 56px);
+        h6 {
+          text-align: end;
+          color: #b02825;
+        }
+        .inputAmount {
+          border: 1px solid #b02825;
+        }
+        .inputAmount:read-only {
+          background: none;
+        }
+
+        .col-lg-11 {
+          p,
+          input,
+          select,
+          button,
+          h6 {
+            margin: 0.5rem 0;
+          }
+          .row {
+            .productTitle {
+              .row {
+                justify-content: space-between;
+                p {
+                  max-width: calc(100% - 56px);
+                }
               }
             }
           }
         }
       }
     }
+    hr {
+      margin: 1.5rem 0;
+      margin-left: 2.5rem;
+    }
+    .btn-outline-primary:focus,
+    .btn:focus {
+      box-shadow: none;
+    }
   }
-  hr {
-    margin: 1.5rem 0;
-    margin-left: 2.5rem;
-  }
-  .btn-outline-primary:focus,
-  .btn:focus {
-    box-shadow: none;
+  .leaseNothing {
+    .row {
+      justify-content: center;
+      align-items: center;
+      section {
+        margin: 3rem;
+        height: 13rem;
+        width: 13rem;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+      }
+    }
   }
 }
+// 租賃買賣選擇呈現樣式 ( OD_CartMotor OD_CartProduct )
+
 // 購物車總結樣式 ( OD_GrandTotal )
 .cartTotal {
   background-color: #f5f5f5;
