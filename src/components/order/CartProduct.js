@@ -12,28 +12,34 @@ import {
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 import { IoCloseSharp } from 'react-icons/io5'
 import $ from 'jquery'
+
 function OD_CartProduct(props) {
   const e = props.data
   const index = props.index
-  const sizesOption = []
-  for (let i = 0; i < e.sizes.length; i++) {
-    sizesOption.push(<option>{e.sizes[i]}</option>)
+  const sizeList = []
+  for (let i = 0; i < e.sizeOptions.length; i++) {
+    sizeList.push(<option value={e.sizeOptions[i]}>{e.sizeOptions[i]}</option>)
   }
-  const colorsOption = []
-  for (let i = 0; i < e.colors.length; i++) {
-    colorsOption.push(<option>{e.colors[i]}</option>)
+
+  const handleChangeSize = (element) => {
+    // console.log(element.target.value)
+    props.updateCartSizeToLocalStorage(e, element.target.value)
   }
-  function plusBtn() {
-    const number = e.cound + 1
-    reactLocalStorage.setObject()
+  const handleChangeChecked = (element) => {
+    // console.log(element.target.checked)
+    props.checkedItem(e, element.target.checked, index)
   }
+  // function plusBtn() {
+  //   const number = e.cound + 1
+  //   reactLocalStorage.setObject()
+  // }
   const display = (
     <>
       <div id={'clickEvent' + index}>
         <Card.Body>
           <Form.Group controlId={'checkBoxProduct' + index} className="lease">
             <div>
-              <Form.Control type="checkbox" />
+              <Form.Control type="checkbox" onChange={handleChangeChecked} />
             </div>
             <Form.Label>
               <Row>
@@ -42,25 +48,23 @@ function OD_CartProduct(props) {
                 </Col>
                 <Col lg={11} md={8} className="px-0">
                   <Row>
-                    <Col lg={4} className="productTitle">
+                    <Col lg={3} className="productTitle">
                       <Row>
-                        <p>{e.title}</p>
-
-                        <Button className="px-1 d-flex align-items-center">
-                          <IoCloseSharp />
-                        </Button>
+                        <p>{e.name}</p>
                       </Row>
                     </Col>
 
                     <Col lg={2}>
-                      <Form.Control as="select" defaultValue={e.color}>
-                        {colorsOption}
-                      </Form.Control>
+                      <p>{e.color}</p>
                     </Col>
 
                     <Col lg={2}>
-                      <Form.Control as="select" defaultValue={e.size}>
-                        {sizesOption}
+                      <Form.Control
+                        as="select"
+                        defaultValue={e.size}
+                        onChange={handleChangeSize}
+                      >
+                        {sizeList}
                       </Form.Control>
                     </Col>
                     <Col lg={2}>
@@ -69,14 +73,15 @@ function OD_CartProduct(props) {
                           <Button
                             variant="outline-primary"
                             className="px-1 d-flex align-items-center"
-                            id="plus"
-                            onClic={plusBtn}
+                            onClick={() =>
+                              props.updateCartAmountToLocalStorage(e, true)
+                            }
                           >
                             <AiOutlinePlus />
                           </Button>
                         </InputGroup.Prepend>
                         <FormControl
-                          value={e.count}
+                          value={e.amount}
                           readOnly
                           className="text-right inputAmount"
                         />
@@ -84,7 +89,10 @@ function OD_CartProduct(props) {
                           <Button
                             variant="outline-primary"
                             className="px-1 d-flex align-items-center"
-                            id="minus"
+                            onClick={() => {
+                              if (e.amount === 1) return
+                              props.updateCartAmountToLocalStorage(e, false)
+                            }}
                           >
                             <AiOutlineMinus />
                           </Button>
@@ -92,7 +100,15 @@ function OD_CartProduct(props) {
                       </InputGroup>
                     </Col>
                     <Col lg={2}>
-                      <h6>$ {e.price * e.count}</h6>
+                      <h6>$ {e.price * e.amount}</h6>
+                    </Col>
+                    <Col lg={1}>
+                      <Button
+                        className="px-1 d-flex align-items-center"
+                        onClick={() => props.deletItemToLocalStorage(e)}
+                      >
+                        <IoCloseSharp />
+                      </Button>
                     </Col>
                   </Row>
                 </Col>

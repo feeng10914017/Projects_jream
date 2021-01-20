@@ -1,42 +1,79 @@
 import { React, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import LoginG from './components/Login-G'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import './login.scss'
 
 //
-async function loginUser() {
-  return fetch('http://localhost:8080/member', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(),
-  }).then((data) => data.json())
-}
-//
-function Login({ setToken }) {
-  const [email, setEmail] = useState()
-  const [password, setPassword] = useState()
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    // const token = await loginUser({
-    //   email,
-    //   password,
-    // })
-    // setToken(token)
+//
+function Login(props) {
+  const { setIsAuth, setAuth } = props
+  const history = useHistory()
+  console.log(props)
+  const [member, setMember] = useState([])
+  console.log('member', member)
+  const [memberEmail, setMemberEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const [validated, setValidated] = useState(false)
+  const handleSubmit = (event) => {
+    const form = event.currentTarget
+    if (form.checkValidity() === false) {
+      event.preventDefault()
+      event.stopPropagation()
+    } else {
+      event.preventDefault()
+      event.stopPropagation()
+      getMember()
+    }
+    setValidated(true)
   }
 
+  async function getMember() {
+    try {
+      const response = await fetch('http://localhost:5555/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ memberEmail, password }),
+      })
+      console.log('email?', memberEmail)
+      if (response.ok) {
+        const data = await response.json()
+        console.log('WHO', data)
+        if (data) {
+          setMember(data)
+          localStorage.setItem('memberName', 'id')
+          localStorage.setItem('memberName', data.member)
+          localStorage.setItem('memberName', JSON.stringify(data))
+          setAuth(true)
+        } else {
+          console.log('error')
+        }
+      }
+    } catch (err) {
+      alert('無法辨識資料')
+      console.log(err)
+    }
+  }
+  useEffect(() => {
+    if (localStorage.getItem('id')) {
+      history.push('/member')
+    } else {
+      console.log('RE')
+    }
+  }, [member])
+  // console.log(member)
   useEffect(() => {
     document.querySelector('.img__btn').addEventListener('click', () => {
       document.querySelector('.cont').classList.toggle('s--signup')
     })
   })
+
   return (
     <>
       <div className="cont">
-        <form onSubmit={handleSubmit}>
+        <form noValidate validated={validated} onChange={handleSubmit}>
           <div className="form sign-in A-label">
             <h2 className="AL-h2">Welcome back,</h2>
             <label>
@@ -44,7 +81,7 @@ function Login({ setToken }) {
               <input
                 type="email"
                 className="LI-input"
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setMemberEmail(e.target.value)}
               />
             </label>
             <label>

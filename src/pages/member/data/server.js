@@ -1,19 +1,19 @@
-const express = require('express')
-const cors = require('cors')
-const app = express()
+// var createError = require('http-error')
+var express = require('express')
+// var path = require('path')
+// var cookieParser = require('cookie-parser')
+// var logger = require('morgan')
+var cors = require('cors')
+var app = express()
+
+var loginRouter = require('./routes/login')
 
 app.use(cors())
 
-app.use('/member', (req, res) => {
-  res.send({
-    token: 'test123',
-  })
-})
+app.use('/login', loginRouter)
 
-app.get('/member', (req, res) => {
-  res.send()
-})
-
-app.listen(8080, () =>
-  console.log('API is running on http://localhost:8080/member')
+app.listen(5555, () =>
+  console.log('API is running on http://localhost:5555/login')
 )
+
+module.exports = app
