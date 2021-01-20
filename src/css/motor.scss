@@ -196,6 +196,7 @@ a:hover {
   position: relative;
   bottom: 40px;
   left: 5px;
+  color: #b02825;
 }
 
 /* slider.css */
@@ -204,10 +205,10 @@ a:hover {
   width: 100%;
   min-height: 25vh;
   // background-image: url('http://localhost:3000/images/shop/bigImage/1_MONSTER HUNTER_ WORLD_0.jpg');
-  background-size: cover;
+  // background-size: cover;
   background-repeat: no-repeat;
   filter: grayscale(50%);
-  transition: 1s;
+  transition: 0.2s;
 
   flex-wrap: wrap;
 }
@@ -255,16 +256,16 @@ a:hover {
   height: 45px;
 }
 .s-filterbar-btn {
-  border-radius: 25px;
-  border: 1px solid #79cee2;
-  color: #79cee2;
+  // border-radius: 25px;
+  border: 1px solid#b02825;
+  color: #b02825;
   width: 150px;
   &:hover {
-    background-color: #79cee2;
-    border: 1px solid #79cee2;
+    background-color: #b02825;
+    border: 1px solid #b02825;
   }
   &:active {
-    background-color: #79cee2;
+    background-color: #b02825;
   }
 }
 .s-filterbar-search {

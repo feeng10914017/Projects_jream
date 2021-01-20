@@ -4,6 +4,7 @@ import MotorSBar from '../../components/motor/MotorSBar'
 // import MotorCard from '../../components/motor/MotorCard'
 import { Container, Row, Col, Pagination } from 'react-bootstrap'
 import ProductList from './ProductList'
+import Pageee from '../../components/motor/Pageee'
 
 function Motor() {
   //設定分頁容納節點
@@ -30,9 +31,11 @@ function Motor() {
       <MotorThreeD />
       {/* <MotorSBar /> */}
       {/* <MotorCard /> */}
-      {paginationBasic}
+
       <hr />
       <ProductList />
+      {/* {paginationBasic} */}
+      <Pageee />
     </>
   )
 }

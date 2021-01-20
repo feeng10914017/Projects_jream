@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Figure } from 'react-bootstrap'
 import { AiOutlineSearch } from 'react-icons/ai'
 import NewTab from '../../components/news/NewTab'
 import './News.css'
@@ -6,10 +7,13 @@ function News() {
   return (
     <>
       <div className="C-searchDiv position-relative">
-        <figure>
-          <img src="http://localhost:3000/images/news/bigpage.jpg" />
-        </figure>
-        <div className="C-searchButtonGroup">
+        <Figure>
+          <Figure.Image
+            // width={'auto'}
+            src="http://localhost:3000/images/news/bigpage.jpg"
+          />
+        </Figure>
+        {/* <div className="C-searchButtonGroup">
           <div
             className="C-searchButton"
             // value="1"
@@ -79,7 +83,7 @@ function News() {
             />
             <AiOutlineSearch className="C-searchbarIcon" />
           </div>
-        </div>
+        </div> */}
 
         <div style={{ display: 'flex' }}>
           <div style={{ margin: '0 auto' }}>
