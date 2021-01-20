@@ -1,115 +1,38 @@
 import React from 'react'
 import { Accordion, Button, Card } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import '../product.css'
 function Sidenav() {
   return (
-    <Accordion className="nopadding">
+    <Accordion className="nopadding P_Sidenav">
       <Card className="nopadding">
         <Card.Header className="nopadding">
           <Accordion.Toggle
             as={Card.Header}
             variant="link"
             eventKey="0"
-            className="nopadding"
+            className="nopadding "
           >
-            <h5>Click me!</h5>
+            <h5
+              onClick={() => {
+                document
+                  .getElementById('arrow')
+                  .classList.toggle('fa-rotate-180')
+              }}
+              className="colorPrimary"
+            >
+              Click me!
+              <FontAwesomeIcon
+                id="arrow"
+                icon={faAngleDown}
+                className=" P_sidenav_transition "
+              ></FontAwesomeIcon>
+            </h5>
           </Accordion.Toggle>
         </Card.Header>
-        <Accordion.Collapse eventKey="0">
+        <Accordion.Collapse eventKey="0" className="P_sidenav_cardbody">
           <Card.Body>Hello! I'm the body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="0">
-          <Card.Body>Hello! I'm the body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="0">
-          <Card.Body>Hello! I'm the body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="0">
-          <Card.Body>Hello! I'm the body</Card.Body>
-        </Accordion.Collapse>
-      </Card>
-      <Card className="nopadding">
-        <Card.Header className="nopadding">
-          <Accordion.Toggle
-            as={Card.Header}
-            variant="link"
-            eventKey="1"
-            className="nopadding"
-          >
-            <h5>Click me!</h5>
-          </Accordion.Toggle>
-        </Card.Header>
-        <Accordion.Collapse eventKey="1">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="1">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="1">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="1">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-      </Card>
-      <Card className="nopadding">
-        <Card.Header className="nopadding">
-          <Accordion.Toggle
-            as={Card.Header}
-            variant="link"
-            eventKey="2"
-            className="nopadding"
-          >
-            <h5>Click me!</h5>
-          </Accordion.Toggle>
-        </Card.Header>
-        <Accordion.Collapse eventKey="2">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="2">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="2">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="2">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="2">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="2">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-      </Card>
-      <Card className="nopadding">
-        <Card.Header className="nopadding">
-          <Accordion.Toggle
-            as={Card.Header}
-            variant="link"
-            eventKey="3"
-            className="nopadding"
-          >
-            <h5>Click me!</h5>
-          </Accordion.Toggle>
-        </Card.Header>
-        <Accordion.Collapse eventKey="3">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="3">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="3">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="3">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="3">
-          <Card.Body>Hello! I'm another body</Card.Body>
-        </Accordion.Collapse>
-        <Accordion.Collapse eventKey="3">
-          <Card.Body>Hello! I'm another body</Card.Body>
         </Accordion.Collapse>
       </Card>
     </Accordion>

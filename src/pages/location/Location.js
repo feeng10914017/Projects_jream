@@ -9,8 +9,8 @@ function Location() {
   const [item, setItem] = useState({
     id: 0,
     name: '',
-    lat: 0,
-    lng: 0,
+    lat: 23.797296,
+    lng: 121.03121,
     address: '',
     opentime: '',
   })
@@ -62,7 +62,9 @@ function Location() {
                     <div className="address fontSize14">門市地址</div>
                     <div className="time fontSize14">營業時間</div>
                     <div className="phone fontSize14">連絡電話</div>
-                    <div className="addressA fontSize14">{location.address}</div>
+                    <div className="addressA fontSize14">
+                      {location.address}
+                    </div>
                     <div className="timeA fontSize14">{location.opentime}</div>
                     <div className="phoneA fontSize14">{location.phone}</div>
 
