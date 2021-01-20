@@ -9,25 +9,23 @@ import CartProduct from '../../components/order/CartProduct'
 import GrandTotal from '../../components/order/CheckOut_GrandTotal'
 
 function OD_Cart() {
-  const [navState, setNavState] = useState('NavMotor')
-  const [motorCart, setMotorCart] = useState(
-    reactLocalStorage.getObject('motorCart')
-  )
-  const [productCart, setProductCart] = useState(
-    reactLocalStorage.getObject('productCart')
-  )
+  const [ListType, setListType] = useState('Motor')
+  const [motorCart, setMotorCart] = useState([])
+  const [productCart, setProductCart] = useState([])
+  const [productCartDisplay, setProductCartDisplay] = useState([])
+  const [checkedCart, setCheckedCart] = useState([])
   const localShipping = reactLocalStorage.get('shipping')
 
   function setLocalStorage() {
     reactLocalStorage.setObject('motorCart', [
       {
-        id: '0',
+        id: 1,
         img: 'Leoncino_250_gray.jpg',
         company: 'SUZUKI',
         model: 'GSX - S1000S',
         color: 'BROWN',
         rentalPrice: '1000',
-        rentalAmount: '1',
+        rentalAmount: 1,
         rentalLocation: '台北濱江店',
         rentalDate: '2021-01-09',
         rentalTime: '14:16:00',
@@ -39,70 +37,99 @@ function OD_Cart() {
     ])
     reactLocalStorage.setObject('productCart', [
       {
-        _id: '1',
-        title: 'Wacth Product 01 ',
+        id: 2,
+        name: 'Wacth Product 01 ',
         images: 'https://www.upsieutoc.com/images/2020/07/18/img1.jpg',
         color: 'red',
         size: 'XL',
         price: 10001,
-        count: 1,
-        colors: ['red', 'black', 'teal'],
-        sizes: ['XL', 'L', 'M', 'XM', 'LX'],
+        amount: 1,
+        colorOptions: ['red', 'black', 'teal'],
+        sizeOptions: ['XL', 'L', 'M', 'XM', 'LX'],
       },
       {
-        _id: '2',
-        title: 'Wacth Product 02',
+        id: 3,
+        name: 'Wacth Product 02',
         images: 'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
         color: 'black',
         size: 'L',
         price: 102,
-        count: 2,
-        colors: ['red', 'black', 'teal'],
-        sizes: ['XL', 'L', 'M', 'XM', 'LX'],
+        amount: 1,
+        colorOptions: ['red', 'black', 'teal'],
+        sizeOptions: ['XL', 'L', 'M', 'XM', 'LX'],
       },
       {
-        _id: '3',
-        title: 'Wacth Product 03',
+        id: 4,
+        name: 'Wacth Product 03',
         images: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
         color: 'teal',
         size: 'M',
         price: 103,
-        count: 3,
-        colors: ['red', 'black', 'teal'],
-        sizes: ['XL', 'L', 'M', 'XM', 'LX'],
+        amount: 1,
+        colorOptions: ['red', 'black', 'teal'],
+        sizeOptions: ['XL', 'L', 'M', 'XM', 'LX'],
       },
       {
-        _id: '4',
-        title: 'Wacth Product 04',
+        id: 4,
+        name: 'Wacth Product 03',
+        images: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
+        color: 'teal',
+        size: 'M',
+        price: 103,
+        amount: 1,
+        colorOptions: ['red', 'black', 'teal'],
+        sizeOptions: ['XL', 'L', 'M', 'XM', 'LX'],
+      },
+      {
+        id: 4,
+        name: 'Wacth Product 03',
+        images: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
+        color: 'teal',
+        size: 'M',
+        price: 103,
+        amount: 1,
+        colorOptions: ['red', 'black', 'teal'],
+        sizeOptions: ['XL', 'L', 'M', 'XM', 'LX'],
+      },
+      {
+        id: 5,
+        name: 'Wacth Product 04',
         images: 'https://www.upsieutoc.com/images/2020/07/18/img4.jpg',
         color: 'red',
         size: 'XM',
         price: 104,
-        count: 1,
-        colors: ['red', 'black', 'teal'],
-        sizes: ['XL', 'L', 'M', 'XM', 'LX'],
+        amount: 1,
+        colorOptions: ['red', 'black', 'teal'],
+        sizeOptions: ['XL', 'L', 'M', 'XM', 'LX'],
       },
       {
-        _id: '5',
-        title: 'Wacth Product 05',
+        id: 6,
+        name: 'Wacth Product 05',
         images: 'https://www.upsieutoc.com/images/2020/07/18/img5.jpg',
         color: 'black',
         size: 'LX',
         price: 105,
-        count: 1,
-        colors: ['red', 'black', 'teal'],
-        sizes: ['XL', 'L', 'M', 'XM', 'LX'],
+        amount: 1,
+        colorOptions: ['red', 'black', 'teal'],
+        sizeOptions: ['XL', 'L', 'M', 'XM', 'LX'],
       },
     ])
-    reactLocalStorage.set('shipping', '-1')
+    reactLocalStorage.set('shipping', [])
+  }
+
+  //get local storage data
+  function getCartFromLocalStorage() {
+    const newMotorCart = localStorage.getItem('motorCart') || '[]'
+    const newProductCart = localStorage.getItem('productCart') || '[]'
+    setMotorCart(JSON.parse(newMotorCart))
+    setProductCart(JSON.parse(newProductCart))
   }
   useEffect(() => {
-    setMotorCart(reactLocalStorage.getObject('motorCart'))
-    setProductCart(reactLocalStorage.getObject('productCart'))
+    getCartFromLocalStorage()
   }, [])
 
-  //透過改變後的navState,來調整顯示的內容(使用function changeDisplay)
-  const navStateOnClick = navState
+  //get users chose
+  const ListTypeOnClick = ListType
   function changeDisplay(a, b) {
     document.getElementById(a).classList.add('displayBlock')
     document.getElementById(b).classList.remove('displayBlock')
@@ -110,17 +137,145 @@ function OD_Cart() {
     document.getElementById(b).classList.add('displayNone')
   }
   useEffect(() => {
-    navStateOnClick === 'NavMotor'
+    ListTypeOnClick === 'Motor'
       ? changeDisplay('BodyMotor', 'BodyProd')
       : changeDisplay('BodyProd', 'BodyMotor')
-  }, [navState])
+  }, [ListType])
 
   /////////////////////////////////////////////////////////////////
+
+  //reorganize the productCart
+  useEffect(() => {
+    let newProductCartDisplay = []
+
+    for (let i = 0; i < productCart.length; i++) {
+      const index = newProductCartDisplay.findIndex(
+        (value) => value.id === productCart[i].id
+      )
+      // console.log(index)
+      if (index !== -1) {
+        newProductCartDisplay[index].amount += productCart[i].amount
+      } else {
+        const newItem = { ...productCart[i] }
+        newProductCartDisplay = [...newProductCartDisplay, newItem]
+      }
+      // console.log('hi')
+    }
+    // console.log(newProductCartDisplay)
+    setProductCartDisplay(newProductCartDisplay)
+
+    localStorage.setItem('productCart', JSON.stringify(newProductCartDisplay))
+  }, [productCart])
+
+  // update productCart Amount to localStorage
+  const updateCartAmountToLocalStorage = (item, isAdded = true) => {
+    // console.log(item, isAdded)
+    const currentCart = JSON.parse(localStorage.getItem('productCart')) || []
+
+    const index = currentCart.findIndex((v) => v.id === item.id)
+    // console.log('index', index)
+
+    if (index !== -1) {
+      if (isAdded) {
+        updateCheckedItem(
+          item,
+          currentCart[index].id,
+          'plus',
+          currentCart[index].amount + 1
+        )
+        currentCart[index].amount++
+      } else {
+        updateCheckedItem(
+          item,
+          currentCart[index].id,
+          'minus',
+          currentCart[index].amount - 1
+        )
+        currentCart[index].amount--
+      }
+    }
+
+    localStorage.setItem('productCart', JSON.stringify(currentCart))
+
+    setProductCart(currentCart)
+  }
+
+  // update productCart size to localStorage
+  const updateCartSizeToLocalStorage = (item, selected) => {
+    // console.log(item, selected)
+    const currentCart = JSON.parse(localStorage.getItem('productCart')) || []
+
+    const index = currentCart.findIndex((v) => v.id === item.id)
+    // console.log('index', index)
+
+    if (index !== -1) {
+      currentCart[index].size = selected
+      updateCheckedItem(item, currentCart[index].id, 'selectSize', selected)
+    }
+
+    localStorage.setItem('productCart', JSON.stringify(currentCart))
+
+    setProductCart(currentCart)
+  }
+
+  // delete productCart item to localStorage
+  const deletItemToLocalStorage = (item) => {
+    // console.log('delete', item)
+    const currentCart = JSON.parse(localStorage.getItem('productCart')) || []
+
+    const index = currentCart.findIndex((v) => v.id === item.id)
+    // console.log('index', index)
+
+    if (index !== -1) {
+      updateCheckedItem(item, currentCart[index].id, 'delete', null)
+      currentCart.splice(index, 1)
+    }
+
+    localStorage.setItem('productCart', JSON.stringify(currentCart))
+
+    setProductCart(currentCart)
+  }
+
+  //check productCart checkedItem data
+  const checkedItem = (item, checked, index) => {
+    // console.log(item, checked, index)
+    const currentCart = JSON.parse(localStorage.getItem('productCart')) || []
+
+    let newCheckedItem = checkedCart
+
+    const newIndex = newCheckedItem.findIndex((v) => v.id === item.id)
+    // console.log(newIndex)
+    checked
+      ? (newCheckedItem = [...newCheckedItem, currentCart[index]])
+      : newIndex !== -1 && newCheckedItem.splice(newIndex, 1)
+    // console.log(newCheckedItem)
+    setCheckedCart(newCheckedItem)
+  }
+
+  //update productCart checkedItem data
+  const updateCheckedItem = (item, id, eventType, value) => {
+    // console.log(item, id, eventType, value)
+
+    let newCheckedCart = checkedCart
+
+    const index = newCheckedCart.findIndex((v) => v.id === item.id)
+    if (index !== -1) {
+      eventType === 'plus' && (newCheckedCart[index].amount = value)
+      eventType === 'minus' && (newCheckedCart[index].amount = value)
+      eventType === 'selectSize' && (newCheckedCart[index].size = value)
+      eventType === 'delete' && newCheckedCart.splice(index, 1)
+    }
+
+    setCheckedCart(newCheckedCart)
+    // console.log(checkedCart)
+  }
+
   const display = (
     <>
       <article className="col-10">
         {/* 購物車步驟 */}
         <OrderStep step="1" />
+
         <Card className="cartHome">
           {/* CardHeader */}
           <Card.Header>
@@ -129,7 +284,7 @@ function OD_Cart() {
                 <Nav.Link
                   href="#Nav_Motor"
                   onClick={() => {
-                    setNavState('NavMotor')
+                    setListType('Motor')
                   }}
                 >
                   <p>重機租賃</p>
@@ -139,7 +294,7 @@ function OD_Cart() {
                 <Nav.Link
                   href="#Nav_Prod"
                   onClick={() => {
-                    setNavState('NavProd')
+                    setListType('Prod')
                   }}
                 >
                   <p>周邊商品</p>
@@ -152,13 +307,24 @@ function OD_Cart() {
             <CartMotor data={motorCart} />
           </div>
           <div id="BodyProd" className="py-4">
-            {productCart.length > 0 ? (
-              productCart.map((v, index) => {
+            {productCartDisplay.length > 0 ? (
+              productCartDisplay.map((v, index) => {
                 return (
                   <>
-                    <CartProduct index={index} data={v} />
+                    <CartProduct
+                      index={index}
+                      data={v}
+                      updateCartAmountToLocalStorage={
+                        updateCartAmountToLocalStorage
+                      }
+                      deletItemToLocalStorage={deletItemToLocalStorage}
+                      updateCartSizeToLocalStorage={
+                        updateCartSizeToLocalStorage
+                      }
+                      checkedItem={checkedItem}
+                    />
                     <div className="col-11 m-auto" key={index}>
-                      {productCart.length - 1 == index ? (
+                      {productCart.length - 1 === index ? (
                         ''
                       ) : (
                         <div className="line"></div>
@@ -172,11 +338,12 @@ function OD_Cart() {
             )}
           </div>
         </Card>
-        {/* <GrandTotal
-          type={navState}
-          data={navStateOnClick === 'NavMotor' ? motorCart : productCart}
+
+        <GrandTotal
+          type={ListType}
+          data={ListTypeOnClick === 'Motor' ? motorCart : checkedCart}
           shipping={localShipping}
-        /> */}
+        />
 
         {/* Button */}
         <Row className="justify-content-center finalBtnParent">
@@ -187,7 +354,7 @@ function OD_Cart() {
           </Link>
           <Link
             to={
-              navStateOnClick === 'NavMotor'
+              ListTypeOnClick === 'Motor'
                 ? '/order/CreditCard'
                 : '/order/checkout'
             }
@@ -214,71 +381,3 @@ function OD_Cart() {
 }
 
 export default OD_Cart
-
-// const [motorCart, setMotorCart] = useState([])
-// const [productCart, setProductCart] = useState([])
-// const [shipping, setShipping] = useState([])
-
-// //引入資料庫
-// async function getMotor() {
-//   try {
-//     const response = await fetch('http://localhost:5555/motorCart', {
-//       method: 'get',
-//     })
-//     if (response.ok) {
-//       // 剖析資料為JS的數值
-//       const data = await response.json()
-
-//       // 設定資料到MotorCart狀態
-//       setMotorCart(data)
-//     }
-//   } catch (error) {
-//     // 發生錯誤的處理情況
-//     alert('無法得到伺服器資料，請稍後再重試')
-//     console.log(error)
-//   }
-// }
-// async function getProduct() {
-//   try {
-//     const response = await fetch('http://localhost:5555/productCart', {
-//       method: 'get',
-//     })
-//     if (response.ok) {
-//       // 剖析資料為JS的數值
-//       const data = await response.json()
-
-//       // 設定資料到ProductCart狀態
-//       setProductCart(data)
-//     }
-//   } catch (error) {
-//     // 發生錯誤的處理情況
-//     alert('無法得到伺服器資料，請稍後再重試')
-//     console.log(error)
-//   }
-// }
-// async function getShipping() {
-//   try {
-//     const response = await fetch('http://localhost:5555/shipping', {
-//       method: 'get',
-//     })
-//     if (response.ok) {
-//       // 剖析資料為JS的數值
-//       const data = await response.json()
-
-//       // 設定資料到Shippin狀態
-//       setShipping(data)
-//     }
-//   } catch (error) {
-//     // 發生錯誤的處理情況
-//     alert('無法得到伺服器資料，請稍後再重試')
-//     console.log(error)
-//   }
-// }
-
-// console.log(reactLocalStorage.getObject('motorCart'))
-// //帶入資料庫
-// useEffect(() => {
-//   getMotor()
-//   getProduct()
-//   getShipping()
-// }, [])
