@@ -11,7 +11,7 @@ const clientId =
 function LoginG() {
   let history = useHistory()
   const onSuccess = (res) => {
-    // alert(`登入成功 welcome ${res.profileObj.name}.`)
+    alert(`登入成功 welcome ${res.profileObj.name}.`)
     console.log('Login Success: currentUser:', res.profileObj)
     refreshTokenSetup(res)
     history.push('/member') //這裡以後會跳轉到首頁
