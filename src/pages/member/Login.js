@@ -5,13 +5,13 @@ import PropTypes from 'prop-types'
 import './login.scss'
 
 //
-async function loginUser(credentials) {
-  return fetch('http://localhost:8080/login', {
+async function loginUser() {
+  return fetch('http://localhost:8080/member', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(credentials),
+    body: JSON.stringify(),
   }).then((data) => data.json())
 }
 //

@@ -4,12 +4,16 @@ const app = express()
 
 app.use(cors())
 
-app.use('/login', (req, res) => {
+app.use('/member', (req, res) => {
   res.send({
     token: 'test123',
   })
 })
 
+app.get('/member', (req, res) => {
+  res.send()
+})
+
 app.listen(8080, () =>
-  console.log('API is running on http://localhost:8080/login')
+  console.log('API is running on http://localhost:8080/member')
 )
