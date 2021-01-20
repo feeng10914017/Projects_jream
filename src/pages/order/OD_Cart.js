@@ -286,7 +286,6 @@ function OD_Cart() {
 
   // delet motor data
   const motorDeleteBtn = () => {
-    console.log('hi')
     const doNotHaveMotor = '[]'
     setMotorCart(JSON.parse(doNotHaveMotor))
     localStorage.setItem('motorCart', doNotHaveMotor)
@@ -301,10 +300,10 @@ function OD_Cart() {
         <Card className="cartHome">
           {/* CardHeader */}
           <Card.Header>
-            <Nav fill variant="tabs" defaultActiveKey="#Nav_Motor">
+            <Nav fill variant="tabs" defaultActiveKey="#N">
               <Nav.Item>
                 <Nav.Link
-                  href="#Nav_Motor"
+                  href="#N"
                   onClick={() => {
                     setListType('Motor')
                   }}
@@ -314,7 +313,7 @@ function OD_Cart() {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link
-                  href="#Nav_Prod"
+                  href="#p"
                   onClick={() => {
                     setListType('Prod')
                   }}
@@ -391,35 +390,58 @@ function OD_Cart() {
         />
 
         {/* Button */}
-        <Row className="justify-content-center finalBtnParent">
-          <Link to={'/'}>
-            <Button className="finalBtn place-center" variant="danger">
-              繼續購物
-            </Button>
-          </Link>
-          <Link
-            to={
-              ListTypeOnClick === 'Motor'
-                ? '/order/CreditCard'
-                : '/order/checkout'
-            }
-          >
-            <Button
-              className="finalBtn finalBtnTwo place-center"
-              variant="primary"
-            >
-              下一步
-            </Button>
-          </Link>
+        {ListTypeOnClick === 'Motor' &&
+        localStorage.getItem('motorCart') === '[]' ? (
+          <></>
+        ) : ListTypeOnClick === 'Prod' &&
+          localStorage.getItem('productCart') === '[]' ? (
+          <></>
+        ) : ListTypeOnClick === 'Motor' &&
+          localStorage.getItem('motorCart') !== '[]' ? (
+          <Row className="justify-content-center ">
+            <Link to={'/motor'}>
+              <Button className="finalBtn place-center" variant="danger">
+                繼續選車
+              </Button>
+            </Link>
+            <Link to={'/order/CreditCard'}>
+              <Button className="finalBtn  place-center" variant="primary">
+                下一步
+              </Button>
+            </Link>
+          </Row>
+        ) : ListTypeOnClick === 'Prod' &&
+          localStorage.getItem('productCart') !== '[]' ? (
+          <Row className="justify-content-center ">
+            <Link to={'/product'}>
+              <Button className="finalBtn place-center" variant="danger">
+                繼續購物
+              </Button>
+            </Link>
+
+            <Link to={'/order/checkout'}>
+              <Button className="finalBtn  place-center" variant="primary">
+                下一步
+              </Button>
+            </Link>
+          </Row>
+        ) : (
           <Button
-            className="finalBtn finalBtnTwo place-center"
+            className="finalBtn  place-center"
             variant="primary"
             onClick={setLocalStorage}
           >
             取資料
           </Button>
-        </Row>
+        )}
       </article>
+      <Button
+        className="finalBtn  place-center"
+        variant="primary"
+        onClick={setLocalStorage}
+      >
+        取資料
+      </Button>
     </>
   )
   return <>{display}</>
