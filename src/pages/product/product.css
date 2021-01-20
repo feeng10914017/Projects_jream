@@ -35,7 +35,7 @@
 }
 
 .P_card .card-text {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   overflow: hidden;
   /* white-space: nowrap; */
   display: -webkit-box;
@@ -75,6 +75,7 @@
   margin: 5px;
   overflow: hidden;
   /* border: gray 1px solid; */
+  cursor: pointer;
 }
 .P_D_smallPhoto .active {
   border: solid red 1px;
@@ -140,7 +141,7 @@
 }
 .P_amount span {
   color: crimson;
-  padding: 0 45px;
+  padding: 0 30px;
 }
 .P_amount .count {
   width: 40px;
@@ -156,4 +157,14 @@
   background: #e74c3c;
   color: white !important;
   padding: 16px 48px;
+}
+/* ------------------Product sidenav----------------- */
+.P_Sidenav {
+  cursor: pointer;
+}
+.P_sidenav_transition {
+  transition-duration: 500ms;
+}
+.P_sidenav_cardbody {
+  margin-left: 1rem;
 }
