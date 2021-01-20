@@ -136,9 +136,9 @@ function Detail(props) {
                 setProductColor(event.target.value)
               }}
             >
-              <option value="-1" disabled selected hidden>
+              {/* <option value="-1" disabled selected hidden>
                 Please Select
-              </option>
+              </option> */}
 
               {FindProductData().colors.map((item, index) => {
                 return (
@@ -162,9 +162,9 @@ function Detail(props) {
                 setProductSize(event.target.value)
               }}
             >
-              <option value="-1" disabled selected hidden>
+              {/* <option value="-1" disabled selected hidden>
                 Please Select
-              </option>
+              </option> */}
               {FindProductData().sizes.map((item, index) => {
                 return <option value={item}>{item}</option>
               })}
