@@ -3,17 +3,20 @@ import React, { useState } from 'react'
 export const Locationdata = [
   {
     id: 1,
+    city: '基隆市',
     name: '基隆 一店',
     path: '/member',
     lat: 25.130638549364203,
     lng: 121.73572271141437,
-    address: '基隆市中山區成功二路66-1號',
+    address:
+      '基隆市中山區成功二路66-1號 基隆市中山區成功二路66-1號 基隆市中山區成功二路66-1號 基隆市中山區成功二路66-1號',
     opentime: '上午9:00~下午9:00',
     img: './images/1.jpg',
     phone: '02-24288211',
   },
   {
     id: 2,
+    city: '台北市',
     name: '台北 一店',
     path: '/member',
     lat: 25.045749684309627,
@@ -25,6 +28,7 @@ export const Locationdata = [
   },
   {
     id: 3,
+    city: '台北市',
     name: '台北 二店',
     path: '/member',
     lat: 25.04298254931106,
@@ -36,6 +40,7 @@ export const Locationdata = [
   },
   {
     id: 4,
+    city: '台北市',
     name: '台北 三店',
     path: '/member',
     lat: 25.052209292511087,
@@ -47,6 +52,7 @@ export const Locationdata = [
   },
   {
     id: 5,
+    city: '新北市',
     name: '新北 一店',
     path: '/member',
     lat: 25.020650756051175,
@@ -58,6 +64,7 @@ export const Locationdata = [
   },
   {
     id: 6,
+    city: '新北市',
     name: '新北 二店',
     path: '/member',
     lat: 24.9955687316847,
@@ -69,6 +76,7 @@ export const Locationdata = [
   },
   {
     id: 7,
+    city: '新北市',
     name: '新北 三店',
     path: '/member',
     lat: 25.026344630575593,
@@ -80,6 +88,7 @@ export const Locationdata = [
   },
   {
     id: 8,
+    city: '桃園市',
     name: '桃園 一店',
     path: '/member',
     lat: 24.991686539979607,
@@ -91,6 +100,7 @@ export const Locationdata = [
   },
   {
     id: 9,
+    city: '台中市',
     name: '台中 一店',
     path: '/member',
     lat: 24.119144858054764,
@@ -102,6 +112,7 @@ export const Locationdata = [
   },
   {
     id: 10,
+    city: '台南市',
     name: '台南 一店',
     path: '/member',
     lat: 22.998975381558118,
@@ -113,6 +124,7 @@ export const Locationdata = [
   },
   {
     id: 11,
+    city: '高雄市',
     name: '高雄 一店',
     path: '/member',
     lat: 22.598732011949746,

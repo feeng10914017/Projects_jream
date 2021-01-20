@@ -7,9 +7,9 @@ function Sidenav() {
   return (
     <>
       <Form.Control
-        className="searchingInp border "
+        className="searchingInp border col-12"
         type="text"
-        placeholder="搜尋商品"
+        placeholder="搜尋產品"
       />
       <Accordion className="nopadding P_Sidenav">
         <Card className="nopadding">
@@ -26,9 +26,9 @@ function Sidenav() {
                     .getElementById('arrow')
                     .classList.toggle('fa-rotate-180')
                 }}
-                className="colorPrimary"
+                className="colorPrimary P_sidenav_Flex"
               >
-                Click me!
+                Category
                 <FontAwesomeIcon
                   id="arrow"
                   icon={faAngleDown}
@@ -38,7 +38,12 @@ function Sidenav() {
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0" className="P_sidenav_cardbody">
-            <Card.Body>Hello! I'm the body</Card.Body>
+            <Card.Body>
+              <h6 className="sidemenu_item">Sub_Category</h6>
+              <h6 className="sidemenu_item">Sub_Category</h6>
+              <h6 className="sidemenu_item">Sub_Category</h6>
+              <h6 className="sidemenu_item">Sub_Category</h6>
+            </Card.Body>
           </Accordion.Collapse>
         </Card>
       </Accordion>

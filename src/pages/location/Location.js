@@ -37,11 +37,9 @@ function Location() {
                 as="select"
                 defaultValue="Choose"
               >
-                <option selected>全部</option>
-                <option>台北市</option>
-                <option>新北市</option>
-                <option>桃園市</option>
-                <option>新竹市</option>
+                {Locationdata.map((location, index) => {
+                  return <option>{location.city}</option>
+                })}
               </Form.Control>
             </ul>
             <Button size="lg" variant="primary" className="SearchingBtn ">
@@ -95,6 +93,8 @@ function Location() {
           name={item.name}
           address={item.address}
           opentime={item.opentime}
+          phone={item.phone}
+          img={item.img}
           dataFromLeft={dataFromLeft}
           setDataFromLeft={setDataFromLeft}
         />

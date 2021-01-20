@@ -122,7 +122,8 @@ export class MapContainer extends React.Component {
                 name={item.name}
                 position={{ lat: item.lat, lng: item.lng }}
                 opentime={item.opentime}
-                WEBSIT="http://localhost:3000/member"
+                phone={item.phone}
+                img={item.img}
                 onClick={this.onMarkerClick}
                 ref={this.addToRefs}
                 itemid={item.id}
@@ -135,24 +136,46 @@ export class MapContainer extends React.Component {
             visible={this.state.showingInfoWindow}
             ref={this.infoWindowOne}
           >
-            <div>
-              <h4>
-                {dataFromLeft ? this.props.name : this.state.selectedPlace.name}
-              </h4>
+            <div className="Location_infobox">
+              <div class="title_and_img">
+                <h4>
+                  {dataFromLeft
+                    ? this.props.name
+                    : this.state.selectedPlace.name}
+                </h4>
+                <div className="photoBox">
+                  <img
+                    src={
+                      dataFromLeft
+                        ? this.props.img
+                        : this.state.selectedPlace.img
+                    }
+                  />
+                </div>
+              </div>
+
               <p>
+                地址:
                 {dataFromLeft
                   ? this.props.address
                   : this.state.selectedPlace.address}
               </p>
               <p>
+                營業時間 :
                 {dataFromLeft
                   ? this.props.opentime
                   : this.state.selectedPlace.opentime}
               </p>
+              <p>
+                連絡電話 :
+                {dataFromLeft
+                  ? this.props.phone
+                  : this.state.selectedPlace.phone}
+              </p>
 
-              {/* <Button variant="primary" href={this.state.selectedPlace.path}>
-                詳細資訊
-              </Button> */}
+              <Button variant="primary" href={this.state.selectedPlace.path}>
+                前往租車
+              </Button>
             </div>
           </InfoWindow>
         </Map>

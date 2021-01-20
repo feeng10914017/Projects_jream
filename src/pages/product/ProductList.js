@@ -108,10 +108,10 @@ function ProductList(props) {
       <Carousel />
       <Container>
         <Row>
-          <Col sm={2} className="nopadding ">
+          <Col sm={3} className="nopadding ">
             <Sidenav />
           </Col>
-          <Col sm={10} className="nopadding ">
+          <Col sm={9} className="nopadding ">
             {display}
           </Col>
         </Row>
