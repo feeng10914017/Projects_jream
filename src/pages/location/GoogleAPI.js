@@ -173,7 +173,8 @@ export class MapContainer extends React.Component {
                   : this.state.selectedPlace.phone}
               </p>
 
-              <Button variant="primary" href={this.state.selectedPlace.path}>
+              {/* <Button variant="primary" href={this.state.selectedPlace.path}> */}
+              <Button variant="primary" href="http://localhost:3000/motor">
                 前往租車
               </Button>
             </div>
