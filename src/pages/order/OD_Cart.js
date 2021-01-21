@@ -15,7 +15,8 @@ function OD_Cart() {
   const [motorCartDisplay, setMotorCartDisplay] = useState([])
   const [productCartDisplay, setProductCartDisplay] = useState([])
   const [checkedCart, setCheckedCart] = useState([])
-  const localShipping = reactLocalStorage.get('shipping')
+  const [shipping, setShipping] = useState([])
+  // const localShipping = reactLocalStorage.get('shipping')
 
   function setLocalStorage() {
     reactLocalStorage.setObject('motorCart', [
@@ -122,10 +123,13 @@ function OD_Cart() {
   function getCartFromLocalStorage() {
     const newMotorCart = localStorage.getItem('motorCart') || '[]'
     const newProductCart = localStorage.getItem('productCart') || '[]'
+    const newShipping = '[]'
     setMotorCart(JSON.parse(newMotorCart))
     setProductCart(JSON.parse(newProductCart))
+    setShipping(JSON.parse(newShipping))
     localStorage.setItem('motorCart', newMotorCart)
     localStorage.setItem('productCart', newProductCart)
+    localStorage.setItem('shipping', newShipping)
     localStorage.setItem('finalProductCart', '[]')
   }
   useEffect(() => {
@@ -260,7 +264,7 @@ function OD_Cart() {
     checked
       ? (newCheckedItem = [...newCheckedItem, currentCart[index]])
       : newIndex !== -1 && newCheckedItem.splice(newIndex, 1)
-    console.log(newCheckedItem)
+    // console.log(newCheckedItem)
     setCheckedCart(newCheckedItem)
 
     localStorage.setItem('finalProductCart', JSON.stringify(newCheckedItem))
@@ -386,7 +390,7 @@ function OD_Cart() {
         <GrandTotal
           type={ListType}
           data={ListTypeOnClick === 'Motor' ? motorCartDisplay : checkedCart}
-          shipping={localShipping}
+          shipping={shipping}
         />
 
         {/* Button */}

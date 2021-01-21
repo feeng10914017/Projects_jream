@@ -108,7 +108,7 @@ function OD_Checkout() {
             </Form>
           </Card.Body>
         </Card>
-        {/* <GrandTotal /> */}
+        <GrandTotal type="Prod" shipping={checkTypeValue} />
 
         {/* Modal */}
         <Modal
