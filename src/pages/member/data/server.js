@@ -7,6 +7,7 @@ var cors = require('cors')
 var app = express()
 
 var loginRouter = require('./routes/login')
+var RegisterRouter = require('./routes/register')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
@@ -22,8 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/login', loginRouter)
 
-app.listen(5555, () =>
-  console.log('API is running on http://localhost:5555/login')
-)
+app.use('/register', RegisterRouter)
+
+app.listen(5555, () => console.log('API is running on http://localhost:5555'))
 
 module.exports = app

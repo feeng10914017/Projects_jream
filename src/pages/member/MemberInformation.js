@@ -15,7 +15,6 @@ function Information({
   telephone = '(02)08000000',
   address = '桃園市中壢區某某路某某巷XX號',
 }) {
-  const [count, setCount] = useState()
   return (
     <>
       <MemberNav />
