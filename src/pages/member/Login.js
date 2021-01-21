@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import LoginG from './components/Login-G'
+
 // import PropTypes from 'prop-types'
 import './login.scss'
 
@@ -84,6 +85,7 @@ function Login(props) {
                 type="email"
                 className="LI-input"
                 onChange={(e) => setMemberEmail(e.target.value)}
+                required="required"
               />
             </label>
             <label>
@@ -92,6 +94,7 @@ function Login(props) {
                 type="password"
                 className="LI-input"
                 onChange={(e) => setPassword(e.target.value)}
+                required="required"
               />
             </label>
             <p className="forgot-pass">Forgot password?</p>

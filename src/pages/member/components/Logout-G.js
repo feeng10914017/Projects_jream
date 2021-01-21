@@ -8,6 +8,7 @@ const clientId =
 function LogoutG() {
   let history = useHistory()
   const onLogoutSuccess = (res) => {
+    localStorage.clear()
     console.log('Logged out Success')
     alert('登出成功')
     history.push('/')
