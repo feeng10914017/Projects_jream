@@ -40,7 +40,10 @@ function ProductList(props) {
   useEffect(() => {
     setproducts(
       ProductData.filter((product) => {
-        return product.title.includes(searchQuery)
+        return (
+          product.title.includes(searchQuery) ||
+          product.sub_category.includes(searchQuery)
+        )
       })
     )
   }, [doSearch])
@@ -117,7 +120,7 @@ function ProductList(props) {
     <>
       {messageModal}
       <Carousel />
-      <Container>
+      <Container style={{ marginTop: '20px' }}>
         <Row>
           <Col sm={3} className="nopadding ">
             <Sidenav

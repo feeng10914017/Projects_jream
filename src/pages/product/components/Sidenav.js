@@ -9,26 +9,15 @@ import '../product.css'
 function Sidenav(props) {
   const { searchQuery, doSearch, setDoSearch, setSearchQuery } = props
 
-  /*
-  categories = {
-    "helmet": [
-      "full face",
-      "half face",
-    ],
-    "Suits": [
-      "Summer suits",
-    ]
-  }
-  */
   const categories = ProductData2.reduce((prev, product) => {
     const { category, sub_category } = product // 解構賦值
 
-    // 不是 Array 的話，就建立成 Array
+    // 如不是 Array 的話，就建成 Array
     if (!Array.isArray(prev[category])) {
       prev[category] = []
     }
 
-    // sub_category 不包含在 prev[category] 這個 Array 裡面的話，就加進去 Array 裡
+    // 如sub_category 不包含於 prev[category] 這個 Array 裡，就加進此 Array 裡
     if (!prev[category].includes(sub_category)) {
       prev[category].push(sub_category)
     }
@@ -64,7 +53,12 @@ function Sidenav(props) {
           </Accordion.Toggle>
         </Card.Header>
         <Accordion.Collapse eventKey={category} className="P_sidenav_cardbody">
-          <Card.Body>
+          <Card.Body
+            onClick={(e) => {
+              setSearchQuery(e.target.innerHTML)
+              setDoSearch(!doSearch)
+            }}
+          >
             {categories[category].map((sub_category) => {
               return <h6 className="sidemenu_item">{sub_category}</h6>
             })}
@@ -80,6 +74,7 @@ function Sidenav(props) {
       <Form.Control
         className="searchingInp border col-12"
         type="text"
+        style={{ marginTop: '10px' }}
         placeholder="搜尋產品"
         value={searchQuery}
         onKeyDown={(e) => {

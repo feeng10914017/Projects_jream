@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Modal, Button, Row, Col } from 'react-bootstrap'
 import { withRouter } from 'react-router-dom'
 import ProductData from './ProductData2.json'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import Sidenav from './components/Sidenav'
 
@@ -129,7 +131,25 @@ function Detail(props) {
               </div>
 
               {/* <div>商品內容: {FindProductData().description}</div> */}
-              <form>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault()
+
+                  updateCartToLocalStorage({
+                    id: FindProductData().id,
+                    name: FindProductData().title,
+                    img: FindProductData().images[0],
+                    color: productColor,
+                    size: productSize,
+                    amount: productAmount,
+                    price: FindProductData().price,
+                    totalprice: productAmount * FindProductData().price,
+                    // 給後面的陣列
+                    colorOptions: FindProductData().colors,
+                    sizeOptions: FindProductData().sizes,
+                  })
+                }}
+              >
                 {/*------------------顏色選擇---------------------- */}
                 <div>
                   {/* 顏色選擇 : */}
@@ -192,34 +212,16 @@ function Detail(props) {
                   sytle={{ justifyContent: 'space-around' }}
                 >
                   <div className="P_amount">
-                    <button className="count" onClick={() => reduction()}>
-                      -
-                    </button>
-                    <span>{productAmount}</span>
-                    <button className="count" onClick={() => increase()}>
-                      +
-                    </button>
+                    <a className="count" onClick={() => reduction()}>
+                      <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
+                    </a>
+                    <span className="fontSize19">{productAmount}</span>
+                    <a className="count" onClick={() => increase()}>
+                      <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
+                    </a>
                   </div>
                   {/* -----------------加入購物車---------------- */}
-                  <button
-                    type="button"
-                    className="btn addtocart-btn"
-                    onClick={() => {
-                      updateCartToLocalStorage({
-                        id: FindProductData().id,
-                        name: FindProductData().title,
-                        img: FindProductData().images[0],
-                        color: productColor,
-                        size: productSize,
-                        amount: productAmount,
-                        price: FindProductData().price,
-                        totalprice: productAmount * FindProductData().price,
-                        // 給後面的陣列
-                        colorOptions: FindProductData().colors,
-                        sizeOptions: FindProductData().sizes,
-                      })
-                    }}
-                  >
+                  <button type="submit" className="btn addtocart-btn">
                     加入購物車
                   </button>
                 </div>
