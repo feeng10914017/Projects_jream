@@ -1,0 +1,24 @@
+會員的資料庫
+
+create database JREAM default character set utf8;
+use JREAM;
+create table member
+(
+  id int auto_increment not null primary key,
+  memberEmail varchar(80),
+  password varchar(80),
+  memberName varchar(20),
+  memberNickname varchar(80),
+  memberBirth DATE,
+  memberGender ENUM('M', 'F'),
+  memberPhone varchar(80),
+  memberTelephone varchar(80),
+  memberAddress varchar(200)
+);
+insert into member (memberEmail, password,memberName,memberNickname,memberBirth,memberGender,memberPhone,memberTelephone,memberAddress)values
+  ('toceyevo@gmail.com', 'abc123','王冠伸','',"1988-12-17","男",'0946614473',"(02)2316154","新北市新莊區新北大道三段269號"),
+  ('a002@gmail.com', 'abc123','陳彥智','',"1999-03-15","男",'0975849214',"(02)2315468","台北市文山區福興路95巷17號2樓"),
+  ('a003@gmail.com', 'abc123','林千皓','',"1996-09-21","男",'0980311776',"(02)2311546","高雄市苓雅區林森二路34巷29號"),
+  ('a004@gmail.com', 'abc123','蕭以方','',"1993-08-24","男",'0950641049',"(02)2315364","台北市大安區延吉街32號"),
+  ('a005@gmail.com', 'abc123','馮信豪','',"1993-03-26","男",'0964291628',"(02)2313543","台北市松山區光復北路165巷6號3樓");
+select * from member;
