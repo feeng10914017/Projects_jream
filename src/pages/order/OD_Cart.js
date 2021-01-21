@@ -408,7 +408,7 @@ function OD_Cart() {
                 繼續選車
               </Button>
             </Link>
-            <Link to={'/order/CreditCard'}>
+            <Link to={'/order/rentalt'}>
               <Button className="finalBtn  place-center" variant="primary">
                 下一步
               </Button>

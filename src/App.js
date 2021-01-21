@@ -29,6 +29,7 @@ import OrderCheckout from './pages/order/OD_Checkout'
 import OrderCreditCard from './pages/order/OD_CreditCard'
 import OrderHomeDelivery from './pages/order/OD_HomeDelivery'
 import OrderCartReport from './pages/order/OD_CartReport'
+import OrderRentalt from './pages/order/OD_Rental'
 
 //登入元件(測試用)
 // import useToken from './pages/member/components/useToken'
@@ -118,6 +119,9 @@ function App() {
               </Route>
 
               {/* order */}
+              <Route path="/order/rentalt">
+                <OrderRentalt />
+              </Route>
               <Route path="/order/cartReport">
                 <OrderCartReport />
               </Route>

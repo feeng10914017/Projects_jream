@@ -142,7 +142,7 @@ function OD_Checkout() {
                 case 'delivery':
                   return '/order/HomeDelivery'
                 default:
-                  return
+                  return '/order/checkout'
               }
             }}
           >

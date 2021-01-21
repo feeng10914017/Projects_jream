@@ -6,7 +6,7 @@ import ODIMotor from './CartMotor'
 import ODICardTotal from '../../components/order/CheckOut_GrandTotal'
 import { AiOutlineDown } from 'react-icons/ai'
 
-function OD_CKO_Detail() {
+function CheckOut_Detail() {
   useEffect(() => {
     $('#productArrowParent').on('click', function () {
       $('#productArrow').toggleClass('transfromArrow')
@@ -40,4 +40,4 @@ function OD_CKO_Detail() {
     </>
   )
 }
-export default OD_CKO_Detail
+export default CheckOut_Detail
