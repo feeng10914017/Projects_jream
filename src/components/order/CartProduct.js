@@ -29,10 +29,7 @@ function OD_CartProduct(props) {
     // console.log(element.target.checked)
     props.checkedItem(e, element.target.checked, index)
   }
-  // function plusBtn() {
-  //   const number = e.cound + 1
-  //   reactLocalStorage.setObject()
-  // }
+
   const display = (
     <>
       <div id={'clickEvent' + index}>
@@ -44,7 +41,7 @@ function OD_CartProduct(props) {
             <Form.Label>
               <Row>
                 <Col lg={1} md={4} className="motorImage">
-                  <img src={e.images} alt="" />
+                  <img src={e.img} alt="" />
                 </Col>
                 <Col lg={11} md={8} className="px-0">
                   <Row>

@@ -12,6 +12,7 @@ function OD_Cart() {
   const [ListType, setListType] = useState('Motor')
   const [motorCart, setMotorCart] = useState([])
   const [productCart, setProductCart] = useState([])
+  const [motorCartDisplay, setMotorCartDisplay] = useState([])
   const [productCartDisplay, setProductCartDisplay] = useState([])
   const [checkedCart, setCheckedCart] = useState([])
   const localShipping = reactLocalStorage.get('shipping')
@@ -39,7 +40,7 @@ function OD_Cart() {
       {
         id: 2,
         name: 'Wacth Product 01 ',
-        images: 'https://www.upsieutoc.com/images/2020/07/18/img1.jpg',
+        img: 'https://www.upsieutoc.com/images/2020/07/18/img1.jpg',
         color: 'red',
         size: 'XL',
         price: 10001,
@@ -50,7 +51,7 @@ function OD_Cart() {
       {
         id: 3,
         name: 'Wacth Product 02',
-        images: 'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
+        img: 'https://www.upsieutoc.com/images/2020/07/18/img2.jpg',
         color: 'black',
         size: 'L',
         price: 102,
@@ -61,7 +62,7 @@ function OD_Cart() {
       {
         id: 4,
         name: 'Wacth Product 03',
-        images: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
+        img: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
         color: 'teal',
         size: 'M',
         price: 103,
@@ -72,7 +73,7 @@ function OD_Cart() {
       {
         id: 4,
         name: 'Wacth Product 03',
-        images: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
+        img: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
         color: 'teal',
         size: 'M',
         price: 103,
@@ -83,7 +84,7 @@ function OD_Cart() {
       {
         id: 4,
         name: 'Wacth Product 03',
-        images: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
+        img: 'https://www.upsieutoc.com/images/2020/07/18/img3.jpg',
         color: 'teal',
         size: 'M',
         price: 103,
@@ -94,7 +95,7 @@ function OD_Cart() {
       {
         id: 5,
         name: 'Wacth Product 04',
-        images: 'https://www.upsieutoc.com/images/2020/07/18/img4.jpg',
+        img: 'https://www.upsieutoc.com/images/2020/07/18/img4.jpg',
         color: 'red',
         size: 'XM',
         price: 104,
@@ -105,7 +106,7 @@ function OD_Cart() {
       {
         id: 6,
         name: 'Wacth Product 05',
-        images: 'https://www.upsieutoc.com/images/2020/07/18/img5.jpg',
+        img: 'https://www.upsieutoc.com/images/2020/07/18/img5.jpg',
         color: 'black',
         size: 'LX',
         price: 105,
@@ -123,6 +124,9 @@ function OD_Cart() {
     const newProductCart = localStorage.getItem('productCart') || '[]'
     setMotorCart(JSON.parse(newMotorCart))
     setProductCart(JSON.parse(newProductCart))
+    localStorage.setItem('motorCart', newMotorCart)
+    localStorage.setItem('productCart', newProductCart)
+    localStorage.setItem('finalProductCart', '[]')
   }
   useEffect(() => {
     getCartFromLocalStorage()
@@ -166,6 +170,14 @@ function OD_Cart() {
 
     localStorage.setItem('productCart', JSON.stringify(newProductCartDisplay))
   }, [productCart])
+  //reorganize the motorCart
+  useEffect(() => {
+    let newMotorCartDisplay = []
+    newMotorCartDisplay = motorCart
+    setMotorCartDisplay(newMotorCartDisplay)
+
+    localStorage.setItem('motorCart', JSON.stringify(newMotorCartDisplay))
+  }, [motorCart])
 
   // update productCart Amount to localStorage
   const updateCartAmountToLocalStorage = (item, isAdded = true) => {
@@ -248,8 +260,10 @@ function OD_Cart() {
     checked
       ? (newCheckedItem = [...newCheckedItem, currentCart[index]])
       : newIndex !== -1 && newCheckedItem.splice(newIndex, 1)
-    // console.log(newCheckedItem)
+    console.log(newCheckedItem)
     setCheckedCart(newCheckedItem)
+
+    localStorage.setItem('finalProductCart', JSON.stringify(newCheckedItem))
   }
 
   //update productCart checkedItem data
@@ -267,7 +281,14 @@ function OD_Cart() {
     }
 
     setCheckedCart(newCheckedCart)
-    // console.log(checkedCart)
+    localStorage.setItem('finalProductCart', JSON.stringify(newCheckedCart))
+  }
+
+  // delet motor data
+  const motorDeleteBtn = () => {
+    const doNotHaveMotor = '[]'
+    setMotorCart(JSON.parse(doNotHaveMotor))
+    localStorage.setItem('motorCart', doNotHaveMotor)
   }
 
   const display = (
@@ -279,10 +300,10 @@ function OD_Cart() {
         <Card className="cartHome">
           {/* CardHeader */}
           <Card.Header>
-            <Nav fill variant="tabs" defaultActiveKey="#Nav_Motor">
+            <Nav fill variant="tabs" defaultActiveKey="#N">
               <Nav.Item>
                 <Nav.Link
-                  href="#Nav_Motor"
+                  href="#N"
                   onClick={() => {
                     setListType('Motor')
                   }}
@@ -292,7 +313,7 @@ function OD_Cart() {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link
-                  href="#Nav_Prod"
+                  href="#p"
                   onClick={() => {
                     setListType('Prod')
                   }}
@@ -304,77 +325,123 @@ function OD_Cart() {
           </Card.Header>
           {/* CardBody */}
           <div id="BodyMotor">
-            <CartMotor data={motorCart} />
+            <CartMotor data={motorCart} motorDeleteBtn={motorDeleteBtn} />
           </div>
-          <div id="BodyProd" className="py-4">
+          <div id="BodyProd">
             {productCartDisplay.length > 0 ? (
-              productCartDisplay.map((v, index) => {
-                return (
-                  <>
-                    <CartProduct
-                      index={index}
-                      data={v}
-                      updateCartAmountToLocalStorage={
-                        updateCartAmountToLocalStorage
-                      }
-                      deletItemToLocalStorage={deletItemToLocalStorage}
-                      updateCartSizeToLocalStorage={
-                        updateCartSizeToLocalStorage
-                      }
-                      checkedItem={checkedItem}
-                    />
-                    <div className="col-11 m-auto" key={index}>
-                      {productCart.length - 1 === index ? (
-                        ''
-                      ) : (
-                        <div className="line"></div>
-                      )}
-                    </div>
-                  </>
-                )
-              })
+              <div className="py-4">
+                {productCartDisplay.map((v, index) => {
+                  return (
+                    <>
+                      <CartProduct
+                        index={index}
+                        data={v}
+                        updateCartAmountToLocalStorage={
+                          updateCartAmountToLocalStorage
+                        }
+                        deletItemToLocalStorage={deletItemToLocalStorage}
+                        updateCartSizeToLocalStorage={
+                          updateCartSizeToLocalStorage
+                        }
+                        checkedItem={checkedItem}
+                      />
+                      <div className="col-11 m-auto" key={index}>
+                        {productCart.length - 1 === index ? (
+                          ''
+                        ) : (
+                          <div className="line"></div>
+                        )}
+                      </div>
+                    </>
+                  )
+                })}
+              </div>
             ) : (
-              <p>nothing</p>
+              <Card.Body className="leaseNothing">
+                <Row>
+                  <div>
+                    <h5>這裡好空</h5>
+                    <h5>可以餵我&nbsp;&nbsp;&nbsp;&nbsp;吃東西嗎？</h5>
+                    <Link to={'/product'}>
+                      <Button
+                        className="nothingBtn place-center mt-2"
+                        variant="primary"
+                      >
+                        馬上來
+                      </Button>
+                    </Link>
+                  </div>
+                  <section>
+                    <img
+                      src="http://localhost:3000/images/order/undraw_empty_xct9.svg"
+                      alt=""
+                    />
+                  </section>
+                </Row>
+              </Card.Body>
             )}
           </div>
         </Card>
 
         <GrandTotal
           type={ListType}
-          data={ListTypeOnClick === 'Motor' ? motorCart : checkedCart}
+          data={ListTypeOnClick === 'Motor' ? motorCartDisplay : checkedCart}
           shipping={localShipping}
         />
 
         {/* Button */}
-        <Row className="justify-content-center finalBtnParent">
-          <Link to={'/'}>
-            <Button className="finalBtn place-center" variant="danger">
-              繼續購物
-            </Button>
-          </Link>
-          <Link
-            to={
-              ListTypeOnClick === 'Motor'
-                ? '/order/CreditCard'
-                : '/order/checkout'
-            }
-          >
-            <Button
-              className="finalBtn finalBtnTwo place-center"
-              variant="primary"
-            >
-              下一步
-            </Button>
-          </Link>
+        {ListTypeOnClick === 'Motor' &&
+        localStorage.getItem('motorCart') === '[]' ? (
+          <></>
+        ) : ListTypeOnClick === 'Prod' &&
+          localStorage.getItem('productCart') === '[]' ? (
+          <></>
+        ) : ListTypeOnClick === 'Motor' &&
+          localStorage.getItem('motorCart') !== '[]' ? (
+          <Row className="justify-content-center ">
+            <Link to={'/motor'}>
+              <Button className="finalBtn place-center" variant="danger">
+                繼續選車
+              </Button>
+            </Link>
+            <Link to={'/order/CreditCard'}>
+              <Button className="finalBtn  place-center" variant="primary">
+                下一步
+              </Button>
+            </Link>
+          </Row>
+        ) : ListTypeOnClick === 'Prod' &&
+          localStorage.getItem('productCart') !== '[]' ? (
+          <Row className="justify-content-center ">
+            <Link to={'/product'}>
+              <Button className="finalBtn place-center" variant="danger">
+                繼續購物
+              </Button>
+            </Link>
+
+            <Link to={'/order/checkout'}>
+              <Button className="finalBtn  place-center" variant="primary">
+                下一步
+              </Button>
+            </Link>
+          </Row>
+        ) : (
           <Button
-            className="finalBtn finalBtnTwo place-center"
+            className="finalBtn  place-center"
             variant="primary"
             onClick={setLocalStorage}
           >
             取資料
           </Button>
-        </Row>
+        )}
       </article>
+      <Button
+        className="finalBtn  place-center"
+        variant="primary"
+        onClick={setLocalStorage}
+      >
+        取資料
+      </Button>
     </>
   )
   return <>{display}</>
