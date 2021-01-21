@@ -29,10 +29,7 @@ function OD_CartProduct(props) {
     // console.log(element.target.checked)
     props.checkedItem(e, element.target.checked, index)
   }
-  // function plusBtn() {
-  //   const number = e.cound + 1
-  //   reactLocalStorage.setObject()
-  // }
+
   const display = (
     <>
       <div id={'clickEvent' + index}>

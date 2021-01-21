@@ -24,7 +24,7 @@ function OD_GrandTotal(props) {
   useEffect(() => {
     const newShipping = localStorage.getItem('shipping')
     // console.log('newShipping', newShipping, shipping)
-    newShipping !== '' ? setShipping(newShipping) : setShipping('未選擇')
+    newShipping !== null ? setShipping(newShipping) : setShipping('未選擇')
   }, [shipping])
 
   const display = (
