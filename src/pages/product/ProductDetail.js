@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Modal, Button, Row, Col } from 'react-bootstrap'
 import { withRouter } from 'react-router-dom'
-import ProductData from './ProductData.json'
+import ProductData from './ProductData2.json'
 import { Link } from 'react-router-dom'
 import Sidenav from './components/Sidenav'
 
