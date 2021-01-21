@@ -10,9 +10,7 @@ import './login.scss'
 function Login(props) {
   const { setIsAuth, setAuth } = props
   const history = useHistory()
-  console.log(props)
   const [member, setMember] = useState([])
-  console.log('member', member)
   const [memberEmail, setMemberEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -33,7 +31,7 @@ function Login(props) {
   async function getMember() {
     try {
       const response = await fetch('http://localhost:5555/login', {
-        method: 'POST',
+        method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ memberEmail, password }),
       })
@@ -43,23 +41,27 @@ function Login(props) {
         console.log('WHO', data)
         if (data) {
           setMember(data)
-          localStorage.setItem('memberName', 'id')
-          localStorage.setItem('memberName', data.member)
-          localStorage.setItem('memberName', JSON.stringify(data))
-          setAuth(true)
+          console.log('member', member)
+          console.log('data', data)
+          localStorage.setItem('userName', 'id')
+          // localStorage.setItem('userId', data.member)
+          localStorage.setItem('userData', JSON.stringify(data))
+          // setAuth(true)
         } else {
           console.log('error')
         }
       }
     } catch (err) {
-      alert('無法辨識資料')
+      // alert('無法辨識資料')
       console.log(err)
     }
   }
   useEffect(() => {
-    if (localStorage.getItem('id')) {
+    if (localStorage.getItem('userData')) {
+      // alert('登入成功')
       history.push('/member')
     } else {
+      console.log('請重新輸入')
       console.log('RE')
     }
   }, [member])
@@ -73,7 +75,7 @@ function Login(props) {
   return (
     <>
       <div className="cont">
-        <form noValidate validated={validated} onChange={handleSubmit}>
+        <form noValidate validated={validated} onSubmit={handleSubmit}>
           <div className="form sign-in A-label">
             <h2 className="AL-h2">Welcome back,</h2>
             <label>
@@ -94,7 +96,21 @@ function Login(props) {
             </label>
             <p className="forgot-pass">Forgot password?</p>
             {/* <Link to="./Member"> */}
-            <button type="submit" className="submit A-Btn Login-button">
+            <button
+              type="submit"
+              className="submit A-Btn Login-button"
+              // onClick={() => {
+              //   getMember()
+              // }}
+              onClick={() => {
+                if (member === true) {
+                  // getMember()
+                  // console.log('member', member)
+                  // history.push('/member')
+                  setIsAuth(true)
+                }
+              }}
+            >
               Sign In
             </button>
             <LoginG />
@@ -140,7 +156,7 @@ function Login(props) {
             <button type="button" className="submit A-Btn Login-button">
               Sign Up
             </button>
-            <LoginG />
+            {/* <LoginG /> */}
             {/* <button type="button" className="fb-btn A-Btn Login-button">
               Join with <span>facebook</span>
             </button> */}

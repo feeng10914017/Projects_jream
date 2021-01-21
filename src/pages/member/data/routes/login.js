@@ -13,7 +13,7 @@ router.use(bodyParser.json())
 var mysql = require('mysql')
 var conn = mysql.createConnection({
   user: 'root',
-  password: '1234',
+  password: '',
   host: 'localhost',
   database: 'jream',
 })
@@ -21,8 +21,8 @@ var conn = mysql.createConnection({
 
 router.post('/', function (req, res) {
   //驗證用戶是否存在
-  let sqlKey = `select * from member`
-  //   let sqlKey = `select * from member where memberEmail='${req.body.memberEmail}' and password='${req.body.password}'`
+  // let sqlKey = `select * from member`
+  let sqlKey = `select * from member where memberEmail='${req.body.memberEmail}' and password='${req.body.password}'`
   //這樣寫才對
   const obj = JSON.parse(JSON.stringify(req.body)) // req.body = [Object: null prototype] { title: 'product' }
   //這樣寫才對
@@ -38,7 +38,7 @@ router.post('/', function (req, res) {
     if (rows.length > 0) {
       const id = rows[0].id
       console.log('id', id)
-      let returnData = { result: true, member: id }
+      // let returnData = { result: true, member: id }
       res.send(JSON.stringify(rows[0]))
     } else {
       res.send(JSON.stringify({ result: false }))
@@ -50,7 +50,7 @@ router.post('/:id', function (req, res, next) {
   //驗證用戶是否存在
   let sqlKey = `select * from member where memberEmail='${req.params.memberEmail}' and password='${req.params.password}'`
   //這樣寫才對
-  const obj = JSON.parse(JSON.stringify(req.params))
+  const obj = JSON.parse(JSON.stringify(req.params)) // req.body = [Object: null prototype] { title: 'product' }
   //這樣寫才對
   console.log('/:id', obj)
   conn.query(sqlKey, [], function (err, rows) {
@@ -69,5 +69,14 @@ router.post('/:id', function (req, res, next) {
     }
   })
 })
+//     if (rows.length > 0) {
+//       console.log('rows', rows[0].id)
+//       let returnData = { result: true, member: rows[0].id }
+//       res.send(JSON.stringify(returnData))
+//     } else {
+//       res.send(JSON.stringify({ result: false }))
+//     }
+//   })
+// })
 
 module.exports = router
