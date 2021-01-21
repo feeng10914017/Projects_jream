@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Col, Modal, Button, Container } from 'react-bootstrap'
 import { withRouter } from 'react-router-dom'
-import ProductData from './ProductData.json'
+import ProductData from './ProductData2.json'
 import Carousel from './components/Carousel'
 import Sidenav from './components/Sidenav'
 import { Link } from 'react-router-dom'
@@ -33,6 +33,17 @@ function ProductList(props) {
     setProductName(value.name)
     handleShow()
   }
+  // searching place----------------------
+  const [searchQuery, setSearchQuery] = useState('')
+  const [doSearch, setDoSearch] = useState(false)
+  const [products, setproducts] = useState([])
+  useEffect(() => {
+    setproducts(
+      ProductData.filter((product) => {
+        return product.title.includes(searchQuery)
+      })
+    )
+  }, [doSearch])
 
   const messageModal = (
     <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
@@ -69,7 +80,7 @@ function ProductList(props) {
   const display = (
     <>
       <div className="productsArea">
-        {ProductData.map((item, index) => {
+        {products.map((item, index) => {
           return (
             <div className="P_card">
               <div style={{ overflow: 'hidden' }}>
@@ -109,7 +120,12 @@ function ProductList(props) {
       <Container>
         <Row>
           <Col sm={3} className="nopadding ">
-            <Sidenav />
+            <Sidenav
+              searchQuery={searchQuery}
+              doSearch={doSearch}
+              setSearchQuery={setSearchQuery}
+              setDoSearch={setDoSearch}
+            />
           </Col>
           <Col sm={9} className="nopadding ">
             {display}
