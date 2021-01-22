@@ -166,7 +166,7 @@ function Filterbar(props) {
               to="#"
               onClick={() => props.setOrderBy('itemName ASC')}
             >
-              遊戲名稱
+              名稱
             </Link>
             <Link
               className="dropdown-item"

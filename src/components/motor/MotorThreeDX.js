@@ -10,9 +10,6 @@ class MotorThreeDX extends React.Component {
   render() {
     return (
       <div>
-        <header>
-          <h4>熱門車款</h4>
-        </header>
         <Coverflow
           height={500}
           displayQuantityOfSide={1}

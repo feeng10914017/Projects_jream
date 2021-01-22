@@ -17,8 +17,6 @@ import {
 
 import '../../css/motor.scss'
 import Swal from 'sweetalert2'
-// import addToLike from './addToLike'
-// import unazen from './unazen'
 
 function MotorList(props) {
   const [mycart, setMycart] = useState([])
@@ -33,7 +31,7 @@ function MotorList(props) {
   const [orderBy, setOrderBy] = useState('itemId')
   const [mbAzen_arr_state, setMbAzen_arr_state] = useState([])
 
-  // const searchParams = new URLSearchParams(props.location.search)
+  const searchParams = new URLSearchParams(props.location.search)
 
   //  加入購物車
   async function updateCartToLocalStorage(value) {
@@ -57,9 +55,6 @@ function MotorList(props) {
     })
   }
 
-  // console.log('currentpage=', currentpage)
-
-  //fetch database product撈所有資料(不分類)
   async function getDataFromServer(page) {
     const request = new Request('http://localhost:6001/product/list/' + page, {
       method: 'GET',
@@ -75,27 +70,10 @@ function MotorList(props) {
     // console.log(data.rows)
   }
 
-  //fetch database product撈所有資料(有分類)
   async function getClassifiedDataFromServer(page) {
-    // 利用內建的API來得到URLSearchParams物件
     const searchParams = new URLSearchParams(props.location.search)
     let request = undefined
-    // if (searchParams.get('type') && type !== 0) {
-    //   request = new Request(
-    //     'http://localhost:3300/product/search/' + type + '/' + currentpage,
-    //     {
-    //       method: 'GET',
-    //       credentials: 'include',
-    //     }
-    //   )
-    // } else {
-    //   request = new Request('http://localhost:3300/product/list/' + page, {
-    //     method: 'GET',
-    //     credentials: 'include',
-    //   })
-    // }
 
-    //新分業方法
     if (type !== 0 || vendor !== 'V000' || price !== '') {
       request = new Request(
         'http://localhost:6001/product/search/' +
@@ -131,31 +109,25 @@ function MotorList(props) {
 
   // console.log(myproduct)
 
-  //一開始就會載入資料,記得設定cors
-  //當換頁時setcurrentpage到新的值就會觸發getDataFromServer
-  // useEffect(() => {
-  //   getClassifiedDataFromServer(currentpage)
-  // }, [currentpage, vendor, price, orderBy])
+  useEffect(() => {
+    getClassifiedDataFromServer(currentpage)
+  }, [currentpage, vendor, price, orderBy])
 
-  //每次mycart資料有變動就會3秒後關掉載入指示
   useEffect(() => {
     setTimeout(() => {
       setDataLoading(false)
     }, 500)
   }, [mycart])
 
-  //分類type有變動就會觸發
-  // useEffect(() => {
-  //   getClassifiedDataFromServer(currentpage)
-  // }, [type])
+  useEffect(() => {
+    getClassifiedDataFromServer(currentpage)
+  }, [type])
 
-  //創造頁數list
   let pageNumbers = []
   for (let i = 1; i <= totalpage; i++) {
     pageNumbers.push(i)
   }
 
-  //換頁function
   const paginate = (value) => {
     setCurrentpage(value)
   }
@@ -166,30 +138,8 @@ function MotorList(props) {
   }
 
   // console.log('type=', type)
+  let search = props.location.search
 
-  //顯示排序方式
-  let orderbydisplay
-  switch (orderBy) {
-    case 'itemName ASC':
-      orderbydisplay = '遊戲名稱'
-      break
-    case 'itemPrice DESC':
-      orderbydisplay = '價錢高至低'
-      break
-    case 'itemPrice ASC':
-      orderbydisplay = '價錢低至高'
-      break
-    case 'itemDate ASC':
-      orderbydisplay = '推出時間最早'
-      break
-    case 'itemDate DESC':
-      orderbydisplay = '推出時間最新'
-      break
-
-    default:
-  }
-
-  //顯示發行商
   let vendordisplay
   switch (vendor) {
     case 'V001':
@@ -225,7 +175,6 @@ function MotorList(props) {
     default:
   }
 
-  //顯示價格區間
   let pricedisplay
   switch (price) {
     case '<1000':
@@ -247,7 +196,6 @@ function MotorList(props) {
     default:
   }
 
-  //顯示遊戲類型
   let typedisplay
   switch (type) {
     case 1:
@@ -271,45 +219,6 @@ function MotorList(props) {
 
     default:
   }
-
-  //處理按讚顯示，點按讚愛心變色，但重新整理會失效，除非更新LOCALSTORAGE的登入資訊
-  function azen(ID) {
-    // let mbAzen_str = JSON.parse(localStorage.getItem('LoginUserData')).mbAzen
-    // mbAzen_str = mbAzen_str.replace('[', '').replace(']', '')
-    // let mbAzen_arr = mbAzen_str.split(',')
-    const currentLocalAzen = JSON.parse(localStorage.getItem('Azen')) || []
-    let newMbAzen_arr = [...currentLocalAzen]
-    if (newMbAzen_arr.indexOf(`${ID}`) !== -1) {
-      let remove_arr = newMbAzen_arr.filter((id) => id !== `${ID}`)
-      setMbAzen_arr_state(remove_arr)
-      localStorage.setItem('Azen', JSON.stringify(remove_arr))
-    } else {
-      newMbAzen_arr.push(`${ID}`)
-      setMbAzen_arr_state(newMbAzen_arr)
-      localStorage.setItem('Azen', JSON.stringify(newMbAzen_arr))
-    }
-    // console.log('mbAzen_arr', mbAzen_arr)
-  }
-
-  //一開始複製一份LoginUserData的Azen，set到Local的Azen值、setMbAzen_arr_state
-  useEffect(() => {
-    if (JSON.parse(localStorage.getItem('LoginUserData')) !== null) {
-      if (localStorage.getItem('Azen') == null) {
-        let mbAzen_str = JSON.parse(localStorage.getItem('LoginUserData'))
-          .mbAzen
-        mbAzen_str = mbAzen_str.replace('[', '').replace(']', '')
-        let mbAzen_arr = mbAzen_str.split(',')
-        // const currentLocalAzen = JSON.parse(localStorage.getItem('Azen')) || []
-        localStorage.setItem('Azen', JSON.stringify(mbAzen_arr))
-        setMbAzen_arr_state(mbAzen_arr)
-      } else {
-        const currentLocalAzen = JSON.parse(localStorage.getItem('Azen'))
-        setMbAzen_arr_state(currentLocalAzen)
-      }
-    } else {
-      localStorage.removeItem('Azen') //如果登出就刪掉localstorage Azen
-    }
-  }, [])
 
   const loading = (
     <>
@@ -359,85 +268,12 @@ function MotorList(props) {
                           })
                         }
                       >
-                        {/* <i class="fas fa-shopping-cart"></i> */}
                         <AiOutlineShoppingCart
                           style={{ color: '#79cee2', fontSize: '24px' }}
                         />
                       </Link>
-
-                      {/* <i class="far fa-heart"></i> */}
-
-                      {/* {JSON.parse(localStorage.getItem('LoginUserData')) !==
-                        null &&
-                      mbAzen_arr_state.indexOf(`${value.itemId}`) !== -1 ? (
-                        <Link
-                          className="col-2"
-                          onClick={() => {
-                            if (
-                              JSON.parse(
-                                localStorage.getItem('LoginUserData')
-                              ) !== null
-                            ) {
-                              azen(value.itemId)
-                              // unazen({
-                              //   userId: JSON.parse(
-                              //     localStorage.getItem('LoginUserData')
-                              //   ).mbId,
-                              //   unlikeproductId: value.itemId,
-                              // })
-                            } else {
-                              Swal.fire('請先登入')
-                            }
-                          }}
-                        >
-                          <AiFillHeart
-                            style={{ color: '#F9A451', fontSize: '24px' }}
-                          />
-                        </Link>
-                      ) : (
-                        <Link
-                          className="col-2"
-                          onClick={() => {
-                            if (
-                              JSON.parse(
-                                localStorage.getItem('LoginUserData')
-                              ) !== null
-                            ) {
-                              // addToLike({
-                              //   userId: JSON.parse(
-                              //     localStorage.getItem('LoginUserData')
-                              //   ).mbId,
-                              //   likeproductId: value.itemId,
-                              // })
-                              azen(value.itemId)
-                            } else {
-                              Swal.fire('請先登入')
-                            }
-                          }}
-                        >
-                          <AiOutlineHeart
-                            style={{ color: '#F9A451', fontSize: '24px' }}
-                          />
-                        </Link>
-                      )} */}
                     </div>
                   </div>
-                  {/* <div className="card-footer">
-                  <button
-                    type="button"
-                    className="btn btn-success"
-                    onClick={() =>
-                      updateCartToLocalStorage({
-                        id: value.itemId,
-                        name: value.itemName,
-                        amount: 1,
-                        price: value.itemPrice,
-                      })
-                    }
-                  >
-                    加入購物車
-                  </button>
-                </div> */}
                 </div>
               </div>
             </div>
@@ -445,62 +281,12 @@ function MotorList(props) {
         })}
       </div>
 
-      {/* {myproduct.length}
-      {totalpage} */}
       <div className="row my-3">
-        <div className="col-12 d-flex">
-          {/* 新的頁數bar開始 */}
-          {/* <ul className="d-flex flex-wrap">
-            <li className="s-pageItem">
-              <Link className="" onClick={() => paginate(currentpage - 1)}>
-                <AiOutlineCaretLeft />
-              </Link>
-            </li>
-            {pageNumbers.map((number, index) => {
-              const data = {
-                type,
-                page: number,
-              }
-              return (
-                <li
-                  key={index}
-                  className={
-                    's-pageItem ' +
-                    (number === currentpage ? 's-pageItem-Active' : '')
-                  }
-                >
-                  <Link
-                    className=""
-                    //   to={{
-                    //     search: searchParams.get('page')
-                    //       ? `page=${number}`
-                    //       : search + `page=${number}`,
-                    //   }}
-                    // to={{ search: `type=${type}` + `&&page=${number}` }}
-                    //頁數資訊可以不要顯示在url
-                    // onClick={() => {paginate(number);setType(type)}}
-                    onClick={() => {
-                      setCurrentpage(number)
-                    }}
-                  >
-                    {number}
-                  </Link>
-                </li>
-              )
-            })}
-            <li className="s-pageItem">
-              <Link className="" onClick={() => paginate(currentpage + 1)}>
-                <AiOutlineCaretRight />
-              </Link>
-            </li>
-          </ul> */}
-          {/* 新的頁數bar結束 */}
-        </div>
+        <div className="col-12 d-flex"></div>
       </div>
     </>
   )
 
-  //每次total資料有變動就會500ms後關掉載入提示
   return (
     <>
       <Slider
@@ -536,16 +322,6 @@ function MotorList(props) {
           <div className="m-filterClearBtn">
             價格:{pricedisplay}
             <button onClick={() => setPrice(9999)}>
-              <AiOutlineCloseCircle />
-            </button>
-          </div>
-        ) : (
-          ''
-        )}
-        {orderBy !== 'itemId' ? (
-          <div className="m-filterClearBtn">
-            排序:{orderbydisplay}
-            <button onClick={() => setOrderBy('itemId')}>
               <AiOutlineCloseCircle />
             </button>
           </div>
