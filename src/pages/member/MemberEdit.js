@@ -71,7 +71,7 @@ function Information({
           <tr>
             <td className="MBItdC"></td>
             <td className="MBItdR">
-              <Link to="/information">
+              <Link to="/member/information">
                 <Button
                   variant="primary"
                   type="submit"
@@ -80,7 +80,7 @@ function Information({
                   取消
                 </Button>
               </Link>
-              <Link to="/information">
+              <Link to="/member/information">
                 <Button variant="primary" type="submit">
                   確認修改
                 </Button>

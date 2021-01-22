@@ -58,8 +58,6 @@ function Login(props) {
           setMember(data)
           console.log('member', member)
           console.log('data', data)
-          localStorage.setItem('userName', 'id')
-          // localStorage.setItem('userId', data.member)
           localStorage.setItem('userData', JSON.stringify(data))
           // setAuth(true)
         } else {
@@ -72,6 +70,7 @@ function Login(props) {
     }
   }
 
+  //註冊
   async function getMemberU() {
     try {
       const response = await fetch('http://localhost:5555/register', {
@@ -103,11 +102,9 @@ function Login(props) {
 
   useEffect(() => {
     if (localStorage.getItem('userData')) {
-      alert('登入成功')
       history.push('/member')
     } else {
       console.log('請重新輸入')
-      console.log('RE')
     }
   }, [member])
 
@@ -145,7 +142,8 @@ function Login(props) {
               type="submit"
               className="submit A-Btn Login-button"
               onClick={() => {
-                if (member === true) {
+                if (member.id === true) {
+                  alert('登入成功')
                   setIsAuth(true)
                 }
               }}

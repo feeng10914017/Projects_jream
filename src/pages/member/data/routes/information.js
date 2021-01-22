@@ -1,13 +1,12 @@
 const express = require('express')
 const router = express.Router()
 // var app = express()
+// require('dotenv').config()
 var bodyParser = require('body-parser')
 router.use(bodyParser.urlencoded({ extended: false }))
 router.use(bodyParser.json())
 
 var mysql = require('mysql')
-
-// require('dotenv').config()
 var conn = mysql.createConnection({
   user: 'root',
   password: '',
@@ -15,20 +14,16 @@ var conn = mysql.createConnection({
   database: 'jream',
 })
 
-// 登入
-router.post('/', function (req, res) {
-  //驗證用戶是否存在
-  // let sqlKey = `select * from member`
-  let sqlKey = `select * from member where memberEmail='${req.body.memberEmail}' and password='${req.body.password}'`
-  //這樣寫才對
-  const obj = JSON.parse(JSON.stringify(req.body)) // req.body = [Object: null prototype] { title: 'product' }
-  //這樣寫才對
+router.get('/', function (req, res) {
+  //   let sqlKey = `select * from member`
+  let sqlKey = `select * from member where id ='${req.body.id}' valid =1`
+  const obj = JSON.parse(JSON.stringify(req.body))
   console.log('/', obj)
 
   conn.query(sqlKey, [], function (err, rows) {
     if (err) {
       console.log(JSON.stringify(err))
-      res.status = '登入失敗。'
+      res.status = '抓取會員資料失敗'
       res.err = '伺服器錯誤，請稍後在試！'
       return
     }
@@ -42,16 +37,16 @@ router.post('/', function (req, res) {
   })
 })
 
-router.post('/:id', function (req, res, next) {
-  //驗證用戶是否存在
-  let sqlKey = `select * from member where memberEmail='${req.params.memberEmail}' and password='${req.params.password}'`
-  //這樣寫才對
+router.get('/:id', function (req, res) {
+  //   let sqlKey = `select * from member`
+  let sqlKey = `select * from member where id ='${req.params.id}'`
   const obj = JSON.parse(JSON.stringify(req.params))
   console.log('/:id', obj)
+
   conn.query(sqlKey, [], function (err, rows) {
     if (err) {
       console.log(JSON.stringify(err))
-      res.status = '登入失敗。'
+      res.status = '抓取會員資料失敗'
       res.err = '伺服器錯誤，請稍後在試！'
       return
     }
