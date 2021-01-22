@@ -29,24 +29,6 @@ function Filterbar(props) {
     <>
       <div className="row d-flex justify-content-center my-2">
         <div className="col col-sm-6 col-lg-2 s-filterbar">
-          <input
-            type="search"
-            className="form-control s-filterbar-search pl-4"
-            aria-label="Text input with dropdown button"
-            name="search"
-            value={search_query}
-            onChange={(event) => setSearch_query(event.target.value)}
-          />
-          <Link
-            className="s-searchicon"
-            to={'/productlist/?search=' + `${search_query}`}
-            // onClick={() => props.handleSearch()}
-          >
-            {/* <i class="fas fa-search"></i> */}
-            <AiOutlineSearch style={{ fontSize: '24px', marginTop: '10px' }} />
-          </Link>
-        </div>
-        <div className="col col-sm-6 col-lg-2 s-filterbar">
           <button
             className="btn btn-outline-secondary dropdown-toggle s-filterbar-btn"
             type="button"
@@ -61,31 +43,50 @@ function Filterbar(props) {
               className="dropdown-item"
               to="#"
               onClick={() => {
-                props.setPrice('<100')
-              }}
-            >
-              Under NT$100
-            </Link>
-            <Link
-              className="dropdown-item"
-              to="#"
-              onClick={() => {
-                props.setPrice('<500')
-              }}
-            >
-              Under NT$500
-            </Link>
-            <Link
-              className="dropdown-item"
-              to="#"
-              onClick={() => {
                 props.setPrice('<1000')
               }}
             >
               Under NT$1000
             </Link>
+            <Link
+              className="dropdown-item"
+              to="#"
+              onClick={() => {
+                props.setPrice('<2000')
+              }}
+            >
+              Under NT$2000
+            </Link>
+            <Link
+              className="dropdown-item"
+              to="#"
+              onClick={() => {
+                props.setPrice('<3000')
+              }}
+            >
+              Under NT$3000
+            </Link>
+            <Link
+              className="dropdown-item"
+              to="#"
+              onClick={() => {
+                props.setPrice('<4000')
+              }}
+            >
+              Under NT$4000
+            </Link>
+            <Link
+              className="dropdown-item"
+              to="#"
+              onClick={() => {
+                props.setPrice('<5000')
+              }}
+            >
+              Under NT$5000
+            </Link>
           </div>
         </div>
+
         <div className="col col-sm-6 col-lg-2 s-filterbar">
           <button
             className="btn btn-outline-secondary dropdown-toggle s-filterbar-btn"
@@ -102,76 +103,55 @@ function Filterbar(props) {
               to="#"
               onClick={() => props.setVendor('V001')}
             >
-              美國藝電（ElectronicArts）
+              150 CC
             </Link>
             <Link
               className="dropdown-item"
               to="#"
               onClick={() => props.setVendor('V002')}
             >
-              動視暴雪（Activision Blizzard）
+              300 CC
             </Link>
             <Link
               className="dropdown-item"
               to="#"
               onClick={() => props.setVendor('V003')}
             >
-              2K Games
+              450 CC
             </Link>
             <Link
               className="dropdown-item"
               to="#"
               onClick={() => props.setVendor('V004')}
             >
-              任天堂（NINTENDO）
+              600 CC
             </Link>
             <Link
               className="dropdown-item"
               to="#"
               onClick={() => props.setVendor('V005')}
             >
-              索尼（SONY）
+              750 CC
             </Link>
             <Link
               className="dropdown-item"
               to="#"
               onClick={() => props.setVendor('V006')}
             >
-              育碧（Ubisoft）
+              900 CC
             </Link>
             <Link
               className="dropdown-item"
               to="#"
               onClick={() => props.setVendor('V007')}
             >
-              柯樂美（KONAMI）
-            </Link>
-            <Link
-              className="dropdown-item"
-              to="#"
-              onClick={() => props.setVendor('V008')}
-            >
-              卡普空（CAPCOM）
-            </Link>
-            <Link
-              className="dropdown-item"
-              to="#"
-              onClick={() => props.setVendor('V009')}
-            >
-              史克威爾艾尼克斯（SQUARE ENIX）
-            </Link>
-            <Link
-              className="dropdown-item"
-              to="#"
-              onClick={() => props.setVendor('V010')}
-            >
-              世嘉（SEGA）
+              1050 CC
             </Link>
           </div>
         </div>
 
         <div className="col col-sm-6 col-lg-2 s-filterbar">
-          <button
+          {/* <button
             className="btn btn-outline-secondary dropdown-toggle s-filterbar-btn"
             type="button"
             data-toggle="dropdown"
@@ -216,7 +196,26 @@ function Filterbar(props) {
             >
               推出時間最新
             </Link>
-          </div>
+          </div> */}
+        </div>
+
+        <div className="col col-sm-6 col-lg-2 s-filterbar">
+          <input
+            type="search"
+            className="form-control s-filterbar-search pl-4"
+            aria-label="Text input with dropdown button"
+            name="search"
+            value={search_query}
+            onChange={(event) => setSearch_query(event.target.value)}
+          />
+          <Link
+            className="s-searchicon"
+            to={'/productlist/?search=' + `${search_query}`}
+            // onClick={() => props.handleSearch()}
+          >
+            {/* <i class="fas fa-search"></i> */}
+            <AiOutlineSearch style={{ fontSize: '24px', marginTop: '10px' }} />
+          </Link>
         </div>
       </div>
     </>

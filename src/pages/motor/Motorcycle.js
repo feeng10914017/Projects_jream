@@ -21,7 +21,7 @@ import $ from 'jquery'
 // import 'react-image-lightbox/style.css' //lightbox
 // import unazen from './unazen' //取消按讚
 
-function Product(props) {
+function Motorcycle(props) {
   const [myproduct, setMyproduct] = useState([])
   const [configORcomment, setCofigORcomment] = useState(1)
   //購物車,與Productlist.js共用
@@ -48,14 +48,14 @@ function Product(props) {
     // }).then(r => {
     //   window.location.reload()
     // })
-    const currentCart = JSON.parse(localStorage.getItem('cart')) || []
+    const currentCart = JSON.parse(localStorage.getItem('motorCart')) || []
     let arr = []
     currentCart.forEach((element) => {
       arr.push(element.id == value.id)
     })
     if (arr.indexOf(true) == -1) {
       const newCart = [...currentCart, value]
-      localStorage.setItem('cart', JSON.stringify(newCart))
+      localStorage.setItem('motorCart', JSON.stringify(newCart))
       setMycart(newCart)
     }
     Swal.fire({
@@ -67,6 +67,7 @@ function Product(props) {
     //設定資料
     // setMycart(newCart)
   }
+
   //fetch database product撈所有資料(不分類)
   async function getDataFromServer() {
     const request = new Request('http://localhost:6001/product/' + productId, {
@@ -320,41 +321,6 @@ function Product(props) {
                 </li>
               )
             })}
-            {/* <li>
-              <img
-                className=" img-fluid"
-                src={`/images/shop/small_img/${myproduct.itemImg}`}
-                alt=""
-              />
-            </li>
-            <li>
-              <img
-                className=""
-                src="https://via.placeholder.com/100x100"
-                alt=""
-              />
-            </li>
-            <li>
-              <img
-                className=""
-                src="https://via.placeholder.com/100x100"
-                alt=""
-              />
-            </li>
-            <li>
-              <img
-                className=""
-                src="https://via.placeholder.com/100x100"
-                alt=""
-              />
-            </li> */}
-            {/* <li>
-              <img
-                className=""
-                src="https://via.placeholder.com/100x100"
-                alt=""
-              />
-            </li> */}
           </ul>
         </div>
         <div className="col col-sm-12 col-md-6 my-5">
@@ -366,7 +332,7 @@ function Product(props) {
           <h3>{myproduct.itemName}</h3>
           <p style={{ minHeight: '150px' }}>{myproduct.itemIntro}</p>
           <div className="row">
-            {mbAzen_arr_state.indexOf(`${myproduct.itemId}`) == -1 ? (
+            {/* {mbAzen_arr_state.indexOf(`${myproduct.itemId}`) == -1 ? (
               <button
                 type="button"
                 className="btn btn-outline-info mx-2 s-btn-common col-5 col-md-4"
@@ -405,7 +371,7 @@ function Product(props) {
                 <AiFillHeart style={{ color: '#F9A451', fontSize: '24px' }} />
                 已加入收藏
               </button>
-            )}
+            )} */}
             <button
               type="button"
               className="btn btn-outline-info mx-2 s-btn-common col-5 col-md-4"
@@ -425,7 +391,7 @@ function Product(props) {
               加入購物車
             </button>
           </div>
-          <div className="row h5 m-2">有{howmanylike}人收藏此遊戲</div>
+          {/* <div className="row h5 m-2">有{howmanylike}人收藏此遊戲</div>
           <div className="row mt-2 h6">
             <div className="col-3 ">發行商:</div>
             <div className="col-7 ">{myproduct.vName}</div>
@@ -437,10 +403,10 @@ function Product(props) {
           <div className="row h6">
             <div className="col-3 ">遊戲類別:</div>
             <div className="col-4 ">{myproduct.categoryName}</div>
-          </div>
+          </div> */}
         </div>
       </div>
-      <ul className="nav justify-content-center">
+      {/* <ul className="nav justify-content-center">
         <li className="nav-item">
           <NavLink
             className="nav-link h5"
@@ -492,7 +458,7 @@ function Product(props) {
             ''
           )}
         </li>
-      </ul>
+      </ul> */}
       {/* <div className="">
         {configORcomment === 1 ? <Config /> : <Comment2 props={myproduct} />}
       </div>
@@ -517,4 +483,4 @@ function Product(props) {
   )
 }
 
-export default withRouter(Product)
+export default withRouter(Motorcycle)

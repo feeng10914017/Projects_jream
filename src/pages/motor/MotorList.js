@@ -20,7 +20,7 @@ import Swal from 'sweetalert2'
 // import addToLike from './addToLike'
 // import unazen from './unazen'
 
-function ProductList(props) {
+function MotorList(props) {
   const [mycart, setMycart] = useState([])
   const [dataLoading, setDataLoading] = useState(false)
   const [myproduct, setMyproduct] = useState([])
@@ -39,14 +39,14 @@ function ProductList(props) {
   async function updateCartToLocalStorage(value) {
     setDataLoading(true)
     // Swal.fire({ html: `商品名稱:${value.name}加入購物車` })
-    const currentCart = JSON.parse(localStorage.getItem('cart')) || []
+    const currentCart = JSON.parse(localStorage.getItem('motorCart')) || []
     let arr = []
     currentCart.forEach((element) => {
       arr.push(element.id == value.id)
     })
     if (arr.indexOf(true) == -1) {
       const newCart = [...currentCart, value]
-      localStorage.setItem('cart', JSON.stringify(newCart))
+      localStorage.setItem('motorCart', JSON.stringify(newCart))
       setMycart(newCart)
     }
     Swal.fire({
@@ -193,34 +193,34 @@ function ProductList(props) {
   let vendordisplay
   switch (vendor) {
     case 'V001':
-      vendordisplay = '美國藝電（ElectronicArts）'
+      vendordisplay = '150 CC'
       break
     case 'V002':
-      vendordisplay = '動視暴雪（Activision Blizzard）'
+      vendordisplay = '300 CC'
       break
     case 'V003':
-      vendordisplay = '2K Games'
+      vendordisplay = '450 CC'
       break
     case 'V004':
-      vendordisplay = '任天堂（NINTENDO）'
+      vendordisplay = '600 CC'
       break
     case 'V005':
-      vendordisplay = '索尼（SONY）'
+      vendordisplay = '750 CC'
       break
     case 'V006':
-      vendordisplay = '育碧（Ubisoft）'
+      vendordisplay = '900 CC'
       break
     case 'V007':
-      vendordisplay = '柯樂美（KONAMI）'
+      vendordisplay = '1050 CC'
       break
     case 'V008':
-      vendordisplay = '卡普空（CAPCOM）'
+      vendordisplay = '1200 CC'
       break
     case 'V009':
-      vendordisplay = '史克威爾艾尼克斯（SQUARE ENIX）'
+      vendordisplay = '1350 CC'
       break
     case 'V010':
-      vendordisplay = '世嘉（SEGA）'
+      vendordisplay = '1500 CC'
       break
     default:
   }
@@ -228,14 +228,20 @@ function ProductList(props) {
   //顯示價格區間
   let pricedisplay
   switch (price) {
-    case '<100':
-      pricedisplay = '< NT$100'
-      break
-    case '<500':
-      pricedisplay = '< NT$500'
-      break
     case '<1000':
       pricedisplay = '< NT$1000'
+      break
+    case '<2000':
+      pricedisplay = '< NT$2000'
+      break
+    case '<3000':
+      pricedisplay = '< NT$3000'
+      break
+    case '<4000':
+      pricedisplay = '< NT$4000'
+      break
+    case '<5000':
+      pricedisplay = '< NT$5000'
       break
 
     default:
@@ -327,7 +333,7 @@ function ProductList(props) {
                   style={{ borderRadius: '0px' }}
                 >
                   <img
-                    src={`/images/shop/small_img/${value.itemImg}`}
+                    src={`/images/motor/${value.itemImg}`}
                     className="card-img-top"
                     alt="..."
                   />
@@ -360,7 +366,8 @@ function ProductList(props) {
                       </Link>
 
                       {/* <i class="far fa-heart"></i> */}
-                      {JSON.parse(localStorage.getItem('LoginUserData')) !==
+
+                      {/* {JSON.parse(localStorage.getItem('LoginUserData')) !==
                         null &&
                       mbAzen_arr_state.indexOf(`${value.itemId}`) !== -1 ? (
                         <Link
@@ -412,7 +419,7 @@ function ProductList(props) {
                             style={{ color: '#F9A451', fontSize: '24px' }}
                           />
                         </Link>
-                      )}
+                      )} */}
                     </div>
                   </div>
                   {/* <div className="card-footer">
@@ -502,6 +509,8 @@ function ProductList(props) {
         }}
       />
 
+      <br />
+
       <div className="d-flex">
         {type !== 0 ? (
           <div className="m-filterClearBtn">
@@ -515,13 +524,13 @@ function ProductList(props) {
         )}
         {vendor !== 'V000' ? (
           <div className="m-filterClearBtn">
-            發行商123:{vendordisplay}
+            排氣量:{vendordisplay}
             <button onClick={() => setVendor('V000')}>
               <AiOutlineCloseCircle />
             </button>
           </div>
         ) : (
-          '123'
+          ''
         )}
         {price !== 9999 ? (
           <div className="m-filterClearBtn">
@@ -544,6 +553,9 @@ function ProductList(props) {
           ''
         )}
       </div>
+
+      <br />
+
       <div>
         <Filterbar
           setMyproduct={setMyproduct}
@@ -553,8 +565,11 @@ function ProductList(props) {
           setOrderBy={setOrderBy}
         />
       </div>
+
+      <br />
+
       <div>{dataLoading ? loading : display}</div>
     </>
   )
 }
-export default withRouter(ProductList)
+export default withRouter(MotorList)
