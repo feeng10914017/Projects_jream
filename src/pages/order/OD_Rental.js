@@ -17,10 +17,10 @@ function OD_Rental() {
   const [invoiceValue1, setInvoiceValue1] = useState('')
   const [invoiceValue2, setInvoiceValue2] = useState('')
   const [invoiceCheckBox, setInvoiceCheckBox] = useState(false)
-  //   console.log(invoiceTitle)
-  //   console.log(invoiceValue1)
-  //   console.log(invoiceValue2)
-  //   console.log(invoiceCheckBox)
+  // console.log(invoiceTitle)
+  // console.log(invoiceValue1)
+  // console.log(invoiceValue2)
+  // console.log(invoiceCheckBox)
   // console.log(cardNumber)
   // console.log(validityMM)
   // console.log(validityYY)
@@ -79,24 +79,25 @@ function OD_Rental() {
             setInvoiceValue2={setInvoiceValue2}
             setInvoiceCheckBox={setInvoiceCheckBox}
           />
-        </Form>
 
-        {/* Button */}
-        <Row className="justify-content-center finalBtnParent">
-          <Link to="/order">
-            <Button className="finalBtn place-center" variant="danger">
-              重新選車
-            </Button>
-          </Link>
-          <Link to="/order/cartReport">
-            <Button
-              className="finalBtn finalBtnTwo place-center"
-              variant="primary"
-            >
-              下一步
-            </Button>
-          </Link>
-        </Row>
+          {/* Button */}
+          <Row className="justify-content-center finalBtnParent">
+            <Link to="/order">
+              <Button className="finalBtn place-center" variant="danger">
+                重新選車
+              </Button>
+            </Link>
+            <Link to="/order/cartReport">
+              <Button
+                className="finalBtn finalBtnTwo place-center"
+                variant="primary"
+                type="submit"
+              >
+                下一步
+              </Button>
+            </Link>
+          </Row>
+        </Form>
       </article>
     </>
   )
