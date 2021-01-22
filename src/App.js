@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 //排版用元件 全部都使用
@@ -31,38 +31,16 @@ import OrderHomeDelivery from './pages/order/OD_HomeDelivery'
 import OrderCartReport from './pages/order/OD_CartReport'
 import OrderRentalt from './pages/order/OD_Rental'
 
-//登入元件(測試用)
-// import useToken from './pages/member/components/useToken'
 function App() {
-  //判別登入狀態
-  // const { token, setToken } = useToken()
-  // console.log(useToken())
-
-  // if (!token) {
-  //   return (
-  //     <Router>
-  //       <>
-  //         <ScrollToTop>
-  //           <MyNavbar />
-  //           <MainContent>
-  //             <Switch>
-  //               <Route path="/login">
-  //                 <LogIn setToken={setToken} />
-  //               </Route>
-  //             </Switch>
-  //           </MainContent>
-  //           <MyFooter />
-  //         </ScrollToTop>
-  //       </>
-  //     </Router>
-  //   )
-  // }
-
+  const [auth, setAuth] = useState(false)
+  useEffect(() => {
+    setAuth(localStorage.getItem('userData'))
+  }, [auth])
   return (
     <Router>
       <>
         <ScrollToTop>
-          <MyNavbar />
+          <MyNavbar auth={auth} setAuth={setAuth} />
           <MainContent>
             <Switch>
               <Route path="/" exact>
@@ -100,22 +78,22 @@ function App() {
 
               {/* member */}
               <Route path="/member/Edit">
-                <MemberEdit />
+                <MemberEdit setAuth={setAuth} />
               </Route>
               <Route path="/member/information">
-                <MemberInformation />
+                <MemberInformation setAuth={setAuth} />
               </Route>
               <Route path="/member/favorite">
-                <MemberFavorite />
+                <MemberFavorite setAuth={setAuth} />
               </Route>
               <Route path="/member/rent-record">
-                <MemberRentrecord />
+                <MemberRentrecord setAuth={setAuth} />
               </Route>
               <Route path="/member/order-record">
-                <MemberOrderrecord />
+                <MemberOrderrecord setAuth={setAuth} />
               </Route>
               <Route path="/member">
-                <Member />
+                <Member auth={auth} setAuth={setAuth} />
               </Route>
 
               {/* order */}

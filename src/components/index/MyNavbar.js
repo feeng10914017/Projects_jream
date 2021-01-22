@@ -1,14 +1,44 @@
-import React from 'react'
+import { React, useState } from 'react'
 
 import { IoPersonOutline } from 'react-icons/io5'
 import { IoCartOutline } from 'react-icons/io5'
-import { Navbar, Nav } from 'react-bootstrap'
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 import { withRouter, NavLink } from 'react-router-dom'
 
-function MyNavbar(props) {
-  const { location } = props
+function MyNavbar({ auth, setAuth }) {
+  // const { location } = props
+  const [member, setMember] = useState(
+    JSON.parse(localStorage.getItem('userData'))
+  )
   // console.log(location.pathname)
+  const loginout = (
+    <Nav.Link as={NavLink} to="/login">
+      <IoPersonOutline size="18" />
+      <h6>登入</h6>
+    </Nav.Link>
+  )
+
+  const login = (
+    <>
+      <NavDropdown title={<IoPersonOutline size="18" />}>
+        <NavDropdown.Item as={NavLink} to="/member">
+          會員中心
+        </NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item
+          as={NavLink}
+          to="/"
+          onClick={() => {
+            localStorage.clear()
+            sessionStorage.clear()
+          }}
+        >
+          登出
+        </NavDropdown.Item>
+      </NavDropdown>
+    </>
+  )
 
   //一般header
   const display = (
@@ -47,10 +77,11 @@ function MyNavbar(props) {
               </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link as={NavLink} to="/login">
+              {auth ? login : loginout}
+              {/* <Nav.Link as={NavLink} to="/login">
                 <IoPersonOutline size="18" />
                 <h6>登入</h6>
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link eventKey={2} as={NavLink} to="/order">
                 <IoCartOutline size="20" />
                 <h6>購物車</h6>
@@ -98,10 +129,11 @@ function MyNavbar(props) {
               </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link as={NavLink} to="/login">
+              {auth ? login : loginout}
+              {/* <Nav.Link as={NavLink} to="/login">
                 <IoPersonOutline size="18" />
                 <h6>登入</h6>
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link eventKey={2} as={NavLink} to="/order">
                 <IoCartOutline size="20" />
                 <h6>購物車</h6>
@@ -117,8 +149,8 @@ function MyNavbar(props) {
       {/* {location.pathname === '/' || location.pathname == '/motor'
         ? homeDisplay
         : display} */}
-      {location.pathname === '/' ? homeDisplay : display}
-      {/* {display} */}
+      {/* {location.pathname === '/' ? homeDisplay : display} */}
+      {display}
     </>
   )
 }
