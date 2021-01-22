@@ -48,10 +48,10 @@ function Detail(props) {
   const handleShow = () => setShow(true)
 
   const updateCartToLocalStorage = (value) => {
-    const currentCart = JSON.parse(localStorage.getItem('cart')) || []
+    const currentCart = JSON.parse(localStorage.getItem('productCart')) || []
 
     const newCart = [...currentCart, value]
-    localStorage.setItem('cart', JSON.stringify(newCart))
+    localStorage.setItem('productCart', JSON.stringify(newCart))
 
     // 設定資料
     setMycart(newCart)
@@ -136,9 +136,9 @@ function Detail(props) {
                 setProductColor(event.target.value)
               }}
             >
-              <option value="-1" disabled selected hidden>
+              {/* <option value="-1" disabled selected hidden>
                 Please Select
-              </option>
+              </option> */}
 
               {FindProductData().colors.map((item, index) => {
                 return (
@@ -162,9 +162,9 @@ function Detail(props) {
                 setProductSize(event.target.value)
               }}
             >
-              <option value="-1" disabled selected hidden>
+              {/* <option value="-1" disabled selected hidden>
                 Please Select
-              </option>
+              </option> */}
               {FindProductData().sizes.map((item, index) => {
                 return <option value={item}>{item}</option>
               })}
@@ -190,6 +190,7 @@ function Detail(props) {
                 updateCartToLocalStorage({
                   id: FindProductData().id,
                   name: FindProductData().title,
+                  img: FindProductData().images[0],
                   color: productColor,
                   size: productSize,
                   amount: productAmount,
