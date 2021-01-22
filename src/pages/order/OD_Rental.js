@@ -21,7 +21,7 @@ function OD_Rental() {
   //   console.log(invoiceValue1)
   //   console.log(invoiceValue2)
   //   console.log(invoiceCheckBox)
-  // // console.log(cardNumber)
+  // console.log(cardNumber)
   // console.log(validityMM)
   // console.log(validityYY)
   // console.log(verificationCode)
@@ -60,12 +60,11 @@ function OD_Rental() {
       console.log(error)
     }
   }
-
   return (
     <>
       <article className="col-10 CheckTwo">
         <OrderStep step="3" />
-        {/* <CkoutDetail /> */}
+        <CkoutDetail type="Motor" />
         <Form>
           <CkoutCredit
             setCardNumber={setCardNumber}
@@ -75,7 +74,6 @@ function OD_Rental() {
           />
           <div className="block"></div>
           <CkoutInvoice
-            invoiceTitle={invoiceTitle}
             setInvoiceTitle={setInvoiceTitle}
             setInvoiceValue1={setInvoiceValue1}
             setInvoiceValue2={setInvoiceValue2}

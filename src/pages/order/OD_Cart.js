@@ -329,7 +329,11 @@ function OD_Cart() {
           </Card.Header>
           {/* CardBody */}
           <div id="BodyMotor">
-            <CartMotor data={motorCart} motorDeleteBtn={motorDeleteBtn} />
+            <CartMotor
+              data={motorCart}
+              motorDeleteBtn={motorDeleteBtn}
+              step="1"
+            />
           </div>
           <div id="BodyProd">
             {productCartDisplay.length > 0 ? (
@@ -387,11 +391,7 @@ function OD_Cart() {
           </div>
         </Card>
 
-        <GrandTotal
-          type={ListType}
-          data={ListTypeOnClick === 'Motor' ? motorCartDisplay : checkedCart}
-          shipping={shipping}
-        />
+        <GrandTotal type={ListType} shipping={shipping} />
 
         {/* Button */}
         {ListTypeOnClick === 'Motor' &&
