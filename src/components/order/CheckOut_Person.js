@@ -5,12 +5,13 @@ import { AiOutlineLine } from 'react-icons/ai'
 import { countries, townships } from './data/TaiwanCountries'
 
 function OD_CKO_Person() {
-  //location useState
+  //  location useState
   const [country, setCountry] = useState(-1)
   const [township, setTownship] = useState(-1)
   const [countryTow, setCountryTow] = useState(-1)
   const [townshipTow, setTownshipTow] = useState(-1)
-  //
+
+  //  添加監聽事件  確認是否與訂購人相同
   useEffect(() => {
     const OderName = document.getElementById('OderName')
     const OderPhone = document.getElementById('OderPhone')
@@ -47,6 +48,7 @@ function OD_CKO_Person() {
         }
       })
   }, [])
+
   return (
     <>
       {/* 訂購人 */}
@@ -124,7 +126,7 @@ function OD_CKO_Person() {
           </Form.Row>
           <div className="line"></div>
           <Form.Group as={Row} controlId="OderAdd">
-            <Form.Label></Form.Label>
+            <Form.Label column sm="2" srOnly></Form.Label>
             <Col sm="12">
               <Form.Control type="text" placeholder="請輸入地址" />
             </Col>
@@ -146,11 +148,7 @@ function OD_CKO_Person() {
         <Card.Header className="Recipient">
           <h6>收件人資訊</h6>
           <Form.Group controlId="isSamePerson">
-            <Form.Check
-              type="checkbox"
-              label="與訂購人相同"
-              // onClick={disable}
-            />
+            <Form.Check type="checkbox" label="與訂購人相同" />
           </Form.Group>
         </Card.Header>
         <Card.Body>
@@ -227,7 +225,9 @@ function OD_CKO_Person() {
           </Form.Row>
           <div className="line"></div>
           <Form.Group as={Row} controlId="RecipientAdd">
-            <Form.Label></Form.Label>
+            <Form.Label column sm="2" srOnly>
+              地址
+            </Form.Label>
             <Col sm="12">
               <Form.Control type="text" placeholder="請輸入地址" />
             </Col>

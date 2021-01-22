@@ -86,12 +86,15 @@ function CartMotor(props) {
                     <p className="col-3 mb-0">{v.returnTime}</p>
                   </Row>
                 </Form.Label>
-                <Button
-                  className="px-1 d-flex align-items-center"
-                  onClick={() => props.motorDeleteBtn()}
-                >
-                  <IoCloseSharp />
-                </Button>
+
+                {props.step === '1' && (
+                  <Button
+                    className="px-1 d-flex align-items-center"
+                    onClick={() => props.motorDeleteBtn()}
+                  >
+                    <IoCloseSharp />
+                  </Button>
+                )}
               </Card.Body>
             </>
           )

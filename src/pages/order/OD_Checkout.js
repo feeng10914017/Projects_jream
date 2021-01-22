@@ -108,7 +108,7 @@ function OD_Checkout() {
             </Form>
           </Card.Body>
         </Card>
-        {/* <GrandTotal /> */}
+        <GrandTotal type="Prod" shipping={checkTypeValue} />
 
         {/* Modal */}
         <Modal
@@ -142,7 +142,7 @@ function OD_Checkout() {
                 case 'delivery':
                   return '/order/HomeDelivery'
                 default:
-                  return
+                  return '/order/checkout'
               }
             }}
           >
