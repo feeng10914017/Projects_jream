@@ -87,7 +87,7 @@ function CartMotor(props) {
                   </Row>
                 </Form.Label>
 
-                {props.step === 1 && (
+                {props.step === '1' && (
                   <Button
                     className="px-1 d-flex align-items-center"
                     onClick={() => props.motorDeleteBtn()}

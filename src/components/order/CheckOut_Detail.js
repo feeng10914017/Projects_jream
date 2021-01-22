@@ -56,13 +56,13 @@ function CheckOut_Detail(props) {
       setProductSumPlus(newSum + Number(productShipping))
     }
   }, [finalCart, productShipping])
-
+  // 火箭轉向
   useEffect(() => {
     $('#productArrowParent').on('click', function () {
       $('#productArrow').toggleClass('transfromArrow')
     })
   }, [])
-
+  console.log(finalCart)
   const motorDisplay = (
     <>
       <Accordion>
@@ -109,7 +109,14 @@ function CheckOut_Detail(props) {
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
             <Card.Body>
-              {/* <CartMotor data={motorCart} /> */}
+              {finalCart.map((v, index) => {
+                return (
+                  <>
+                    <CartProduct index={index} data={v} step="3" />
+                  </>
+                )
+              })}
+
               <GrandTotal type={'Prod'} shipping={shipping} />
             </Card.Body>
           </Accordion.Collapse>
