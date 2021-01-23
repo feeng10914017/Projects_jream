@@ -5,6 +5,9 @@ import ProductData from './ProductData2.json'
 import Carousel from './components/Carousel'
 import Sidenav from './components/Sidenav'
 import { Link } from 'react-router-dom'
+
+import { PRODUCT_PER_PAGE } from './constants'
+
 import './product.css'
 
 function ProductList(props) {
@@ -37,6 +40,7 @@ function ProductList(props) {
   const [searchQuery, setSearchQuery] = useState('')
   const [doSearch, setDoSearch] = useState(false)
   const [products, setproducts] = useState([])
+
   useEffect(() => {
     setproducts(
       ProductData.filter((product) => {
@@ -84,10 +88,15 @@ function ProductList(props) {
     </>
   )
 
+  const total_page = Math.ceil(products.length / PRODUCT_PER_PAGE)
+  const urlParams = new URLSearchParams(window.location.search)
+  let page = parseInt(urlParams.get('page')) || 1 // default in page 1
+  page = page > total_page ? total_page : page
+
   const display = (
-    <>
-      <div className="productsArea">
-        {products.map((item, index) => {
+    <div className="productsArea">
+      {products.map((item, index) => {
+        if (Math.floor(index / PRODUCT_PER_PAGE) === page - 1) {
           return (
             <div className="P_card">
               <div style={{ overflow: 'hidden' }}>
@@ -115,10 +124,21 @@ function ProductList(props) {
               </div>
             </div>
           )
-        })}
-      </div>
-    </>
+        }
+      })}
+    </div>
   )
+
+  const page_buttons = []
+  for (let i = 0; i < total_page; i++) {
+    page_buttons.push(
+      <li class="page-item">
+        <a class="page-link" href={`?page=${i + 1}`}>
+          {i + 1}
+        </a>
+      </li>
+    )
+  }
 
   return (
     <>
@@ -134,8 +154,36 @@ function ProductList(props) {
               setDoSearch={setDoSearch}
             />
           </Col>
-          <Col sm={9} className="nopadding ">
+          <Col sm={9} className="nopadding " style={{ height: '100vh' }}>
             {display}
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                {page === 1 ? null : (
+                  <li class="page-item ">
+                    <a
+                      class="page-link"
+                      href={`?page=${page - 1}`}
+                      tabindex="-1"
+                    >
+                      上一頁
+                    </a>
+                  </li>
+                )}
+
+                {page_buttons}
+                {page === total_page ? null : (
+                  <li class="page-item">
+                    <a
+                      class="page-link"
+                      href={`?page=${page + 1}`}
+                      tabindex="+1"
+                    >
+                      下一頁
+                    </a>
+                  </li>
+                )}
+              </ul>
+            </nav>
           </Col>
         </Row>
       </Container>
