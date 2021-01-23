@@ -37,11 +37,28 @@ import OrderCartReport from './pages/order/OD_CartReport'
 import OrderRentalt from './pages/order/OD_Rental'
 
 function App() {
-  const [auth, setAuth] = useState(false)
-
+  const [auth, setAuth] = React.useState(false)
   useEffect(() => {
     setAuth(localStorage.getItem('userData'))
   }, [auth])
+
+  function PrivateRoute({ component: Component, authed, setAuth, ...rest }) {
+    return (
+      <Route
+        {...rest}
+        setAuth={setAuth}
+        render={(props) =>
+          authed === true ? (
+            <Component setAuth={setAuth} {...props} />
+          ) : (
+            <Redirect
+              to={{ pathname: '/login', state: { from: props.location } }}
+            />
+          )
+        }
+      />
+    )
+  }
 
   return (
     <Router>
@@ -54,7 +71,7 @@ function App() {
                 <Home />
               </Route>
               <Route path="/login">
-                <LogIn />
+                <LogIn auth={auth} setAuth={setAuth} />
               </Route>
 
               {/* news */}
@@ -85,29 +102,30 @@ function App() {
 
               {/* member */}
               <Route path="/member/Edit">
-                <MemberEdit />
+                <MemberEdit auth={auth} setAuth={setAuth} />
               </Route>
               <Route path="/member/information">
-                <MemberInformation />
+                <MemberInformation auth={auth} setAuth={setAuth} />
               </Route>
               <Route path="/member/favorite">
-                <MemberFavorite />
+                <MemberFavorite auth={auth} setAuth={setAuth} />
               </Route>
               <Route path="/member/rent-record">
-                <MemberRentrecord />
+                <MemberRentrecord auth={auth} setAuth={setAuth} />
               </Route>
               <Route path="/member/order-record">
-                <MemberOrderrecord />
+                <MemberOrderrecord auth={auth} setAuth={setAuth} />
               </Route>
-              {/* <PrivateRoute
+              <PrivateRoute
                 authed={localStorage.getItem('userData') && true}
                 path="/member"
                 component={Member}
+                sauth={auth}
                 setAuth={setAuth}
-              /> */}
-              <Route path="/member">
+              />
+              {/* <Route path="/member">
                 <Member />
-              </Route>
+              </Route> */}
 
               {/* order */}
               <Route path="/order/rentalt">

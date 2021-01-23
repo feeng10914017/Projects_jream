@@ -59,7 +59,7 @@ function Login(props) {
           console.log('member', member)
           console.log('data', data)
           localStorage.setItem('userData', JSON.stringify(data))
-          // setAuth(true)
+          setAuth(true)
         } else {
           console.log('error')
         }

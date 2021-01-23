@@ -1,22 +1,27 @@
-import React, { useState } from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import React, { useState, userEffect } from 'react'
+import { Link, withRouter, useHistory, useParams } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
 import { Table, Button } from 'react-bootstrap'
 
 import './member.scss'
 
 function Information() {
-  const [member, setMember] = useState(
+  let history = useHistory()
+  let { id } = useParams()
+  const [memberData, setMemberData] = useState(
     JSON.parse(localStorage.getItem('userData'))
   )
-  const [memberName, setMemberName] = useState()
-  const [memberNickName, setMeNickName] = useState()
-  const [memberBirth, setMemberBirth] = useState()
-  const [memberGender, setMemberGender] = useState()
-  const [memberEmail, setMemberEmail] = useState()
-  const [memberPhone, setMemberPhone] = useState()
-  const [memberTelephone, setMemberTelephone] = useState()
-  const [memberAddress, setMemberAddress] = useState()
+  console.log('ed member', memberData)
+  const [memberName, setMemberName] = useState(memberData.memberName)
+  const [memberNickname, setMeNickname] = useState(memberData.memberNickname)
+  const [memberBirth, setMemberBirth] = useState(memberData.Birth)
+  const [memberGender, setMemberGender] = useState(memberData.Gender)
+  const [memberEmail, setMemberEmail] = useState(memberData.memberEmail)
+  const [memberPhone, setMemberPhone] = useState(memberData.memberPhone)
+  const [memberTelephone, setMemberTelephone] = useState(
+    memberData.memberTelephone
+  )
+  const [memberAddress, setMemberAddress] = useState(memberData.memberAddress)
   const [validated, setValidated] = useState(false)
   const handleSubmit = (event) => {
     const form = event.currentTarget
@@ -26,69 +31,72 @@ function Information() {
     } else {
       event.preventDefault()
       event.stopPropagation()
-      getMember()
     }
     setValidated(true)
   }
-  async function getMember() {
-    try {
-      const response = await fetch('http://localhost:5555/editmember', {
-        method: 'get',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          memberName,
-          memberNickName,
-          memberBirth,
-          memberGender,
-          memberEmail,
-          memberPhone,
-          memberTelephone,
-          memberAddress,
-        }),
-      })
-      if (response.ok) {
-        const data = await response.json()
-        console.log('WHO', data)
-        if (data) {
-          setMember(data)
-          console.log('member', member)
-          console.log('data', data)
-          localStorage.setItem('userData', JSON.stringify(data))
-          // setAuth(true)
-        } else {
-          console.log('error')
-        }
-      }
-    } catch (err) {
-      // alert('無法辨識資料')
-      console.log(err)
+  // async function getMember() {
+  //   try {
+  //     const response = await fetch('http://localhost:5555/editmember', {
+  //       method: 'get',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify({
+  //         memberName,
+  //         memberNickname,
+  //         memberBirth,
+  //         memberGender,
+  //         memberEmail,
+  //         memberPhone,
+  //         memberTelephone,
+  //         memberAddress,
+  //       }),
+  //     })
+  //     if (response.ok) {
+  //       const data = await response.json()
+  //       console.log('WHO', data)
+  //       if (data) {
+  //         setMemberEmail(data)
+  //         console.log('member', member)
+  //         console.log('data', data)
+  //         localStorage.setItem('userData', JSON.stringify(data))
+  //         // setAuth(true)
+  //       } else {
+  //         console.log('error')
+  //       }
+  //     }
+  //   } catch (err) {
+  //     // alert('無法辨識資料')
+  //     console.log(err)
+  //   }
+  // }
+  async function updateMember(id) {
+    const newMember = {
+      id,
+      memberName,
+      memberNickname,
+      memberBirth,
+      memberGender,
+      memberEmail,
+      memberPhone,
+      memberTelephone,
+      memberAddress,
     }
-  }
-  async function updateMember() {
     try {
-      const response = await fetch('http://localhost:5555/editmember', {
+      const response = await fetch(`http://localhost:5555/editmember/${id}`, {
         method: 'put',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          memberName,
-          memberNickName,
-          memberBirth,
-          memberGender,
-          memberEmail,
-          memberPhone,
-          memberTelephone,
-          memberAddress,
-        }),
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newMember),
       })
       if (response.ok) {
         const data = await response.json()
-        console.log('WHO', data)
         if (data) {
-          setMember(data)
-          console.log('member', member)
+          setMemberEmail(data)
           console.log('data', data)
           localStorage.setItem('userData', JSON.stringify(data))
-          // setAuth(true)
+          if (data) alert('更新成功')
+          history.push('/member/information')
         } else {
           console.log('error')
         }
@@ -98,12 +106,22 @@ function Information() {
       console.log(err)
     }
   }
+  // userEffect(() => {
+  //   if (memberData === 1) {
+  //     setMemberData()
+  //     console.log('沒值', id)
+  //     updateMember(id)
+  //     console.log('hi 沒有值', id)
+  //     updateMember(memberData.id)
+  //     console.log('member.id 沒有值', memberData.id)
+  //     console.log('member', memberData)
+  //   }
+  // }, [memberData, id])
   return (
     <>
       <MemberNav />
       <Table
         className="MBI"
-        member={member}
         noValidate
         validated={validated}
         onSubmit={handleSubmit}
@@ -114,7 +132,7 @@ function Information() {
             <td className="MBItdL">
               <input
                 type="text"
-                defaultValue={member.memberName}
+                defaultValue={memberData.memberName}
                 onChange={(e) => setMemberName(e.target.value)}
               />
             </td>
@@ -124,8 +142,8 @@ function Information() {
             <td className="MBItdL">
               <input
                 type="text"
-                defaultValue={member.memberNickName}
-                onChange={(e) => setMeNickName(e.target.value)}
+                defaultValue={memberData.memberNickname}
+                onChange={(e) => setMeNickname(e.target.value)}
               />
             </td>
           </tr>
@@ -133,22 +151,31 @@ function Information() {
             <td className="MBItdC">生日</td>
             <td className="MBItdL">
               <input
-                type="text"
-                defaultValue={member.memberBirth}
+                type="date"
+                defaultValue={memberData.memberBirth}
                 onChange={(e) => setMemberBirth(e.target.value)}
               />
             </td>
           </tr>
           <tr>
             <td className="MBItdC">性別</td>
-            <td className="MBItdL">{member.memberGender}</td>
+            <td className="MBItdL">
+              <select
+                defaultValue={memberData.memberGender}
+                onChange={(e) => setMemberGender(e.target.value)}
+              >
+                <option disabled>請選擇</option>
+                <option value="1">男</option>
+                <option value="2">女</option>
+              </select>
+            </td>
           </tr>
           <tr>
             <td className="MBItdC">信箱</td>
             <td className="MBItdL">
               <input
                 type="email"
-                defaultValue={member.memberEmail}
+                defaultValue={memberData.memberEmail}
                 onChange={(e) => setMemberEmail(e.target.value)}
               />
             </td>
@@ -158,7 +185,7 @@ function Information() {
             <td className="MBItdL">
               <input
                 type="text"
-                defaultValue={member.memberPhone}
+                defaultValue={memberData.memberPhone}
                 onChange={(e) => setMemberPhone(e.target.value)}
               />
             </td>
@@ -168,7 +195,7 @@ function Information() {
             <td className="MBItdL">
               <input
                 type="text"
-                defaultValue={member.memberTelephone}
+                defaultValue={memberData.memberTelephone}
                 onChange={(e) => setMemberTelephone(e.target.value)}
               />
             </td>
@@ -178,7 +205,7 @@ function Information() {
             <td className="MBItdL">
               <input
                 type="text"
-                defaultValue={member.memberAddress}
+                defaultValue={memberData.memberAddress}
                 onChange={(e) => setMemberAddress(e.target.value)}
                 size="30"
               />
@@ -200,8 +227,8 @@ function Information() {
                 variant="primary"
                 type="submit"
                 onClick={() => {
-                  updateMember(member.id)
-                  console.log('onclick ed', member.id)
+                  updateMember(memberData.id)
+                  console.log('onclick ed', memberData.id)
                 }}
               >
                 確認修改

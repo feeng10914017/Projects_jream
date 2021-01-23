@@ -4,7 +4,7 @@ import MemberNav from './components/MemberNav'
 import MotoR from './components/MotoR'
 import { Form, Col, Card, ListGroup, Button } from 'react-bootstrap'
 
-function Rentrecord() {
+function Rentrecord(auth, setAuth) {
   return (
     <>
       <MemberNav />
