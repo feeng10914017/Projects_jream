@@ -62,7 +62,7 @@ function CheckOut_Detail(props) {
       $('#productArrow').toggleClass('transfromArrow')
     })
   }, [])
-  console.log(finalCart)
+  // console.log(finalCart)
   const motorDisplay = (
     <>
       <Accordion>

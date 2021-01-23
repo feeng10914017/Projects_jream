@@ -1,21 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import { Row, Col, Card, Button, Form, Modal } from 'react-bootstrap'
+import { Row, Col, Card, Button, Form } from 'react-bootstrap'
 import $ from 'jquery'
 function CheckOut_Invoice(props) {
-  // const [invoiceTitle, setInvoiceTitle] = useState('')
-  // const [invoiceValue1, setInvoiceValue1] = useState('')
-  // const [invoiceValue2, setInvoiceValue2] = useState('')
-  const [smShow, setSmShow] = useState(false)
   const [invoiceCompany, setInvoiceCompany] = useState('')
   const [invoiceDonate, setInvoiceDonate] = useState('')
   const [invoiceVehicleOne, setInvoiceVehicleOne] = useState('')
   const [invoiceVehicleTwo, setInvoiceVehicleTwo] = useState('')
-  // function checkInvoiceValue() {
-  //   const a = invoiceVehicleOne
-  //   const b = invoiceVehicleTwo
-  //   a !== '' && b !== '' && a !== b && setSmShow(true)
-  // }
 
+  const handleChangeChecked = (element) => {
+    // console.log(element.target.checked)
+    // props.checkedItem(e, element.target.checked, index)
+  }
   useEffect(() => {
     $('#Invoice')
       .find('button')
@@ -46,11 +41,11 @@ function CheckOut_Invoice(props) {
               id="Personal"
               variant="outline-light"
               onClick={() => {
-                // setInvoiceTitle('電子發票 - 個人')
                 setInvoiceCompany('')
                 setInvoiceDonate('')
                 setInvoiceVehicleOne('')
                 setInvoiceVehicleTwo('')
+                props.setInvoiceTitle('電子發票 - 個人')
                 props.setInvoiceValue1('')
                 props.setInvoiceValue2('')
               }}
@@ -61,10 +56,10 @@ function CheckOut_Invoice(props) {
               id="Company"
               variant="outline-light"
               onClick={() => {
-                // setInvoiceTitle('電子發票 - 公司')
                 setInvoiceDonate('')
                 setInvoiceVehicleOne('')
                 setInvoiceVehicleTwo('')
+                props.setInvoiceTitle('電子發票 - 公司')
                 props.setInvoiceValue1('')
                 props.setInvoiceValue2('')
               }}
@@ -75,12 +70,12 @@ function CheckOut_Invoice(props) {
               id="Donate"
               variant="outline-light"
               onClick={() => {
-                // setInvoiceTitle('捐贈發票')
                 setInvoiceCompany('')
                 setInvoiceDonate('伊甸社會福利基金會')
                 setInvoiceVehicleOne('')
                 setInvoiceVehicleTwo('')
-                props.setInvoiceValue1('')
+                props.setInvoiceTitle('捐贈發票')
+                props.setInvoiceValue1('伊甸社會福利基金會')
                 props.setInvoiceValue2('')
               }}
             >
@@ -90,11 +85,9 @@ function CheckOut_Invoice(props) {
               id="Vehicle"
               variant="outline-light"
               onClick={() => {
-                // setInvoiceTitle('個人 - 手機條碼載具')
                 setInvoiceCompany('')
                 setInvoiceDonate('')
-                props.setInvoiceValue1('')
-                props.setInvoiceValue2('')
+                props.setInvoiceTitle('個人 - 手機條碼載具')
               }}
             >
               個人 - 手機條碼載具
@@ -201,27 +194,12 @@ function CheckOut_Invoice(props) {
           <Form.Check
             type="checkbox"
             label="我同意辦理退貨時，由 JREAM 代為處理電子發票及銷貨退回折讓單以加速退款作業。"
-            onclick={(e) => {
-              props.setInvoiceCheckBox(e.target.value)
+            onChange={(element) => {
+              props.setInvoiceCheckBox(element.target.checked)
             }}
           />
         </Form.Group>
       </section>
-      {/* modal */}
-      <Modal
-        size="sm"
-        show={smShow}
-        onHide={() => setSmShow(false)}
-        aria-labelledby="example-modal-sizes-title-sm"
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="example-modal-sizes-title-sm">提醒</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <p>請確認您輸入的「手機條碼」是相同的</p>
-        </Modal.Body>
-      </Modal>
     </>
   )
 }

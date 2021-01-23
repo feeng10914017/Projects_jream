@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Row, Button, Form } from 'react-bootstrap'
+import { Row, Button, Form, Modal } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 //引入頁面元件
@@ -9,22 +9,42 @@ import CkoutInvoice from '../../components/order/CheckOut_Invoice'
 import CkoutDetail from '../../components/order/CheckOut_Detail'
 
 function OD_Rental() {
+  //  Credit
   const [cardNumber, setCardNumber] = useState(0)
   const [validityMM, setValidityMM] = useState(0)
   const [validityYY, setValidityYY] = useState(0)
   const [verificationCode, setVerificationCode] = useState(0)
+  //  Invoice
   const [invoiceTitle, setInvoiceTitle] = useState('')
   const [invoiceValue1, setInvoiceValue1] = useState('')
   const [invoiceValue2, setInvoiceValue2] = useState('')
   const [invoiceCheckBox, setInvoiceCheckBox] = useState(false)
-  // console.log(invoiceTitle)
-  // console.log(invoiceValue1)
-  // console.log(invoiceValue2)
-  // console.log(invoiceCheckBox)
-  // console.log(cardNumber)
-  // console.log(validityMM)
-  // console.log(validityYY)
-  // console.log(verificationCode)
+  //  Invoice's Modal
+  const [invoiceTitleShow, setInvoiceTitleShow] = useState(false)
+  const [invoiceCompanyShow, setInvoiceCompanyShow] = useState(false)
+  const [invoiceVehicleNullShow, setInvoiceVehicleNullShow] = useState(false)
+  const [invoiceVehicleShow, setInvoiceVehicleShow] = useState(false)
+  const [invoiceCheckBoxShow, setInvoiceCheckBoxShow] = useState(false)
+  // console.log('cardNumber', cardNumber)
+  // console.log('validityMM', validityMM)
+  // console.log('validityYY', validityYY)
+  // console.log('verificationCode', verificationCode)
+  // console.log('invoiceTitle', invoiceTitle)
+  // console.log('invoiceValue1', invoiceValue1)
+  // console.log('invoiceValue2', invoiceValue2)
+  // console.log('invoiceCheckBox', invoiceCheckBox)
+  const motorCart = JSON.parse(localStorage.getItem('motorCart'))
+  const testRentalorder = {
+    motorCart,
+    cardNumber,
+    validityMM,
+    validityYY,
+    verificationCode,
+    invoiceTitle,
+    invoiceValue1,
+    invoiceValue2,
+  }
+  // console.log(testRentalorder)
 
   //後台新增租賃訂單
   async function addRentalOrder() {
@@ -60,12 +80,46 @@ function OD_Rental() {
       console.log(error)
     }
   }
+
+  //發票驗證
+  function RentalSubmit(e) {
+    e.preventDefault()
+    if (invoiceTitle === '') {
+      setInvoiceTitleShow(true)
+      return
+    }
+    if (invoiceTitle === '電子發票 - 公司' && invoiceValue1 === '') {
+      setInvoiceCompanyShow(true)
+      return
+    }
+    if (
+      invoiceTitle === '個人 - 手機條碼載具' &&
+      invoiceValue1 === '' &&
+      invoiceValue2 === ''
+    ) {
+      setInvoiceVehicleNullShow(true)
+      return
+    }
+    if (
+      invoiceTitle === '個人 - 手機條碼載具' &&
+      invoiceValue1 !== invoiceValue2
+    ) {
+      setInvoiceVehicleShow(true)
+      return
+    }
+    if (invoiceCheckBox === false) {
+      setInvoiceCheckBoxShow(true)
+      return
+    }
+    console.log(testRentalorder)
+  }
+
   return (
     <>
       <article className="col-10 CheckTwo">
         <OrderStep step="3" />
         <CkoutDetail type="Motor" />
-        <Form>
+        <Form onSubmit={RentalSubmit} return false>
           <CkoutCredit
             setCardNumber={setCardNumber}
             setValidityMM={setValidityMM}
@@ -87,17 +141,88 @@ function OD_Rental() {
                 重新選車
               </Button>
             </Link>
-            <Link to="/order/cartReport">
-              <Button
-                className="finalBtn finalBtnTwo place-center"
-                variant="primary"
-                type="submit"
-              >
-                下一步
-              </Button>
-            </Link>
+            {/* <Link to="/order/cartReport"> */}
+            <Button
+              className="finalBtn finalBtnTwo place-center"
+              variant="primary"
+              type="submit"
+            >
+              下一步
+            </Button>
+            {/* </Link> */}
           </Row>
         </Form>
+        {/* modal */}
+        <Modal
+          size="sm"
+          show={invoiceTitleShow}
+          onHide={() => setInvoiceTitleShow(false)}
+          aria-labelledby="example-modal-sizes-title-sm"
+          centered
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-modal-sizes-title-sm">提醒</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>請確認您的「發票類型」</p>
+          </Modal.Body>
+        </Modal>
+        <Modal
+          size="sm"
+          show={invoiceCompanyShow}
+          onHide={() => setInvoiceCompanyShow(false)}
+          aria-labelledby="example-modal-sizes-title-sm"
+          centered
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-modal-sizes-title-sm">提醒</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>請輸入您的「統一編號」</p>
+          </Modal.Body>
+        </Modal>
+        <Modal
+          size="sm"
+          show={invoiceVehicleNullShow}
+          onHide={() => setInvoiceVehicleNullShow(false)}
+          aria-labelledby="example-modal-sizes-title-sm"
+          centered
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-modal-sizes-title-sm">提醒</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>請輸入您的「手機條碼」</p>
+          </Modal.Body>
+        </Modal>
+        <Modal
+          size="sm"
+          show={invoiceVehicleShow}
+          onHide={() => setInvoiceVehicleShow(false)}
+          aria-labelledby="example-modal-sizes-title-sm"
+          centered
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-modal-sizes-title-sm">提醒</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>請確認您輸入的「手機條碼」是相同的</p>
+          </Modal.Body>
+        </Modal>
+        <Modal
+          size="sm"
+          show={invoiceCheckBoxShow}
+          onHide={() => setInvoiceCheckBoxShow(false)}
+          aria-labelledby="example-modal-sizes-title-sm"
+          centered
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-modal-sizes-title-sm">提醒</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>請確認「服務條款」</p>
+          </Modal.Body>
+        </Modal>
       </article>
     </>
   )
