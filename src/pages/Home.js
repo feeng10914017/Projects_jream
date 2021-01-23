@@ -144,7 +144,7 @@ function Home() {
                   className="homeLine"
                 ></Col>
               </Row>
-              <div className="blockContainer"></div>
+              <div className="blockContainer">123</div>
             </Col>
           </article>
         </Container>
