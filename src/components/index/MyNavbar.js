@@ -6,8 +6,8 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 import { withRouter, NavLink, Route, Redirect } from 'react-router-dom'
 
-function MyNavbar({ auth, setAuth }) {
-  // const { location } = props
+function MyNavbar(props, { auth, setAuth }) {
+  const { location } = props
   const [member, setMember] = useState(
     JSON.parse(localStorage.getItem('userData'))
   )
@@ -150,8 +150,8 @@ function MyNavbar({ auth, setAuth }) {
       {/* {location.pathname === '/' || location.pathname == '/motor'
         ? homeDisplay
         : display} */}
-      {/* {location.pathname === '/' ? homeDisplay : display} */}
-      {display}
+      {location.pathname === '/' ? homeDisplay : display}
+      {/* {display} */}
     </>
   )
 }

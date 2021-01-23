@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Button, Form, Modal } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 //引入頁面元件
 import OrderStep from '../../components/order/CartStep'
@@ -8,7 +8,7 @@ import CkoutCredit from '../../components/order/CheckOut_Credit'
 import CkoutInvoice from '../../components/order/CheckOut_Invoice'
 import CkoutDetail from '../../components/order/CheckOut_Detail'
 
-function OD_Rental() {
+function OD_Rental(props) {
   //  Credit
   const [cardNumber, setCardNumber] = useState(0)
   const [validityMM, setValidityMM] = useState(0)
@@ -33,18 +33,82 @@ function OD_Rental() {
   // console.log('invoiceValue1', invoiceValue1)
   // console.log('invoiceValue2', invoiceValue2)
   // console.log('invoiceCheckBox', invoiceCheckBox)
-  const motorCart = JSON.parse(localStorage.getItem('motorCart'))
-  const testRentalorder = {
-    motorCart,
-    cardNumber,
-    validityMM,
-    validityYY,
-    verificationCode,
-    invoiceTitle,
-    invoiceValue1,
-    invoiceValue2,
+
+  //  Motor Order and Serial Number parameter
+  const [motorOrderSerialNumber, setMotorOrderSerialNumber] = useState('')
+
+  useEffect(() => {
+    const year = new Date().getFullYear()
+    const month = new Date().getMonth()
+    const monthArray = [
+      '01',
+      '02',
+      '03',
+      '04',
+      '05',
+      '06',
+      '07',
+      '08',
+      '09',
+      '10',
+      '11',
+      '12',
+    ]
+    const RandomNumber = Math.floor(Math.random() * 10 ** 12)
+    const finalSerialNumber = 'MC' + year + monthArray[month] + RandomNumber
+    setMotorOrderSerialNumber(finalSerialNumber)
+  }, [])
+  function pushToFinalOrder() {
+    const motorCart = JSON.parse(localStorage.getItem('motorCart'))
+    const finalRentalOrder = {
+      motorOrderSerialNumber,
+      motorCart,
+      cardNumber,
+      validityMM,
+      validityYY,
+      verificationCode,
+      invoiceTitle,
+      invoiceValue1,
+      invoiceValue2,
+    }
+    localStorage.setItem('rentalOrder', JSON.stringify(finalRentalOrder))
+    localStorage.setItem('motorCart', '[]')
+    props.history.push('/order/cartReport')
   }
-  // console.log(testRentalorder)
+
+  //發票驗證
+  function RentalSubmit(e) {
+    e.preventDefault()
+    if (invoiceTitle === '') {
+      setInvoiceTitleShow(true)
+      return
+    }
+    if (invoiceTitle === '電子發票 - 公司' && invoiceValue1 === '') {
+      setInvoiceCompanyShow(true)
+      return
+    }
+    if (
+      invoiceTitle === '個人 - 手機條碼載具' &&
+      invoiceValue1 === '' &&
+      invoiceValue2 === ''
+    ) {
+      setInvoiceVehicleNullShow(true)
+      return
+    }
+    if (
+      invoiceTitle === '個人 - 手機條碼載具' &&
+      invoiceValue1 !== invoiceValue2
+    ) {
+      setInvoiceVehicleShow(true)
+      return
+    }
+    if (invoiceCheckBox === false) {
+      setInvoiceCheckBoxShow(true)
+      return
+    } else {
+      pushToFinalOrder()
+    }
+  }
 
   //後台新增租賃訂單
   async function addRentalOrder() {
@@ -79,39 +143,6 @@ function OD_Rental() {
       alert('無法得到伺服器資料，請稍後再重試')
       console.log(error)
     }
-  }
-
-  //發票驗證
-  function RentalSubmit(e) {
-    e.preventDefault()
-    if (invoiceTitle === '') {
-      setInvoiceTitleShow(true)
-      return
-    }
-    if (invoiceTitle === '電子發票 - 公司' && invoiceValue1 === '') {
-      setInvoiceCompanyShow(true)
-      return
-    }
-    if (
-      invoiceTitle === '個人 - 手機條碼載具' &&
-      invoiceValue1 === '' &&
-      invoiceValue2 === ''
-    ) {
-      setInvoiceVehicleNullShow(true)
-      return
-    }
-    if (
-      invoiceTitle === '個人 - 手機條碼載具' &&
-      invoiceValue1 !== invoiceValue2
-    ) {
-      setInvoiceVehicleShow(true)
-      return
-    }
-    if (invoiceCheckBox === false) {
-      setInvoiceCheckBoxShow(true)
-      return
-    }
-    console.log(testRentalorder)
   }
 
   return (
@@ -228,4 +259,4 @@ function OD_Rental() {
   )
 }
 
-export default OD_Rental
+export default withRouter(OD_Rental)
