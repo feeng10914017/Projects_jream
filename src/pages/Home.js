@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Parallax } from 'react-parallax'
 import { Container, Row, Col } from 'react-bootstrap'
 import BackToTop from 'react-easy-back-to-top'
+import MotorThreeDX from '../components/motor/MotorThreeDX'
 
 //import video
 import Banner from '../components/home/video/homeBanner.mp4'
@@ -169,7 +170,9 @@ function Home() {
                   className="homeLine"
                 ></Col>
               </Row>
-              <div className="blockContainer"></div>
+              <div className="blockContainer">
+                <MotorThreeDX />
+              </div>
             </Col>
           </article>
           {/* ABOUT */}

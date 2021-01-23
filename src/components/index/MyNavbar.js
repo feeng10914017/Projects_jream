@@ -50,7 +50,7 @@ function MyNavbar({ auth, setAuth }) {
           expand="lg"
           bg="primary"
           variant="dark"
-          // fixed="top"
+          fixed="top"
         >
           <Navbar.Brand href="#home">
             <Nav.Link as={NavLink} to="/">
