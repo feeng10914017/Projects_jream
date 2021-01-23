@@ -6,7 +6,8 @@
 .productsArea {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
+  /* justify-content: space-around; */
   flex-wrap: wrap;
   margin: 0px 0;
 }
@@ -49,17 +50,17 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 50px;
+  padding: 10px;
 }
 .P_img-container {
-  max-width: 434px;
-  height: 100%;
-  margin: 20px;
-  height: 434px;
+  max-height: 500px;
+  width: 100%;
+  margin: 8px;
+  height: 500px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-size: 95%;
+  background-size: 98%;
 }
 .P_img-container:hover {
   background-size: 150%;
@@ -82,9 +83,9 @@
 }
 /* ----------------Detail box ----------------------*/
 .P_details .box-details {
-  max-width: 500px;
-  width: 100%;
-  margin: 20px;
+  max-width: 440px;
+  height: 100%;
+  margin: 10px;
 }
 
 /* -------------Detail color selector------------- */
@@ -136,7 +137,7 @@
 }
 /* Amount selector */
 .P_amount {
-  padding: 16px 0;
+  padding: 20px 0;
   margin-right: 100px;
 }
 .P_amount span {
@@ -146,6 +147,7 @@
 .P_amount .count {
   width: 40px;
   height: 30px;
+  padding: 15px;
   border: 1px solid #555;
   outline: none;
   background: #555;
@@ -166,5 +168,13 @@
   transition-duration: 500ms;
 }
 .P_sidenav_cardbody {
-  margin-left: 1rem;
+  margin-left: 4rem;
+  /* border-bottom: gray solid 1px; */
+}
+.P_sidenav_cardbody .sidemenu_item {
+  height: 2rem;
+}
+.P_sidenav_Flex {
+  display: flex;
+  justify-content: space-between;
 }
