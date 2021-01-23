@@ -22,9 +22,11 @@ function Detail(props) {
   const [show, setShow] = useState(false)
   const [productName, setProductName] = useState('')
   //購物車商品=>大小  單價  數量
-  const [productColor, setProductColor] = useState('')
+  const [productColor, setProductColor] = useState('orangered')
   const [productSize, setProductSize] = useState('')
   const [productAmount, setProductAmount] = useState(1)
+
+  // useEffect(() => {}, [productColor])
 
   //商品數量計數器
   const reduction = (id) => {
@@ -36,15 +38,19 @@ function Detail(props) {
     let tmp = productAmount
     setProductAmount(tmp + 1)
   }
+
   // 讓小圖片變大檢視
   const [index, setIndex] = useState(0)
   const imgDiv = useRef()
+  console.log(FindProductData().images)
+
   // 大圖局部放大細節
   const handleMouseMove = (e) => {
     const { left, top, width, height } = e.target.getBoundingClientRect()
-    const x = ((e.pageX - left) / width) * 100
-    const y = ((e.pageY - top) / height) * 100
+    const x = ((e.clientX - left) / width) * 100
+    const y = ((e.clientY - top) / height) * 100
     imgDiv.current.style.backgroundPosition = `${x}% ${y}%`
+    // console.log(x, y)
   }
 
   const handleClose = () => setShow(false)
@@ -103,7 +109,9 @@ function Detail(props) {
                 className="P_img-container"
                 onMouseMove={handleMouseMove}
                 style={{
-                  backgroundImage: `url(${FindProductData().images[index]})`,
+                  backgroundImage: `url(${
+                    FindProductData().images[productColor][index]
+                  })`,
                 }}
                 ref={imgDiv}
                 onMouseLeave={() =>
@@ -111,7 +119,7 @@ function Detail(props) {
                 }
               ></div>
               {/* 小圖 點後放大 */}
-              {FindProductData().images.map((item, index) => {
+              {FindProductData().images[productColor].map((item, index) => {
                 return (
                   <img
                     src={item}
