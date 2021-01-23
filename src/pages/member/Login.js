@@ -143,7 +143,6 @@ function Login(props) {
               className="submit A-Btn Login-button"
               onClick={() => {
                 if (member.id === true) {
-                  alert('登入成功')
                   setIsAuth(true)
                 }
               }}

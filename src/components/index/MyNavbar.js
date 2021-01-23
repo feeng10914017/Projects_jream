@@ -4,7 +4,7 @@ import { IoPersonOutline } from 'react-icons/io5'
 import { IoCartOutline } from 'react-icons/io5'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
-import { withRouter, NavLink } from 'react-router-dom'
+import { withRouter, NavLink, Route, Redirect } from 'react-router-dom'
 
 function MyNavbar({ auth, setAuth }) {
   // const { location } = props
@@ -21,7 +21,7 @@ function MyNavbar({ auth, setAuth }) {
 
   const login = (
     <>
-      <NavDropdown title={<IoPersonOutline size="18" />}>
+      <NavDropdown title={<h6>{member && member.memberName}</h6>}>
         <NavDropdown.Item as={NavLink} to="/member">
           會員中心
         </NavDropdown.Item>
@@ -32,6 +32,7 @@ function MyNavbar({ auth, setAuth }) {
           onClick={() => {
             localStorage.clear()
             sessionStorage.clear()
+            setAuth(false)
           }}
         >
           登出
@@ -79,9 +80,9 @@ function MyNavbar({ auth, setAuth }) {
             <Nav>
               {auth ? login : loginout}
               {/* <Nav.Link as={NavLink} to="/login">
-                <IoPersonOutline size="18" />
-                <h6>登入</h6>
-              </Nav.Link> */}
+                <IoPersonOutline size="18" /> */}
+              {/* {auth ? login : loginout} */}
+              {/* </Nav.Link> */}
               <Nav.Link eventKey={2} as={NavLink} to="/order">
                 <IoCartOutline size="20" />
                 <h6>購物車</h6>
@@ -129,7 +130,7 @@ function MyNavbar({ auth, setAuth }) {
               </Nav.Link>
             </Nav>
             <Nav>
-              {auth ? login : loginout}
+              {/* {auth ? login : loginout} */}
               {/* <Nav.Link as={NavLink} to="/login">
                 <IoPersonOutline size="18" />
                 <h6>登入</h6>

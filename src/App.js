@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom'
 
 //排版用元件 全部都使用
 import MyNavbar from './components/index/MyNavbar'
@@ -33,9 +38,11 @@ import OrderRentalt from './pages/order/OD_Rental'
 
 function App() {
   const [auth, setAuth] = useState(false)
+
   useEffect(() => {
     setAuth(localStorage.getItem('userData'))
   }, [auth])
+
   return (
     <Router>
       <>
@@ -78,22 +85,28 @@ function App() {
 
               {/* member */}
               <Route path="/member/Edit">
-                <MemberEdit setAuth={setAuth} />
+                <MemberEdit />
               </Route>
               <Route path="/member/information">
-                <MemberInformation setAuth={setAuth} />
+                <MemberInformation />
               </Route>
               <Route path="/member/favorite">
-                <MemberFavorite setAuth={setAuth} />
+                <MemberFavorite />
               </Route>
               <Route path="/member/rent-record">
-                <MemberRentrecord setAuth={setAuth} />
+                <MemberRentrecord />
               </Route>
               <Route path="/member/order-record">
-                <MemberOrderrecord setAuth={setAuth} />
+                <MemberOrderrecord />
               </Route>
+              {/* <PrivateRoute
+                authed={localStorage.getItem('userData') && true}
+                path="/member"
+                component={Member}
+                setAuth={setAuth}
+              /> */}
               <Route path="/member">
-                <Member auth={auth} setAuth={setAuth} />
+                <Member />
               </Route>
 
               {/* order */}
