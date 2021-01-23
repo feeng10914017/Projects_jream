@@ -85,7 +85,7 @@ function OD_CartReport() {
 
         {/* Button */}
         <Row className="justify-content-center finalBtnParent">
-          <Link to="/order/CreditCard">
+          <Link to="/">
             <Button className="finalBtn place-center" variant="danger">
               繼續逛逛
             </Button>

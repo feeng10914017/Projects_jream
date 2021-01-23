@@ -22,6 +22,7 @@ function OD_CKO_Credit(props) {
                 onChange={(e) => {
                   props.setCardNumber(e.target.value)
                 }}
+                required
               />
             </Col>
           </Form.Group>
@@ -42,6 +43,7 @@ function OD_CKO_Credit(props) {
                   onChange={(e) => {
                     props.setValidityMM(e.target.value)
                   }}
+                  required
                 />
               </Col>
               <Col sm="2" className="creditLine">
@@ -57,6 +59,7 @@ function OD_CKO_Credit(props) {
                   onChange={(e) => {
                     props.setValidityYY(e.target.value)
                   }}
+                  required
                 />
               </Col>
             </Form.Group>
@@ -76,6 +79,7 @@ function OD_CKO_Credit(props) {
                   onChange={(e) => {
                     props.setVerificationCode(e.target.value)
                   }}
+                  required
                 />
               </Col>
             </Form.Group>
