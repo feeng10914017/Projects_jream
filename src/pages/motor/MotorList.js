@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Link, NavLink, withRouter } from 'react-router-dom'
 import Slider from '../../components/motor/Slider'
 import Filterbar from '../../components/motor/Filterbar'
-// import Product from './Product'
 
 import {
   AiOutlineHeart,
@@ -33,10 +32,9 @@ function MotorList(props) {
 
   const searchParams = new URLSearchParams(props.location.search)
 
-  //  加入購物車
   async function updateCartToLocalStorage(value) {
     setDataLoading(true)
-    // Swal.fire({ html: `商品名稱:${value.name}加入購物車` })
+
     const currentCart = JSON.parse(localStorage.getItem('motorCart')) || []
     let arr = []
     currentCart.forEach((element) => {
