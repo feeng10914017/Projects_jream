@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
 import { Table, Button } from 'react-bootstrap'
@@ -6,32 +6,7 @@ import { Table, Button } from 'react-bootstrap'
 import './member.scss'
 
 function Information() {
-  const [member, setMember] = useState(
-    JSON.parse(localStorage.getItem('userData'))
-  )
-  // async function getMember(id) {
-  //   try {
-  //     const response = await fetch(`http://localhost:5555/information/${id}`, {
-  //       mode: 'cors',
-  //       method: 'get',
-  //     })
-  //     if (response.ok) {
-  //       const data = await response.json()
-  //       console.log('response:', response)
-  //       // setMember(data)
-  //       localStorage.setItem('userData', JSON.stringify(data))
-  //       console.log('memberdata:', data)
-  //     }
-  //   } catch (err) {
-  //     alert('無法得到伺服器資料，請稍後再重試')
-  //     // history.push('/login')
-  //     console.log(err)
-  //   }
-  // }
-  // useEffect(() => {
-  //   // getMember(member.id)
-  //   console.log('me有資料嗎?', member)
-  // }, [])
+  const [member] = useState(JSON.parse(localStorage.getItem('userData')))
 
   return (
     <>

@@ -102,6 +102,7 @@ function Login(props) {
 
   useEffect(() => {
     if (localStorage.getItem('userData')) {
+      alert('登入成功')
       history.push('/member')
     } else {
       console.log('請重新輸入')

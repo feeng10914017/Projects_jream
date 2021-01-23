@@ -9,12 +9,15 @@ const clientId =
   '901766639548-1q68ne39r4honv8veh9j001t7buqn209.apps.googleusercontent.com'
 
 function LoginG() {
-  let history = useHistory()
+  // let history = useHistory()
   const onSuccess = (res) => {
     // alert(`登入成功 welcome ${res.profileObj.name}.`)
     console.log('Login Success: currentUser:', res.profileObj)
+    console.log(res.profileObj.name)
+    console.log(res.profileObj.email)
+
     refreshTokenSetup(res)
-    history.push('/member') //這裡以後會跳轉到首頁
+    // history.push('/member') //這裡以後會跳轉到首頁
   }
 
   const onFailure = (res) => {
