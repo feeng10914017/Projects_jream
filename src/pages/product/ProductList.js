@@ -41,8 +41,12 @@ function ProductList(props) {
     setproducts(
       ProductData.filter((product) => {
         return (
-          product.title.includes(searchQuery) ||
-          product.sub_category.includes(searchQuery)
+          product.title
+            .toLocaleLowerCase()
+            .includes(searchQuery.toLocaleLowerCase()) ||
+          product.sub_category
+            .toLocaleLowerCase()
+            .includes(searchQuery.toLocaleLowerCase())
         )
       })
     )
