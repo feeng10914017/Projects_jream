@@ -83,7 +83,7 @@ function Detail(props) {
         <Button
           variant="primary"
           onClick={() => {
-            props.history.push('/cart')
+            props.history.push('/order/cartReport')
           }}
         >
           前往購物車結帳

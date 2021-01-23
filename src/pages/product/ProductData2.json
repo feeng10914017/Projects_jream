@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "p_id":"H_1",
     "category": "helmet",
     "sub_category": "full face",
     "title": "Helment01",
@@ -20,13 +21,14 @@
       "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
     "content":
       "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors": ["orangered", "yellow"],
+    "colors": ["orangered","yellow"],
     "sizes": ["XL", "L", "M", "XM", "LX"],
     "price": 101,
     "count": 1
   },
   {
-    "id": 2,
+    "id": 1,
+    "p_id":"H_1",
     "category": "helmet",
     "sub_category": "half face",
     "title": "Helment02",
@@ -40,12 +42,13 @@
       "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
     "content":
       "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors": ["yellow","orangered" ],
+    "colors": ["yellow"],
     "sizes": ["XL", "L", "M", "XM", "LX"],
     "price": 102,
     "count": 1
   },{
-    "id": 3,
+    "id": 2,
+    "p_id":"S_1",
     "category": "Suits",
     "sub_category": "Summer Suit",
     "title": "Suits SummerSuit01",
@@ -57,13 +60,14 @@
       "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
     "content":
       "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors": ["red", "black", "teal"],
+    "colors":["red"],
     "sizes": ["XL", "L", "M", "XM", "LX"],
     "price": 102,
     "count": 1
   },
   {
-    "id": 4,
+    "id": 2,
+    "p_id":"S_1",
     "category": "Suits",
     "sub_category": "winter Suit",
     "title": "Suits WinterSuit01",
@@ -75,13 +79,14 @@
       "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
     "content":
       "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors": ["red", "black", "teal"],
+    "colors":  ["black"],
     "sizes": ["XL", "L", "M", "XM", "LX"],
     "price": 102,
     "count": 1
   },
   {
-    "id": 5,
+    "id": 2,
+    "p_id":"S_1",
     "category": "Suits",
     "sub_category": "Cowboy Suit",
     "title": "Suits CowboySuit01",
@@ -94,7 +99,7 @@
       "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
     "content":
       "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors": ["red", "black", "teal"],
+    "colors": ["teal"],
     "sizes": ["XL", "L", "M", "XM", "LX"],
     "price": 102,
     "count": 1
