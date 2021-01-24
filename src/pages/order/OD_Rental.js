@@ -76,7 +76,7 @@ function OD_Rental(props) {
     props.history.push('/order/rentalReport')
   }
 
-  //發票驗證
+  //  Invoice Verification
   function RentalSubmit(e) {
     e.preventDefault()
     if (invoiceTitle === '') {
@@ -172,7 +172,6 @@ function OD_Rental(props) {
                 重新選車
               </Button>
             </Link>
-            {/* <Link to="/order/cartReport"> */}
             <Button
               className="finalBtn finalBtnTwo place-center"
               variant="primary"
@@ -180,7 +179,6 @@ function OD_Rental(props) {
             >
               下一步
             </Button>
-            {/* </Link> */}
           </Row>
         </Form>
         {/* modal */}

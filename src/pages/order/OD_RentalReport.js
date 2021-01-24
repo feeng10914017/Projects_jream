@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 //引入頁面元件
 import OrderStep from '../../components/order/CartStep'
 
-function OD_CartReport() {
+function OD_RentalReport() {
   const [serialNumber, setSerialNumber] = useState('')
   const [orderTime, setORderTime] = useState('')
   const [orderPrice, setOrderPrice] = useState('')
@@ -279,4 +279,4 @@ function OD_CartReport() {
   return <>{display}</>
 }
 
-export default OD_CartReport
+export default OD_RentalReport
