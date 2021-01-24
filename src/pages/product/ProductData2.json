@@ -1,108 +1,130 @@
 [
   {
     "id": 1,
-    "p_id":"H_1",
     "category": "helmet",
     "sub_category": "full face",
     "title": "Helment01",
-    "images": {
-      "orangered": [
-        "http://localhost:3000/images/product/Hel_orange_1.jpg",
-        "http://localhost:3000/images/product/Hel_orange_2.jpg",
-        "http://localhost:3000/images/product/Hel_orange_3.jpg"
-      ],
-      "yellow": [
-        "http://localhost:3000/images/product/Hel_yellow_1.jpg",
-        "http://localhost:3000/images/product/Hel_yellow_2.jpg",
-        "http://localhost:3000/images/product/Hel_yellow_3.jpg"
-      ]
-    },
-    "description":
-      "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
-    "content":
-      "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors": ["orangered","yellow"],
-    "sizes": ["XL", "L", "M", "XM", "LX"],
+    "description": "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
+    "content": "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
     "price": 101,
-    "count": 1
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "orangered",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_orange_1.jpg",
+          "http://localhost:3000/images/product/Hel_orange_2.jpg",
+          "http://localhost:3000/images/product/Hel_orange_3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "orangered",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_orange_1.jpg",
+          "http://localhost:3000/images/product/Hel_orange_2.jpg",
+          "http://localhost:3000/images/product/Hel_orange_3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "orangered",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_orange_1.jpg",
+          "http://localhost:3000/images/product/Hel_orange_2.jpg",
+          "http://localhost:3000/images/product/Hel_orange_3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "yellow",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_yellow_1.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_2.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "yellow",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_yellow_1.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_2.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "yellow",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_yellow_1.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_2.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_3.jpg"
+        ],
+        "amount": 10
+      }
+    ]
   },
   {
-    "id": 1,
-    "p_id":"H_1",
-    "category": "helmet",
+    "id": 2,
+    "category": "helmet2",
     "sub_category": "half face",
     "title": "Helment02",
-    "images": [
-      "http://localhost:3000/images/product/Hel_yellow_1.jpg",
-      "http://localhost:3000/images/product/Hel_yellow_2.jpg",
-      "http://localhost:3000/images/product/Hel_yellow_3.jpg"
-      
-    ],
-    "description":
-      "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
-    "content":
-      "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors": ["yellow"],
-    "sizes": ["XL", "L", "M", "XM", "LX"],
+    "description": "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
+    "content": "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
     "price": 102,
-    "count": 1
-  },{
-    "id": 2,
-    "p_id":"S_1",
-    "category": "Suits",
-    "sub_category": "Summer Suit",
-    "title": "Suits SummerSuit01",
-    "images": [
-      "http://localhost:3000/images/product/Suits-1-1.jpg",
-      "http://localhost:3000/images/product/Suits-1-2.jpg"
-    ],
-    "description":
-      "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
-    "content":
-      "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors":["red"],
-    "sizes": ["XL", "L", "M", "XM", "LX"],
-    "price": 102,
-    "count": 1
-  },
-  {
-    "id": 2,
-    "p_id":"S_1",
-    "category": "Suits",
-    "sub_category": "winter Suit",
-    "title": "Suits WinterSuit01",
-    "images": [
-      "http://localhost:3000/images/product/Suits-2-1.jpg",
-      "http://localhost:3000/images/product/Suits-2-2.jpg"
-    ],
-    "description":
-      "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
-    "content":
-      "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors":  ["black"],
-    "sizes": ["XL", "L", "M", "XM", "LX"],
-    "price": 102,
-    "count": 1
-  },
-  {
-    "id": 2,
-    "p_id":"S_1",
-    "category": "Suits",
-    "sub_category": "Cowboy Suit",
-    "title": "Suits CowboySuit01",
-    "images": [
-      "http://localhost:3000/images/product/Suits-3-1.jpg",
-      "http://localhost:3000/images/product/Suits-3-2.jpg",
-      "http://localhost:3000/images/product/Suits-3-3.jpg"
-    ],
-    "description":
-      "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
-    "content":
-      "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors": ["teal"],
-    "sizes": ["XL", "L", "M", "XM", "LX"],
-    "price": 102,
-    "count": 1
+    "variances": [
+      {
+        "color": "yellow",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_yellow_1.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_2.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_3.jpg"
+        ],
+        "amount": 1
+      },
+      {
+        "color": "yellow",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_yellow_1.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_2.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_3.jpg"
+        ],
+        "amount": 1
+      },
+      {
+        "color": "orangered",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_yellow_1.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_2.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_3.jpg"
+        ],
+        "amount": 1
+      },
+      {
+        "color": "orangered",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_yellow_1.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_2.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_3.jpg"
+        ],
+        "amount": 1
+      }
+    ]
   }
- 
 ]
