@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Button, Form, Modal } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 //引入頁面元件
 import OrderStep from '../../components/order/CartStep'
@@ -8,7 +8,7 @@ import CkoutPerson from '../../components/order/CheckOut_Person'
 import CkoutInvoice from '../../components/order/CheckOut_Invoice'
 import CkoutDetail from '../../components/order/CheckOut_Detail'
 
-function OD_HomeDelivery() {
+function OD_HomeDelivery(props) {
   //  user
   const [userName, setUserName] = useState('')
   const [userPhone, setUserPhone] = useState('')
@@ -64,6 +64,7 @@ function OD_HomeDelivery() {
       return
     } else {
       // pushToFinalOrder()
+      props.history.push('/order/cartReport')
     }
   }
   // console.log('userPhone', userName)
@@ -73,11 +74,11 @@ function OD_HomeDelivery() {
   // console.log('userAdd', userAdd)
   // console.log('userComment', userComment)
   // console.log('invoiceCheckBox father', invoiceCheckBox)
-  console.log('recipientName', recipientName)
-  console.log('recipientPhone', recipientPhone)
-  console.log('recipientCountry', recipientCountry)
-  console.log('recipientTownship', recipientTownship)
-  console.log('recipientAdd', recipientAdd)
+  // console.log('recipientName', recipientName)
+  // console.log('recipientPhone', recipientPhone)
+  // console.log('recipientCountry', recipientCountry)
+  // console.log('recipientTownship', recipientTownship)
+  // console.log('recipientAdd', recipientAdd)
   return (
     <>
       <article className="col-10 CheckTwo">
@@ -85,7 +86,6 @@ function OD_HomeDelivery() {
         <CkoutDetail type="Prod" />
         <Form onSubmit={RentalSubmit} return false>
           <CkoutPerson
-            recipientChecked={recipientChecked}
             setUserName={setUserName}
             setUserPhone={setUserPhone}
             setUserCountry={setUserCountry}
@@ -200,4 +200,4 @@ function OD_HomeDelivery() {
   )
 }
 
-export default OD_HomeDelivery
+export default withRouter(OD_HomeDelivery)
