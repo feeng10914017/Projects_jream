@@ -35,7 +35,7 @@ function OD_Rental(props) {
   // console.log('invoiceCheckBox', invoiceCheckBox)
 
   //  Motor Order and Serial Number parameter
-  const [motorOrderSerialNumber, setMotorOrderSerialNumber] = useState('')
+  const [serialNumber, setSerialNumber] = useState('')
 
   useEffect(() => {
     const year = new Date().getFullYear()
@@ -56,12 +56,12 @@ function OD_Rental(props) {
     ]
     const RandomNumber = Math.floor(Math.random() * 10 ** 12)
     const finalSerialNumber = 'MC' + year + monthArray[month] + RandomNumber
-    setMotorOrderSerialNumber(finalSerialNumber)
+    setSerialNumber(finalSerialNumber)
   }, [])
   function pushToFinalOrder() {
     const motorCart = JSON.parse(localStorage.getItem('motorCart'))
     const finalRentalOrder = {
-      motorOrderSerialNumber,
+      serialNumber,
       motorCart,
       cardNumber,
       validityMM,
