@@ -17,7 +17,7 @@ import Home from './pages/Home'
 import LogIn from './pages/member/Login'
 import News from './pages/news/News'
 import Motor from './pages/motor/Motor'
-import MotorList from './pages/motor/Product'
+import Motorcycle from './pages/motor/Motorcycle'
 
 import Product from './pages/product/ProductList'
 import Detail from './pages/product/ProductDetail'
@@ -35,6 +35,7 @@ import OrderCreditCard from './pages/order/OD_CreditCard'
 import OrderHomeDelivery from './pages/order/OD_HomeDelivery'
 import OrderCartReport from './pages/order/OD_CartReport'
 import OrderRentalt from './pages/order/OD_Rental'
+import OrderRentalReport from './pages/order/OD_RentalReport'
 
 function App() {
   const [auth, setAuth] = React.useState(false)
@@ -83,8 +84,8 @@ function App() {
               <Route path="/motor/:type?/:page?">
                 <Motor />
               </Route>
-              <Route path="/motorlist/:type?/:id?">
-                <MotorList />
+              <Route path="/motorcycle/:type?/:id?">
+                <Motorcycle />
               </Route>
 
               {/* product */}
@@ -128,6 +129,9 @@ function App() {
               </Route> */}
 
               {/* order */}
+              <Route path="/order/rentalReport">
+                <OrderRentalReport />
+              </Route>
               <Route path="/order/rentalt">
                 <OrderRentalt />
               </Route>

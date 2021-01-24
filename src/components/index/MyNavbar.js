@@ -25,6 +25,9 @@ function MyNavbar(props, { auth, setAuth }) {
         <NavDropdown.Item as={NavLink} to="/member">
           會員中心
         </NavDropdown.Item>
+        <NavDropdown.Item as={NavLink} to="/member/rent-record">
+          租車紀錄
+        </NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item
           as={NavLink}

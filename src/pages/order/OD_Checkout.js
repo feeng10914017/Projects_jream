@@ -49,7 +49,7 @@ function OD_Checkout() {
             <Form>
               <Form.Group as={Row} reqire="true">
                 {/* <Form.Label></Form.Label> */}
-                <Row>
+                {/* <Row>
                   <Form.Check
                     type="radio"
                     label="7-11 取貨付款"
@@ -76,7 +76,7 @@ function OD_Checkout() {
                     <span>滿1000元免運費，運費 $0</span>
                   </p>
                 </Row>
-                <div className="line"></div>
+                <div className="line"></div> */}
                 <Row>
                   <Form.Check
                     type="radio"

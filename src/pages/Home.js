@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Parallax } from 'react-parallax'
 import { Container, Row, Col } from 'react-bootstrap'
 import BackToTop from 'react-easy-back-to-top'
+import MotorThreeDX from '../components/motor/MotorThreeDX'
 
 //import video
 import Banner from '../components/home/video/homeBanner.mp4'
@@ -18,6 +19,20 @@ import { FaStoreAlt } from 'react-icons/fa'
 function Home() {
   const bgImg1 = 'http://localhost:3000/images/home/bgImg1.jpg'
   const bgImg2 = 'http://localhost:3000/images/home/bgImg2.jpg'
+
+  //set localStorage data
+  function getCartFromLocalStorage() {
+    const newMotorCart = localStorage.getItem('motorCart') || '[]'
+    const newProductCart = localStorage.getItem('productCart') || '[]'
+    const newShipping = '[]'
+    localStorage.setItem('motorCart', newMotorCart)
+    localStorage.setItem('productCart', newProductCart)
+    localStorage.setItem('shipping', newShipping)
+    localStorage.setItem('finalProductCart', '[]')
+  }
+  useEffect(() => {
+    getCartFromLocalStorage()
+  }, [])
 
   return (
     <>
@@ -155,7 +170,9 @@ function Home() {
                   className="homeLine"
                 ></Col>
               </Row>
-              <div className="blockContainer"></div>
+              <div className="blockContainer">
+                <MotorThreeDX />
+              </div>
             </Col>
           </article>
           {/* ABOUT */}

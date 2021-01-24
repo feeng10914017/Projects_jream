@@ -329,3 +329,47 @@
     }
   }
 }
+.rentalReport {
+  .card-body {
+    .row {
+      .col-lg-6 {
+        .row {
+          .col-lg-4 {
+            p {
+              color: #b02825;
+              margin-bottom: 0;
+            }
+          }
+          .col-lg-8 {
+            p {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      .col {
+        hr {
+          margin: 0 0 1.5rem 0;
+        }
+        .row {
+          .col-lg-2 {
+            p {
+              color: #b02825;
+              margin-bottom: 0;
+            }
+          }
+          .col-lg-10 {
+            .row {
+              .col-lg-4 {
+                padding-left: 0;
+                p {
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
