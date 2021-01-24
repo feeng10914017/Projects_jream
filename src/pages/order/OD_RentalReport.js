@@ -13,7 +13,8 @@ function OD_CartReport() {
         <Card>
           <Card.Header>
             <h6 className="px-3">
-              訂單編號 <span className="pl-3">202012201833</span>
+              訂單編號
+              <span className="pl-3">202012201833 OrderRentalReport</span>
             </h6>
           </Card.Header>
 

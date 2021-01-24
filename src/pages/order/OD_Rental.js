@@ -73,7 +73,7 @@ function OD_Rental(props) {
     }
     localStorage.setItem('rentalOrder', JSON.stringify(finalRentalOrder))
     localStorage.setItem('motorCart', '[]')
-    props.history.push('/order/cartReport')
+    props.history.push('/order/rentalReport')
   }
 
   //發票驗證

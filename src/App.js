@@ -35,6 +35,7 @@ import OrderCreditCard from './pages/order/OD_CreditCard'
 import OrderHomeDelivery from './pages/order/OD_HomeDelivery'
 import OrderCartReport from './pages/order/OD_CartReport'
 import OrderRentalt from './pages/order/OD_Rental'
+import OrderRentalReport from './pages/order/OD_RentalReport'
 
 function App() {
   const [auth, setAuth] = React.useState(false)
@@ -128,6 +129,9 @@ function App() {
               </Route> */}
 
               {/* order */}
+              <Route path="/order/rentalReport">
+                <OrderRentalReport />
+              </Route>
               <Route path="/order/rentalt">
                 <OrderRentalt />
               </Route>
