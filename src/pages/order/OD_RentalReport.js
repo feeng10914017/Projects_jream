@@ -5,12 +5,77 @@ import { Link } from 'react-router-dom'
 import OrderStep from '../../components/order/CartStep'
 
 function OD_CartReport() {
-  const [rentalOrderData, setRentalOrderData] = useState({})
+  const [serialNumber, setSerialNumber] = useState('')
+  const [orderTime, setORderTime] = useState('')
+  const [orderPrice, setOrderPrice] = useState('')
+  const [creditHidden, setCreditHidden] = useState('')
+  const [color, setColor] = useState('')
+  const [company, setCompany] = useState('')
+  const [model, setModel] = useState('')
+  const [rentalDate, setRentalDate] = useState('')
+  const [rentalLocation, setRentalLocation] = useState('')
+  const [rentalTime, setRentalTime] = useState('')
+  const [returnDate, setReturnDate] = useState('')
+  const [returnLocation, setReturnLocation] = useState('')
+  const [returnTime, setReturnTime] = useState('')
 
   useEffect(() => {
-    setRentalOrderData(JSON.parse(localStorage.getItem('rentalOrder')))
+    const rentalData = JSON.parse(localStorage.getItem('rentalOrder'))
+    const motorCart = rentalData.motorCart[0]
+    setSerialNumber(rentalData.serialNumber)
+    orderEditTime()
+    setOrderPrice(
+      Number(motorCart.rentalAmount) * Number(motorCart.rentalPrice)
+    )
+    setCreditHidden(rentalData.cardNumber)
+    setColor(motorCart.color)
+    setCompany(motorCart.company)
+    setModel(motorCart.model)
+    setRentalDate(motorCart.rentalDate)
+    setRentalLocation(motorCart.rentalLocation)
+    setRentalTime(motorCart.rentalTime)
+    setReturnDate(motorCart.returnDate)
+    setReturnLocation(motorCart.returnLocation)
+    setReturnTime(motorCart.returnTime)
+    localStorage.removeItem('rentalOrder')
   }, [])
-  return (
+  function orderEditTime() {
+    const year = new Date().getFullYear()
+    const month = new Date().getMonth()
+    const monthArray = [
+      '01',
+      '02',
+      '03',
+      '04',
+      '05',
+      '06',
+      '07',
+      '08',
+      '09',
+      '10',
+      '11',
+      '12',
+    ]
+    const date = new Date().getDate()
+    const hour = new Date().getHours()
+    const minute = new Date().getMinutes()
+    const second = new Date().getSeconds()
+    setORderTime(
+      year +
+        '-' +
+        monthArray[month] +
+        '-' +
+        date +
+        ' ' +
+        hour +
+        ':' +
+        minute +
+        ':' +
+        second
+    )
+  }
+
+  const display = (
     <>
       <article className="col-10 rentalReport">
         <OrderStep step="4" />
@@ -27,7 +92,7 @@ function OD_CartReport() {
                     <p>訂單編號</p>
                   </Col>
                   <Col lg={8}>
-                    <p>{rentalOrderData.serialNumber}</p>
+                    <p>{serialNumber}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -38,7 +103,7 @@ function OD_CartReport() {
                     <p>訂單日期</p>
                   </Col>
                   <Col lg={8}>
-                    <p>2020-12-12</p>
+                    <p>{orderTime}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -62,7 +127,7 @@ function OD_CartReport() {
                     <p>訂單金額</p>
                   </Col>
                   <Col lg={8}>
-                    <p>NT$ 140,000</p>
+                    <p>NT$ {orderPrice}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -86,14 +151,16 @@ function OD_CartReport() {
                     <p>付款卡號</p>
                   </Col>
                   <Col lg={8}>
-                    <p>12345678952</p>
+                    <p>{creditHidden}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
               </Col>
             </Row>
+
             <Row>
               <Col>
+                <hr />
                 <Row>
                   <Col lg={2}>
                     <p>租賃車種</p>
@@ -101,13 +168,13 @@ function OD_CartReport() {
                   <Col lg={10}>
                     <Row>
                       <Col lg={4}>
-                        <p>SUZUKI</p>
+                        <p>{company}</p>
                       </Col>
                       <Col lg={4}>
-                        <p>GSX - S1000S</p>
+                        <p>{model}</p>
                       </Col>
                       <Col lg={4}>
-                        <p>BROWN</p>
+                        <p>{color}</p>
                       </Col>
                     </Row>
                   </Col>
@@ -122,7 +189,7 @@ function OD_CartReport() {
                     <p>取車地點</p>
                   </Col>
                   <Col lg={8}>
-                    <p>台北濱江店</p>
+                    <p>{rentalLocation}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -133,7 +200,7 @@ function OD_CartReport() {
                     <p>還車地點</p>
                   </Col>
                   <Col lg={8}>
-                    <p>台北濱江店</p>
+                    <p>{returnLocation}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -146,7 +213,7 @@ function OD_CartReport() {
                     <p>取車日期</p>
                   </Col>
                   <Col lg={8}>
-                    <p>2021-01-09</p>
+                    <p>{rentalDate}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -157,7 +224,7 @@ function OD_CartReport() {
                     <p>還車日期</p>
                   </Col>
                   <Col lg={8}>
-                    <p>2021-01-09</p>
+                    <p>{returnDate}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -170,7 +237,7 @@ function OD_CartReport() {
                     <p>取車時間</p>
                   </Col>
                   <Col lg={8}>
-                    <p>14:16:00</p>
+                    <p>{rentalTime}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -181,7 +248,7 @@ function OD_CartReport() {
                     <p>還車時間</p>
                   </Col>
                   <Col lg={8}>
-                    <p>14:16:00</p>
+                    <p>{returnTime}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -209,6 +276,7 @@ function OD_CartReport() {
       </article>
     </>
   )
+  return <>{display}</>
 }
 
 export default OD_CartReport
