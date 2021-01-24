@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Accordion, Form, Card } from 'react-bootstrap'
+import AccordionContext from 'react-bootstrap/AccordionContext'
+import { useAccordionToggle } from 'react-bootstrap/AccordionToggle'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
@@ -25,32 +27,49 @@ function Sidenav() {
     return prev
   }, {})
 
+  const CustomToggle = ({ children, eventKey, callback }) => {
+    const currentEventKey = useContext(AccordionContext)
+
+    useEffect(() => {
+      const icon = document.getElementById(`sidenav_${eventKey}`)
+
+      if (icon) {
+        if (currentEventKey === eventKey) {
+          icon.classList.add('fa-rotate-180')
+        } else {
+          icon.classList.remove('fa-rotate-180')
+        }
+      }
+    }, [currentEventKey])
+
+    const decoratedOnClick = useAccordionToggle(eventKey, () => {
+      callback && callback(eventKey)
+    })
+
+    return (
+      <h5 onClick={decoratedOnClick} className="colorPrimary P_sidenav_Flex">
+        {children}
+        <FontAwesomeIcon
+          id={`sidenav_${eventKey}`}
+          icon={faAngleDown}
+          className="P_sidenav_transition"
+        ></FontAwesomeIcon>
+      </h5>
+    )
+  }
+
   const cards = Object.keys(categories).map((category) => {
     return (
       <Card className="nopadding">
         <Card.Header className="nopadding">
-          <Accordion.Toggle
+          <CustomToggle
             as={Card.Header}
             variant="link"
             eventKey={category}
             className="nopadding"
           >
-            <h5
-              onClick={() => {
-                document
-                  .getElementById(`sidenav_${category}`)
-                  .classList.toggle('fa-rotate-180')
-              }}
-              className="colorPrimary P_sidenav_Flex"
-            >
-              {category}
-              <FontAwesomeIcon
-                id={`sidenav_${category}`}
-                icon={faAngleDown}
-                className=" P_sidenav_transition"
-              ></FontAwesomeIcon>
-            </h5>
-          </Accordion.Toggle>
+            {category}
+          </CustomToggle>
         </Card.Header>
         <Accordion.Collapse eventKey={category} className="P_sidenav_cardbody">
           <Card.Body>
