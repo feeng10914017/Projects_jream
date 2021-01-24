@@ -9,6 +9,19 @@ import CkoutInvoice from '../../components/order/CheckOut_Invoice'
 import CkoutDetail from '../../components/order/CheckOut_Detail'
 
 function OD_HomeDelivery() {
+  //  user
+  const [userName, setUserName] = useState('')
+  const [userPhone, setUserPhone] = useState('')
+  const [userCountry, setUserCountry] = useState(-1)
+  const [usertownship, setUsertownship] = useState(-1)
+  const [userAdd, setUserAdd] = useState('')
+  const [userComment, setUserComment] = useState('')
+  const [recipientChecked, setRecipientChecked] = useState('')
+  const [recipientName, setRecipientName] = useState('')
+  const [recipientPhone, setRecipientPhone] = useState('')
+  const [recipientCountry, setRecipientCountry] = useState(-1)
+  const [recipientTownship, setRecipientTownship] = useState(-1)
+  const [recipientAdd, setRecipientAdd] = useState('')
   //  Invoice
   const [invoiceTitle, setInvoiceTitle] = useState('')
   const [invoiceValue1, setInvoiceValue1] = useState('')
@@ -53,14 +66,39 @@ function OD_HomeDelivery() {
       // pushToFinalOrder()
     }
   }
-
+  // console.log('userPhone', userName)
+  // console.log('userName', userPhone)
+  // console.log('userCountry', userCountry)
+  // console.log('usertownship', usertownship)
+  // console.log('userAdd', userAdd)
+  // console.log('userComment', userComment)
+  // console.log('invoiceCheckBox father', invoiceCheckBox)
+  console.log('recipientName', recipientName)
+  console.log('recipientPhone', recipientPhone)
+  console.log('recipientCountry', recipientCountry)
+  console.log('recipientTownship', recipientTownship)
+  console.log('recipientAdd', recipientAdd)
   return (
     <>
       <article className="col-10 CheckTwo">
         <OrderStep step="3" />
         <CkoutDetail type="Prod" />
         <Form onSubmit={RentalSubmit} return false>
-          <CkoutPerson />
+          <CkoutPerson
+            recipientChecked={recipientChecked}
+            setUserName={setUserName}
+            setUserPhone={setUserPhone}
+            setUserCountry={setUserCountry}
+            setUsertownship={setUsertownship}
+            setUserAdd={setUserAdd}
+            setUserComment={setUserComment}
+            setRecipientChecke={setRecipientChecked}
+            setRecipientName={setRecipientName}
+            setRecipientPhone={setRecipientPhone}
+            setRecipientCountry={setRecipientCountry}
+            setRecipientTownship={setRecipientTownship}
+            setRecipientAdd={setRecipientAdd}
+          />
           <div className="block"></div>
           <CkoutInvoice
             setInvoiceTitle={setInvoiceTitle}

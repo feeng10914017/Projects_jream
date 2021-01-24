@@ -7,10 +7,6 @@ function CheckOut_Invoice(props) {
   const [invoiceVehicleOne, setInvoiceVehicleOne] = useState('')
   const [invoiceVehicleTwo, setInvoiceVehicleTwo] = useState('')
 
-  const handleChangeChecked = (element) => {
-    // console.log(element.target.checked)
-    // props.checkedItem(e, element.target.checked, index)
-  }
   useEffect(() => {
     $('#Invoice')
       .find('button')

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import $ from 'jquery'
 import { BiSearchAlt } from 'react-icons/bi'
 import { RiCoinsLine } from 'react-icons/ri'
@@ -9,7 +9,7 @@ import { AiOutlineLine } from 'react-icons/ai'
 
 function OD_Step(props) {
   useEffect(() => {
-    props.step == 1 &&
+    props.step === '1' &&
       $('#step1')
         .children()
         .eq(0)
@@ -20,7 +20,7 @@ function OD_Step(props) {
         .next()
         .addClass('activeColorSecondary')
 
-    props.step == 2 &&
+    props.step === '2' &&
       $('#step2')
         .children()
         .eq(0)
@@ -30,7 +30,7 @@ function OD_Step(props) {
         .parent()
         .next()
         .addClass('activeColorSecondary')
-    props.step == 3 &&
+    props.step === '3' &&
       $('#step3')
         .children()
         .eq(0)
@@ -40,7 +40,7 @@ function OD_Step(props) {
         .parent()
         .next()
         .addClass('activeColorSecondary')
-    props.step == 4 &&
+    props.step === '4' &&
       $('#step4')
         .children()
         .eq(0)
@@ -50,7 +50,7 @@ function OD_Step(props) {
         .parent()
         .next()
         .addClass('activeColorSecondary')
-  }, [])
+  }, [props.step])
   return (
     <>
       <div className="step">
