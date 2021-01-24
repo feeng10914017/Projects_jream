@@ -6,8 +6,8 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import ProductData2 from '../ProductData2.json'
 import '../product.css'
 
-function Sidenav(props) {
-  const { searchQuery, doSearch, setDoSearch, setSearchQuery } = props
+function Sidenav() {
+  const [searchQuery, setSearchQuery] = useState('')
 
   const categories = ProductData2.reduce((prev, product) => {
     const { category, sub_category } = product // 解構賦值
@@ -53,14 +53,18 @@ function Sidenav(props) {
           </Accordion.Toggle>
         </Card.Header>
         <Accordion.Collapse eventKey={category} className="P_sidenav_cardbody">
-          <Card.Body
-            onClick={(e) => {
-              setSearchQuery(e.target.innerHTML)
-              setDoSearch(!doSearch)
-            }}
-          >
+          <Card.Body>
             {categories[category].map((sub_category) => {
-              return <h6 className="sidemenu_item">{sub_category}</h6>
+              return (
+                <h6
+                  className="sidemenu_item"
+                  onClick={() => {
+                    window.location.href = `${window.location.origin}/product?search=${sub_category}`
+                  }}
+                >
+                  {sub_category}
+                </h6>
+              )
             })}
           </Card.Body>
         </Accordion.Collapse>
@@ -79,7 +83,7 @@ function Sidenav(props) {
         value={searchQuery}
         onKeyDown={(e) => {
           if (e.keyCode === 13) {
-            setDoSearch(!doSearch)
+            window.location.href = `${window.location.origin}/product?search=${searchQuery}`
           }
         }}
         onChange={(e) => setSearchQuery(e.target.value)}
