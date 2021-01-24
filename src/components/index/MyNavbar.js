@@ -6,8 +6,8 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 import { withRouter, NavLink, Route, Redirect } from 'react-router-dom'
 
-function MyNavbar({ auth, setAuth }) {
-  // const { location } = props
+function MyNavbar(props, { auth, setAuth }) {
+  const { location } = props
   const [member, setMember] = useState(
     JSON.parse(localStorage.getItem('userData'))
   )
@@ -31,6 +31,8 @@ function MyNavbar({ auth, setAuth }) {
           to="/"
           onClick={() => {
             localStorage.clear()
+            console.log('Logged out Success')
+            alert('登出成功')
             sessionStorage.clear()
             setAuth(false)
           }}
@@ -130,11 +132,11 @@ function MyNavbar({ auth, setAuth }) {
               </Nav.Link>
             </Nav>
             <Nav>
-              {/* {auth ? login : loginout} */}
-              {/* <Nav.Link as={NavLink} to="/login">
-                <IoPersonOutline size="18" />
-                <h6>登入</h6>
-              </Nav.Link> */}
+              {/* <Nav.Link as={NavLink} to="/login"> */}
+              {/* <IoPersonOutline size="18" /> */}
+              {auth ? login : loginout}
+              {/* <h6>登入</h6> */}
+              {/* </Nav.Link> */}
               <Nav.Link eventKey={2} as={NavLink} to="/order">
                 <IoCartOutline size="20" />
                 <h6>購物車</h6>
@@ -150,8 +152,8 @@ function MyNavbar({ auth, setAuth }) {
       {/* {location.pathname === '/' || location.pathname == '/motor'
         ? homeDisplay
         : display} */}
-      {/* {location.pathname === '/' ? homeDisplay : display} */}
-      {display}
+      {location.pathname === '/' ? homeDisplay : display}
+      {/* {display} */}
     </>
   )
 }
