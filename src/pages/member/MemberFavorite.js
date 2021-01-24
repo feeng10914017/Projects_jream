@@ -4,7 +4,7 @@ import MemberNav from './components/MemberNav'
 import { Form, Col, Card, ListGroup } from 'react-bootstrap'
 import FavoriteM from './components/FavoriteM'
 
-function Favorite() {
+function Favorite(auth, setAuth) {
   return (
     <>
       <MemberNav />

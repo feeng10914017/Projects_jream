@@ -90,7 +90,7 @@ function OD_CartReport() {
               繼續逛逛
             </Button>
           </Link>
-          <Link to="/order/CreditCard">
+          <Link to="/member">
             <Button
               className="finalBtn finalBtnTwo place-center"
               variant="primary"

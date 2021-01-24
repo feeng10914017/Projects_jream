@@ -12,7 +12,6 @@ function OD_Cart() {
   const [ListType, setListType] = useState('Motor')
   const [motorCart, setMotorCart] = useState([])
   const [productCart, setProductCart] = useState([])
-  const [motorCartDisplay, setMotorCartDisplay] = useState([])
   const [productCartDisplay, setProductCartDisplay] = useState([])
   const [checkedCart, setCheckedCart] = useState([])
   const [shipping, setShipping] = useState([])
@@ -174,14 +173,6 @@ function OD_Cart() {
 
     localStorage.setItem('productCart', JSON.stringify(newProductCartDisplay))
   }, [productCart])
-  //reorganize the motorCart
-  useEffect(() => {
-    let newMotorCartDisplay = []
-    newMotorCartDisplay = motorCart
-    setMotorCartDisplay(newMotorCartDisplay)
-
-    localStorage.setItem('motorCart', JSON.stringify(newMotorCartDisplay))
-  }, [motorCart])
 
   // update productCart Amount to localStorage
   const updateCartAmountToLocalStorage = (item, isAdded = true) => {

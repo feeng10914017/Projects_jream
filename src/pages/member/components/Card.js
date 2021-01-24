@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../member.scss'
 
-function Card() {
+function Card({ setMember }) {
+  const [memberData, setMemberData] = useState(
+    JSON.parse(localStorage.getItem('userData'))
+  )
+
   return (
     <>
       <div className="row">
@@ -25,7 +29,12 @@ function Card() {
               </h5>
               <p className="card-text">查看你的個人資料，或是修改資料。</p>
               <Link to="/member/information">
-                <button type="button" className="btn btn-primary">
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  member={memberData}
+                  setMember={setMember}
+                >
                   管理您的資料
                 </button>
               </Link>

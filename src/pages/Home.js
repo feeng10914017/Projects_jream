@@ -20,6 +20,20 @@ function Home() {
   const bgImg1 = 'http://localhost:3000/images/home/bgImg1.jpg'
   const bgImg2 = 'http://localhost:3000/images/home/bgImg2.jpg'
 
+  //set localStorage data
+  function getCartFromLocalStorage() {
+    const newMotorCart = localStorage.getItem('motorCart') || '[]'
+    const newProductCart = localStorage.getItem('productCart') || '[]'
+    const newShipping = '[]'
+    localStorage.setItem('motorCart', newMotorCart)
+    localStorage.setItem('productCart', newProductCart)
+    localStorage.setItem('shipping', newShipping)
+    localStorage.setItem('finalProductCart', '[]')
+  }
+  useEffect(() => {
+    getCartFromLocalStorage()
+  }, [])
+
   return (
     <>
       {/* bannerVideo */}
@@ -131,7 +145,7 @@ function Home() {
                   className="homeLine"
                 ></Col>
               </Row>
-              <div className="blockContainer"></div>
+              <div className="blockContainer">123</div>
             </Col>
           </article>
         </Container>
