@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import $ from 'jquery'
-import '../../css/motor.scss'
+import '../../styles/motor/motor.scss'
 
 function Slider(props) {
   useEffect(() => {

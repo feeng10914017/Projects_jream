@@ -1,6 +1,6 @@
 import React from 'react'
 import { Carousel } from '3d-react-carousal'
-import '../../css/motor.scss'
+import '../../styles/motor/motor.scss'
 import { Link } from 'react-router-dom'
 
 class MotorThreeD extends React.Component {

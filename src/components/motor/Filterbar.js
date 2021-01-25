@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import '../../css/motor.scss'
+import '../../styles/motor/motor.scss'
 import { AiOutlineSearch } from 'react-icons/ai' //search_icon
 
 function Filterbar(props) {
@@ -151,58 +151,9 @@ function Filterbar(props) {
         </div>
 
         <div className="col col-sm-6 col-lg-2 s-filterbar">
-          {/* <button
-            className="btn btn-outline-secondary dropdown-toggle s-filterbar-btn"
-            type="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            排序方式
-          </button>
-          <div className="dropdown-menu">
-            <Link
-              className="dropdown-item"
-              to="#"
-              onClick={() => props.setOrderBy('itemName ASC')}
-            >
-              名稱
-            </Link>
-            <Link
-              className="dropdown-item"
-              to="#"
-              onClick={() => props.setOrderBy('itemPrice DESC')}
-            >
-              價錢高至低
-            </Link>
-            <Link
-              className="dropdown-item"
-              to="#"
-              onClick={() => props.setOrderBy('itemPrice ASC')}
-            >
-              價錢低至高
-            </Link>
-            <Link
-              className="dropdown-item"
-              to="#"
-              onClick={() => props.setOrderBy('itemDate ASC')}
-            >
-              推出時間最早
-            </Link>
-            <Link
-              className="dropdown-item"
-              to="#"
-              onClick={() => props.setOrderBy('itemDate DESC')}
-            >
-              推出時間最新
-            </Link>
-          </div> */}
-        </div>
-
-        <div className="col col-sm-6 col-lg-2 s-filterbar">
           <input
             type="search"
-            className="form-control s-filterbar-search pl-4"
+            className="form-control m-filterbar-search pl-4"
             aria-label="Text input with dropdown button"
             name="search"
             value={search_query}
@@ -210,7 +161,7 @@ function Filterbar(props) {
           />
           <Link
             className="s-searchicon"
-            to={'/productlist/?search=' + `${search_query}`}
+            to={'/motor/?search=' + `${search_query}`}
             // onClick={() => props.handleSearch()}
           >
             {/* <i class="fas fa-search"></i> */}

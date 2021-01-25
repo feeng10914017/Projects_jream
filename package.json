@@ -42,6 +42,7 @@
     "react-google-maps": "^9.4.5",
     "react-holder": "^1.0.0",
     "react-icons": "^4.1.0",
+    "react-image-lightbox": "^5.1.1",
     "react-parallax": "^3.1.2",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
