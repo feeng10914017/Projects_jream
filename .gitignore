@@ -8,6 +8,7 @@ debug.log
 .pnp.js
 .eslintcache
 .env
+.debug.log
 
 # testing
 /coverage
