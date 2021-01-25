@@ -9,6 +9,7 @@
 /* ---------products_area--------- */
 .productsArea {
   width: 100%;
+  /* min-height: 100vh; */
   padding-left: 15px;
   display: flex;
   justify-content: left;
@@ -49,6 +50,7 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
+  color: #242424;
 }
 .P_card .card-title {
   /* text-transform: uppercase; */
