@@ -45,31 +45,6 @@ function Member() {
       <div className="A-member">
         <h3>HI!{member.memberName},歡迎來到會員首頁</h3>
         <Card member={member} setMember={setMember} />
-        {/* <LogoutG /> */}
-        <h4>上次租用車款</h4>
-        <Row>
-          <Col>
-            <img src={Moto} alt="Moto" height="220px" width="280px" />
-          </Col>
-          <Col>
-            <img src={Moto} alt="Moto" height="220px" width="280px" />
-          </Col>
-          <Col>
-            <img src={Moto} alt="Moto" height="220px" width="280px" />
-          </Col>
-        </Row>
-        <h4>配件選購</h4>
-        <Row>
-          <Col>
-            <img src={Product} alt="Product" height="180px" width="180px" />
-          </Col>
-          <Col>
-            <img src={Product} alt="Product" height="180px" width="180px" />
-          </Col>
-          <Col>
-            <img src={Product} alt="Product" height="180px" width="180px" />
-          </Col>
-        </Row>
       </div>
     </>
   )
