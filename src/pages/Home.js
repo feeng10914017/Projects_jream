@@ -145,8 +145,16 @@ function Home() {
                   className="homeLine"
                 ></Col>
               </Row>
+<<<<<<< HEAD
               <div className="blockContainer">
                 <MotorThreeDX />
+=======
+              <div className="blockContainer recommend">
+                <img
+                  src="http://localhost:3000/images/home/recommend.jpg"
+                  alt=""
+                />
+>>>>>>> f48fc3781dc831c169974eadad4c721c632d6393
               </div>
             </Col>
           </article>
