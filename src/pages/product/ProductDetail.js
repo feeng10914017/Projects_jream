@@ -42,6 +42,9 @@ function Detail(props) {
   // useEffect(() => {
   //   console.log(productData)
   // }, [productData])
+  // useEffect(() => {
+  //   console.log(productData.P_id)
+  // }, [productData])
 
   useEffect(() => {
     const newImages = productData.variances.find((variance) => {
@@ -105,7 +108,7 @@ function Detail(props) {
         <Button
           variant="primary"
           onClick={() => {
-            props.history.push('/cart')
+            props.history.push('/order')
           }}
         >
           前往購物車結帳
@@ -165,7 +168,7 @@ function Detail(props) {
 
                   updateCartToLocalStorage({
                     id: productData.id,
-                    P_id: productData.P_id,
+                    P_id: productData.variances.P_id,
                     name: productData.title,
                     img: productData.images[0],
                     color: selectedColor,
@@ -247,7 +250,11 @@ function Detail(props) {
                     </a>
                   </div>
                   {/* -----------------加入購物車---------------- */}
-                  <button type="submit" className="btn addtocart-btn">
+                  <button
+                    type="submit"
+                    className="btn addtocart-btn"
+                    onClick={console.log(productData.P_id)}
+                  >
                     加入購物車
                   </button>
                 </div>
@@ -263,7 +270,7 @@ function Detail(props) {
             <div style={{ textAlign: 'right' }}>
               <Link to={`/product`} style={{ textDecoration: 'none' }}>
                 <Button variant="secondary" onClick={handleClose}>
-                  繼續購物
+                  返回商城
                 </Button>
               </Link>
             </div>
