@@ -123,6 +123,7 @@ export class MapContainer extends React.Component {
                 position={{ lat: item.lat, lng: item.lng }}
                 opentime={item.opentime}
                 phone={item.phone}
+                email={item.email}
                 img={item.img}
                 onClick={this.onMarkerClick}
                 ref={this.addToRefs}
@@ -172,11 +173,17 @@ export class MapContainer extends React.Component {
                   ? this.props.phone
                   : this.state.selectedPlace.phone}
               </p>
+              <p>
+                電子信箱 :
+                {dataFromLeft
+                  ? this.props.email
+                  : this.state.selectedPlace.email}
+              </p>
 
               {/* <Button variant="primary" href={this.state.selectedPlace.path}> */}
-              <Button variant="primary" href="http://localhost:3000/motor">
+              {/* <Button variant="primary" href="http://localhost:3000/motor">
                 前往租車
-              </Button>
+              </Button> */}
             </div>
           </InfoWindow>
         </Map>
