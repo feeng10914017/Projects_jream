@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import OrderStep from '../../components/order/CartStep'
 
 function OD_CartReport() {
+  const [shipping, setShipping] = useState('')
   const [serialNumber, setSerialNumber] = useState('')
   const [orderTime, setORderTime] = useState('')
   const [price, setPrice] = useState('')
@@ -18,7 +19,7 @@ function OD_CartReport() {
   const [recipientName, setRecipientName] = useState('')
   const [recipientPhone, setRecipientPhone] = useState('')
   const [recipientAdd, setRecipientUserAdd] = useState('')
-  const [CreditHidden, setCreditHidden] = useState('')
+  const [Credit, setCredit] = useState('')
 
   function orderEditTime() {
     const year = new Date().getFullYear()
@@ -62,14 +63,19 @@ function OD_CartReport() {
     })
     return Price
   }
+  function CreditHidden(value) {
+    console.log(value)
+  }
   useEffect(() => {
     const cartData = JSON.parse(localStorage.getItem('CartOrder'))
+    const shippingType = JSON.parse(localStorage.getItem('shipping'))
     const productCart = cartData.finalProductCart
 
+    setShipping(shippingType[0])
     setSerialNumber(cartData.serialNumber)
     orderEditTime()
     setPrice(totalprice(productCart))
-    setCreditHidden(cartData.cardNumber)
+    setCredit(CreditHidden(cartData.cardNumber))
     setUserName(cartData.userName)
     setUserPhone(cartData.userPhone)
     setUserComment(cartData.userComment)
@@ -81,7 +87,21 @@ function OD_CartReport() {
 
     // localStorage.removeItem('rentalOrder')
   }, [])
-  const aa = <></>
+  const aa = (
+    <>
+      <Col lg={6}>
+        <Row>
+          <Col lg={4}>
+            <p>&nbsp;</p>
+          </Col>
+          <Col lg={8}>
+            <p>{}</p>
+          </Col>
+        </Row>
+        <div className="line"></div>
+      </Col>
+    </>
+  )
   const bb = (
     <>
       <Col lg={6}>
@@ -192,7 +212,7 @@ function OD_CartReport() {
                     <p>付款方式</p>
                   </Col>
                   <Col lg={8}>
-                    <p>宅配 貨到付款</p>
+                    <p>{shipping === 'delivery' ? '貨到付款' : '信用卡'}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -200,10 +220,10 @@ function OD_CartReport() {
               <Col lg={6}>
                 <Row>
                   <Col lg={4}>
-                    <p>運費</p>
+                    <p>配送方式</p>
                   </Col>
                   <Col lg={8}>
-                    <p>NT$ {}</p>
+                    <p>宅配到府</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
