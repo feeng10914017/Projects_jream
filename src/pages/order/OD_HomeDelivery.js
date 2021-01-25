@@ -33,6 +33,30 @@ function OD_HomeDelivery(props) {
   const [invoiceVehicleNullShow, setInvoiceVehicleNullShow] = useState(false)
   const [invoiceVehicleShow, setInvoiceVehicleShow] = useState(false)
   const [invoiceCheckBoxShow, setInvoiceCheckBoxShow] = useState(false)
+  //  Motor Order and Serial Number parameter
+  const [serialNumber, setSerialNumber] = useState('')
+
+  useEffect(() => {
+    const year = new Date().getFullYear()
+    const month = new Date().getMonth()
+    const monthArray = [
+      '01',
+      '02',
+      '03',
+      '04',
+      '05',
+      '06',
+      '07',
+      '08',
+      '09',
+      '10',
+      '11',
+      '12',
+    ]
+    const RandomNumber = Math.floor(Math.random() * 10 ** 12)
+    const finalSerialNumber = 'PH' + year + monthArray[month] + RandomNumber
+    setSerialNumber(finalSerialNumber)
+  }, [])
   //  Invoice Verification
   function RentalSubmit(e) {
     e.preventDefault()
@@ -63,9 +87,33 @@ function OD_HomeDelivery(props) {
       setInvoiceCheckBoxShow(true)
       return
     } else {
-      // pushToFinalOrder()
-      props.history.push('/order/cartReport')
+      pushToFinalOrder()
     }
+  }
+  function pushToFinalOrder() {
+    const finalProductCart = JSON.parse(
+      localStorage.getItem('finalProductCart')
+    )
+    const finalUserAdd = userCountry + usertownship + userAdd
+    const finalRecipientAdd =
+      recipientCountry + recipientTownship + recipientAdd
+    const finalHoneOrder = {
+      finalProductCart,
+      serialNumber,
+      userName,
+      userPhone,
+      finalUserAdd,
+      userComment,
+      recipientName,
+      recipientPhone,
+      finalRecipientAdd,
+      invoiceTitle,
+      invoiceValue1,
+      invoiceValue2,
+    }
+    localStorage.setItem('homeOrder', JSON.stringify(finalHoneOrder))
+    localStorage.setItem('finalProductCart', '[]')
+    // props.history.push('/order/cartReport')
   }
   // console.log('userPhone', userName)
   // console.log('userName', userPhone)

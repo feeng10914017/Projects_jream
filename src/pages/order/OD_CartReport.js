@@ -6,6 +6,42 @@ import { Link } from 'react-router-dom'
 import OrderStep from '../../components/order/CartStep'
 
 function OD_CartReport() {
+  const [orderTime, setORderTime] = useState('')
+  function orderEditTime() {
+    const year = new Date().getFullYear()
+    const month = new Date().getMonth()
+    const monthArray = [
+      '01',
+      '02',
+      '03',
+      '04',
+      '05',
+      '06',
+      '07',
+      '08',
+      '09',
+      '10',
+      '11',
+      '12',
+    ]
+    const date = new Date().getDate()
+    const hour = new Date().getHours()
+    const minute = new Date().getMinutes()
+    const second = new Date().getSeconds()
+    setORderTime(
+      year +
+        '-' +
+        monthArray[month] +
+        '-' +
+        date +
+        ' ' +
+        hour +
+        ':' +
+        minute +
+        ':' +
+        second
+    )
+  }
   return (
     <>
       <article className="col-10 cartReport">

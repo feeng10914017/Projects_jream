@@ -34,8 +34,8 @@ function CheckOut_Person(props) {
       setRecipientAdd(userAdd)
       props.setRecipientName(userName)
       props.setRecipientPhone(userPhone)
-      props.setRecipientCountry(userCountry)
-      props.setRecipientTownship(usertownship)
+      props.setRecipientCountry(countries[userCountry])
+      props.setRecipientTownship(townships[userCountry][usertownship])
       props.setRecipientAdd(userAdd)
       document.getElementById('RecipientName').setAttribute('disabled', '')
       document.getElementById('RecipientPhone').setAttribute('disabled', '')
@@ -61,6 +61,8 @@ function CheckOut_Person(props) {
   // console.log('recipientCountry', recipientCountry)
   // console.log('recipientTownship', recipientTownship)
   // console.log('recipientAdd', recipientAdd)
+  // console.log(countries[userCountry])
+  // console.log(townships[userCountry][usertownship])
 
   return (
     <>
@@ -117,9 +119,10 @@ function CheckOut_Person(props) {
                   defaultValue="請選擇縣市"
                   value={userCountry}
                   onChange={(event) => {
+                    const value = event.target.value
                     setUserCountry(event.target.value)
                     setUsertownship(-1)
-                    props.setUserCountry(event.target.value)
+                    props.setUserCountry(countries[value])
                     props.setUsertownship(-1)
                   }}
                   required
@@ -144,8 +147,9 @@ function CheckOut_Person(props) {
                   defaultValue="Choose..."
                   value={usertownship}
                   onChange={(event) => {
+                    const value = event.target.value
                     setUsertownship(event.target.value)
-                    props.setUsertownship(event.target.value)
+                    props.setUsertownship(townships[userCountry][value])
                   }}
                   required
                 >
@@ -256,9 +260,10 @@ function CheckOut_Person(props) {
                   defaultValue="請選擇縣市"
                   value={recipientCountry}
                   onChange={(event) => {
+                    const value = event.target.value
                     setRecipientCountry(event.target.value)
                     setRecipientTownship(-1)
-                    props.setRecipientCountry(event.target.value)
+                    props.setRecipientCountry(countries[value])
                   }}
                   required
                 >
@@ -286,14 +291,17 @@ function CheckOut_Person(props) {
                   defaultValue="請選擇區域"
                   value={recipientTownship}
                   onChange={(event) => {
+                    const value = event.target.value
                     setRecipientTownship(event.target.value)
-                    props.setRecipientTownship(event.target.value)
+                    props.setRecipientTownship(
+                      townships[recipientCountry][value]
+                    )
                   }}
                   required
                 >
                   <option value={-1}>請選擇區域</option>
-                  {userCountry > -1 &&
-                    townships[userCountry].map((v, i) => (
+                  {recipientCountry > -1 &&
+                    townships[recipientCountry].map((v, i) => (
                       <option value={i} key={i}>
                         {v}
                       </option>
