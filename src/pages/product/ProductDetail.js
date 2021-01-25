@@ -165,13 +165,14 @@ function Detail(props) {
 
                   updateCartToLocalStorage({
                     id: productData.id,
+                    P_id: productData.P_id,
                     name: productData.title,
                     img: productData.images[0],
                     color: selectedColor,
                     size: selectedSize,
                     amount: buyAmount,
                     price: productData.price,
-                    totalprice: buyAmount * productData.price,
+                    // totalprice: buyAmount * productData.price,
                     // 給後面的陣列
                     colorOptions: productData.colors,
                     sizeOptions: productData.sizes,
