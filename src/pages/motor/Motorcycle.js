@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { withRouter, NavLink, Switch, Route } from 'react-router-dom'
-// import Config from './Config'
-// import Comment from './Comment'
-// import Comment2 from './Comment2'
+
+import { Button, Accordion, Card } from 'react-bootstrap'
 import Recommend from './Recommend'
 import {
   AiOutlineHeart,
@@ -14,7 +13,10 @@ import {
   AiOutlineCaretRight,
   AiOutlineArrowsAlt,
 } from 'react-icons/ai'
-import '../../css/motor.scss'
+
+import { IoCartOutline } from 'react-icons/io5'
+
+import '../../styles/motor/motor.scss'
 import Swal from 'sweetalert2' //sweetalert2
 import $ from 'jquery'
 import Lightbox from 'react-image-lightbox' //lightbox
@@ -219,7 +221,7 @@ function Motorcycle(props) {
   useEffect(() => {
     $('.s-smallImg li img').click(function () {
       $(this)
-        .css('border', '2px solid orange')
+        .css('border', '2px solid  #d56a16')
         .parent('li')
         .siblings()
         .children()
@@ -279,7 +281,7 @@ function Motorcycle(props) {
           />
         )}
       </div>
-      <div className="d-flex flex-wrap container">
+      <div className="d-flex flex-wrap container" style={{ padding: '0' }}>
         <div className="col col-12 col-md-6 my-5">
           <div
             className="text-center s-bigImg"
@@ -326,13 +328,16 @@ function Motorcycle(props) {
         </div>
 
         <div className="col col-sm-12 col-md-6 my-5">
-          <div className="d-flex">
-            <span className="p">NT$:</span>
-            <h2>{myproduct.itemPrice}</h2>
-          </div>
+          <h2 style={{ color: '#d56a16' }}>{myproduct.itemName}</h2>
+          <p style={{ minHeight: '200px' }}>
+            <h5>廠牌：{myproduct.categoryName}</h5>
+            <br />
+            <h5>排氣量：{myproduct.itemGrade} CC</h5>
+            <br />
+            <h5>引擎形式：{myproduct.itemIntro}</h5>
+          </p>
+          <h3 style={{ color: ' #b02825' }}>NT$: {myproduct.itemPrice} / 天</h3>
 
-          <h3>{myproduct.itemName}</h3>
-          <p style={{ minHeight: '150px' }}>{myproduct.itemIntro}</p>
           <div className="row">
             {/* {mbAzen_arr_state.indexOf(`${myproduct.itemId}`) == -1 ? (
               <button
@@ -388,10 +393,8 @@ function Motorcycle(props) {
                 })
               }
             >
-              <AiOutlineShoppingCart
-                style={{ color: '#F9A451', fontSize: '24px' }}
-              />
-              加入購物車
+              <IoCartOutline style={{ color: '#d56a16', fontSize: '20px' }} />
+              &nbsp; 我要租車
             </button>
           </div>
 
@@ -405,67 +408,102 @@ function Motorcycle(props) {
             <div className="col-4 ">{myproduct.itemDate}</div>
           </div>
           <div className="row h6">
-            <div className="col-3 ">遊戲類別:</div>
+            <div className="col-3 ">類別:</div>
             <div className="col-4 ">{myproduct.categoryName}</div>
           </div> */}
         </div>
       </div>
 
-      {/* <ul className="nav justify-content-center">
-        <li className="nav-item">
-          <NavLink
-            className="nav-link h5"
-            to="#"
-            onClick={() => {
-              handleDisplay(1)
-            }}
-            style={{ marginBottom: '0px' }}
-          >
-            建議配備
-          </NavLink>
-          {configORcomment == 1 ? (
-            <div
-              style={{
-                borderBottom: '2px solid #79cee2',
-                width: '75%',
-                position: 'relative',
-                left: '12px',
-                top: '20px',
-                // marginBottom: '5px',
-              }}
-            ></div>
-          ) : (
-            ''
-          )}
-        </li>
-        <li className="nav-item">
-          <NavLink
-            className="nav-link h5"
-            to="#"
-            onClick={() => {
-              handleDisplay(2)
-            }}
-            style={{ marginBottom: '0px' }}
-          >
-            留言評論
-          </NavLink>
-          {configORcomment == 2 ? (
-            <div
-              style={{
-                borderBottom: '2px solid #79cee2',
-                width: '75%',
-                position: 'relative',
-                left: '12px',
-                top: '20px',
-              }}
-            ></div>
-          ) : (
-            ''
-          )}
-        </li>
-      </ul> */}
+      <Accordion>
+        <Card>
+          <Card.Header>
+            <Accordion.Toggle
+              as={Button}
+              variant="link"
+              eventKey="0"
+              style={{ border: '1px solid #b02825' }}
+            >
+              <h5 style={{ margin: '0' }}>{myproduct.itemName} 的詳細規格</h5>
+            </Accordion.Toggle>
+          </Card.Header>
+          <Accordion.Collapse eventKey="0">
+            <Card.Body>
+              <table class="table table-bordered ">
+                <tbody>
+                  <tr>
+                    <th class="active">廠牌</th>
+                    <td>{myproduct.categoryName}</td>
+                    <th class="active">引擎形式</th>
+                    <td>{myproduct.itemIntro}</td>
+                  </tr>
+                  <tr>
+                    <th class="active">車型名稱</th>
+                    <td>{myproduct.itemName}</td>
+                    <th class="active">引擎啟動方式</th>
+                    <td>電發</td>
+                  </tr>
+                  <tr>
+                    <th class="active">款式・種類</th>
+                    <td></td>
+                    <th class="active">最高馬力</th>
+                    <td> - </td>
+                  </tr>
+                  <tr>
+                    <th class="active">動力方式</th>
+                    <td>-</td>
+                    <th class="active">最大扭力</th>
+                    <td> - </td>
+                  </tr>
+                  <tr>
+                    <th class="active">型式</th>
+                    <td></td>
+                    <th class="active">車體重量(乾燥重量)</th>
+                    <td> - (概算値)kg</td>
+                  </tr>
+                  <tr>
+                    <th class="active">排氣量</th>
+                    <td>{myproduct.itemGrade} CC</td>
+                    <th class="active">車體重量(裝備重量)</th>
+                    <td>190kg</td>
+                  </tr>
+                  <tr>
+                    <th class="active">開始銷售年分</th>
+                    <td>2017年</td>
+                    <th class="active">馬力重量比</th>
+                    <td>[ - / - ] kg/PS</td>
+                  </tr>
+                  <tr>
+                    <th class="active">能源消耗值</th>
+                    <td>6.6L/100km</td>
+                    <th class="active">全長・全高・全寬</th>
+                    <td>2040mm × 1150mm × 695mm</td>
+                  </tr>
+                  <tr>
+                    <th class="active">油箱容量</th>
+                    <td>17公升</td>
+                    <th class="active">座高</th>
+                    <td>850mm</td>
+                  </tr>
+                  <tr>
+                    <th class="active">行駛距離</th>
+                    <td>[6.6L/100km * 17]km(概算値)</td>
+                    <th class="active">前輪尺寸</th>
+                    <td>120/70 ZR17M/C (58W)</td>
+                  </tr>
+                  <tr>
+                    <th class="active">燃料給油方式</th>
+                    <td>噴射</td>
+                    <th class="active">後輪尺寸</th>
+                    <td>180/55 ZR17M/C (73W)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+      </Accordion>
 
-      <div className="container">
+      <div className="container" style={{ padding: '0' }}>
         {
           <Recommend
             changeurl={(url) => {

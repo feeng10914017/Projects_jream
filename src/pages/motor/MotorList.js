@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, NavLink, withRouter } from 'react-router-dom'
 import Slider from '../../components/motor/Slider'
 import Filterbar from '../../components/motor/Filterbar'
-// import Product from './Product'
+import { Button } from 'react-bootstrap'
 
 import {
   AiOutlineHeart,
@@ -15,7 +15,9 @@ import {
   AiFillHeart,
 } from 'react-icons/ai'
 
-import '../../css/motor.scss'
+import { TiArrowLeftThick, TiArrowRightThick } from 'react-icons/ti'
+
+import '../../styles/motor/motor.scss'
 import Swal from 'sweetalert2'
 
 function MotorList(props) {
@@ -163,7 +165,7 @@ function MotorList(props) {
     setCurrentpage(1)
   }
 
-  // console.log('type=', type)
+  console.log('type=', type)
   let search = props.location.search
 
   //顯示排序方式
@@ -283,7 +285,7 @@ function MotorList(props) {
 
   const display = (
     <>
-      <div className="row row-cols-3">
+      <div className="row row-cols-3" style={{ marginBottom: '1rem' }}>
         {myproduct.map((value, index) => {
           return (
             <div className="col-6 col-lg-4 col-sm-6" key={index}>
@@ -293,7 +295,7 @@ function MotorList(props) {
                   style={{ borderRadius: '0px' }}
                 >
                   <img
-                    src={`/images/motor/${value.itemImg}`}
+                    src={`/images/motor/small_Img/${value.itemImg}`}
                     className="card-img-top"
                     alt="..."
                   />
@@ -303,27 +305,21 @@ function MotorList(props) {
                         {value.itemName}
                       </h5>
                     </Link>
-                    <div className="d-flex">
-                      <p className="card-text col-8 p-0">
-                        NT$ {value.itemPrice}
-                      </p>
-                      <Link
-                        className="col-2"
-                        onClick={() =>
-                          updateCartToLocalStorage({
-                            id: value.itemId,
-                            name: value.itemName,
-                            amount: 1,
-                            price: value.itemPrice,
-                            img: value.itemImg,
-                          })
-                        }
+                    <div className="">
+                      <h6
+                        className="card-text col-8 p-0"
+                        style={{ color: '#b02825' }}
                       >
-                        {/* <i class="fas fa-shopping-cart"></i> */}
-                        <AiOutlineShoppingCart
-                          style={{ color: '#79cee2', fontSize: '24px' }}
-                        />
-                      </Link>
+                        NT$ {value.itemPrice} / 天
+                      </h6>
+                      <Button style={{ marginTop: '1rem' }}>
+                        <Link
+                          to={{ pathname: `/motorcycle/${value.itemId}` }}
+                          style={{ color: 'white' }}
+                        >
+                          查看商品
+                        </Link>
+                      </Button>
 
                       {/* <i class="far fa-heart"></i> */}
 
@@ -405,15 +401,13 @@ function MotorList(props) {
         })}
       </div>
 
-      {/* {myproduct.length}
-      {totalpage} */}
-      <div className="row my-3">
-        <div className="col-12 d-flex">
+      <div className="row my-3 d-flex">
+        <div className="col-12 d-flex" style={{ justifyContent: 'center' }}>
           {/* 新的頁數bar開始 */}
-          {/* <ul className="d-flex flex-wrap">
-            <li className="s-pageItem">
+          <ul className="d-flex ">
+            <li className="n-pageItem">
               <Link className="" onClick={() => paginate(currentpage - 1)}>
-                <AiOutlineCaretLeft />
+                <TiArrowLeftThick />
               </Link>
             </li>
             {pageNumbers.map((number, index) => {
@@ -431,14 +425,6 @@ function MotorList(props) {
                 >
                   <Link
                     className=""
-                    //   to={{
-                    //     search: searchParams.get('page')
-                    //       ? `page=${number}`
-                    //       : search + `page=${number}`,
-                    //   }}
-                    // to={{ search: `type=${type}` + `&&page=${number}` }}
-                    //頁數資訊可以不要顯示在url
-                    // onClick={() => {paginate(number);setType(type)}}
                     onClick={() => {
                       setCurrentpage(number)
                     }}
@@ -448,12 +434,12 @@ function MotorList(props) {
                 </li>
               )
             })}
-            <li className="s-pageItem">
+            <li className="n-pageItem">
               <Link className="" onClick={() => paginate(currentpage + 1)}>
-                <AiOutlineCaretRight />
+                <TiArrowRightThick />
               </Link>
             </li>
-          </ul> */}
+          </ul>
           {/* 新的頁數bar結束 */}
         </div>
       </div>

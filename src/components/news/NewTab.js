@@ -7,6 +7,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
+import { Link, NavLink, withRouter } from 'react-router-dom'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
@@ -85,29 +86,146 @@ export default function FullWidthTabs() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <p>
-            從小就對於理工方面的事物較為感興趣，受到很多網路資訊及影音娛樂的影響，而受工程師這類的職業吸引，在高中期間預定的大學理想目標是相關的科系，然而當時的成績並不理想，所以轉而選擇了第二興趣的經濟領域的科系，在畢業後，我覺得開始正式的工作之前應該出國看看，於是我選擇到美國進行一年的課程，在返台後找工作的一兩個月中，我認為我還是想走走看工程師的路，並找上了資策會的前端工程師養成班。
-          </p>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[會員快訊] 2021 會員專屬 農曆年全省道路救援方案</p>
+              <p>2021/01/11</p>
+            </div>
+          </Link>
+          <Link to="/news/1" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[新車報到] 2021年式新色登場：「TMAX 560 」</p>
+              <p>2021/01/07</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[新車報到] CRF300L CRF300 RALLY導入確定</p>
+              <p>2020/11/16</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[會員快訊] 北區會員 VIP專屬 👉🏻 租👆🏻送✌🏻</p>
+              <p>2020/10/10</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[門市公告] 下班之後的好去處！</p>
+              <p>2020/09/11</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[會員快訊]「YAMAHA LIFE APP」新註冊車主歡迎禮</p>
+              <p>2020/07/13</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[門市公告] 深耕竹北二十八年，機車保養第一首選 ~</p>
+              <p>2020/07/07</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>
+                [門市公告]
+                堅持獨到品味，走自己的路線~MAX車系改裝專門店~661豐連車業~
+              </p>
+              <p>2020/04/05</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[考照資訊] 大型重型機車考照</p>
+              <p>2019/05/21</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[考照資訊] 普通重型機車考照</p>
+              <p>2019/05/21</p>
+            </div>
+          </Link>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          <p>
-            從小就對於理工方面的事物較為感興趣，受到很多網路資訊及影音娛樂的影響，而受工程師這類的職業吸引，在高中期間預定的大學理想目標是相關的科系，然而當時的成績並不理想，所以轉而選擇了第二興趣的經濟領域的科系，在畢業後，我覺得開始正式的工作之前應該出國看看，於是我選擇到美國進行一年的課程，在返台後找工作的一兩個月中，我認為我還是想走走看工程師的路，並找上了資策會的前端工程師養成班。
-          </p>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[門市公告] 下班之後的好去處！</p>
+              <p>2020/09/11</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[門市公告] 深耕竹北二十八年，機車保養第一首選 ~</p>
+              <p>2020/07/07</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>
+                [門市公告]
+                堅持獨到品味，走自己的路線~MAX車系改裝專門店~661豐連車業~
+              </p>
+              <p>2020/04/05</p>
+            </div>
+          </Link>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <p>
-            從小就對於理工方面的事物較為感興趣，受到很多網路資訊及影音娛樂的影響，而受工程師這類的職業吸引，在高中期間預定的大學理想目標是相關的科系，然而當時的成績並不理想，所以轉而選擇了第二興趣的經濟領域的科系，在畢業後，我覺得開始正式的工作之前應該出國看看，於是我選擇到美國進行一年的課程，在返台後找工作的一兩個月中，我認為我還是想走走看工程師的路，並找上了資策會的前端工程師養成班。
-          </p>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[會員快訊] 2021 會員專屬 農曆年全省道路救援方案</p>
+              <p>2021/01/11</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[會員快訊] 北區會員 VIP專屬 👉🏻 租👆🏻送✌🏻</p>
+              <p>2020/10/10</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[會員快訊]「YAMAHA LIFE APP」新註冊車主歡迎禮</p>
+              <p>2020/07/13</p>
+            </div>
+          </Link>
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
-          <p>
-            從小就對於理工方面的事物較為感興趣，受到很多網路資訊及影音娛樂的影響，而受工程師這類的職業吸引，在高中期間預定的大學理想目標是相關的科系，然而當時的成績並不理想，所以轉而選擇了第二興趣的經濟領域的科系，在畢業後，我覺得開始正式的工作之前應該出國看看，於是我選擇到美國進行一年的課程，在返台後找工作的一兩個月中，我認為我還是想走走看工程師的路，並找上了資策會的前端工程師養成班。
-          </p>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[新車報到] 2021年式新色登場：「TMAX 560 」</p>
+              <p>2021/01/07</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[新車報到] Pure Torque：「2021 MT-07」</p>
+              <p>2020/12/25</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[新車報到] CRF300L CRF300 RALLY導入確定</p>
+              <p>2020/11/16</p>
+            </div>
+          </Link>
         </TabPanel>
         <TabPanel value={value} index={4} dir={theme.direction}>
-          <p>
-            從小就對於理工方面的事物較為感興趣，受到很多網路資訊及影音娛樂的影響，而受工程師這類的職業吸引，在高中期間預定的大學理想目標是相關的科系，然而當時的成績並不理想，所以轉而選擇了第二興趣的經濟領域的科系，在畢業後，我覺得開始正式的工作之前應該出國看看，於是我選擇到美國進行一年的課程，在返台後找工作的一兩個月中，我認為我還是想走走看工程師的路，並找上了資策會的前端工程師養成班。
-          </p>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[考照資訊] 大型重型機車考照</p>
+              <p>2019/05/21</p>
+            </div>
+          </Link>
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[考照資訊] 普通重型機車考照</p>
+              <p>2019/05/21</p>
+            </div>
+          </Link>
         </TabPanel>
       </SwipeableViews>
     </div>

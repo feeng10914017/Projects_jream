@@ -6,6 +6,7 @@ import {
   AiOutlineCaretRight,
 } from 'react-icons/ai'
 import { Link, withRouter } from 'react-router-dom'
+
 function Recommend(props) {
   const [index, setIndex] = useState(0)
   let clickcount = index
@@ -14,16 +15,18 @@ function Recommend(props) {
       clickcount++
     }
     console.log(clickcount)
-    document.querySelector('.s-recommend-row').style.left = `-${clickcount *
-      400}px`
+    document.querySelector('.s-recommend-row').style.left = `-${
+      clickcount * 400
+    }px`
   }
   function toRight() {
     if (clickcount > 0) {
       clickcount--
     }
     console.log(clickcount)
-    document.querySelector('.s-recommend-row').style.left = `-${clickcount *
-      400}px`
+    document.querySelector('.s-recommend-row').style.left = `-${
+      clickcount * 400
+    }px`
   }
   const recommend = (
     <>
@@ -59,45 +62,45 @@ function Recommend(props) {
           >
             <AiOutlineCaretRight style={{ fontSize: '30px', color: '' }} />
           </button>
-          <h4 className="text-center">推薦商品</h4>
+          <h4 className="text-center">熱門車款</h4>
           <div className="" style={{ overflow: 'hidden' }}>
             <div
               className="d-flex s-recommend-row mx-5 px-2"
               style={{ transition: '.5s' }}
             >
               <div className="s-recommend-pic">
-                <Link to="/product/1">
+                <Link to="/motorcycle/1">
                   <img
                     className="img-fluid"
-                    src="/images/shop/small_Img/1_Shadowverse CCG.jpg"
+                    src="/images/motor/small_Img/1_YZF-R6.jpg"
                     alt=""
                     // onClick={() => props.changeurl(1)}
                   />
                 </Link>
               </div>
               <div className="s-recommend-pic">
-                <Link to="/product/6">
+                <Link to="/motorcycle/6">
                   <img
                     className="img-fluid"
-                    src="/images/shop/small_Img/6_MOBIUS FINAL FANTASY.jpg"
+                    src="/images/motor/small_Img/6_MOBIUS FINAL FANTASY.jpg"
                     alt=""
                   />
                 </Link>
               </div>
               <div className="s-recommend-pic">
-                <Link to="/product/218">
+                <Link to="/motorcycle/11">
                   <img
                     className="img-fluid"
-                    src="/images/shop/small_Img/2_NBA 2K20.jpg"
+                    src="/images/motor/small_Img/2_NBA 2K20.jpg"
                     alt=""
                   />
                 </Link>
               </div>
               <div className="s-recommend-pic">
-                <Link to="/product/76">
+                <Link to="/motorcycle/16">
                   <img
                     className="img-fluid"
-                    src="/images/shop/small_Img/26_DOOM.jpg"
+                    src="/images/motor/small_Img/26_DOOM.jpg"
                     alt=""
                   />
                 </Link>
