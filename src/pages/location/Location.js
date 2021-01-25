@@ -122,6 +122,7 @@ function Location() {
           address={item.address}
           opentime={item.opentime}
           phone={item.phone}
+          email={item.email}
           img={item.img}
           dataFromLeft={dataFromLeft}
           setDataFromLeft={setDataFromLeft}

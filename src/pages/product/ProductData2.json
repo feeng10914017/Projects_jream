@@ -1,103 +1,1087 @@
 [
   {
     "id": 1,
-    "category": "helmet",
-    "sub_category": "full face",
-    "title": "Helment01",
-    "images": {
-      "orangered": [
-        "http://localhost:3000/images/product/Hel_orange_1.jpg",
-        "http://localhost:3000/images/product/Hel_orange_2.jpg",
-        "http://localhost:3000/images/product/Hel_orange_3.jpg"
-      ],
-      "yellow": [
-        "http://localhost:3000/images/product/Hel_yellow_1.jpg",
-        "http://localhost:3000/images/product/Hel_yellow_2.jpg",
-        "http://localhost:3000/images/product/Hel_yellow_3.jpg"
-      ]
-    },
-    "description":
-      "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
-    "content":
-      "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors": ["orangered", "yellow"],
-    "sizes": ["XL", "L", "M", "XM", "LX"],
-    "price": 101,
-    "count": 1
+    "category": "安全帽",
+    "sub_category": "全罩式",
+    "title": "LS2 Metro Evo FF324 Rapid 2019摩托車頭盔",
+    "description": "LS2  Metro Evo FF324",
+    "content": "LS2提供多種外殼尺寸，定制尺寸的EPS保護膜以及我們的高性能，高品質的填充墊以及3D激光切割塑料泡沫，可全天完美貼合和舒適，LS2遮陽板由3D光學正確的“ A級”聚合物製成，這是一種對撞擊能量具有高抵抗力並具有最大可見度的太空探索聚合物。我們的遮陽板穩定，耐刮擦和抗紫外線。所有這些與最終的PINLOCK技術相結合，提供了最先進的防霧標準，頸墊安裝在頭盔殼的背面，可確保頭部在頭盔中的舒適位置。萬一發生意外，它會結合適當關閉的下巴帶防止頭盔解開，密度不同的泡沫被3D激光切割，完全適合駕駛員的頭部形狀。",
+    "price": 2880,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "orangered",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_orange_1.jpg",
+          "http://localhost:3000/images/product/Hel_orange_2.jpg",
+          "http://localhost:3000/images/product/Hel_orange_3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "orangered",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_orange_1.jpg",
+          "http://localhost:3000/images/product/Hel_orange_2.jpg",
+          "http://localhost:3000/images/product/Hel_orange_3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "orangered",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_orange_1.jpg",
+          "http://localhost:3000/images/product/Hel_orange_2.jpg",
+          "http://localhost:3000/images/product/Hel_orange_3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "yellow",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_yellow_1.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_2.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "yellow",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_yellow_1.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_2.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "yellow",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_yellow_1.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_2.jpg",
+          "http://localhost:3000/images/product/Hel_yellow_3.jpg"
+        ],
+        "amount": 10
+      }
+    ]
   },
   {
     "id": 2,
-    "category": "helmet",
-    "sub_category": "half face",
-    "title": "Helment02",
-    "images": [
-      "http://localhost:3000/images/product/Hel_yellow_1.jpg",
-      "http://localhost:3000/images/product/Hel_yellow_2.jpg",
-      "http://localhost:3000/images/product/Hel_yellow_3.jpg"
-      
-    ],
-    "description":
-      "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
-    "content":
-      "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors": ["yellow","orangered" ],
-    "sizes": ["XL", "L", "M", "XM", "LX"],
-    "price": 102,
-    "count": 1
-  },{
+    "category": "安全帽",
+    "sub_category": "全罩式",
+    "title": "Bogotto V135  D-R2 頭盔",
+    "description": "Bogotto V135 D-R2頭盔",
+    "content": "Bogotto V135摩托車頭盔可完美展現您的Cafe Racer外觀！該頭盔結合了經典的外觀和現代安全功能。玻璃纖維外殼、透明的防刮擦遮陽板、通風系統、可拆洗的內膽。",
+    "price": 2500,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "white",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_2_white-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_white-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_white-3.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_white-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "white",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_2_white-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_white-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_white-3.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_white-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "orangered",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_2_orange-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_orange-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_orange-3.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_orange-4.jpg"
+          
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "orangered",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_2_orange-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_orange-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_orange-3.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_orange-4.jpg"
+          
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "orangered",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_2_orange-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_orange-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_orange-3.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_orange-4.jpg"
+          
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "Black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_2_black-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_black-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_black-3.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_black-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 6,
+        "color": "Black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_2_black-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_black-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_black-3.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_black-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "Black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_2_black-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_black-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_black-3.jpg",
+          "http://localhost:3000/images/product/Hel_f_2_black-4.jpg"
+        ],
+        "amount": 10
+      }
+     
+    ]
+  },
+  {
     "id": 3,
-    "category": "Suits",
-    "sub_category": "Summer Suit",
-    "title": "Suits SummerSuit01",
-    "images": [
-      "http://localhost:3000/images/product/Suits-1-1.jpg",
-      "http://localhost:3000/images/product/Suits-1-2.jpg"
-    ],
-    "description":
-      "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
-    "content":
-      "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors": ["red", "black", "teal"],
-    "sizes": ["XL", "L", "M", "XM", "LX"],
-    "price": 102,
-    "count": 1
+    "category": "安全帽",
+    "sub_category": "全罩式",
+    "title": "Bogotto  V151  SPN 頭盔",
+    "description": "Bogotto V151 SPN頭盔",
+    "content": "Bogotto V151 SPN摩托車頭盔採用永恆的設計，並具有大量通風孔。熱塑性外殼、透明的防刮擦遮陽板、準備就緒、可拆洗的舒適內膽、通風孔",
+    "price": 1450,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "white",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_3_white-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_3_white-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_3_white-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "white",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_3_white-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_3_white-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_3_white-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "white",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_3_white-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_3_white-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_3_white-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_3_black-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_3_black-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_3_black-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_3_black-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_3_black-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_3_black-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_3_black-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_3_black-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_3_black-3.jpg"
+       
+        ],
+        "amount": 10
+      }
+     
+     
+    ]
   },
   {
     "id": 4,
-    "category": "Suits",
-    "sub_category": "winter Suit",
-    "title": "Suits WinterSuit01",
-    "images": [
-      "http://localhost:3000/images/product/Suits-2-1.jpg",
-      "http://localhost:3000/images/product/Suits-2-2.jpg"
-    ],
-    "description":
-      "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
-    "content":
-      "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors": ["red", "black", "teal"],
-    "sizes": ["XL", "L", "M", "XM", "LX"],
-    "price": 102,
-    "count": 1
+    "category": "安全帽",
+    "sub_category": "半罩式",
+    "title": "Bogotto V586 Detri Jet 頭盔",
+    "description": "Bogotto V586 Detri Jet 頭盔",
+    "content": "無論您是穿越城市交通還是在鄉間道路上行駛，新型Bogotto V586 Detri噴氣頭盔都是不二之選。得益於遮陽板和通風孔，它非常適合在溫暖的天氣中騎行！ 熱塑性外殼、透明的防刮擦遮陽板、集成式遮陽板、可拆洗襯裡、頭部頂部的通風孔。",
+    "price": 1680,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_1_red-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_red-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_red-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_red-4.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "red",
+        "size": "L",
+        "images": [
+          
+          "http://localhost:3000/images/product/Hel_h_1_red-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_red-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_red-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_red-4.jpg"
+       
+         
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_1_red-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_red-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_red-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_red-4.jpg"
+       
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "yellow",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_1_yellow-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_yellow-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_yellow-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_yellow-4.jpg"
+       
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "yellow",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_1_yellow-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_yellow-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_yellow-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_yellow-4.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "yellow",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_1_yellow-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_yellow-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_yellow-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_yellow-4.jpg"
+       
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 6,
+        "color": "gray",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_1_gary-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_gary-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_gary-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_gary-4.jpg"
+       
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 7,
+        "color": "gray",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_1_gary-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_gary-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_gary-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_gary-4.jpg"
+       
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 8,
+        "color": "gray",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_1_gary-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_gary-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_gary-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_1_gary-4.jpg"
+       
+       
+        ],
+        "amount": 10
+      }
+     
+     
+    ]
   },
   {
     "id": 5,
-    "category": "Suits",
-    "sub_category": "Cowboy Suit",
-    "title": "Suits CowboySuit01",
-    "images": [
-      "http://localhost:3000/images/product/Suits-3-1.jpg",
-      "http://localhost:3000/images/product/Suits-3-2.jpg",
-      "http://localhost:3000/images/product/Suits-3-3.jpg"
-    ],
-    "description":
-      "How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.",
-    "content":
-      "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-    "colors": ["red", "black", "teal"],
-    "sizes": ["XL", "L", "M", "XM", "LX"],
-    "price": 102,
-    "count": 1
+    "category": "安全帽",
+    "sub_category": "半罩式",
+    "title": "Bogotto V541 Scacco Jet 頭盔",
+    "description": "Bogotto V541 Scacco Jet 頭盔",
+    "content": "Bogotto V541 Scacco Jet頭盔具有現代復古設計，可為您在城市的旅途中佩戴帶來高舒適度。熱塑性外殼、高峰安裝按鈕、帶襯墊的下巴、可拆洗的臉頰墊、頭部後部的護目鏡環",
+    "price": 1430,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_2_black-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_black-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_black-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_black-4.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_2_black-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_black-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_black-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_black-4.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_2_black-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_black-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_black-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_black-4.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "tan",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_2_brown-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_brown-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_brown-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_brown-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "tan",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_2_brown-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_brown-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_brown-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_brown-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "tan",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_2_brown-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_brown-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_brown-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_brown-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 6,
+        "color": "tan",
+        "size": "S",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_2_brown-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_brown-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_brown-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_brown-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 7,
+        "color": "gray",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_2_gray-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_gray-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_gray-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_gray-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 8,
+        "color": "gray",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_2_gray-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_gray-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_gray-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_gray-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 9,
+        "color": "gray",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_2_gray-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_gray-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_gray-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_gray-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 10,
+        "color": "gray",
+        "size": "S",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_2_gray-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_gray-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_gray-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_gray-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 11,
+        "color": "white",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_2_white-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_white-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_white-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_white-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 12,
+        "color": "white",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_2_white-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_white-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_white-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_white-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 12,
+        "color": "white",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_h_2_white-1.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_white-2.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_white-3.jpg",
+          "http://localhost:3000/images/product/Hel_h_2_white-4.jpg"
+        ],
+        "amount": 10
+      }
+     
+     
+    ]
+  },
+  {
+    "id": 6,
+    "category": "防摔衣",
+    "sub_category": "四季防摔衣",
+    "title": "Spidi Bolide 摩托車皮革夾克",
+    "description": "Spidi Bolide 摩托車皮革夾克",
+    "content": "Spidi Ignite 是安全實驗室開發的摩托車皮夾克,專為要求最苛刻的體育車手而設計。它由高品質 1.2 毫米厚的義大利皮革製成,提供外部防護罩,配備勇士技術和內部戰士精簡保護,EN1621-1 在肩部和肘部進行測試。肩上的戰士盾牌、固定格線襯裡、帶氯丁丁物插入件的衣領、50%防水服裝、拉鍊緊固件加入夾克/褲子、平均重量 2,5 公斤、夜間騎行的反射區。",
+    "price": 1430,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "yellow",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_1_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_1_yellow-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "yellow",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_1_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_1_yellow-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "yellow",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_1_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_1_yellow-2.jpg"
+       
+        ],
+        "amount": 10
+      }
+     
+     
+    ]
+  },
+  {
+    "id": 7,
+    "category": "防摔衣",
+    "sub_category": "四季防摔衣",
+    "title": "斯皮迪埃沃裡德II 摩托車皮革夾克",
+    "description": "斯皮迪埃沃裡德II 摩托車皮革夾克",
+    "content": "SPIDI Evorider 2 是廣受歡迎的Evorider 夾克系列的新版和更新版。我們的設計師開發了夾克，以勾選每一個盒子的性能騎手時，尋找夏季賽道日夾克，沒有安全妥協。Evorider 2 在肩部和肘部有可拆卸的保護器，肩部有勇士外部滑塊。為了增加安全性，有一個口袋的背部保護器，以及一個近距拉鍊，以附加騎馬褲，和一個捕捉系統連接騎牛仔褲。50%防水服裝、襯裡的佈置、固定格線襯裡、平均重量2，5 公斤、可調腰部緊固、高韌性彈性彈性韌性尼龍6.6，極端耐磨性牛皮，1.1/1.3 毫米厚，​​高安全性能",
+    "price": 1430,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "yellow",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_yellow-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "yellow",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_yellow-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "yellow",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_yellow-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 6,
+        "color": "white",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_white-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 7,
+        "color": "white",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_white-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 7,
+        "color": "white",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_white-2.jpg"
+        ],
+        "amount": 10
+      }
+
+     
+    ]
+  },
+  {
+    "id": 8,
+    "category": "防摔衣",
+    "sub_category": "四季防摔衣",
+    "title": "Spidi Warrior 2 摩托車皮夾克",
+    "description": "Spidi Warrior 2 摩托車皮夾克",
+    "content": "SPIDI Evorider 2 是廣受歡迎的Evorider 夾克系列的新版和更新版。我們的設計師開發了夾克，以勾選每一個盒子的性能騎手時，尋找夏季賽道日夾克，沒有安全妥協。Evorider 2 在肩部和肘部有可拆卸的保護器，肩部有勇士外部滑塊。為了增加安全性，有一個口袋的背部保護器，以及一個近距拉鍊，50%防水服裝、可調節腰部閉合、聯合區域的靈活施工、來自義大利的優質皮革、彈性尼龍 6.6,撕裂強度高,耐磨性最高、穿孔網格。",
+    "price": 1430,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_3_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_3_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_3_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_3_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_3_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_3_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "yellow",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_3_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_3_yellow-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "yellow",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_3_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_3_yellow-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "yellow",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_3_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_3_yellow-2.jpg"
+        ],
+        "amount": 10
+      }
+
+     
+    ]
+  },
+  {
+    "id": 9,
+    "category": "防摔衣",
+    "sub_category": "冬季防摔衣",
+    "title": "Dainese Air Frame D1 Tex 摩托車紡織夾克",
+    "description": "Dainese Air Frame D1 Tex 摩托車紡織夾克",
+    "content": "當天氣變熱, 沒有比空氣框架 d1 更好的夾克, 其特點是快速乾燥織物底盤與充足的網格面板, 真正讓氣流。熱適應性是通過可拆卸的防風襯墊提供的, 而舒適性是通過一個防浮套筒系統和柔軟的插入頸部和手腕。一般特性:1個內袋2個外口袋。人 機 工程學：防浮套調整手腕上有彈性和柔軟的插入物夾克緊固系統頸部、腰部和手腕調整、頸部柔軟的刀片主要材料:網狀織物刀片快速幹布安全設備:反光刀片:g1 和 g2 背保護器的口袋、肘部和肩部的可移動複合保護器 (1621.1 標準)、溫度調節: 透氣和穿孔的 sanitized®織物襯裡、穿孔面料、可拆卸防風襯墊",
+    "price": 1430,
+    "variances": [
+    
+      {
+        "p_id": 6,
+        "color": "white",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 7,
+        "color": "white",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 8,
+        "color": "white",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 0,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "blue",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "blue",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "blue",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      }
+
+
+     
+    ]
+  },
+  {
+    "id": 9,
+    "category": "防摔衣",
+    "sub_category": "冬季防摔衣",
+    "title": "Dainese Air Frame D1 Tex 摩托車紡織夾克",
+    "description": "Dainese Air Frame D1 Tex 摩托車紡織夾克",
+    "content": "當天氣變熱, 沒有比空氣框架 d1 更好的夾克, 其特點是快速乾燥織物底盤與充足的網格面板, 真正讓氣流。熱適應性是通過可拆卸的防風襯墊提供的, 而舒適性是通過一個防浮套筒系統和柔軟的插入頸部和手腕。一般特性:1個內袋2個外口袋。人 機 工程學：防浮套調整手腕上有彈性和柔軟的插入物夾克緊固系統頸部、腰部和手腕調整、頸部柔軟的刀片主要材料:網狀織物刀片快速幹布安全設備:反光刀片:g1 和 g2 背保護器的口袋、肘部和肩部的可移動複合保護器 (1621.1 標準)、溫度調節: 透氣和穿孔的 sanitized®織物襯裡、穿孔面料、可拆卸防風襯墊",
+    "price": 1430,
+    "variances": [
+    
+      {
+        "p_id": 6,
+        "color": "white",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 7,
+        "color": "white",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 8,
+        "color": "white",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 0,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "blue",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "blue",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "blue",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      }
+
+
+     
+    ]
   }
- 
+  
 ]

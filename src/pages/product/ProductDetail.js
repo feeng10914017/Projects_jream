@@ -10,39 +10,61 @@ import Sidenav from './components/Sidenav'
 import './product.css'
 
 function Detail(props) {
-  const FindProductData = () => {
-    const id = +props.match.params.id
-    const P = ProductData.find((val) => {
-      return val.id === id
-    })
-    return P
-  }
+  const id = +props.match.params.id
+  const product = ProductData.find((val) => {
+    return val.id === id
+  })
+  product.images = product.variances[0].images
+  product.colors = []
+  product.sizes = []
+  product.variances.forEach((variance) => {
+    if (!product.colors.includes(variance.color)) {
+      product.colors.push(variance.color)
+    }
+    if (!product.sizes.includes(variance.size)) {
+      product.sizes.push(variance.size)
+    }
+  })
+
+  const [productData, setProductData] = useState(product)
   // 以下為加入購物車
   const [mycart, setMycart] = useState([])
   const [show, setShow] = useState(false)
   const [productName, setProductName] = useState('')
   //購物車商品=>大小  單價  數量
-  const [productColor, setProductColor] = useState('orangered')
-  const [productSize, setProductSize] = useState('')
-  const [productAmount, setProductAmount] = useState(1)
-
-  // useEffect(() => {}, [productColor])
-
-  //商品數量計數器
-  const reduction = (id) => {
-    let tmp = productAmount
-    productAmount === 1 ? setProductAmount(tmp) : setProductAmount(tmp - 1)
-  }
-
-  const increase = (id) => {
-    let tmp = productAmount
-    setProductAmount(tmp + 1)
-  }
-
+  const [selectedColor, setSelectedColor] = useState('')
+  const [selectedSize, setSelectedSize] = useState('')
+  const [buyAmount, setBuyAmount] = useState(1)
   // 讓小圖片變大檢視
   const [index, setIndex] = useState(0)
   const imgDiv = useRef()
-  console.log(FindProductData().images)
+
+  // useEffect(() => {
+  //   console.log(productData)
+  // }, [productData])
+
+  useEffect(() => {
+    const tmp = productData.variances.find((variance) => {
+      if (!selectedColor) {
+        return true
+      }
+      return variance.color === selectedColor
+    })
+
+    // console.log(newImages)
+    setProductData({ ...productData, images: tmp.images, p_id: tmp.p_id })
+  }, [selectedColor, selectedSize])
+
+  //商品數量計數器
+  const reduction = () => {
+    const tmp = buyAmount
+    buyAmount === 1 ? setBuyAmount(tmp) : setBuyAmount(tmp - 1)
+  }
+
+  const increase = () => {
+    const tmp = buyAmount
+    setBuyAmount(tmp + 1)
+  }
 
   // 大圖局部放大細節
   const handleMouseMove = (e) => {
@@ -83,7 +105,7 @@ function Detail(props) {
         <Button
           variant="primary"
           onClick={() => {
-            props.history.push('/cart')
+            props.history.push('/order')
           }}
         >
           前往購物車結帳
@@ -109,9 +131,7 @@ function Detail(props) {
                 className="P_img-container"
                 onMouseMove={handleMouseMove}
                 style={{
-                  backgroundImage: `url(${
-                    FindProductData().images[productColor][index]
-                  })`,
+                  backgroundImage: `url(${productData.images[index]})`,
                 }}
                 ref={imgDiv}
                 onMouseLeave={() =>
@@ -119,7 +139,7 @@ function Detail(props) {
                 }
               ></div>
               {/* 小圖 點後放大 */}
-              {FindProductData().images[productColor].map((item, index) => {
+              {productData.images.map((item, index) => {
                 return (
                   <img
                     src={item}
@@ -132,29 +152,30 @@ function Detail(props) {
             </div>
             {/* 詳細資料位置 */}
             <div className="box-details">
-              <h3 className="text-secondary">{FindProductData().title}</h3>
+              <h5 className="text-secondary">{productData.title}</h5>
               <div className="text-danger" style={{ textAlign: 'right' }}>
                 <span>NT$</span>
-                <h4 className="text-danger">{FindProductData().price}</h4>
+                <h4 className="text-danger">{productData.price}</h4>
               </div>
 
-              {/* <div>商品內容: {FindProductData().description}</div> */}
+              {/* <div>商品內容: {productData.description}</div> */}
               <form
                 onSubmit={(e) => {
                   e.preventDefault()
 
                   updateCartToLocalStorage({
-                    id: FindProductData().id,
-                    name: FindProductData().title,
-                    img: FindProductData().images[0],
-                    color: productColor,
-                    size: productSize,
-                    amount: productAmount,
-                    price: FindProductData().price,
-                    totalprice: productAmount * FindProductData().price,
+                    id: productData.id,
+                    p_id: productData.p_id,
+                    name: productData.title,
+                    img: productData.images[0],
+                    color: selectedColor,
+                    size: selectedSize,
+                    amount: buyAmount,
+                    price: productData.price,
+                    // totalprice: buyAmount * productData.price,
                     // 給後面的陣列
-                    colorOptions: FindProductData().colors,
-                    sizeOptions: FindProductData().sizes,
+                    colorOptions: productData.colors,
+                    sizeOptions: productData.sizes,
                   })
                 }}
               >
@@ -167,14 +188,14 @@ function Detail(props) {
                     multiple
                     onChange={(event) => {
                       // 設定要轉換為數字(索引值)
-                      setProductColor(event.target.value)
+                      setSelectedColor(event.target.value)
                     }}
                   >
                     {/* <option value="-1" disabled selected hidden>
                 Please Select
               </option> */}
 
-                    {FindProductData().colors.map((item, index) => {
+                    {productData.colors.map((item, index) => {
                       return (
                         <option
                           value={item}
@@ -198,13 +219,10 @@ function Detail(props) {
                     // value={productSize}
                     onChange={(event) => {
                       // 設定要轉換為數字(索引值)
-                      setProductSize(event.target.value)
+                      setSelectedSize(event.target.value)
                     }}
                   >
-                    {/* <option value="-1" disabled selected hidden>
-                Please Select
-              </option> */}
-                    {FindProductData().sizes.map((item, index) => {
+                    {productData.sizes.map((item) => {
                       return (
                         <option value={item} required>
                           {item}
@@ -223,7 +241,7 @@ function Detail(props) {
                     <a className="count" onClick={() => reduction()}>
                       <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
                     </a>
-                    <span className="fontSize19">{productAmount}</span>
+                    <span className="fontSize19">{buyAmount}</span>
                     <a className="count" onClick={() => increase()}>
                       <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
                     </a>
@@ -238,8 +256,16 @@ function Detail(props) {
           </div>
           <div>
             <div className="box-details fontSize16">
-              <p>商品內容: {FindProductData().description}</p>
-              <p>商品內容: {FindProductData().content}</p>
+              <h5> {productData.description}</h5>
+              <p>商品內容: </p>
+              <div> {productData.content}</div>
+            </div>
+            <div style={{ textAlign: 'right' }}>
+              <Link to={`/product`} style={{ textDecoration: 'none' }}>
+                <Button variant="secondary" onClick={handleClose}>
+                  返回商城
+                </Button>
+              </Link>
             </div>
           </div>
         </Col>

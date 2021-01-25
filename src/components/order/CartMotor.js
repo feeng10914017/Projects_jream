@@ -57,7 +57,10 @@ function CartMotor(props) {
                   <Row>
                     <div className="col-3">
                       <img
-                        src={'http://localhost:3000/images/motor/' + v.img}
+                        src={
+                          'http://localhost:3000/images/motor/small_Img/' +
+                          v.img
+                        }
                         alt=""
                       />
                     </div>

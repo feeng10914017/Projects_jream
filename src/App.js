@@ -16,6 +16,8 @@ import ScrollToTop from './components/index/ScrollToTop'
 import Home from './pages/Home'
 import LogIn from './pages/member/Login'
 import News from './pages/news/News'
+import News1 from './pages/news/News1'
+
 import Motor from './pages/motor/Motor'
 import Motorcycle from './pages/motor/Motorcycle'
 
@@ -76,6 +78,9 @@ function App() {
               </Route>
 
               {/* news */}
+              <Route path="/news/2">
+                <News1 />
+              </Route>
               <Route path="/news">
                 <News />
               </Route>
