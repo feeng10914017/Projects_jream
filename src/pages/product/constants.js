@@ -1,1 +1,1 @@
-export const PRODUCT_PER_PAGE = 1
+export const PRODUCT_PER_PAGE = 10
