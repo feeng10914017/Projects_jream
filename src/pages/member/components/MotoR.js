@@ -29,7 +29,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>{rentData.serialNumber}</p>
               </Col>
             </Row>
-            <div className="line"></div>
+            {/* <div className="line"></div> */}{' '}
           </Col>
           <Col lg={6}>
             <Row>
@@ -40,7 +40,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>{motorCart.orderTime}</p>
               </Col>
             </Row>
-            <div className="line"></div>
+            {/* <div className="line"></div> */}{' '}
           </Col>
         </Row>
         <Row>
@@ -53,7 +53,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>待領車</p>
               </Col>
             </Row>
-            <div className="line"></div>
+            {/* <div className="line"></div> */}{' '}
           </Col>
           <Col lg={6}>
             <Row>
@@ -61,10 +61,10 @@ function MyVerticallyCenteredModal(props) {
                 <p>訂單金額</p>
               </Col>
               <Col lg={8}>
-                <p>NT$ {motorCart.orderPrice}</p>
+                <p>NT$ {motorCart.rentalPrice}</p>
               </Col>
             </Row>
-            <div className="line"></div>
+            {/* <div className="line"></div> */}
           </Col>
         </Row>
         <Row>
@@ -77,7 +77,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>信用卡</p>
               </Col>
             </Row>
-            <div className="line"></div>
+            {/* <div className="line"></div> */}{' '}
           </Col>
           <Col lg={6}>
             <Row>
@@ -88,32 +88,24 @@ function MyVerticallyCenteredModal(props) {
                 <p>{rentData.cardNumber}</p>
               </Col>
             </Row>
-            <div className="line"></div>
+            {/* <div className="line"></div> */}{' '}
           </Col>
         </Row>
-
         <Row>
           <Col>
-            <hr />
             <Row>
               <Col lg={2}>
                 <p>租賃車種</p>
               </Col>
-              <Col lg={10}>
-                <Row>
-                  <Col lg={4}>
-                    <p>{motorCart.company}</p>
-                  </Col>
-                  <Col lg={4}>
-                    <p>{motorCart.model}</p>
-                  </Col>
-                  <Col lg={4}>
-                    <p>{motorCart.color}</p>
-                  </Col>
-                </Row>
-              </Col>
+              <Row>
+                <Col lg={12}>
+                  <p>
+                    {motorCart.company} {motorCart.model} {motorCart.color}
+                  </p>
+                </Col>
+              </Row>
             </Row>
-            <div className="line"></div>
+            {/* <div className="line"></div> */}{' '}
           </Col>
         </Row>
         <Row>
@@ -126,7 +118,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>{motorCart.rentalLocation}</p>
               </Col>
             </Row>
-            <div className="line"></div>
+            {/* <div className="line"></div> */}{' '}
           </Col>
           <Col lg={6}>
             <Row>
@@ -137,7 +129,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>{motorCart.returnLocation}</p>
               </Col>
             </Row>
-            <div className="line"></div>
+            {/* <div className="line"></div> */}{' '}
           </Col>
         </Row>
         <Row>
@@ -150,7 +142,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>{motorCart.rentalDate}</p>
               </Col>
             </Row>
-            <div className="line"></div>
+            {/* <div className="line"></div> */}{' '}
           </Col>
           <Col lg={6}>
             <Row>
@@ -161,7 +153,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>{motorCart.returnDate}</p>
               </Col>
             </Row>
-            <div className="line"></div>
+            {/* <div className="line"></div> */}{' '}
           </Col>
         </Row>
         <Row>
@@ -174,7 +166,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>{motorCart.rentalTime}</p>
               </Col>
             </Row>
-            <div className="line"></div>
+            {/* <div className="line"></div> */}{' '}
           </Col>
           <Col lg={6}>
             <Row>
@@ -185,7 +177,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>{motorCart.returnTime}</p>
               </Col>
             </Row>
-            <div className="line"></div>
+            {/* <div className="line"></div> */}{' '}
           </Col>
         </Row>
       </Modal.Body>
