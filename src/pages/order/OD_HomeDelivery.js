@@ -111,9 +111,9 @@ function OD_HomeDelivery(props) {
       invoiceValue1,
       invoiceValue2,
     }
-    localStorage.setItem('homeOrder', JSON.stringify(finalHoneOrder))
+    localStorage.setItem('CartOrder', JSON.stringify(finalHoneOrder))
     localStorage.setItem('finalProductCart', '[]')
-    // props.history.push('/order/cartReport')
+    props.history.push('/order/cartReport')
   }
   // console.log('userPhone', userName)
   // console.log('userName', userPhone)

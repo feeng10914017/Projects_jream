@@ -6,7 +6,20 @@ import { Link } from 'react-router-dom'
 import OrderStep from '../../components/order/CartStep'
 
 function OD_CartReport() {
+  const [serialNumber, setSerialNumber] = useState('')
   const [orderTime, setORderTime] = useState('')
+  const [price, setPrice] = useState('')
+  const [invoiceTitle, setInvoiceTitle] = useState('')
+  const [invoiceValue1, setInvoiceValue1] = useState('')
+
+  const [userName, setUserName] = useState('')
+  const [userPhone, setUserPhone] = useState('')
+  const [userComment, setUserComment] = useState('')
+  const [recipientName, setRecipientName] = useState('')
+  const [recipientPhone, setRecipientPhone] = useState('')
+  const [recipientAdd, setRecipientUserAdd] = useState('')
+  const [CreditHidden, setCreditHidden] = useState('')
+
   function orderEditTime() {
     const year = new Date().getFullYear()
     const month = new Date().getMonth()
@@ -42,7 +55,79 @@ function OD_CartReport() {
         second
     )
   }
-  return (
+  function totalprice(list) {
+    let Price = 0
+    list.map((v, i) => {
+      Price = Price + Number(v.amount) * Number(v.price)
+    })
+    return Price
+  }
+  useEffect(() => {
+    const cartData = JSON.parse(localStorage.getItem('CartOrder'))
+    const productCart = cartData.finalProductCart
+
+    setSerialNumber(cartData.serialNumber)
+    orderEditTime()
+    setPrice(totalprice(productCart))
+    setCreditHidden(cartData.cardNumber)
+    setUserName(cartData.userName)
+    setUserPhone(cartData.userPhone)
+    setUserComment(cartData.userComment)
+    setRecipientName(cartData.recipientName)
+    setRecipientPhone(cartData.recipientPhone)
+    setRecipientUserAdd(cartData.finalRecipientAdd)
+    setInvoiceTitle(cartData.invoiceTitle)
+    setInvoiceValue1(cartData.invoiceValue1)
+
+    // localStorage.removeItem('rentalOrder')
+  }, [])
+  const aa = <></>
+  const bb = (
+    <>
+      <Col lg={6}>
+        <Row>
+          <Col lg={4}>
+            <p>統依編號</p>
+          </Col>
+          <Col lg={8}>
+            <p>{invoiceValue1}</p>
+          </Col>
+        </Row>
+        <div className="line"></div>
+      </Col>
+    </>
+  )
+  const cc = (
+    <>
+      <Col lg={6}>
+        <Row>
+          <Col lg={4}>
+            <p>捐贈單位</p>
+          </Col>
+          <Col lg={8}>
+            <p>{invoiceValue1}</p>
+          </Col>
+        </Row>
+        <div className="line"></div>
+      </Col>
+    </>
+  )
+  const dd = (
+    <>
+      <Col lg={6}>
+        <Row>
+          <Col lg={4}>
+            <p>條碼載具</p>
+          </Col>
+          <Col lg={8}>
+            <p>{invoiceValue1}</p>
+          </Col>
+        </Row>
+        <div className="line"></div>
+      </Col>
+    </>
+  )
+  const display = (
     <>
       <article className="col-10 cartReport">
         <OrderStep step="4" />
@@ -59,7 +144,7 @@ function OD_CartReport() {
                     <p>訂單編號</p>
                   </Col>
                   <Col lg={8}>
-                    <p>{}</p>
+                    <p>{serialNumber}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -70,7 +155,7 @@ function OD_CartReport() {
                     <p>訂單日期</p>
                   </Col>
                   <Col lg={8}>
-                    <p>{}</p>
+                    <p>{orderTime}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -94,7 +179,7 @@ function OD_CartReport() {
                     <p>訂單金額</p>
                   </Col>
                   <Col lg={8}>
-                    <p>NT$ {}</p>
+                    <p>NT$ {price}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -124,6 +209,23 @@ function OD_CartReport() {
                 <div className="line"></div>
               </Col>
             </Row>
+            <Row>
+              <Col lg={6}>
+                <Row>
+                  <Col lg={4}>
+                    <p>發票類型</p>
+                  </Col>
+                  <Col lg={8}>
+                    <p>{invoiceTitle}</p>
+                  </Col>
+                </Row>
+                <div className="line"></div>
+              </Col>
+              {invoiceTitle === '電子發票 - 個人' && aa}
+              {invoiceTitle === '電子發票 - 公司' && bb}
+              {invoiceTitle === '捐贈發票' && cc}
+              {invoiceTitle === '個人 - 手機條碼載具' && dd}
+            </Row>
 
             <Row>
               <Col lg={6}>
@@ -132,7 +234,7 @@ function OD_CartReport() {
                     <p>訂購人</p>
                   </Col>
                   <Col lg={8}>
-                    <p>{}</p>
+                    <p>{userName}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -143,7 +245,7 @@ function OD_CartReport() {
                     <p>手機號碼</p>
                   </Col>
                   <Col lg={8}>
-                    <p>{}</p>
+                    <p>{userPhone}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -156,7 +258,7 @@ function OD_CartReport() {
                     <p>收件人</p>
                   </Col>
                   <Col lg={8}>
-                    <p>{}</p>
+                    <p>{recipientName}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -167,7 +269,7 @@ function OD_CartReport() {
                     <p>手機號碼</p>
                   </Col>
                   <Col lg={8}>
-                    <p>{}</p>
+                    <p>{recipientPhone}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -180,7 +282,7 @@ function OD_CartReport() {
                     <p>收件地址</p>
                   </Col>
                   <Col lg={10}>
-                    <p>{}</p>
+                    <p>{recipientAdd}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -193,7 +295,7 @@ function OD_CartReport() {
                     <p>收件備註</p>
                   </Col>
                   <Col lg={10}>
-                    <p>{}</p>
+                    <p>{userComment}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -221,6 +323,7 @@ function OD_CartReport() {
       </article>
     </>
   )
+  return <>{display}</>
 }
 
 export default OD_CartReport
