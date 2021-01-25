@@ -6,20 +6,20 @@ import { Link } from 'react-router-dom'
 class MotorThreeD extends React.Component {
   render() {
     let slides = [
-      <Link to={'/'} className="p-0">
+      <Link to={'/motorcycle/19'} className="p-0">
+        <img src="http://localhost:3000/images/motor/BOLT950.jpg" alt="1" />
+      </Link>,
+      <Link to={'/motorcycle/20'} className="p-0">
         <img
           src="http://localhost:3000/images/motor/Imperiake 400 紅.jpg"
           alt="1"
         />
       </Link>,
-      <Link to={'/'} className="p-0">
+      <Link to={'/motorcycle/13'} className="p-0">
         <img
-          src="http://localhost:3000/images/motor/Leoncino_250_gray.jpg"
+          src="http://localhost:3000/images/motor/small_Img/13_GSX - S750.jpg"
           alt="1"
         />
-      </Link>,
-      <Link to={'/'} className="p-0">
-        <img src="http://localhost:3000/images/motor/BOLT950.jpg" alt="1" />
       </Link>,
     ]
 

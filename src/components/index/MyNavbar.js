@@ -137,11 +137,11 @@ function MyNavbar(props) {
               </Nav.Link>
             </Nav>
             <Nav>
-              {/* <Nav.Link as={NavLink} to="/login"> */}
-              {/* <IoPersonOutline size="18" /> */}
               {auth ? login : loginout}
-              {/* <h6>登入</h6> */}
-              {/* </Nav.Link> */}
+              {/* <Nav.Link as={NavLink} to="/login">
+                <IoPersonOutline size="18" />
+                <h6>登入</h6>
+              </Nav.Link> */}
               <Nav.Link eventKey={2} as={NavLink} to="/order">
                 <IoCartOutline size="20" />
                 <h6>購物車</h6>

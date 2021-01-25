@@ -28,9 +28,9 @@ function Motorcycle(props) {
   const [configORcomment, setCofigORcomment] = useState(1)
   //購物車,與Productlist.js共用
   const [mycart, setMycart] = useState([])
-  console.log(props)
+  // console.log(props)
   const productId = props.match.params.type
-  console.log(productId)
+  // console.log(productId)
   const [like, setlike] = useState('') //記錄此商品被那些mbId收藏
   const [howmanylike, setHowmanylike] = useState(0) //有多少人收藏
   const [mbLikeThisProduct, setMbLikeThisProduct] = useState(false)
@@ -41,6 +41,9 @@ function Motorcycle(props) {
   const handleDisplay = (value) => {
     setCofigORcomment(value)
   }
+  const lazyTimer = JSON.parse(localStorage.getItem('lazyTime'))
+  console.log(lazyTimer)
+
   //  加入購物車,與Productlist.js共用
   async function updateCartToLocalStorage(value) {
     const currentCart = JSON.parse(localStorage.getItem('motorCart')) || []
@@ -57,7 +60,7 @@ function Motorcycle(props) {
       html: `商品名稱:${myproduct.itemName}成功加入購物車`,
       timer: 2000,
     }).then((r) => {
-      window.location.reload()
+      // window.location.reload()
     })
     //設定資料
     // setMycart(newCart)
@@ -75,7 +78,7 @@ function Motorcycle(props) {
     setMyproduct(data.rows[0])
     let picUrl = JSON.stringify(myproduct)
 
-    console.log('pic', picUrl)
+    // console.log('pic', picUrl)
     // console.log(typeof(myproduct))
     setDefaultPic(data.rows[0].itemImg)
 
@@ -92,20 +95,20 @@ function Motorcycle(props) {
     getDataFromServer()
   }, [productId])
 
-  console.log('myproduct資訊=', myproduct)
+  // console.log('myproduct資訊=', myproduct)
   const url = props.match.url
   const path = props.match.path
-  console.log('url', props.match)
+  // console.log('url', props.match)
   //以下，將database儲存的收藏此商品id=[1,2,3,4]轉成length
   let wholike = { ...myproduct }
-  console.log('wholike', Array.from(String(wholike.memberFavoriteId)))
-  console.log(String(String(wholike.memberFavoriteId).replace(/([[]|])/gm, '')))
-  console.log('wholike_toarr', [wholike.memberFavoriteId])
+  // console.log('wholike', Array.from(String(wholike.memberFavoriteId)))
+  // console.log(String(String(wholike.memberFavoriteId).replace(/([[]|])/gm, '')))
+  // console.log('wholike_toarr', [wholike.memberFavoriteId])
   let wholike2 = "'" + wholike.memberFavoriteId + "'"
   // let wholike2 = [wholike.memberFavoriteId]
 
   wholike2 = wholike2.split(',')
-  console.log('wholike2', wholike2)
+  // console.log('wholike2', wholike2)
   //以上，將database儲存的收藏此商品id=[1,2,3,4]轉成length
 
   //商品加入收藏
@@ -135,7 +138,7 @@ function Motorcycle(props) {
 
   //從localstorage撈出登入者是否喜歡目前商品
   useEffect(() => {
-    console.log('like', like)
+    // console.log('like', like)
     let likedisplay = like.slice(0) //copy like state
     // console.log('likedisplay',likedisplay)
     let likedisplay2 = likedisplay.replace('[', '').replace(']', '') //取代"[]""
@@ -238,7 +241,7 @@ function Motorcycle(props) {
   for (let i = 0; i <= 3; i++) {
     bigImgarray.push(newname[0] + '_' + i)
   }
-  console.log(bigImgarray)
+  // console.log(bigImgarray)
 
   //瀏覽歷程記錄
   function addToHistory() {
@@ -337,7 +340,6 @@ function Motorcycle(props) {
             <h5>引擎形式：{myproduct.itemIntro}</h5>
           </p>
           <h3 style={{ color: ' #b02825' }}>NT$: {myproduct.itemPrice} / 天</h3>
-
           <div className="row">
             {/* {mbAzen_arr_state.indexOf(`${myproduct.itemId}`) == -1 ? (
               <button
@@ -386,10 +388,17 @@ function Motorcycle(props) {
               onClick={() =>
                 updateCartToLocalStorage({
                   id: myproduct.itemId,
-                  name: myproduct.itemName,
-                  amount: 1,
-                  price: myproduct.itemPrice,
+                  company: myproduct.categoryName,
+                  model: myproduct.itemName,
+                  rentalAmount: 1,
+                  rentalPrice: myproduct.itemPrice,
                   img: myproduct.itemImg,
+                  rentalDate: lazyTimer.rentalDate,
+                  rentalTime: lazyTimer.rentalTime,
+                  returnDate: lazyTimer.returnDate,
+                  returnTime: lazyTimer.returnTime,
+                  rentalLocation: '台北濱江店',
+                  returnLocation: '台北濱江店',
                 })
               }
             >
@@ -397,7 +406,6 @@ function Motorcycle(props) {
               &nbsp; 我要租車
             </button>
           </div>
-
           {/* <div className="row h5 m-2">有{howmanylike}人收藏此遊戲</div>
           <div className="row mt-2 h6">
             <div className="col-3 ">發行商:</div>
@@ -470,11 +478,11 @@ function Motorcycle(props) {
                     <th class="active">開始銷售年分</th>
                     <td>2017年</td>
                     <th class="active">馬力重量比</th>
-                    <td>[ - / - ] kg/PS</td>
+                    <td>[ - / - ] kg / PS</td>
                   </tr>
                   <tr>
                     <th class="active">能源消耗值</th>
-                    <td>6.6L/100km</td>
+                    <td>6.6L / 100km</td>
                     <th class="active">全長・全高・全寬</th>
                     <td>2040mm × 1150mm × 695mm</td>
                   </tr>
@@ -486,7 +494,7 @@ function Motorcycle(props) {
                   </tr>
                   <tr>
                     <th class="active">行駛距離</th>
-                    <td>[6.6L/100km * 17]km(概算値)</td>
+                    <td>[6.6L / 100km * 17]km(概算値)</td>
                     <th class="active">前輪尺寸</th>
                     <td>120/70 ZR17M/C (58W)</td>
                   </tr>
