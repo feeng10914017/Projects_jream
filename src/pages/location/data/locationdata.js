@@ -12,6 +12,7 @@ export const Locationdata = [
     opentime: '上午9:00~下午9:00',
     img: './images/1.jpg',
     phone: '02-24288211',
+    email: 'JustRide01@altmails.com',
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ export const Locationdata = [
     opentime: '上午9:00~下午9:00',
     img: './images/2.jpg',
     phone: '02-27675958',
+    email: 'JustRide02@altmails.com',
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ export const Locationdata = [
     opentime: '上午9:00~下午9:00',
     img: './images/3.jpg',
     phone: '02-87851899',
+    email: 'JustRide03@altmails.com',
   },
   {
     id: 4,
@@ -48,6 +51,7 @@ export const Locationdata = [
     opentime: '上午9:00~下午9:00',
     img: './images/4.jpg',
     phone: '02-22053355',
+    email: 'JustRide04@altmails.com',
   },
   {
     id: 5,
@@ -60,6 +64,7 @@ export const Locationdata = [
     opentime: '上午9:00~下午9:00',
     img: './images/5.jpg',
     phone: '02-22053355',
+    email: 'JustRide05@altmails.com',
   },
   {
     id: 6,
@@ -72,6 +77,7 @@ export const Locationdata = [
     opentime: '上午9:00~下午9:00',
     img: './images/6.jpg',
     phone: '02-26832593',
+    email: 'JustRide06@altmails.com',
   },
   {
     id: 7,
@@ -84,6 +90,7 @@ export const Locationdata = [
     opentime: '上午9:00~下午9:00',
     img: './images/7.jpg',
     phone: '02-22569977',
+    email: 'JustRide07@altmails.com',
   },
   {
     id: 8,
@@ -96,6 +103,7 @@ export const Locationdata = [
     opentime: '上午9:00~下午9:00',
     img: './images/1.jpg',
     phone: '03-3395899',
+    email: 'JustRide08@altmails.com',
   },
   {
     id: 9,
@@ -108,6 +116,7 @@ export const Locationdata = [
     opentime: '上午9:00~下午9:00',
     img: './images/2.jpg',
     phone: '04-22811612',
+    email: 'JustRide09@altmails.com',
   },
   {
     id: 10,
@@ -120,6 +129,7 @@ export const Locationdata = [
     opentime: '上午9:00~下午9:00',
     img: './images/3.jpg',
     phone: '06-3121282',
+    email: 'JustRide10@altmails.com',
   },
   {
     id: 11,
@@ -132,5 +142,6 @@ export const Locationdata = [
     opentime: '上午9:00~下午9:00',
     img: './images/4.jpg',
     phone: '06-3121282',
+    email: 'JustRide11@altmails.com',
   },
 ]
