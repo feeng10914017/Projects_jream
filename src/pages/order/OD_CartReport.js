@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Row, Button, Card, Form, Col } from 'react-bootstrap'
+import { Row, Button, Card, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 //引入頁面元件
@@ -64,7 +64,9 @@ function OD_CartReport() {
     return Price
   }
   function CreditHidden(value) {
-    console.log(value)
+    const Value1 = value.slice(0, 4)
+    const Value2 = value.slice(12, 16)
+    return Value1 + ' xxxx xxxx ' + Value2
   }
   useEffect(() => {
     const cartData = JSON.parse(localStorage.getItem('CartOrder'))

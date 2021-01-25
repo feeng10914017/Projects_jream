@@ -8,7 +8,7 @@ function OD_RentalReport() {
   const [serialNumber, setSerialNumber] = useState('')
   const [orderTime, setORderTime] = useState('')
   const [orderPrice, setOrderPrice] = useState('')
-  const [creditHidden, setCreditHidden] = useState('')
+  const [credit, setCredit] = useState('')
   // const [color, setColor] = useState('')
   const [company, setCompany] = useState('')
   const [model, setModel] = useState('')
@@ -29,7 +29,7 @@ function OD_RentalReport() {
     setOrderPrice(
       Number(motorCart.rentalAmount) * Number(motorCart.rentalPrice)
     )
-    setCreditHidden(rentalData.cardNumber)
+    setCredit(CreditHidden(rentalData.cardNumber))
     // setColor(motorCart.color)
     setCompany(motorCart.company)
     setModel(motorCart.model)
@@ -41,7 +41,6 @@ function OD_RentalReport() {
     setReturnTime(motorCart.returnTime)
     setInvoiceTitle(rentalData.invoiceTitle)
     setInvoiceValue1(rentalData.invoiceValue1)
-    console.log(rentalData)
     localStorage.removeItem('rentalOrder')
   }, [])
   function orderEditTime() {
@@ -78,6 +77,11 @@ function OD_RentalReport() {
         ':' +
         second
     )
+  }
+  function CreditHidden(value) {
+    const Value1 = value.slice(0, 4)
+    const Value2 = value.slice(12, 16)
+    return Value1 + ' xxxx xxxx ' + Value2
   }
 
   const aa = <></>
@@ -203,7 +207,7 @@ function OD_RentalReport() {
                     <p>付款卡號</p>
                   </Col>
                   <Col lg={8}>
-                    <p>{creditHidden}</p>
+                    <p>{credit}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
