@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { React, useState, useEffect } from 'react'
 
 import { IoPersonOutline } from 'react-icons/io5'
 import { IoCartOutline } from 'react-icons/io5'
@@ -6,8 +6,8 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 import { withRouter, NavLink, Route, Redirect } from 'react-router-dom'
 
-function MyNavbar(props, { auth, setAuth }) {
-  const { location } = props
+function MyNavbar(props) {
+  const { location, auth, setAuth } = props
   const [member, setMember] = useState(
     JSON.parse(localStorage.getItem('userData'))
   )
@@ -18,12 +18,17 @@ function MyNavbar(props, { auth, setAuth }) {
       <h6>登入</h6>
     </Nav.Link>
   )
-
+  useEffect(() => {
+    setMember(JSON.parse(localStorage.getItem('userData')))
+  }, [auth])
   const login = (
     <>
       <NavDropdown title={<h6>{member && member.memberName}</h6>}>
         <NavDropdown.Item as={NavLink} to="/member">
           會員中心
+        </NavDropdown.Item>
+        <NavDropdown.Item as={NavLink} to="/member/rent-record">
+          租車紀錄
         </NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item
@@ -31,6 +36,8 @@ function MyNavbar(props, { auth, setAuth }) {
           to="/"
           onClick={() => {
             localStorage.clear()
+            console.log('Logged out Success')
+            alert('登出成功')
             sessionStorage.clear()
             setAuth(false)
           }}
@@ -130,11 +137,11 @@ function MyNavbar(props, { auth, setAuth }) {
               </Nav.Link>
             </Nav>
             <Nav>
-              {/* {auth ? login : loginout} */}
-              {/* <Nav.Link as={NavLink} to="/login">
-                <IoPersonOutline size="18" />
-                <h6>登入</h6>
-              </Nav.Link> */}
+              {/* <Nav.Link as={NavLink} to="/login"> */}
+              {/* <IoPersonOutline size="18" /> */}
+              {auth ? login : loginout}
+              {/* <h6>登入</h6> */}
+              {/* </Nav.Link> */}
               <Nav.Link eventKey={2} as={NavLink} to="/order">
                 <IoCartOutline size="20" />
                 <h6>購物車</h6>
