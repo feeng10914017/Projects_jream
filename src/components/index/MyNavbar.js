@@ -6,8 +6,8 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 import { withRouter, NavLink, Route, Redirect } from 'react-router-dom'
 
-function MyNavbar(props, { auth, setAuth }) {
-  const { location } = props
+function MyNavbar(props) {
+  const { location, auth, setAuth } = props
   const [member, setMember] = useState(
     JSON.parse(localStorage.getItem('userData'))
   )
@@ -130,7 +130,7 @@ function MyNavbar(props, { auth, setAuth }) {
               </Nav.Link>
             </Nav>
             <Nav>
-              {/* {auth ? login : loginout} */}
+              {auth ? login : loginout}
               {/* <Nav.Link as={NavLink} to="/login">
                 <IoPersonOutline size="18" />
                 <h6>登入</h6>

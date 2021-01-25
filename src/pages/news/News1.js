@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineClockCircle, AiOutlineFolderOpen } from 'react-icons/ai'
+import { Breadcrumb } from 'react-bootstrap'
+import { ImNewspaper } from 'react-icons/im'
+
 import './News.css'
 
 function News1() {
@@ -9,13 +12,13 @@ function News1() {
       <div className="wrapper">
         <div className="container pagination_news">
           <div className="pagination_news_content position-relative">
-            <h1 className=" py-3 pagination_news bh1">
+            <h4 className=" py-3 pagination_news bh1">
               [新車報到] 2021年式新色登場：「TMAX 560 」
-            </h1>
+            </h4>
             <div className="news_index_detail d-flex justify-content-between pt-2">
               <div className="news_index_detail_icon_group d-flex justify-content-between">
                 <div className="category_group d-flex">
-                  <AiOutlineFolderOpen className="icon" />
+                  <ImNewspaper className="icon" />
                   <p>新車報到</p>
                 </div>
                 <div className="time_group d-flex">

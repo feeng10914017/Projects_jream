@@ -470,11 +470,11 @@ function Motorcycle(props) {
                     <th class="active">開始銷售年分</th>
                     <td>2017年</td>
                     <th class="active">馬力重量比</th>
-                    <td>[ - / - ] kg/PS</td>
+                    <td>[ - / - ] kg / PS</td>
                   </tr>
                   <tr>
                     <th class="active">能源消耗值</th>
-                    <td>6.6L/100km</td>
+                    <td>6.6L / 100km</td>
                     <th class="active">全長・全高・全寬</th>
                     <td>2040mm × 1150mm × 695mm</td>
                   </tr>
@@ -486,7 +486,7 @@ function Motorcycle(props) {
                   </tr>
                   <tr>
                     <th class="active">行駛距離</th>
-                    <td>[6.6L/100km * 17]km(概算値)</td>
+                    <td>[6.6L / 100km * 17]km(概算値)</td>
                     <th class="active">前輪尺寸</th>
                     <td>120/70 ZR17M/C (58W)</td>
                   </tr>

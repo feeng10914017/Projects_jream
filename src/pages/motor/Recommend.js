@@ -82,7 +82,7 @@ function Recommend(props) {
                 <Link to="/motorcycle/6">
                   <img
                     className="img-fluid"
-                    src="/images/motor/small_Img/6_MOBIUS FINAL FANTASY.jpg"
+                    src="/images/motor/small_Img/6_GSX-R150.jpg"
                     alt=""
                   />
                 </Link>
@@ -91,7 +91,7 @@ function Recommend(props) {
                 <Link to="/motorcycle/11">
                   <img
                     className="img-fluid"
-                    src="/images/motor/small_Img/2_NBA 2K20.jpg"
+                    src="/images/motor/small_Img/11_CRF1100L.jpg"
                     alt=""
                   />
                 </Link>
@@ -100,7 +100,7 @@ function Recommend(props) {
                 <Link to="/motorcycle/16">
                   <img
                     className="img-fluid"
-                    src="/images/motor/small_Img/26_DOOM.jpg"
+                    src="/images/motor/small_Img/16_TRACER900.jpg"
                     alt=""
                   />
                 </Link>
