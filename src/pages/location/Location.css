@@ -24,8 +24,8 @@ li {
 
 .SearchingPlace {
   position: absolute;
-  left: 10px;
-  margin-left: 16px;
+  left: 0px;
+  margin-left: 0px;
 }
 
 .searchingInp {

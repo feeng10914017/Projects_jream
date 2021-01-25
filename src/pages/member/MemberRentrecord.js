@@ -2,6 +2,7 @@ import React from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
 import MotoR from './components/MotoR'
+import MotoRF from './components/MotoRF'
 import { Form, Col, Card, ListGroup, Button } from 'react-bootstrap'
 
 function Rentrecord(auth, setAuth) {
@@ -33,6 +34,7 @@ function Rentrecord(auth, setAuth) {
         </Card.Header>
         <ListGroup variant="flush" className="A-MotoList">
           <MotoR />
+          <MotoRF />
         </ListGroup>
       </Card>
       <Link to="/member">

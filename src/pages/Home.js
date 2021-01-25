@@ -29,6 +29,7 @@ function Home() {
     localStorage.setItem('productCart', newProductCart)
     localStorage.setItem('shipping', newShipping)
     localStorage.setItem('finalProductCart', '[]')
+    localStorage.setItem('lazyTime', '[]')
   }
   useEffect(() => {
     getCartFromLocalStorage()
@@ -47,10 +48,10 @@ function Home() {
         {/* bannerContent */}
         <Container className="bannerTitle">
           <Col lg={{ span: 5, offset: 7 }} md={{ span: 8, offset: 2 }}>
-            <h3>踏上夢想的旅程</h3>
-            <p>
+            <h3>- 踏上夢想的旅程 -</h3>
+            {/* <p>
               想騎乘的慾望，不應受到環境左右而引響，快將將一切拋置腦後，享受映入眼簾的美景與被風撫摸的快感吧！
-            </p>
+            </p> */}
             <BannerSearch />
           </Col>
         </Container>

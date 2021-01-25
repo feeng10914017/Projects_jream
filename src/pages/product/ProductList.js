@@ -100,7 +100,7 @@ function ProductList(props) {
   // )
 
   const display = (
-    <div className="productsArea" style={{ height: 'calc(100vh - 49px )' }}>
+    <div className="productsArea" style={{ minHeight: 'calc(100vh - 49px )' }}>
       {products.map((product, index) => {
         if (Math.floor(index / PRODUCT_PER_PAGE) === page - 1) {
           return (
@@ -162,7 +162,7 @@ function ProductList(props) {
           <Col sm={3} className="nopadding ">
             <Sidenav />
           </Col>
-          <Col sm={9} className="nopadding " style={{ height: '100vh' }}>
+          <Col sm={9} className="nopadding ">
             {display}
             <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center">
