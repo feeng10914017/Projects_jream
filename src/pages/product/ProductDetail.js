@@ -152,7 +152,7 @@ function Detail(props) {
             </div>
             {/* 詳細資料位置 */}
             <div className="box-details">
-              <h3 className="text-secondary">{productData.title}</h3>
+              <h5 className="text-secondary">{productData.title}</h5>
               <div className="text-danger" style={{ textAlign: 'right' }}>
                 <span>NT$</span>
                 <h4 className="text-danger">{productData.price}</h4>
@@ -255,8 +255,16 @@ function Detail(props) {
           </div>
           <div>
             <div className="box-details fontSize16">
-              <p>商品內容: {productData.description}</p>
-              <p>商品內容: {productData.content}</p>
+              <h5> {productData.description}</h5>
+              <p>商品內容: </p>
+              <div> {productData.content}</div>
+            </div>
+            <div style={{ textAlign: 'right' }}>
+              <Link to={`/product`} style={{ textDecoration: 'none' }}>
+                <Button variant="secondary" onClick={handleClose}>
+                  繼續購物
+                </Button>
+              </Link>
             </div>
           </div>
         </Col>
