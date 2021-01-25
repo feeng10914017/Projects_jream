@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Col } from 'react-bootstrap'
-import { Input } from 'antd'
+import { Input, Button } from 'antd'
 
 const { TextArea } = Input
 class ContactUs extends React.Component {
@@ -24,11 +24,15 @@ class ContactUs extends React.Component {
                 <Row>
                   <Col md={6} xs={12}>
                     <h6>姓名</h6>
-                    <Input placeholder="Basic usage" size="large" />
+                    <Input
+                    // placeholder="Basic usage"
+                    />
                   </Col>
                   <Col md={6} xs={12}>
                     <h6>信箱</h6>
-                    <Input placeholder="Basic usage" size="large" />
+                    <Input
+                    // placeholder="Basic usage"
+                    />
                   </Col>
                 </Row>
                 <Col>
@@ -36,9 +40,14 @@ class ContactUs extends React.Component {
                   <TextArea
                     value={value}
                     onChange={this.onChange}
-                    placeholder="Controlled autosize"
+                    // placeholder="Controlled autosize"
                     autoSize={{ minRows: 3, maxRows: 5 }}
                   />
+                </Col>
+                <Col>
+                  <Button block size="large">
+                    <h6>送出</h6>
+                  </Button>
                 </Col>
               </div>
             </section>

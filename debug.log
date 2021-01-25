@@ -13,3 +13,4 @@
 =======
 [0125/140715.123:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系統找不到指定的路徑。 (0x3)
 >>>>>>> 12c95ac88cbfc77dea662436dd02f042fae7e5d7
+[0126/023533.272:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系統找不到指定的路徑。 (0x3)

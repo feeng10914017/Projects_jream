@@ -9,7 +9,7 @@ function NesMarquee() {
     }, 10000)
   }
   useEffect(() => {
-    setTimeFunction()
+    // setTimeFunction()
   }, [])
   return (
     <>
