@@ -593,6 +593,191 @@
      
      
     ]
+  },
+  {
+    "id": 6,
+    "category": "防摔衣",
+    "sub_category": "四季防摔衣",
+    "title": "Spidi Bolide 摩托車皮革夾克",
+    "description": "Spidi Bolide 摩托車皮革夾克",
+    "content": "Spidi Ignite 是安全實驗室開發的摩托車皮夾克,專為要求最苛刻的體育車手而設計。它由高品質 1.2 毫米厚的義大利皮革製成,提供外部防護罩,配備勇士技術和內部戰士精簡保護,EN1621-1 在肩部和肘部進行測試。肩上的戰士盾牌、固定格線襯裡、帶氯丁丁物插入件的衣領、50%防水服裝、拉鍊緊固件加入夾克/褲子、平均重量 2,5 公斤、夜間騎行的反射區。",
+    "price": 1430,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "yellow",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_1_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_1_yellow-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "yellow",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_1_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_1_yellow-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "yellow",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_1_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_1_yellow-2.jpg"
+       
+        ],
+        "amount": 10
+      }
+     
+     
+    ]
+  },
+  {
+    "id": 7,
+    "category": "防摔衣",
+    "sub_category": "四季防摔衣",
+    "title": "斯皮迪埃沃裡德II 摩托車皮革夾克",
+    "description": "斯皮迪埃沃裡德II 摩托車皮革夾克",
+    "content": "SPIDI Evorider 2 是廣受歡迎的Evorider 夾克系列的新版和更新版。我們的設計師開發了夾克，以勾選每一個盒子的性能騎手時，尋找夏季賽道日夾克，沒有安全妥協。Evorider 2 在肩部和肘部有可拆卸的保護器，肩部有勇士外部滑塊。為了增加安全性，有一個口袋的背部保護器，以及一個近距拉鍊，以附加騎馬褲，和一個捕捉系統連接騎牛仔褲。50%防水服裝、襯裡的佈置、固定格線襯裡、平均重量2，5 公斤、可調腰部緊固、高韌性彈性彈性韌性尼龍6.6，極端耐磨性牛皮，1.1/1.3 毫米厚，​​高安全性能",
+    "price": 1430,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "yellow",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_yellow-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "yellow",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_yellow-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "yellow",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_yellow-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 6,
+        "color": "white",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_white-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 7,
+        "color": "white",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_white-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 7,
+        "color": "white",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_2_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_2_white-2.jpg"
+        ],
+        "amount": 10
+      }
+
+     
+    ]
   }
   
 ]
