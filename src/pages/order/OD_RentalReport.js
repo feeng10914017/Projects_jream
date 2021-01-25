@@ -25,7 +25,7 @@ function OD_RentalReport() {
     const rentalData = JSON.parse(localStorage.getItem('rentalOrder'))
     const motorCart = rentalData.motorCart[0]
     setSerialNumber(rentalData.serialNumber)
-    orderEditTime()
+    orderEditTime(rentalData)
     setOrderPrice(
       Number(motorCart.rentalAmount) * Number(motorCart.rentalPrice)
     )
@@ -41,9 +41,10 @@ function OD_RentalReport() {
     setReturnTime(motorCart.returnTime)
     setInvoiceTitle(rentalData.invoiceTitle)
     setInvoiceValue1(rentalData.invoiceValue1)
+
     // localStorage.removeItem('rentalOrder')
   }, [])
-  function orderEditTime() {
+  function orderEditTime(data) {
     const year = new Date().getFullYear()
     const month = new Date().getMonth()
     const monthArray = [
@@ -64,26 +65,28 @@ function OD_RentalReport() {
     const hour = new Date().getHours()
     const minute = new Date().getMinutes()
     const second = new Date().getSeconds()
-    setORderTime(
+    const ORderTime =
       year +
-        '-' +
-        monthArray[month] +
-        '-' +
-        date +
-        ' ' +
-        hour +
-        ':' +
-        minute +
-        ':' +
-        second
-    )
+      '-' +
+      monthArray[month] +
+      '-' +
+      date +
+      ' ' +
+      hour +
+      ':' +
+      minute +
+      ':' +
+      second
+    setORderTime(ORderTime)
+    const oldDate = data
+    oldDate.oldDate = ORderTime
+    localStorage.setItem('rentalOrder', JSON.stringify(oldDate))
   }
   function CreditHidden(value) {
     const Value1 = value.slice(0, 4)
     const Value2 = value.slice(12, 16)
     return Value1 + ' xxxx xxxx ' + Value2
   }
-
   const aa = <></>
   const bb = (
     <>

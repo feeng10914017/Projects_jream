@@ -21,7 +21,7 @@ function OD_CartReport() {
   const [recipientAdd, setRecipientUserAdd] = useState('')
   const [Credit, setCredit] = useState('')
 
-  function orderEditTime() {
+  function orderEditTime(data, data2) {
     const year = new Date().getFullYear()
     const month = new Date().getMonth()
     const monthArray = [
@@ -42,19 +42,23 @@ function OD_CartReport() {
     const hour = new Date().getHours()
     const minute = new Date().getMinutes()
     const second = new Date().getSeconds()
-    setORderTime(
+    const ORderTime =
       year +
-        '-' +
-        monthArray[month] +
-        '-' +
-        date +
-        ' ' +
-        hour +
-        ':' +
-        minute +
-        ':' +
-        second
-    )
+      '-' +
+      monthArray[month] +
+      '-' +
+      date +
+      ' ' +
+      hour +
+      ':' +
+      minute +
+      ':' +
+      second
+    setORderTime(ORderTime)
+    const oldDate = data
+    oldDate.oldDate = ORderTime
+    oldDate.shipping = data2
+    localStorage.setItem('CartOrder', JSON.stringify(oldDate))
   }
   function totalprice(list) {
     let Price = 0
@@ -75,7 +79,7 @@ function OD_CartReport() {
 
     setShipping(shippingType[0])
     setSerialNumber(cartData.serialNumber)
-    orderEditTime()
+    orderEditTime(cartData, shippingType[0])
     setPrice(totalprice(productCart))
     setCredit(CreditHidden(cartData.cardNumber))
     setUserName(cartData.userName)
@@ -93,13 +97,12 @@ function OD_CartReport() {
   function removeProductData(deleteDate) {
     const prodData = JSON.parse(localStorage.getItem('productCart'))
     const checkedData = deleteDate
-    prodData.map((v1, i1) => {
-      checkedData.map((v2, i2) => {
-        if (v1.id === v2.id) {
-          prodData.splice(i2, 1)
-        }
+    for (let i = 0; i < checkedData.length; i++) {
+      console.log(checkedData[i].id)
+      prodData.map((v, ii) => {
+        v.id === checkedData[i].id && prodData.splice(ii, 1)
       })
-    })
+    }
     localStorage.setItem('productCart', JSON.stringify(prodData))
   }
   const aa = (
