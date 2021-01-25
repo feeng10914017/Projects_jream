@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 import moment from 'moment'
 import { DatePicker, Select } from 'antd'
 import 'antd/dist/antd.css'
 
-function BannerSearch() {
+function BannerSearch(props) {
   const { RangePicker } = DatePicker
+  // const [rentalDate, setRentalDate] = useState('')
+  // const [rentalTime, setRentalTime] = useState('')
+  // const [returnDate, setReturnDate] = useState('')
+  // const [returnTime, setReturnTime] = useState('')
 
   function range(start, end) {
     const result = []
@@ -31,11 +35,27 @@ function BannerSearch() {
     }
   }
   function onChange(value, dateString) {
-    console.log('Selected Time: ', value)
+    // console.log('Selected Time: ', value)
     console.log('Formatted Selected Time: ', dateString)
+    const rentalDateString = dateString[0]
+    const returnDateString = dateString[1]
+    const rentalDate = rentalDateString.substring(0, 10)
+    const rentalTime = rentalDateString.substring(12, 16)
+    const returnDate = returnDateString.substring(0, 10)
+    const returnTime = returnDateString.substring(12, 16)
+    const lazyTime = {
+      rentalDate,
+      rentalTime,
+      returnDate,
+      returnTime,
+    }
+    localStorage.setItem('lazyTime', JSON.stringify(lazyTime))
   }
   function onOk(value) {
-    console.log('onOk: ', value)
+    // console.log('onOk: ', value)
+  }
+  function goToOrder() {
+    const data = {}
   }
 
   const { Option } = Select
@@ -79,11 +99,16 @@ function BannerSearch() {
           <Option value="Yiminghe">yiminghe</Option>
         </Select>
 
-        <Link to={'/member'}>
-          <Button className="bannerSearchBtn" variant="primary" block>
-            下一步
-          </Button>
-        </Link>
+        {/* <Link to={'/member'}> */}
+        <Button
+          className="bannerSearchBtn"
+          variant="primary"
+          block
+          // onClick={onOK}
+        >
+          下一步
+        </Button>
+        {/* </Link> */}
       </div>
     </>
   )
@@ -91,4 +116,4 @@ function BannerSearch() {
   return <>{display}</>
 }
 
-export default BannerSearch
+export default withRouter(BannerSearch)

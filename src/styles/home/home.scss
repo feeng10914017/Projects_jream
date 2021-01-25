@@ -492,6 +492,12 @@
         box-shadow: 4px 4px rgba(176, 40, 37, 0.75), 8px 8px rgba(0, 0, 0, 0.1);
       }
     }
+    .recommend {
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 .homeSquare2 {

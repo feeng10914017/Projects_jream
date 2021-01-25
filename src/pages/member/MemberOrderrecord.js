@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
-import { Form, Col, Card, ListGroup } from 'react-bootstrap'
+import { Form, Col, Card, ListGroup, Button } from 'react-bootstrap'
 import OrderR from './components/OrderR'
 
 function Orderrecord(auth, setAuth) {
@@ -33,14 +33,16 @@ function Orderrecord(auth, setAuth) {
         </Card.Header>
         <ListGroup variant="flush" className="A-OrderList">
           <OrderR />
-          <OrderR />
-          <OrderR />
-          <OrderR />
-          <OrderR />
         </ListGroup>
       </Card>
       <Link to="/member">
-        <button>回首頁</button>
+        <Button
+          variant="primary"
+          type="submit"
+          style={{ margin: '16px 16px 0 0' }}
+        >
+          回首頁
+        </Button>
       </Link>
     </>
   )
