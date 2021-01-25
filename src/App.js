@@ -1,5 +1,10 @@
-import React, { useState } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom'
 
 //排版用元件 全部都使用
 import MyNavbar from './components/index/MyNavbar'
@@ -12,7 +17,7 @@ import Home from './pages/Home'
 import LogIn from './pages/member/Login'
 import News from './pages/news/News'
 import Motor from './pages/motor/Motor'
-import MotorList from './pages/motor/Product'
+import Motorcycle from './pages/motor/Motorcycle'
 
 import Product from './pages/product/ProductList'
 import Detail from './pages/product/ProductDetail'
@@ -29,46 +34,45 @@ import OrderCheckout from './pages/order/OD_Checkout'
 import OrderCreditCard from './pages/order/OD_CreditCard'
 import OrderHomeDelivery from './pages/order/OD_HomeDelivery'
 import OrderCartReport from './pages/order/OD_CartReport'
+import OrderRentalt from './pages/order/OD_Rental'
+import OrderRentalReport from './pages/order/OD_RentalReport'
 
-//登入元件(測試用)
-// import useToken from './pages/member/components/useToken'
 function App() {
-  //判別登入狀態
-  // const { token, setToken } = useToken()
-  // console.log(useToken())
+  const [auth, setAuth] = React.useState(false)
+  useEffect(() => {
+    setAuth(localStorage.getItem('userData'))
+  }, [auth])
 
-  // if (!token) {
-  //   return (
-  //     <Router>
-  //       <>
-  //         <ScrollToTop>
-  //           <MyNavbar />
-  //           <MainContent>
-  //             <Switch>
-  //               <Route path="/login">
-  //                 <LogIn setToken={setToken} />
-  //               </Route>
-  //             </Switch>
-  //           </MainContent>
-  //           <MyFooter />
-  //         </ScrollToTop>
-  //       </>
-  //     </Router>
-  //   )
-  // }
+  function PrivateRoute({ component: Component, authed, setAuth, ...rest }) {
+    return (
+      <Route
+        {...rest}
+        setAuth={setAuth}
+        render={(props) =>
+          authed === true ? (
+            <Component setAuth={setAuth} {...props} />
+          ) : (
+            <Redirect
+              to={{ pathname: '/login', state: { from: props.location } }}
+            />
+          )
+        }
+      />
+    )
+  }
 
   return (
     <Router>
       <>
         <ScrollToTop>
-          <MyNavbar />
+          <MyNavbar auth={auth} setAuth={setAuth} />
           <MainContent>
             <Switch>
               <Route path="/" exact>
                 <Home />
               </Route>
               <Route path="/login">
-                <LogIn />
+                <LogIn auth={auth} setAuth={setAuth} />
               </Route>
 
               {/* news */}
@@ -80,8 +84,8 @@ function App() {
               <Route path="/motor/:type?/:page?">
                 <Motor />
               </Route>
-              <Route path="/motorlist/:type?/:id?">
-                <MotorList />
+              <Route path="/motorcycle/:type?/:id?">
+                <Motorcycle />
               </Route>
 
               {/* product */}
@@ -99,25 +103,38 @@ function App() {
 
               {/* member */}
               <Route path="/member/Edit">
-                <MemberEdit />
+                <MemberEdit auth={auth} setAuth={setAuth} />
               </Route>
               <Route path="/member/information">
-                <MemberInformation />
+                <MemberInformation auth={auth} setAuth={setAuth} />
               </Route>
               <Route path="/member/favorite">
-                <MemberFavorite />
+                <MemberFavorite auth={auth} setAuth={setAuth} />
               </Route>
               <Route path="/member/rent-record">
-                <MemberRentrecord />
+                <MemberRentrecord auth={auth} setAuth={setAuth} />
               </Route>
               <Route path="/member/order-record">
-                <MemberOrderrecord />
+                <MemberOrderrecord auth={auth} setAuth={setAuth} />
               </Route>
-              <Route path="/member">
+              <PrivateRoute
+                authed={localStorage.getItem('userData') && true}
+                path="/member"
+                component={Member}
+                sauth={auth}
+                setAuth={setAuth}
+              />
+              {/* <Route path="/member">
                 <Member />
-              </Route>
+              </Route> */}
 
               {/* order */}
+              <Route path="/order/rentalReport">
+                <OrderRentalReport />
+              </Route>
+              <Route path="/order/rentalt">
+                <OrderRentalt />
+              </Route>
               <Route path="/order/cartReport">
                 <OrderCartReport />
               </Route>

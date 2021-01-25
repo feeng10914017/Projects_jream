@@ -1,63 +1,63 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
 import { Table, Button } from 'react-bootstrap'
 
 import './member.scss'
 
-function Information({
-  name = '王大明',
-  nickname = '路人乙',
-  birth = '2088-12-31',
-  gender = '男',
-  email = 'LOL@gmail.com',
-  phone = '0911111111',
-  telephone = '(02)08000000',
-  address = '桃園市中壢區某某路某某巷XX號',
-}) {
-  const [count, setCount] = useState()
+function Information({ member, setMember }) {
+  const [memberData, setMemberData] = useState(
+    JSON.parse(localStorage.getItem('userData'))
+  )
+  console.log('inf memberData', memberData)
+  console.log('member', member)
   return (
     <>
-      <MemberNav />
+      <MemberNav member={memberData} setMember={setMember} />
       <Table className="MBI">
         <tbody className="MBItr">
           <tr>
             <td className="MBItdC">姓名</td>
-            <td className="MBItdL">{name}</td>
+            <td className="MBItdL">{memberData.memberName}</td>
           </tr>
           <tr>
             <td className="MBItdC">暱稱</td>
-            <td className="MBItdL">{nickname}</td>
+            <td className="MBItdL">{memberData.memberNickname}</td>
           </tr>
           <tr>
             <td className="MBItdC">生日</td>
-            <td className="MBItdL">{birth}</td>
+            <td className="MBItdL">{memberData.memberBirth}</td>
           </tr>
           <tr>
             <td className="MBItdC">性別</td>
-            <td className="MBItdL">{gender}</td>
+            <td className="MBItdL">{memberData.memberGender}</td>
           </tr>
           <tr>
             <td className="MBItdC">信箱</td>
-            <td className="MBItdL">{email}</td>
+            <td className="MBItdL">{memberData.memberEmail}</td>
           </tr>
           <tr>
             <td className="MBItdC">手機</td>
-            <td className="MBItdL">{phone}</td>
+            <td className="MBItdL">{memberData.memberPhone}</td>
           </tr>
           <tr>
             <td className="MBItdC">電話</td>
-            <td className="MBItdL">{telephone}</td>
+            <td className="MBItdL">{memberData.memberTelephone}</td>
           </tr>
           <tr>
             <td className="MBItdC">地址</td>
-            <td className="MBItdL">{address}</td>
+            <td className="MBItdL">{memberData.memberAddress}</td>
           </tr>
           <tr>
             <td className="MBItdC"></td>
             <td className="MBItdR">
               <Link to="/member/Edit">
-                <Button variant="primary" type="submit">
+                <Button
+                  variant="primary"
+                  type="submit"
+                  memberData={memberData}
+                  setMember={setMember}
+                >
                   修改
                 </Button>
               </Link>

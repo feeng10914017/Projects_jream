@@ -1,0 +1,7 @@
+[1231/141259.427:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系統找不到指定的路徑。 (0x3)
+[0107/162855.860:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系統找不到指定的路徑。 (0x3)
+[0120/115221.248:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系統找不到指定的路徑。 (0x3)
+[0122/060212.402:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系統找不到指定的路徑。 (0x3)
+[0123/213632.461:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\kevino430\AppData\Local\Google\Chrome\User Data\Crashpad\reports\a4c699f6-ac96-499f-9d94-9933b3c2fe78.dmp: 程序無法存取檔案，因為檔案正由另一個程序使用。 (0x20)
+[0123/214942.483:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系統找不到指定的路徑。 (0x3)
+[0125/095611.143:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系統找不到指定的路徑。 (0x3)

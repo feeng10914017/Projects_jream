@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Row, Col, Card, Form } from 'react-bootstrap'
 import { AiOutlineLine } from 'react-icons/ai'
 
-function OD_CKO_Credit() {
+function OD_CKO_Credit(props) {
   return (
     <>
       <Card>
@@ -16,7 +16,14 @@ function OD_CKO_Credit() {
               信用卡卡號
             </Form.Label>
             <Col sm="10">
-              <Form.Control type="text" placeholder="限使用台灣核發之信用卡" />
+              <Form.Control
+                type="text"
+                placeholder="限使用台灣核發之信用卡"
+                onChange={(e) => {
+                  props.setCardNumber(e.target.value)
+                }}
+                required
+              />
             </Col>
           </Form.Group>
           <div className="line"></div>
@@ -30,13 +37,30 @@ function OD_CKO_Credit() {
                 有效期限
               </Form.Label>
               <Col sm="3">
-                <Form.Control type="text" placeholder="MM" />
+                <Form.Control
+                  type="text"
+                  placeholder="MM"
+                  onChange={(e) => {
+                    props.setValidityMM(e.target.value)
+                  }}
+                  required
+                />
               </Col>
               <Col sm="2" className="creditLine">
                 <AiOutlineLine size="32" color="#CACACA" />
               </Col>
+              <Form.Label column sm="4" srOnly>
+                有效期限(年)
+              </Form.Label>
               <Col sm="3">
-                <Form.Control type="text" placeholder="YY" />
+                <Form.Control
+                  type="text"
+                  placeholder="YY"
+                  onChange={(e) => {
+                    props.setValidityYY(e.target.value)
+                  }}
+                  required
+                />
               </Col>
             </Form.Group>
             <AiOutlineLine className="localLine" size="32" color="#CACACA" />
@@ -49,7 +73,14 @@ function OD_CKO_Credit() {
                 背面末三碼
               </Form.Label>
               <Col sm="8">
-                <Form.Control type="text" placeholder="信用卡背面末三碼" />
+                <Form.Control
+                  type="text"
+                  placeholder="信用卡背面末三碼"
+                  onChange={(e) => {
+                    props.setVerificationCode(e.target.value)
+                  }}
+                  required
+                />
               </Col>
             </Form.Group>
           </Form.Row>

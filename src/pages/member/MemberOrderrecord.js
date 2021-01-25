@@ -4,7 +4,7 @@ import MemberNav from './components/MemberNav'
 import { Form, Col, Card, ListGroup } from 'react-bootstrap'
 import OrderR from './components/OrderR'
 
-function Orderrecord() {
+function Orderrecord(auth, setAuth) {
   return (
     <>
       <MemberNav />

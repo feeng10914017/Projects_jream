@@ -200,15 +200,12 @@
     -webkit-animation-duration: 0.2s;
     -webkit-animation-fill-mode: both;
     -webkit-animation-iteration-count: 1;
-    -webkit-animation-delay: 0.5s;
     -moz-animation-duration: 0.2s;
     -moz-animation-fill-mode: both;
     -moz-animation-iteration-count: 1;
-    -moz-animation-delay: 0.5s;
     animation-duration: 0.2s;
     animation-fill-mode: both;
     animation-iteration-count: 1;
-    animation-delay: 0.5s;
   }
 
   .delay-animated {
@@ -325,26 +322,26 @@
   }
   @keyframes slidein {
     from {
-      margin-left: 800px;
+      margin-top: 0px;
     }
     to {
-      margin-top: 0px;
+      margin-left: 100px;
     }
   }
   @-webkit-keyframes slidein {
     from {
-      margin-left: 800px;
+      margin-top: 0px;
     }
     to {
-      margin-top: 0px;
+      margin-left: 100px;
     }
   }
   @-moz-keyframes slidein {
     from {
-      margin-left: 800px;
+      margin-top: 0px;
     }
     to {
-      margin-top: 0px;
+      margin-left: 100px;
     }
   }
 

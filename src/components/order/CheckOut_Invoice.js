@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Col, Card, Button, Form } from 'react-bootstrap'
 import $ from 'jquery'
-function OD_CKO_Invoice() {
+function CheckOut_Invoice(props) {
+  const [invoiceCompany, setInvoiceCompany] = useState('')
+  const [invoiceDonate, setInvoiceDonate] = useState('')
+  const [invoiceVehicleOne, setInvoiceVehicleOne] = useState('')
+  const [invoiceVehicleTwo, setInvoiceVehicleTwo] = useState('')
+
   useEffect(() => {
     $('#Invoice')
       .find('button')
@@ -18,6 +23,7 @@ function OD_CKO_Invoice() {
           .addClass('displayNone')
       })
   }, [])
+
   return (
     <>
       <Card>
@@ -25,17 +31,61 @@ function OD_CKO_Invoice() {
           <h6>發票類型</h6>
         </Card.Header>
         <Card.Body id="Invoice">
+          {/* 標頭 */}
           <div className=" d-flex justify-content-between mb-3">
-            <Button id="Personal" variant="outline-light">
+            <Button
+              id="Personal"
+              variant="outline-light"
+              onClick={() => {
+                setInvoiceCompany('')
+                setInvoiceDonate('')
+                setInvoiceVehicleOne('')
+                setInvoiceVehicleTwo('')
+                props.setInvoiceTitle('電子發票 - 個人')
+                props.setInvoiceValue1('')
+                props.setInvoiceValue2('')
+              }}
+            >
               電子發票 - 個人
             </Button>
-            <Button id="Company" variant="outline-light">
+            <Button
+              id="Company"
+              variant="outline-light"
+              onClick={() => {
+                setInvoiceDonate('')
+                setInvoiceVehicleOne('')
+                setInvoiceVehicleTwo('')
+                props.setInvoiceTitle('電子發票 - 公司')
+                props.setInvoiceValue1('')
+                props.setInvoiceValue2('')
+              }}
+            >
               電子發票 - 公司
             </Button>
-            <Button id="Donate" variant="outline-light">
+            <Button
+              id="Donate"
+              variant="outline-light"
+              onClick={() => {
+                setInvoiceCompany('')
+                setInvoiceDonate('伊甸社會福利基金會')
+                setInvoiceVehicleOne('')
+                setInvoiceVehicleTwo('')
+                props.setInvoiceTitle('捐贈發票')
+                props.setInvoiceValue1('伊甸社會福利基金會')
+                props.setInvoiceValue2('')
+              }}
+            >
               捐贈發票
             </Button>
-            <Button id="Vehicle" variant="outline-light">
+            <Button
+              id="Vehicle"
+              variant="outline-light"
+              onClick={() => {
+                setInvoiceCompany('')
+                setInvoiceDonate('')
+                props.setInvoiceTitle('個人 - 手機條碼載具')
+              }}
+            >
               個人 - 手機條碼載具
             </Button>
           </div>
@@ -54,7 +104,15 @@ function OD_CKO_Invoice() {
               統一編號
             </Form.Label>
             <Col sm="5">
-              <Form.Control type="text" placeholder="請輸入統一編號" />
+              <Form.Control
+                type="text"
+                placeholder="請輸入統一編號"
+                value={invoiceCompany}
+                onChange={(e) => {
+                  setInvoiceCompany(e.target.value)
+                  props.setInvoiceValue1(e.target.value)
+                }}
+              />
             </Col>
             <p className="fontSize14 colorDanger">
               根據財政部「電子發票實施作業要點」，於消費開立「三聯電子發票」不主動寄送，lativ亦會將發票號碼上傳至政府平台。
@@ -71,9 +129,18 @@ function OD_CKO_Invoice() {
               捐贈單位
             </Form.Label>
             <Col sm="5">
-              <Form.Control as="select" defaultValue="Choose...">
-                <option>Choose123...</option>
-                <option>...</option>
+              <Form.Control
+                as="select"
+                defaultValue="伊甸社會福利基金會"
+                value={invoiceDonate}
+                onChange={(e) => {
+                  setInvoiceDonate(e.target.value)
+                  props.setInvoiceValue1(e.target.value)
+                }}
+              >
+                <option>伊甸社會福利基金會</option>
+                <option>喜憨兒社會福利基金會</option>
+                <option>華山社會福利慈善事業基金會</option>
               </Form.Control>
             </Col>
           </Form.Group>
@@ -89,6 +156,11 @@ function OD_CKO_Invoice() {
                 <Form.Control
                   type="text"
                   placeholder="請輸入手機條碼(限大寫英文數字)"
+                  value={invoiceVehicleOne}
+                  onChange={(e) => {
+                    setInvoiceVehicleOne(e.target.value)
+                    props.setInvoiceValue1(e.target.value)
+                  }}
                 />
               </Col>
             </Form.Group>
@@ -102,6 +174,11 @@ function OD_CKO_Invoice() {
                 <Form.Control
                   type="text"
                   placeholder="請再次輸入手機條碼(限大寫英文數字)"
+                  value={invoiceVehicleTwo}
+                  onChange={(e) => {
+                    setInvoiceVehicleTwo(e.target.value)
+                    props.setInvoiceValue2(e.target.value)
+                  }}
                 />
               </Col>
             </Form.Group>
@@ -113,10 +190,13 @@ function OD_CKO_Invoice() {
           <Form.Check
             type="checkbox"
             label="我同意辦理退貨時，由 JREAM 代為處理電子發票及銷貨退回折讓單以加速退款作業。"
+            onChange={(element) => {
+              props.setInvoiceCheckBox(element.target.checked)
+            }}
           />
         </Form.Group>
       </section>
     </>
   )
 }
-export default OD_CKO_Invoice
+export default CheckOut_Invoice
