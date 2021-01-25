@@ -100,7 +100,7 @@ function ProductList(props) {
   // )
 
   const display = (
-    <div className="productsArea">
+    <div className="productsArea" style={{ height: 'calc(100vh - 49px )' }}>
       {products.map((product, index) => {
         if (Math.floor(index / PRODUCT_PER_PAGE) === page - 1) {
           return (
@@ -118,14 +118,16 @@ function ProductList(props) {
                 </Link>
               </div>
 
-              <div className="card-body">
+              <div className="card-body ">
                 <Link
                   to={`/product/Detail/${product.id}`}
                   style={{ textDecoration: 'none' }}
                 >
-                  <h5 className="card-title">{product.title}</h5>
-                  <div className="card-text ">{product.description}</div>
-                  <p className="card-text text-danger">NTD {product.price}元</p>
+                  <p className="card-title fontSize16">{product.title}</p>
+                  <div className="card-text ">{product.content}</div>
+                  <p className="card-text text-danger price_space">
+                    NTD {product.price}元
+                  </p>
                 </Link>
               </div>
             </div>
