@@ -87,7 +87,8 @@ function OD_CartReport() {
     setInvoiceTitle(cartData.invoiceTitle)
     setInvoiceValue1(cartData.invoiceValue1)
 
-    // localStorage.removeItem('rentalOrder')
+    localStorage.removeItem('CartOrder')
+    localStorage.setItem('shipping', '[]')
   }, [])
   const aa = (
     <>
@@ -214,7 +215,7 @@ function OD_CartReport() {
                     <p>付款方式</p>
                   </Col>
                   <Col lg={8}>
-                    <p>{shipping === 'delivery' ? '貨到付款' : Credit}</p>
+                    <p>{shipping === 'delivery' ? '貨到付款' : '信用卡'}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -225,7 +226,7 @@ function OD_CartReport() {
                     <p>配送方式</p>
                   </Col>
                   <Col lg={8}>
-                    <p>{shipping === 'delivery' ? '宅配到府' : '信用卡'}</p>
+                    <p>{shipping === 'delivery' ? '宅配到府' : Credit}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
