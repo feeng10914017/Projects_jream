@@ -7,10 +7,6 @@ function CheckOut_Invoice(props) {
   const [invoiceVehicleOne, setInvoiceVehicleOne] = useState('')
   const [invoiceVehicleTwo, setInvoiceVehicleTwo] = useState('')
 
-  const handleChangeChecked = (element) => {
-    // console.log(element.target.checked)
-    // props.checkedItem(e, element.target.checked, index)
-  }
   useEffect(() => {
     $('#Invoice')
       .find('button')
@@ -165,6 +161,7 @@ function CheckOut_Invoice(props) {
                     setInvoiceVehicleOne(e.target.value)
                     props.setInvoiceValue1(e.target.value)
                   }}
+                  minLength="8"
                 />
               </Col>
             </Form.Group>

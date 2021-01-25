@@ -1,48 +1,51 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Col, Modal, Button, Container } from 'react-bootstrap'
-import { withRouter } from 'react-router-dom'
-import ProductData from './ProductData2.json'
+import { Link, withRouter } from 'react-router-dom'
+
 import Carousel from './components/Carousel'
 import Sidenav from './components/Sidenav'
-import { Link } from 'react-router-dom'
 
+import ProductData from './ProductData2.json'
 import { PRODUCT_PER_PAGE } from './constants'
 
 import './product.css'
+import { updateURLParameter } from './tools'
 
 function ProductList(props) {
-  const [id, setId] = useState(0)
-  const [title, setTitle] = useState(0)
-  const [images, setImages] = useState(0)
-  const [price, setPrice] = useState(0)
-
+  const urlParams = new URLSearchParams(window.location.search)
+  // const [id, setId] = useState(0)
+  // const [title, setTitle] = useState(0)
+  // const [images, setImages] = useState(0)
+  // const [price, setPrice] = useState(0)
   // 以上為我加的code
-
-  const [mycart, setMycart] = useState([])
+  // const [mycart, setMycart] = useState([])
   const [show, setShow] = useState(false)
   const [productName, setProductName] = useState('')
+  // searching place----------------------
+  const [products, setProducts] = useState([])
+  const total_page = Math.ceil(products.length / PRODUCT_PER_PAGE)
+  const searchQuery = urlParams.get('search') || ''
+
+  const [page, setPage] = useState(+urlParams.get('page') || 1, total_page)
 
   const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
 
-  const updateCartToLocalStorage = (value) => {
-    const currentCart = JSON.parse(localStorage.getItem('productCart')) || []
+  // const handleShow = () => setShow(true)
 
-    const newCart = [...currentCart, value]
-    localStorage.setItem('productCart', JSON.stringify(newCart))
+  // const updateCartToLocalStorage = (value) => {
+  //   const currentCart = JSON.parse(localStorage.getItem('productCart')) || []
 
-    // 設定資料
-    setMycart(newCart)
-    setProductName(value.name)
-    handleShow()
-  }
-  // searching place----------------------
-  const [searchQuery, setSearchQuery] = useState('')
-  const [doSearch, setDoSearch] = useState(false)
-  const [products, setproducts] = useState([])
+  //   const newCart = [...currentCart, value]
+  //   localStorage.setItem('productCart', JSON.stringify(newCart))
+
+  //   // 設定資料
+  //   setMycart(newCart)
+  //   setProductName(value.name)
+  //   handleShow()
+  // }
 
   useEffect(() => {
-    setproducts(
+    setProducts(
       ProductData.filter((product) => {
         return (
           product.title
@@ -54,7 +57,15 @@ function ProductList(props) {
         )
       })
     )
-  }, [doSearch])
+  }, [])
+
+  useEffect(() => {
+    window.history.pushState(
+      '',
+      '',
+      updateURLParameter(window.location.href, 'page', page)
+    )
+  }, [page])
 
   const messageModal = (
     <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
@@ -78,48 +89,45 @@ function ProductList(props) {
     </Modal>
   )
 
-  const spinner = (
-    <>
-      <div className="d-flex justify-content-center">
-        <div className="spinner-border" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </div>
-    </>
-  )
-
-  const total_page = Math.ceil(products.length / PRODUCT_PER_PAGE)
-  const urlParams = new URLSearchParams(window.location.search)
-  let page = parseInt(urlParams.get('page')) || 1 // default in page 1
-  page = page > total_page ? total_page : page
+  // const spinner = (
+  //   <>
+  //     <div className="d-flex justify-content-center">
+  //       <div className="spinner-border" role="status">
+  //         <span className="sr-only">Loading...</span>
+  //       </div>
+  //     </div>
+  //   </>
+  // )
 
   const display = (
-    <div className="productsArea">
-      {products.map((item, index) => {
+    <div className="productsArea" style={{ height: 'calc(100vh - 49px )' }}>
+      {products.map((product, index) => {
         if (Math.floor(index / PRODUCT_PER_PAGE) === page - 1) {
           return (
             <div className="P_card">
               <div style={{ overflow: 'hidden' }}>
                 <Link
-                  to={`/product/Detail/${item.id}`}
+                  to={`/product/Detail/${product.id}`}
                   style={{ textDecoration: 'none' }}
                 >
                   <img
-                    src={item.images[0]}
+                    src={product.variances[0]?.images[0]}
                     className="card-img-top"
                     alt="..."
                   />
                 </Link>
               </div>
 
-              <div className="card-body">
+              <div className="card-body ">
                 <Link
-                  to={`/product/Detail/${item.id}`}
+                  to={`/product/Detail/${product.id}`}
                   style={{ textDecoration: 'none' }}
                 >
-                  <h5 className="card-title">{item.title}</h5>
-                  <div className="card-text ">{item.description}</div>
-                  <p className="card-text text-danger">NTD {item.price}元</p>
+                  <p className="card-title fontSize16">{product.title}</p>
+                  <div className="card-text ">{product.content}</div>
+                  <p className="card-text text-danger price_space">
+                    NTD {product.price}元
+                  </p>
                 </Link>
               </div>
             </div>
@@ -133,9 +141,14 @@ function ProductList(props) {
   for (let i = 0; i < total_page; i++) {
     page_buttons.push(
       <li class="page-item">
-        <a class="page-link" href={`?page=${i + 1}`}>
+        <span
+          class="page-link"
+          onClick={() => {
+            setPage(i + 1)
+          }}
+        >
           {i + 1}
-        </a>
+        </span>
       </li>
     )
   }
@@ -147,12 +160,7 @@ function ProductList(props) {
       <Container style={{ marginTop: '20px' }}>
         <Row>
           <Col sm={3} className="nopadding ">
-            <Sidenav
-              searchQuery={searchQuery}
-              doSearch={doSearch}
-              setSearchQuery={setSearchQuery}
-              setDoSearch={setDoSearch}
-            />
+            <Sidenav />
           </Col>
           <Col sm={9} className="nopadding " style={{ height: '100vh' }}>
             {display}
@@ -160,26 +168,29 @@ function ProductList(props) {
               <ul class="pagination justify-content-center">
                 {page === 1 ? null : (
                   <li class="page-item ">
-                    <a
+                    <span
                       class="page-link"
-                      href={`?page=${page - 1}`}
+                      onClick={() => {
+                        setPage(page - 1)
+                      }}
                       tabindex="-1"
                     >
                       上一頁
-                    </a>
+                    </span>
                   </li>
                 )}
-
                 {page_buttons}
                 {page === total_page ? null : (
                   <li class="page-item">
-                    <a
+                    <span
                       class="page-link"
-                      href={`?page=${page + 1}`}
+                      onClick={() => {
+                        setPage(page + 1)
+                      }}
                       tabindex="+1"
                     >
                       下一頁
-                    </a>
+                    </span>
                   </li>
                 )}
               </ul>
