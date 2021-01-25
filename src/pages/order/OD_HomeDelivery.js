@@ -94,11 +94,13 @@ function OD_HomeDelivery(props) {
     const finalProductCart = JSON.parse(
       localStorage.getItem('finalProductCart')
     )
+    const cardNumber = ''
     const finalUserAdd = userCountry + usertownship + userAdd
     const finalRecipientAdd =
       recipientCountry + recipientTownship + recipientAdd
     const finalHoneOrder = {
       finalProductCart,
+      cardNumber,
       serialNumber,
       userName,
       userPhone,

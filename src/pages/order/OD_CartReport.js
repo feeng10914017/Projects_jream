@@ -214,7 +214,7 @@ function OD_CartReport() {
                     <p>付款方式</p>
                   </Col>
                   <Col lg={8}>
-                    <p>{shipping === 'delivery' ? '貨到付款' : '信用卡'}</p>
+                    <p>{shipping === 'delivery' ? '貨到付款' : Credit}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
@@ -225,7 +225,7 @@ function OD_CartReport() {
                     <p>配送方式</p>
                   </Col>
                   <Col lg={8}>
-                    <p>宅配到府</p>
+                    <p>{shipping === 'delivery' ? '宅配到府' : '信用卡'}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
