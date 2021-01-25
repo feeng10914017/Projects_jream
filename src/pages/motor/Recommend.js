@@ -62,7 +62,7 @@ function Recommend(props) {
           >
             <AiOutlineCaretRight style={{ fontSize: '30px', color: '' }} />
           </button>
-          <h4 className="text-center">熱門車款</h4>
+          <h4 className="text-center">推薦車款</h4>
           <div className="" style={{ overflow: 'hidden' }}>
             <div
               className="d-flex s-recommend-row mx-5 px-2"

@@ -390,6 +390,8 @@ function Motorcycle(props) {
                   amount: 1,
                   price: myproduct.itemPrice,
                   img: myproduct.itemImg,
+                  aa: myproduct.created_at,
+                  bb: myproduct.updated_at,
                 })
               }
             >
