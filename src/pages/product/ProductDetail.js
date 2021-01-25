@@ -42,20 +42,17 @@ function Detail(props) {
   // useEffect(() => {
   //   console.log(productData)
   // }, [productData])
-  // useEffect(() => {
-  //   console.log(productData.P_id)
-  // }, [productData])
 
   useEffect(() => {
-    const newImages = productData.variances.find((variance) => {
+    const tmp = productData.variances.find((variance) => {
       if (!selectedColor) {
         return true
       }
       return variance.color === selectedColor
-    }).images
+    })
 
     // console.log(newImages)
-    setProductData({ ...productData, images: newImages })
+    setProductData({ ...productData, images: tmp.images, p_id: tmp.p_id })
   }, [selectedColor, selectedSize])
 
   //商品數量計數器
@@ -168,7 +165,7 @@ function Detail(props) {
 
                   updateCartToLocalStorage({
                     id: productData.id,
-                    P_id: productData.variances.P_id,
+                    p_id: productData.p_id,
                     name: productData.title,
                     img: productData.images[0],
                     color: selectedColor,
@@ -250,11 +247,7 @@ function Detail(props) {
                     </a>
                   </div>
                   {/* -----------------加入購物車---------------- */}
-                  <button
-                    type="submit"
-                    className="btn addtocart-btn"
-                    onClick={console.log(productData.P_id)}
-                  >
+                  <button type="submit" className="btn addtocart-btn">
                     加入購物車
                   </button>
                 </div>
