@@ -142,6 +142,7 @@ function OD_Checkout() {
                 case 'delivery':
                   return '/order/HomeDelivery'
                 default:
+                  console.log('agb')
                   return '/order/checkout'
               }
             }}

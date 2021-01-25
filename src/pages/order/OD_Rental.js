@@ -35,7 +35,7 @@ function OD_Rental(props) {
   // console.log('invoiceCheckBox', invoiceCheckBox)
 
   //  Motor Order and Serial Number parameter
-  const [motorOrderSerialNumber, setMotorOrderSerialNumber] = useState('')
+  const [serialNumber, setSerialNumber] = useState('')
 
   useEffect(() => {
     const year = new Date().getFullYear()
@@ -56,12 +56,12 @@ function OD_Rental(props) {
     ]
     const RandomNumber = Math.floor(Math.random() * 10 ** 12)
     const finalSerialNumber = 'MC' + year + monthArray[month] + RandomNumber
-    setMotorOrderSerialNumber(finalSerialNumber)
+    setSerialNumber(finalSerialNumber)
   }, [])
   function pushToFinalOrder() {
     const motorCart = JSON.parse(localStorage.getItem('motorCart'))
     const finalRentalOrder = {
-      motorOrderSerialNumber,
+      serialNumber,
       motorCart,
       cardNumber,
       validityMM,
@@ -76,7 +76,7 @@ function OD_Rental(props) {
     props.history.push('/order/rentalReport')
   }
 
-  //發票驗證
+  //  Invoice Verification
   function RentalSubmit(e) {
     e.preventDefault()
     if (invoiceTitle === '') {
@@ -172,7 +172,6 @@ function OD_Rental(props) {
                 重新選車
               </Button>
             </Link>
-            {/* <Link to="/order/cartReport"> */}
             <Button
               className="finalBtn finalBtnTwo place-center"
               variant="primary"
@@ -180,7 +179,6 @@ function OD_Rental(props) {
             >
               下一步
             </Button>
-            {/* </Link> */}
           </Row>
         </Form>
         {/* modal */}

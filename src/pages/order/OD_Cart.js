@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react'
-import { Row, Card, Nav, Button } from 'react-bootstrap'
+import { Row, Card, Nav, Button, Modal } from 'react-bootstrap'
 import { reactLocalStorage } from 'reactjs-localstorage'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 import OrderStep from '../../components/order/CartStep'
 import CartMotor from '../../components/order/CartMotor'
 import CartProduct from '../../components/order/CartProduct'
 import GrandTotal from '../../components/order/CheckOut_GrandTotal'
 
-function OD_Cart() {
+function OD_Cart(props) {
   const [ListType, setListType] = useState('Motor')
   const [motorCart, setMotorCart] = useState([])
   const [productCart, setProductCart] = useState([])
   const [productCartDisplay, setProductCartDisplay] = useState([])
   const [checkedCart, setCheckedCart] = useState([])
   const [shipping, setShipping] = useState([])
+  const [smShow, setSmShow] = useState(false)
   // const localShipping = reactLocalStorage.get('shipping')
 
   function setLocalStorage() {
@@ -150,6 +151,8 @@ function OD_Cart() {
   }, [ListType])
 
   /////////////////////////////////////////////////////////////////
+  const [checkValue, setCheckValue] = useState(0)
+  /////////////////////////////////////////////////////////////////
 
   //reorganize the productCart
   useEffect(() => {
@@ -259,8 +262,8 @@ function OD_Cart() {
     setCheckedCart(newCheckedItem)
 
     localStorage.setItem('finalProductCart', JSON.stringify(newCheckedItem))
+    setCheckValue(newCheckedItem.length)
   }
-
   //update productCart checkedItem data
   const updateCheckedItem = (item, id, eventType, value) => {
     // console.log(item, id, eventType, value)
@@ -414,11 +417,32 @@ function OD_Cart() {
               </Button>
             </Link>
 
-            <Link to={'/order/checkout'}>
-              <Button className="finalBtn  place-center" variant="primary">
-                下一步
-              </Button>
-            </Link>
+            {/* <Link
+              to={checkValue > 0 ? '/order/checkout' : '/order'}
+              // to={() => {
+              //   if (checkValue > 0) {
+              //     return '/order/checkout'
+              //   } else {
+              //     // setSmShow(true)
+              //     console.log('modal')
+              //     return '/order'
+              //   }
+              // }}
+            > */}
+            <Button
+              className="finalBtn  place-center"
+              variant="primary"
+              onClick={(e) => {
+                if (checkValue > 0) {
+                  props.history.push('/order/checkout')
+                } else {
+                  setSmShow(true)
+                }
+              }}
+            >
+              下一步
+            </Button>
+            {/* </Link> */}
           </Row>
         ) : (
           <Button
@@ -437,9 +461,24 @@ function OD_Cart() {
       >
         取資料
       </Button>
+      {/* Modal */}
+      <Modal
+        size="sm"
+        show={smShow}
+        onHide={() => setSmShow(false)}
+        aria-labelledby="example-modal-sizes-title-sm"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-modal-sizes-title-sm">提醒</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>請「選擇」您要購買的「商品」</p>
+        </Modal.Body>
+      </Modal>
     </>
   )
   return <>{display}</>
 }
 
-export default OD_Cart
+export default withRouter(OD_Cart)
