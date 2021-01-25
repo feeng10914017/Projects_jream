@@ -9,7 +9,7 @@ function OD_RentalReport() {
   const [orderTime, setORderTime] = useState('')
   const [orderPrice, setOrderPrice] = useState('')
   const [creditHidden, setCreditHidden] = useState('')
-  const [color, setColor] = useState('')
+  // const [color, setColor] = useState('')
   const [company, setCompany] = useState('')
   const [model, setModel] = useState('')
   const [rentalDate, setRentalDate] = useState('')
@@ -18,6 +18,8 @@ function OD_RentalReport() {
   const [returnDate, setReturnDate] = useState('')
   const [returnLocation, setReturnLocation] = useState('')
   const [returnTime, setReturnTime] = useState('')
+  const [invoiceTitle, setInvoiceTitle] = useState('')
+  const [invoiceValue1, setInvoiceValue1] = useState('')
 
   useEffect(() => {
     const rentalData = JSON.parse(localStorage.getItem('rentalOrder'))
@@ -28,7 +30,7 @@ function OD_RentalReport() {
       Number(motorCart.rentalAmount) * Number(motorCart.rentalPrice)
     )
     setCreditHidden(rentalData.cardNumber)
-    setColor(motorCart.color)
+    // setColor(motorCart.color)
     setCompany(motorCart.company)
     setModel(motorCart.model)
     setRentalDate(motorCart.rentalDate)
@@ -37,6 +39,9 @@ function OD_RentalReport() {
     setReturnDate(motorCart.returnDate)
     setReturnLocation(motorCart.returnLocation)
     setReturnTime(motorCart.returnTime)
+    setInvoiceTitle(rentalData.invoiceTitle)
+    setInvoiceValue1(rentalData.invoiceValue1)
+    console.log(rentalData)
     localStorage.removeItem('rentalOrder')
   }, [])
   function orderEditTime() {
@@ -74,6 +79,53 @@ function OD_RentalReport() {
         second
     )
   }
+
+  const aa = <></>
+  const bb = (
+    <>
+      <Col lg={6}>
+        <Row>
+          <Col lg={4}>
+            <p>統依編號</p>
+          </Col>
+          <Col lg={8}>
+            <p>{invoiceValue1}</p>
+          </Col>
+        </Row>
+        <div className="line"></div>
+      </Col>
+    </>
+  )
+  const cc = (
+    <>
+      <Col lg={6}>
+        <Row>
+          <Col lg={4}>
+            <p>捐贈單位</p>
+          </Col>
+          <Col lg={8}>
+            <p>{invoiceValue1}</p>
+          </Col>
+        </Row>
+        <div className="line"></div>
+      </Col>
+    </>
+  )
+  const dd = (
+    <>
+      <Col lg={6}>
+        <Row>
+          <Col lg={4}>
+            <p>條碼載具</p>
+          </Col>
+          <Col lg={8}>
+            <p>{invoiceValue1}</p>
+          </Col>
+        </Row>
+        <div className="line"></div>
+      </Col>
+    </>
+  )
 
   const display = (
     <>
@@ -157,26 +209,43 @@ function OD_RentalReport() {
                 <div className="line"></div>
               </Col>
             </Row>
+            <Row>
+              <Col lg={6}>
+                <Row>
+                  <Col lg={4}>
+                    <p>發票類型</p>
+                  </Col>
+                  <Col lg={8}>
+                    <p>{invoiceTitle}</p>
+                  </Col>
+                </Row>
+                <div className="line"></div>
+              </Col>
+              {invoiceTitle === '電子發票 - 個人' && aa}
+              {invoiceTitle === '電子發票 - 公司' && bb}
+              {invoiceTitle === '捐贈發票' && cc}
+              {invoiceTitle === '個人 - 手機條碼載具' && dd}
+            </Row>
 
             <Row>
-              <Col>
-                <hr />
+              <Col lg={6}>
                 <Row>
-                  <Col lg={2}>
-                    <p>租賃車種</p>
+                  <Col lg={4}>
+                    <p>重機廠牌</p>
                   </Col>
-                  <Col lg={10}>
-                    <Row>
-                      <Col lg={4}>
-                        <p>{company}</p>
-                      </Col>
-                      <Col lg={4}>
-                        <p>{model}</p>
-                      </Col>
-                      <Col lg={4}>
-                        <p>{color}</p>
-                      </Col>
-                    </Row>
+                  <Col lg={8}>
+                    <p>{company}</p>
+                  </Col>
+                </Row>
+                <div className="line"></div>
+              </Col>
+              <Col lg={6}>
+                <Row>
+                  <Col lg={4}>
+                    <p>租賃車型</p>
+                  </Col>
+                  <Col lg={8}>
+                    <p>{model}</p>
                   </Col>
                 </Row>
                 <div className="line"></div>
