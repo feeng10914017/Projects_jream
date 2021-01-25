@@ -8,8 +8,7 @@ export const Locationdata = [
     path: ' http://localhost:3000/motor',
     lat: 25.130638549364203,
     lng: 121.73572271141437,
-    address:
-      '基隆市中山區成功二路66-1號 基隆市中山區成功二路66-1號 基隆市中山區成功二路66-1號 基隆市中山區成功二路66-1號',
+    address: '基隆市中山區成功二路66-1號 ',
     opentime: '上午9:00~下午9:00',
     img: './images/1.jpg',
     phone: '02-24288211',
