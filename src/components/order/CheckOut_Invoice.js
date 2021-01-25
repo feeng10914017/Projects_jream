@@ -161,6 +161,7 @@ function CheckOut_Invoice(props) {
                     setInvoiceVehicleOne(e.target.value)
                     props.setInvoiceValue1(e.target.value)
                   }}
+                  minLength="8"
                 />
               </Col>
             </Form.Group>

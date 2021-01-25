@@ -86,10 +86,22 @@ function OD_CartReport() {
     setRecipientUserAdd(cartData.finalRecipientAdd)
     setInvoiceTitle(cartData.invoiceTitle)
     setInvoiceValue1(cartData.invoiceValue1)
-
-    localStorage.removeItem('CartOrder')
+    removeProductData(productCart)
+    // localStorage.removeItem('CartOrder')
     localStorage.setItem('shipping', '[]')
   }, [])
+  function removeProductData(deleteDate) {
+    const prodData = JSON.parse(localStorage.getItem('productCart'))
+    const checkedData = deleteDate
+    prodData.map((v1, i1) => {
+      checkedData.map((v2, i2) => {
+        if (v1.id === v2.id) {
+          prodData.splice(i2, 1)
+        }
+      })
+    })
+    localStorage.setItem('productCart', JSON.stringify(prodData))
+  }
   const aa = (
     <>
       <Col lg={6}>

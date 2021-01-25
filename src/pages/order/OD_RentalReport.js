@@ -41,7 +41,7 @@ function OD_RentalReport() {
     setReturnTime(motorCart.returnTime)
     setInvoiceTitle(rentalData.invoiceTitle)
     setInvoiceValue1(rentalData.invoiceValue1)
-    localStorage.removeItem('rentalOrder')
+    // localStorage.removeItem('rentalOrder')
   }, [])
   function orderEditTime() {
     const year = new Date().getFullYear()
