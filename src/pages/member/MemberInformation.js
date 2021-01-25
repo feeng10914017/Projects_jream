@@ -66,7 +66,13 @@ function Information({ member, setMember }) {
         </tbody>
       </Table>
       <Link to="/member">
-        <button>回首頁</button>
+        <Button
+          variant="primary"
+          type="submit"
+          style={{ margin: '16px 16px 0 250px' }}
+        >
+          回首頁
+        </Button>
       </Link>
     </>
   )

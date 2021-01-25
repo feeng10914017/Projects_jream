@@ -33,14 +33,16 @@ function Rentrecord(auth, setAuth) {
         </Card.Header>
         <ListGroup variant="flush" className="A-MotoList">
           <MotoR />
-          <MotoR />
-          <MotoR />
-          <MotoR />
-          <MotoR />
         </ListGroup>
       </Card>
       <Link to="/member">
-        <button>回首頁</button>
+        <Button
+          variant="primary"
+          type="submit"
+          style={{ margin: '16px 16px 0 0' }}
+        >
+          回首頁
+        </Button>
       </Link>
     </>
   )

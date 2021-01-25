@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { React, useState, useEffect } from 'react'
 
 import { IoPersonOutline } from 'react-icons/io5'
 import { IoCartOutline } from 'react-icons/io5'
@@ -6,8 +6,8 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 import { withRouter, NavLink, Route, Redirect } from 'react-router-dom'
 
-function MyNavbar(props, { auth, setAuth }) {
-  const { location } = props
+function MyNavbar(props) {
+  const { location, auth, setAuth } = props
   const [member, setMember] = useState(
     JSON.parse(localStorage.getItem('userData'))
   )
@@ -18,7 +18,9 @@ function MyNavbar(props, { auth, setAuth }) {
       <h6>登入</h6>
     </Nav.Link>
   )
-
+  useEffect(() => {
+    setMember(JSON.parse(localStorage.getItem('userData')))
+  }, [auth])
   const login = (
     <>
       <NavDropdown title={<h6>{member && member.memberName}</h6>}>

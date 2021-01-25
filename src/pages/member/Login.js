@@ -9,7 +9,7 @@ import './login.scss'
 
 //
 function Login(props) {
-  const { setIsAuth, setAuth } = props
+  const { location, setIsAuth, setAuth } = props
   const history = useHistory()
   const [member, setMember] = useState([])
   const [memberEmail, setMemberEmail] = useState('')
@@ -89,7 +89,6 @@ function Login(props) {
         console.log('WHO', data)
         if (data) {
           setMember(data)
-          // setAuth(true)
         } else {
           console.log('error')
         }
@@ -120,7 +119,7 @@ function Login(props) {
       <div className="cont">
         <form noValidate validated={validated} onSubmit={handleSubmit}>
           <div className="form sign-in A-label">
-            <h2 className="AL-h2">Welcome back,</h2>
+            <h2 className="AL-h2">夢想啟程</h2>
             <label>
               <span>Email</span>
               <input
@@ -148,9 +147,9 @@ function Login(props) {
                 }
               }}
             >
-              Sign In
+              登入
             </button>
-            <LoginG />
+            {/* <LoginG /> */}
 
             <p class="mt-5 mb-3 text-muted text-center">&copy; 2020-2021</p>
           </div>
@@ -159,22 +158,20 @@ function Login(props) {
           <form noValidate validated={validated} onSubmit={handleSubmitS}>
             <div className="img">
               <div className="img__text m--up">
-                <h2 className="AL-h2-2">New here?</h2>
-                <p>Sign up and discover great amount of new opportunities!</p>
+                <h2 className="AL-h2-2">還沒加入會員嗎?</h2>
+                <p>加入會員獲得更多資訊</p>
               </div>
               <div className="img__text m--in">
-                <h2 className="AL-h2-2">One of us?</h2>
-                <p>
-                  If you already has an account, just sign in. We've missed you!
-                </p>
+                <h2 className="AL-h2-2">已經是我們的會員?</h2>
+                <p>如果已經創建帳號，就直接登入吧~~</p>
               </div>
               <div className="img__btn">
-                <span className="m--up">Sign Up</span>
-                <span className="m--in">Sign In</span>
+                <span className="m--up">註冊</span>
+                <span className="m--in">登入</span>
               </div>
             </div>
             <div className="form sign-up A-label">
-              <h2 className="AL-h2">Time to feel like home,</h2>
+              <h2 className="AL-h2">加入我們</h2>
               <label>
                 <span>Name</span>
                 <input
@@ -215,13 +212,14 @@ function Login(props) {
                 type="submit"
                 className="submit A-Btn Login-button"
                 onClick={() => {
+                  alert('註冊成功')
                   if (member === true) {
-                    alert('註冊成功')
                     setIsAuth(true)
+                    location.reload()
                   }
                 }}
               >
-                Sign Up
+                註冊
               </button>
               {/* <LoginG /> */}
               {/* <button type="button" className="fb-btn A-Btn Login-button">
