@@ -45,6 +45,22 @@ function ProductList(props) {
   // }
 
   useEffect(() => {
+    const initProcess = async () => {
+      console.log('fetch start')
+      const response = await fetch('http://localhost:5000/product', {
+        method: 'GET',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      })
+      const data = await response.json()
+      console.log('fetch end')
+      console.log('response', response)
+      console.log('data', data)
+    }
+    initProcess()
+
     setProducts(
       ProductData.filter((product) => {
         return (
@@ -163,6 +179,38 @@ function ProductList(props) {
             <Sidenav />
           </Col>
           <Col sm={9} className="nopadding ">
+            <Button
+              onClick={async () => {
+                // axios
+                console.log('new fetch start')
+                const aaa = {
+                  title: 'aaa tile',
+                  description: 'aaa description',
+                  content: 'aaa content',
+                  category: 'aaa category',
+                  sub_category: 'aaa sub_category',
+                  price: 999,
+                }
+                console.log(JSON.stringify(aaa))
+                const response = await fetch(
+                  'http://localhost:5000/product/new',
+                  {
+                    method: 'POST',
+                    headers: {
+                      Accpet: 'application/json',
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(aaa),
+                  }
+                )
+                console.log('new fetch end')
+                const data = await response.json()
+                console.log('aaa response', response)
+                console.log('aaa data', data)
+              }}
+            >
+              新增商品
+            </Button>
             {display}
             <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center">
