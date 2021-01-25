@@ -11,7 +11,12 @@ function ControlledCarousel(props) {
   }
   if (props.location.pathname === '/product')
     return (
-      <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel
+        activeIndex={index}
+        onSelect={handleSelect}
+        prevIcon={<span aria-hidden="true" />}
+        nextIcon={<span aria-hidden="true" />}
+      >
         <Carousel.Item style={{ height: 'calc(60vh - 80px )' }}>
           <img
             className="d-block w-100 "

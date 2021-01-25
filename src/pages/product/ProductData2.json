@@ -778,6 +778,310 @@
 
      
     ]
+  },
+  {
+    "id": 8,
+    "category": "防摔衣",
+    "sub_category": "四季防摔衣",
+    "title": "Spidi Warrior 2 摩托車皮夾克",
+    "description": "Spidi Warrior 2 摩托車皮夾克",
+    "content": "SPIDI Evorider 2 是廣受歡迎的Evorider 夾克系列的新版和更新版。我們的設計師開發了夾克，以勾選每一個盒子的性能騎手時，尋找夏季賽道日夾克，沒有安全妥協。Evorider 2 在肩部和肘部有可拆卸的保護器，肩部有勇士外部滑塊。為了增加安全性，有一個口袋的背部保護器，以及一個近距拉鍊，50%防水服裝、可調節腰部閉合、聯合區域的靈活施工、來自義大利的優質皮革、彈性尼龍 6.6,撕裂強度高,耐磨性最高、穿孔網格。",
+    "price": 1430,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_3_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_3_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_3_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_3_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_3_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_3_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "yellow",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_3_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_3_yellow-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "yellow",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_3_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_3_yellow-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "yellow",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_four_3_yellow-1.jpg",
+          "http://localhost:3000/images/product/Suit_four_3_yellow-2.jpg"
+        ],
+        "amount": 10
+      }
+
+     
+    ]
+  },
+  {
+    "id": 9,
+    "category": "防摔衣",
+    "sub_category": "冬季防摔衣",
+    "title": "Dainese Air Frame D1 Tex 摩托車紡織夾克",
+    "description": "Dainese Air Frame D1 Tex 摩托車紡織夾克",
+    "content": "當天氣變熱, 沒有比空氣框架 d1 更好的夾克, 其特點是快速乾燥織物底盤與充足的網格面板, 真正讓氣流。熱適應性是通過可拆卸的防風襯墊提供的, 而舒適性是通過一個防浮套筒系統和柔軟的插入頸部和手腕。一般特性:1個內袋2個外口袋。人 機 工程學：防浮套調整手腕上有彈性和柔軟的插入物夾克緊固系統頸部、腰部和手腕調整、頸部柔軟的刀片主要材料:網狀織物刀片快速幹布安全設備:反光刀片:g1 和 g2 背保護器的口袋、肘部和肩部的可移動複合保護器 (1621.1 標準)、溫度調節: 透氣和穿孔的 sanitized®織物襯裡、穿孔面料、可拆卸防風襯墊",
+    "price": 1430,
+    "variances": [
+    
+      {
+        "p_id": 6,
+        "color": "white",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 7,
+        "color": "white",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 8,
+        "color": "white",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 0,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "blue",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "blue",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "blue",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      }
+
+
+     
+    ]
+  },
+  {
+    "id": 9,
+    "category": "防摔衣",
+    "sub_category": "冬季防摔衣",
+    "title": "Dainese Air Frame D1 Tex 摩托車紡織夾克",
+    "description": "Dainese Air Frame D1 Tex 摩托車紡織夾克",
+    "content": "當天氣變熱, 沒有比空氣框架 d1 更好的夾克, 其特點是快速乾燥織物底盤與充足的網格面板, 真正讓氣流。熱適應性是通過可拆卸的防風襯墊提供的, 而舒適性是通過一個防浮套筒系統和柔軟的插入頸部和手腕。一般特性:1個內袋2個外口袋。人 機 工程學：防浮套調整手腕上有彈性和柔軟的插入物夾克緊固系統頸部、腰部和手腕調整、頸部柔軟的刀片主要材料:網狀織物刀片快速幹布安全設備:反光刀片:g1 和 g2 背保護器的口袋、肘部和肩部的可移動複合保護器 (1621.1 標準)、溫度調節: 透氣和穿孔的 sanitized®織物襯裡、穿孔面料、可拆卸防風襯墊",
+    "price": 1430,
+    "variances": [
+    
+      {
+        "p_id": 6,
+        "color": "white",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 7,
+        "color": "white",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 8,
+        "color": "white",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 0,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "blue",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "blue",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "blue",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      }
+
+
+     
+    ]
   }
   
 ]
