@@ -33,9 +33,9 @@ function MyVerticallyCenteredModal(props) {
 
 function MotoR({
   img = '',
-  rentnumbering = '20210107001',
-  time = '2021/01/07 12:00:00',
-  statusS = '訂單已完成',
+  rentnumbering = 'MC202101512546953214',
+  time = '2020/12/25 08:00:00',
+  statusS = '租賃完成',
   status = '預約完成',
 }) {
   const [modalShow, setModalShow] = React.useState(false)
@@ -52,7 +52,7 @@ function MotoR({
           <p>{time}</p>
         </td>
         <td className="A-MotoStatus">
-          <p>{status}</p>
+          <p>{statusS}</p>
         </td>
         <td className="A-MotoRButton">
           <Button onClick={() => setModalShow(true)}>租賃細節</Button>

@@ -37,7 +37,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>訂單日期</p>
               </Col>
               <Col lg={8}>
-                <p>{motorCart.orderTime}</p>
+                <p>{rentData.oldDate}</p>
               </Col>
             </Row>
             {/* <div className="line"></div> */}{' '}
