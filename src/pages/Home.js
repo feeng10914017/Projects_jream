@@ -29,6 +29,7 @@ function Home() {
     localStorage.setItem('productCart', newProductCart)
     localStorage.setItem('shipping', newShipping)
     localStorage.setItem('finalProductCart', '[]')
+    localStorage.setItem('lazyTime', '[]')
   }
   useEffect(() => {
     getCartFromLocalStorage()

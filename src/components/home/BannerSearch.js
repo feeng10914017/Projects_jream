@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Row, Button } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import { withRouter } from 'react-router-dom'
+import { Locationdata } from '../../pages/location/data/locationdata'
 
 import moment from 'moment'
 import { DatePicker, Select } from 'antd'
@@ -8,6 +9,13 @@ import 'antd/dist/antd.css'
 
 function BannerSearch(props) {
   const { RangePicker } = DatePicker
+  console.log(Locationdata)
+  const locationList = []
+  for (let i = 0; i < Locationdata.length; i++) {
+    locationList.push(
+      <option value={Locationdata[i]}>{Locationdata[i]}</option>
+    )
+  }
   // const [rentalDate, setRentalDate] = useState('')
   // const [rentalTime, setRentalTime] = useState('')
   // const [returnDate, setReturnDate] = useState('')
@@ -34,6 +42,9 @@ function BannerSearch(props) {
       disabledHours: () => range(0, 60).splice(0, 9),
     }
   }
+  function onOk(value) {
+    // console.log('onOk: ', value)
+  }
   function onChange(value, dateString) {
     // console.log('Selected Time: ', value)
     console.log('Formatted Selected Time: ', dateString)
@@ -51,13 +62,6 @@ function BannerSearch(props) {
     }
     localStorage.setItem('lazyTime', JSON.stringify(lazyTime))
   }
-  function onOk(value) {
-    // console.log('onOk: ', value)
-  }
-  function goToOrder() {
-    const data = {}
-  }
-
   const { Option } = Select
 
   function handleChange(value) {
@@ -91,12 +95,7 @@ function BannerSearch(props) {
           style={{ width: '100%' }}
           onChange={handleChange}
         >
-          <Option value="jack">Jack</Option>
-          <Option value="lucy">Lucy</Option>
-          <Option value="disabled" disabled>
-            Disabled
-          </Option>
-          <Option value="Yiminghe">yiminghe</Option>
+          {/* {locationList} */}
         </Select>
 
         {/* <Link to={'/member'}> */}
