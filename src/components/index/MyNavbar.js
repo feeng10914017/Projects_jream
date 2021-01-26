@@ -38,7 +38,7 @@ function MyNavbar(props) {
             localStorage.removeItem('userData')
             console.log('Logged out Success')
             alert('登出成功')
-            sessionStorage.clear()
+            sessionStorage.removeItem('userData')
             setAuth(false)
           }}
         >
