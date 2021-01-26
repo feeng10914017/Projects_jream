@@ -1,65 +1,32 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { ListGroup, Button, Modal, Col, Row } from 'react-bootstrap'
 import Product from '../images/7418807_R-removebg-preview.png'
 
 import '../member.scss'
-function MyVerticallyCenteredModal(props) {
-  const [CartOrder, setCartOrder] = useState(
-    JSON.parse(localStorage.getItem('CartOrder'))
-  )
-  const [credit, setCredit] = useState('')
-  const finalProductCart = CartOrder.finalProductCart[0]
-  function CreditHidden(value) {
-    const Value1 = value.slice(0, 4)
-    const Value2 = value.slice(12, 16)
-    return Value1 + ' xxxx xxxx ' + Value2
+function MyVerticallyCenteredModal(
+  props,
+  {
+    serialNumber = 'MC202101512546953214',
+    orderTime = '2020/12/22 08:00:00',
+    price = '1000',
+    cardNumber = '123445677890',
+    company = 'Ninja 400',
+    rentalLocation = '台北濱江店',
+    returnLocation = '台北濱江店',
+    rentalDate = '2020/12/25',
+    returnDate = '2020/12/26',
+    rentalTime = '08:00:00',
+    returnTime = '16:00:00',
+    invoiceTitle = '捐贈發票',
+    invoiceTitle1 = '喜憨兒社會福利基金會',
+    recipientAdd = '新北市新莊區瓊林南路23號',
+    userName = '黃尚義',
+    userPhone = '09151515151',
+    userComment = '輕放謝謝',
+    invoiceTitle2 = '捐贈發票',
+    invoiceTitle3 = '喜憨兒社會福利基金會',
   }
-  const aa = <></>
-  const bb = (
-    <>
-      <Col lg={6}>
-        <Row>
-          <Col lg={4}>
-            <p>統一編號</p>
-          </Col>
-          <Col lg={8}>
-            <p>{CartOrder.invoiceValue1}</p>
-          </Col>
-        </Row>
-      </Col>
-    </>
-  )
-  const cc = (
-    <>
-      <Col lg={6}>
-        <Row>
-          <Col lg={4}>
-            <p>捐贈單位</p>
-          </Col>
-          <Col lg={8}>
-            <p>{CartOrder.invoiceValue1}</p>
-          </Col>
-        </Row>
-      </Col>
-    </>
-  )
-  const dd = (
-    <>
-      <Col lg={6}>
-        <Row>
-          <Col lg={4}>
-            <p>條碼載具</p>
-          </Col>
-          <Col lg={8}>
-            <p>{CartOrder.invoiceValue1}</p>
-          </Col>
-        </Row>
-      </Col>
-    </>
-  )
-  useEffect(() => {
-    setCredit(CreditHidden(CartOrder.cardNumber))
-  })
+) {
   return (
     <Modal
       {...props}
@@ -78,10 +45,20 @@ function MyVerticallyCenteredModal(props) {
                 <p>訂單編號</p>
               </Col>
               <Col lg={8}>
-                <p>{CartOrder.serialNumber}</p>
+                <p>{serialNumber}</p>
               </Col>
             </Row>
           </Col>
+          {/* <Col lg={6}>
+            <Row>
+              <Col lg={4}>
+                <p>訂單日期</p>
+              </Col>
+              <Col lg={8}>
+                <p>{orderTime}</p>
+              </Col>
+            </Row>
+          </Col> */}
         </Row>
         <Row>
           <Col lg={6}>
@@ -100,7 +77,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>訂單金額</p>
               </Col>
               <Col lg={8}>
-                <p>NT$ {finalProductCart.price}</p>
+                <p>NT$ {price}</p>
               </Col>
             </Row>
           </Col>
@@ -112,9 +89,17 @@ function MyVerticallyCenteredModal(props) {
                 <p>付款方式</p>
               </Col>
               <Col lg={8}>
-                <p>
-                  {CartOrder.shipping === 'delivery' ? '貨到付款' : '信用卡'}
-                </p>
+                <p>信用卡</p>
+              </Col>
+            </Row>
+          </Col>
+          <Col lg={6}>
+            <Row>
+              <Col lg={4}>
+                <p>配送方式</p>
+              </Col>
+              <Col lg={8}>
+                <p>宅配到府</p>
               </Col>
             </Row>
           </Col>
@@ -126,14 +111,20 @@ function MyVerticallyCenteredModal(props) {
                 <p>發票類型</p>
               </Col>
               <Col lg={8}>
-                <p>{CartOrder.invoiceTitle}</p>
+                <p>{invoiceTitle2}</p>
               </Col>
             </Row>
           </Col>
-          {CartOrder.invoiceTitle === '電子發票 - 個人' && aa}
-          {CartOrder.invoiceTitle === '電子發票 - 公司' && bb}
-          {CartOrder.invoiceTitle === '捐贈發票' && cc}
-          {CartOrder.invoiceTitle === '個人 - 手機條碼載具' && dd}
+          <Col lg={6}>
+            <Row>
+              <Col lg={4}>
+                <p>捐贈單位</p>
+              </Col>
+              <Col lg={8}>
+                <p>{invoiceTitle3}</p>
+              </Col>
+            </Row>
+          </Col>
         </Row>
 
         <Row>
@@ -143,7 +134,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>訂購人</p>
               </Col>
               <Col lg={8}>
-                <p>{CartOrder.userName}</p>
+                <p>{userName}</p>
               </Col>
             </Row>
           </Col>
@@ -153,7 +144,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>手機號碼</p>
               </Col>
               <Col lg={8}>
-                <p>{CartOrder.userPhone}</p>
+                <p>{userPhone}</p>
               </Col>
             </Row>
           </Col>
@@ -165,7 +156,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>收件人</p>
               </Col>
               <Col lg={8}>
-                <p>{CartOrder.recipientName}</p>
+                <p>{userName}</p>
               </Col>
             </Row>
           </Col>
@@ -175,7 +166,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>手機號碼</p>
               </Col>
               <Col lg={8}>
-                <p>{CartOrder.recipientPhone}</p>
+                <p>{userPhone}</p>
               </Col>
             </Row>
           </Col>
@@ -187,7 +178,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>收件地址</p>
               </Col>
               <Col lg={10}>
-                <p>{CartOrder.finalRecipientAdd}</p>
+                <p>{recipientAdd}</p>
               </Col>
             </Row>
           </Col>
@@ -199,7 +190,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>收件備註</p>
               </Col>
               <Col lg={10}>
-                <p>{CartOrder.userComment}</p>
+                <p>{userComment}</p>
               </Col>
             </Row>
           </Col>
@@ -211,27 +202,31 @@ function MyVerticallyCenteredModal(props) {
     </Modal>
   )
 }
-function OrderR({ status = '訂單已成立' }) {
+function OrderR({
+  img = '',
+  productName = 'LS2 Metro Evo FF324 Rapid 2019摩托車頭盔',
+  itemName = '聯名款',
+  time = '2021/01/07',
+  price = '$19000',
+  statusS = '訂單已完成',
+  status = '訂單已完成',
+}) {
   const [modalShow, setModalShow] = React.useState(false)
-  const [CartOrder, setCartOrder] = useState(
-    JSON.parse(localStorage.getItem('CartOrder'))
-  )
-  const finalProductCart = CartOrder.finalProductCart[0]
   return (
     <>
       <ListGroup.Item>
         <td className="A-OrderRImg">
-          <img src={finalProductCart.img} alt="Product" />
+          <img src={Product} alt="Product" />
         </td>
         <td className="A-OrderRP1">
-          <p>{finalProductCart.name}</p>
-          <p className="A-OrderRP2">{finalProductCart.color}</p>
+          <p>{productName}</p>
+          <p className="A-OrderRP2">{itemName}</p>
         </td>
         <td className="A-OrderRTime">
-          <p>{CartOrder.oldDate}</p>
+          <p>{time}</p>
         </td>
         <td className="A-OrderRPrice">
-          <p>{finalProductCart.price}</p>
+          <p>{price}</p>
         </td>
         <td className="A-OrderRStatus">
           <p>{status}</p>
