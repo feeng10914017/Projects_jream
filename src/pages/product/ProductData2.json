@@ -2538,34 +2538,34 @@
     "variances": [ 
       {
         "p_id": 0,
-        "color": "#6f4e37",
+        "color": "gray",
         "size": "XL",
         "images": [
           "http://localhost:3000/images/product/Glo_l_10_gra-1.jpg",
-          "http://localhost:3000/images/product/Glo_l_9_gra-2.jpg",
-          "http://localhost:3000/images/product/Glo_l_9_gra-3.jpg"
+          "http://localhost:3000/images/product/Glo_l_10_gra-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_10_gra-3.jpg"
         ],
         "amount": 10
       },
       {
         "p_id": 1,
-        "color": "#6f4e37",
+        "color": "gray",
         "size": "L",
         "images": [
           "http://localhost:3000/images/product/Glo_l_10_gra-1.jpg",
-          "http://localhost:3000/images/product/Glo_l_9_gra-2.jpg",
-          "http://localhost:3000/images/product/Glo_l_9_gra-3.jpg"
+          "http://localhost:3000/images/product/Glo_l_10_gra-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_10_gra-3.jpg"
         ],
         "amount": 10
       },
       {
         "p_id": 2,
-        "color": "#6f4e37",
+        "color": "gray",
         "size": "M",
         "images": [
           "http://localhost:3000/images/product/Glo_l_10_gra-1.jpg",
-          "http://localhost:3000/images/product/Glo_l_9_gra-2.jpg",
-          "http://localhost:3000/images/product/Glo_l_9_gra-3.jpg"
+          "http://localhost:3000/images/product/Glo_l_10_gra-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_10_gra-3.jpg"
         ],
         "amount": 10
       }
@@ -2650,7 +2650,7 @@
     ]
   },
   {
-    "id": 302,
+    "id": 303,
     "category": "騎士車靴",
     "sub_category": "四季騎士車靴",
     "title": "Ixon Assault 摩托車鞋",
