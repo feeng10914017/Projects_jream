@@ -6,35 +6,32 @@ import { ImNewspaper } from 'react-icons/im'
 
 import '../../styles/news/news.scss'
 
-function News1() {
+function News2() {
   return (
     <>
       <div className="wrapper">
         <div className="container pagination_news">
           <div className="pagination_news_content position-relative">
             <h4 className=" py-3 pagination_news bh1">
-              [會員快訊] 2021 會員專屬 農曆年全省道路救援方案
+              [新車報到] 2021年式新色登場：「TMAX 560 」
             </h4>
             <div className="news_index_detail d-flex justify-content-between pt-2">
               <div className="news_index_detail_icon_group d-flex justify-content-between">
                 <div className="category_group d-flex">
                   <ImNewspaper style={{ height: '1.5rem', width: '1.5rem' }} />
-                  <p style={{ margin: '0 0 0 5px' }}>會員快訊</p>
+                  <p style={{ margin: '0 0 0 5px' }}>新車報到</p>
                 </div>
                 &nbsp;&nbsp;&nbsp;
                 <div className="time_group d-flex">
                   <AiOutlineClockCircle
                     style={{ height: '1.5rem', width: '1.5rem' }}
                   />
-                  <p style={{ margin: '0 0 0 5px' }}>2021/01/11</p>
+                  <p style={{ margin: '0 0 0 5px' }}>2021/01/07</p>
                 </div>
               </div>
             </div>
             <br />
-            <img
-              src="http://localhost:3000/images/news/YMS_01_big.jpg"
-              alt="1"
-            />
+            <img src="http://localhost:3000/images/news/TMAX_big.jpg" alt="1" />
 
             <p className="py-5" style={{ whiteSpace: 'pre-wrap' }}>
               <p>
@@ -77,4 +74,4 @@ function News1() {
   )
 }
 
-export default News1
+export default News2
