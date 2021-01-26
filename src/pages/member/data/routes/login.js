@@ -10,7 +10,7 @@ var mysql = require('mysql')
 // require('dotenv').config()
 var conn = mysql.createConnection({
   user: 'root',
-  password: '12345',
+  password: '',
   host: 'localhost',
   database: 'jream',
 })

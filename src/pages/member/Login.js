@@ -212,10 +212,10 @@ function Login(props) {
                 type="submit"
                 className="submit A-Btn Login-button"
                 onClick={() => {
+                  window.location.reload()
                   alert('註冊成功')
                   if (member === true) {
                     setIsAuth(true)
-                    location.reload()
                   }
                 }}
               >

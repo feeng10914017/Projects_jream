@@ -35,7 +35,7 @@ function MyNavbar(props) {
           as={NavLink}
           to="/"
           onClick={() => {
-            localStorage.clear()
+            localStorage.removeItem('userData')
             console.log('Logged out Success')
             alert('登出成功')
             sessionStorage.clear()
