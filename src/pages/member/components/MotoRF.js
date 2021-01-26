@@ -17,6 +17,8 @@ function MyVerticallyCenteredModal(
     returnDate = '2020/12/26',
     rentalTime = '08:00:00',
     returnTime = '16:00:00',
+    invoiceTitle = '捐贈發票',
+    invoiceTitle1 = '喜憨兒社會福利基金會',
   }
 ) {
   return (
@@ -100,6 +102,28 @@ function MyVerticallyCenteredModal(
               </Col>
             </Row>
             {/* <div className="line"></div> */}
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={6}>
+            <Row>
+              <Col lg={4}>
+                <p>發票類型</p>
+              </Col>
+              <Col lg={8}>
+                <p>{invoiceTitle}</p>
+              </Col>
+            </Row>
+          </Col>
+          <Col lg={6}>
+            <Row>
+              <Col lg={4}>
+                <p>捐贈單位</p>
+              </Col>
+              <Col lg={8}>
+                <p>{invoiceTitle1}</p>
+              </Col>
+            </Row>
           </Col>
         </Row>
         <Row>
