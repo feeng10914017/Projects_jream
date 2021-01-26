@@ -19,7 +19,7 @@ const openNotificationWithIcon1 = (type) => {
 }
 notification.config({
   placement: 'topRight',
-  top: 100,
+  top: 105,
   duration: 6,
 })
 class ContactUs extends React.Component {

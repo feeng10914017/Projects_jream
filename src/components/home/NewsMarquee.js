@@ -17,7 +17,7 @@ function NesMarquee() {
       <Col lg={{ span: 10, offset: 1 }} md={12} xs={12} className="homeMarquee">
         <div id="breaking-news-container">
           <div id="breaking-news-colour" class="slideup animated"></div>
-          <h6 className="breaking-news-title delay-animated slidein">
+          <h6 className="breaking-news-title delay-animated slideinHome">
             &nbsp;&nbsp;News&nbsp;&nbsp;
           </h6>
           <a

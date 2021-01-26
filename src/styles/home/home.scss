@@ -215,10 +215,10 @@
     -webkit-animation-duration: 0.4s;
     -webkit-animation-fill-mode: both;
     -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 0.3s;
     -moz-animation-duration: 0.4s;
     -moz-animation-fill-mode: both;
     -moz-animation-iteration-count: 1;
-    -webkit-animation-delay: 0.3s;
     animation-duration: 0.4s;
     animation-fill-mode: both;
     animation-iteration-count: 1;
@@ -296,11 +296,11 @@
     }
   }
 
-  .slidein {
-    -webkit-animation-name: slidein;
-    -moz-animation-name: slidein;
-    -o-animation-name: slidein;
-    animation-name: slidein;
+  .slideinHome {
+    -webkit-animation-name: slideinHome;
+    -moz-animation-name: slideinHome;
+    -o-animation-name: slideinHome;
+    animation-name: slideinHome;
   }
 
   @keyframes marquee {
@@ -323,28 +323,28 @@
     animation-duration: 10s;
     animation-delay: 3s;
   }
-  @keyframes slidein {
+  @keyframes slideinHome {
     from {
-      margin-top: 0px;
+      margin-left: 800px;
     }
     to {
-      margin-left: 100px;
+      margin-top: 0px;
     }
   }
-  @-webkit-keyframes slidein {
+  @-webkit-keyframes slideinHome {
     from {
-      margin-top: 0px;
+      margin-left: 800px;
     }
     to {
-      margin-left: 100px;
+      margin-top: 0px;
     }
   }
-  @-moz-keyframes slidein {
+  @-moz-keyframes slideinHome {
     from {
-      margin-top: 0px;
+      margin-left: 800px;
     }
     to {
-      margin-left: 100px;
+      margin-top: 0px;
     }
   }
 
