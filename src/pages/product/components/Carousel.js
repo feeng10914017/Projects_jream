@@ -17,7 +17,7 @@ function ControlledCarousel(props) {
         prevIcon={<span aria-hidden="true" />}
         nextIcon={<span aria-hidden="true" />}
       >
-        <Carousel.Item style={{ height: 'calc(60vh - 80px )' }}>
+        {/* <Carousel.Item style={{ height: 'calc(60vh - 80px )' }}>
           <img
             className="d-block w-100 "
             src="/images/1.jpg"
@@ -40,7 +40,7 @@ function ControlledCarousel(props) {
             <h3 style={{ color: 'white' }}>配件商城</h3>
             <p>人身部品 一次到位</p>
           </Carousel.Caption>
-        </Carousel.Item>
+        </Carousel.Item> */}
         <Carousel.Item style={{ height: 'calc(60vh - 80px )' }}>
           <img
             className="d-block w-100 "
