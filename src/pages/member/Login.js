@@ -158,16 +158,16 @@ function Login(props) {
           <form noValidate validated={validated} onSubmit={handleSubmitS}>
             <div className="img">
               <div className="img__text m--up">
-                <h2 className="AL-h2-2">還沒加入會員嗎?</h2>
-                <p>加入會員獲得更多資訊</p>
+                <h2 className="AL-h2-2 h1">還沒加入會員嗎?</h2>
+                <p className="h6">加入會員獲得更多資訊</p>
               </div>
               <div className="img__text m--in">
-                <h2 className="AL-h2-2">已經是我們的會員?</h2>
-                <p>如果已經創建帳號，就直接登入吧~~</p>
+                <h2 className="AL-h2-2 h1">已經是我們的會員?</h2>
+                <p className="h6">如果已經創建帳號，就直接登入吧~~</p>
               </div>
               <div className="img__btn">
-                <span className="m--up">註冊</span>
-                <span className="m--in">登入</span>
+                <span className="m--up h5">註冊</span>
+                <span className="m--in h5">登入</span>
               </div>
             </div>
             <div className="form sign-up A-label">
