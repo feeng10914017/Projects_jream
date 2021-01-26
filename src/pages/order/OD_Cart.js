@@ -22,7 +22,7 @@ function OD_Cart(props) {
     reactLocalStorage.setObject('motorCart', [
       {
         id: 1,
-        img: 'Leoncino_250_gray.jpg',
+        img: '2_HORNET600.jpg',
         company: 'SUZUKI',
         model: 'GSX - S1000S',
         color: 'BROWN',
