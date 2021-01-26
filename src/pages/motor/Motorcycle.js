@@ -397,8 +397,8 @@ function Motorcycle(props) {
                   rentalTime: lazyTimer.rentalTime,
                   returnDate: lazyTimer.returnDate,
                   returnTime: lazyTimer.returnTime,
-                  rentalLocation: '台北濱江店',
-                  returnLocation: '台北濱江店',
+                  rentalLocation: lazyTimer.rentalLocation,
+                  returnLocation: lazyTimer.returnLocation,
                 })
               }
             >
