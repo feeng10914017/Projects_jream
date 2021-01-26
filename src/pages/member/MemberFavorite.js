@@ -22,7 +22,7 @@ function Favorite(auth, setAuth) {
           </th>
         </Card.Header>
         <ListGroup variant="flush" className="A-FVList">
-          <FavoriteM />
+          {/* <FavoriteM /> */}
         </ListGroup>
       </Card>{' '}
       <Link to="/member">

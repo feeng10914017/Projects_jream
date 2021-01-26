@@ -7,6 +7,9 @@ function MyVerticallyCenteredModal(props) {
   const [rentData, setRentData] = useState(
     JSON.parse(localStorage.getItem('rentalOrder'))
   )
+  const [lazyTime, setLazyTime] = useState(
+    JSON.parse(localStorage.getItem('lazyTime'))
+  )
   const [credit, setCredit] = useState('')
   const motorCart = rentData.motorCart[0]
   function CreditHidden(value) {
@@ -206,7 +209,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>取車日期</p>
               </Col>
               <Col lg={8}>
-                <p>2021-01-30</p>
+                <p>{lazyTime.rentalDate}</p>
               </Col>
             </Row>
             {/* <div className="line"></div> */}{' '}
@@ -217,7 +220,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>還車日期</p>
               </Col>
               <Col lg={8}>
-                <p>2021-02-01</p>
+                <p>{lazyTime.returnDate}</p>
               </Col>
             </Row>
             {/* <div className="line"></div> */}{' '}
@@ -230,7 +233,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>取車時間</p>
               </Col>
               <Col lg={8}>
-                <p>{motorCart.rentalTime}</p>
+                <p>{lazyTime.rentalTime}</p>
               </Col>
             </Row>
             {/* <div className="line"></div> */}{' '}
@@ -241,7 +244,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>還車時間</p>
               </Col>
               <Col lg={8}>
-                <p>{motorCart.returnTime}</p>
+                <p>{lazyTime.returnTime}</p>
               </Col>
             </Row>
             {/* <div className="line"></div> */}{' '}
@@ -271,14 +274,16 @@ function MotoR({
     <>
       <ListGroup.Item>
         <td className="A-MotoRImg">
-          {/* <img
-            src={'http://localhost:3000/images/motor/smail_img/' + motorCart.img}
-            alt="Moto"
-          /> */}
           <img
-            src={'http://localhost:3000/images/motor/' + motorCart.img}
+            src={
+              'http://localhost:3000/images/motor/small_Img/' + motorCart.img
+            }
             alt="Moto"
           />
+          {/* <img
+            src={'http://localhost:3000/images/motor/' + motorCart.img}
+            alt="Moto"
+          /> */}
         </td>
         <td className="A-MotoRNum">
           <p>{rentData.serialNumber}</p>

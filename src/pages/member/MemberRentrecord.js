@@ -34,7 +34,7 @@ function Rentrecord(auth, setAuth) {
         </Card.Header>
         <ListGroup variant="flush" className="A-MotoList">
           {localStorage.getItem('rentalOrder') && <MotoR />}
-          <MotoRF />
+          {/* <MotoRF /> */}
         </ListGroup>
       </Card>
       <Link to="/member">

@@ -34,7 +34,7 @@ function Orderrecord(auth, setAuth) {
         </Card.Header>
         <ListGroup variant="flush" className="A-OrderList">
           {localStorage.getItem('CartOrder') && <OrderR />}
-          <OrderRF />
+          {/* <OrderRF /> */}
         </ListGroup>
       </Card>
       <Link to="/member">
