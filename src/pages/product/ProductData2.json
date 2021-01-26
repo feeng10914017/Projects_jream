@@ -1894,7 +1894,7 @@
       },
       {
         "p_id": 3,
-        "color": "tan",
+        "color": "#6f4e37",
         "size": "XL",
         "images": [
           "http://localhost:3000/images/product/Glo_l_1_br-1.jpg",
@@ -1906,7 +1906,7 @@
       },
       {
         "p_id": 4,
-        "color": "tan",
+        "color": "#6f4e37",
         "size": "L",
         "images": [
           "http://localhost:3000/images/product/Glo_l_1_br-1.jpg",
@@ -1918,7 +1918,7 @@
       },
       {
         "p_id": 5,
-        "color": "tan",
+        "color": "#6f4e37",
         "size": "M",
         "images": [
           "http://localhost:3000/images/product/Glo_l_1_br-1.jpg",
@@ -1930,6 +1930,649 @@
       }
     ]
   },
+  {
+    "id": 252,
+    "category": "騎士手套",
+    "sub_category": "四季防摔手套",
+    "title": "Bogotto X-Blend 摩托車手套",
+    "description": "博戈托 X 混合摩托車手套",
+    "content": "Bogotto X-Blend 是一款輕便的皮革手套,具有復古的外觀,非常適合夏季騎行。特徵:輕便皮革手套與復古的外觀、軟聚酯襯裡、手的填充腳跟、在大量使用區域的雙層材料、帶天鵝絨的短袖口、手指穿孔",
+    "price": 1050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_2_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_b-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_b-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_b-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_2_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_b-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_b-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_b-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_2_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_b-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_b-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_b-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "#6f4e37",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_2_br-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_br-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_br-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_br-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "#6f4e37",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_2_br-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_br-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_br-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_br-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "#6f4e37",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_2_br-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_br-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_br-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_2_br-4.jpg"
+        ],
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "id": 253,
+    "category": "騎士手套",
+    "sub_category": "四季防摔手套",
+    "title": "Klim Induction 摩托車手套",
+    "description": "Klim Induction Motorcycle Gloves",
+    "content": "klim特異性騎手抓地力和全手指外管的終極手套舒適性。完美融合了保護技術和優質通風皮革。特徵：在溫暖的騎行環境中保持舒適，使用先進的防護技術, 自信地騎行，可變抓地力關節, 實現極致控制和触覺、充分通風山羊皮革街頭值得手套、通風穿孔, 可實現巨大的氣流，炎熱的天氣舒適和保護、Kwik-訪問雙調整條目、YKK®自動鎖拉鍊、硬關節啞光碳纖維保護器、Poron® xrd®指節保護、Poron® xrd®在棕櫚墊與kevlar®增強的帆船®覆蓋、手風琴伸展在手背上、多觸摸™智能設備功能、3米™斯點石™反光材料, 用於生物運動識別、手指上的外部頂部和底部縫合、食指遮陽器、四塊網格、手掌上的縫隙和手指上的外座、公里工程的騎手抓地力關節、入口輔助拉環",
+    "price": 1050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_3_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_3_b-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_3_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_3_b-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_3_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_3_b-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "maroon",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_3_bro-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_3_bro-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "maroon",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_3_bro-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_3_bro-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "maroon",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_3_bro-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_3_bro-2.jpg"
+        ],
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "id": 254,
+    "category": "騎士手套",
+    "sub_category": "四季防摔手套",
+    "title": "Klim Adventure GTX Short 摩托車手套",
+    "description": "克利姆冒險gtx 短摩托車手套",
+    "content": "終極世界旅遊, 全地形防水皮手套。極耐用的低調設計載入創新的衝擊覆蓋技術和gorex + gore grip 的卓越抓地力, 這是您的冒險騎行套件的高里程大師。特徵：大鐵+ 戈爾抓地力、保證讓你保持乾燥、山羊皮-彈力編織結構、袖口下使用的短設計、幻燈片區域中的陶瓷列印、3d 矽膠指墊、poron®xrd®棕櫚在碳纖維指節保護器下、吸濕襯墊材料、遮陽刮水器、公里工程的騎手抓地力關節、尼龍搭扣腕部、多-電子觸控™智慧裝置功能、入門級輔助迴路",
+    "price": 1050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_4_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_4_b-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_4_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_4_b-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_4_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_4_b-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "gray",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_4_gra-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_4_gra-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "gray",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_4_gra-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_4_gra-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "gray",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_4_gra-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_4_gra-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 6,
+        "color": "tan",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_4_tan-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_4_tan-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 6,
+        "color": "tan",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_4_tan-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_4_tan-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 6,
+        "color": "tan",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_4_tan-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_4_tan-2.jpg"
+        ],
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "id": 255,
+    "category": "騎士手套",
+    "sub_category": "四季防摔手套",
+    "title": "Klim Dakar Pro 摩托車手套",
+    "description": "KLIM®'s Dakar PRO Glove ",
+    "content": "KLIM® 的達喀爾PRO 手套是終極，高度耐用的皮革，越野手套旨在滿足最激進的越野騎手。PORON® XRD™ 智慧泡沫插入手指和指關節提供特殊的影響報導，而皮革主體需要越野濫用從容應對。工程綜合彈力面板與穿孔全天舒適。皮革掌面和手背、在優化通風區穿孔的皮革、拇指皮革覆蓋、尼龍拉伸面板在手上、poron® xrd™ 加放關節、 手指和手腕、掌側手指上搭接焊縫的建設、可調魔術貼手腕帶、3m™ scotchlite™ 反光材料的手指上、手掌上的拉卡。",
+    "price": 1050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_5_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_5_b-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_5_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_5_b-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_5_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_5_b-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "gray",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_5_gra-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_5_gra-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "gray",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_5_gra-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_5_gra-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "gray",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_5_gra-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_5_gra-2.jpg"
+        ],
+        "amount": 10
+      }
+      
+    ]
+  },
+  {
+    "id": 256,
+    "category": "騎士手套",
+    "sub_category": "四季防摔手套",
+    "title": "Klim Badlands Aero Pro S 摩托車手套",
+    "description": "Klim Badlands Aero Pro S Glove ",
+    "content": "KLIM® 的達喀爾PRO 手套是終極，高度耐用的皮革，越野手套旨在滿足最激進的越野騎手。PORON® XRD™ 智慧泡沫插入手指和指關節提供特殊的影響報導，而皮革主體需要越野濫用從容應對。工程綜合彈力面板與穿孔全天舒適。高級真皮穿孔手套、山羊和三重dwr 牛仔競技皮革、多電子Touch™智慧裝置功能、陶瓷印花在棕櫚抵抗磨損、熱成型多密度碳纖維硬關節、在關節上的工程陶瓷覆蓋物、Poron® XRD®掌和關節保護、3m™ Scotchlite™反射材質biomotion 識別、Velcro®袖扣、含通氣孔的矽膠關節保護、舒適掌部軟墊、克林設計的騎手手柄鉸接、輸入輔助拉環",
+    "price": 1050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_6_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_6_b-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_6_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_6_b-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_6_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_6_b-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "#6f4e37",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_6_org-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_6_org-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "#6f4e37",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_6_org-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_6_org-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "#6f4e37",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_6_org-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_6_org-2.jpg"
+        ],
+        "amount": 10
+      }
+      
+    ]
+  },
+  {
+    "id": 257,
+    "category": "騎士手套",
+    "sub_category": "四季防摔手套",
+    "title": "Bogotto Flint 摩托車手套",
+    "description": "博戈托弗林特摩托車手套 ",
+    "content": "Bogotto 弗林特是一種運動型摩托車手套，配備高品質的碳保護。特徵：運動山羊皮手套、碳指關節保護器KP，手指上的碳強化，手指上的增強網格材料，用於增加進氣量，手掌上的合成絨面革，改善抓地力、關節上的襯墊、柔軟的內襯、帶天鵝絨緊固件的短袖口、保護等級1",
+    "price": 1050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "orange",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_7_org-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_7_org-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "orange",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_7_org-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_7_org-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "orange",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_7_org-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_7_org-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_7_red-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_7_red-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_7_red-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_7_red-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_7_red-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_7_red-2.jpg"
+        ],
+        "amount": 10
+      }
+      
+    ]
+  },
+  {
+    "id": 258,
+    "category": "騎士手套",
+    "sub_category": "四季防摔手套",
+    "title": "Bogotto Sparrow 摩托車手套",
+    "description": "博戈托山雀摩托車手套",
+    "content": "Bogotto 麻雀手套為您提供一個很酷的復古外觀與現代防護設備，是炎熱的日子的完美選擇，感謝穿孔!特徵：網孔山羊皮革、Kp 關節保護器、保護器下方的軟襯墊，提高佩戴舒適性、絨面皮手掌改善抓地力、軟襯裡、帶天鵝絨緊固件的短袖口、保護等級1",
+    "price": 1050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_8_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_8_b-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_8_b-3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_8_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_8_b-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_8_b-3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_8_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_8_b-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_8_b-3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "#6f4e37",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_8_br-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_8_br-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_8_br-3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "#6f4e37",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_8_br-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_8_br-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_8_br-3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "#6f4e37",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_8_br-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_8_br-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_8_br-3.jpg"
+        ],
+        "amount": 10
+      }
+      
+    ]
+  },
+  {
+    "id": 259,
+    "category": "騎士手套",
+    "sub_category": "四季防摔手套",
+    "title": "Bogotto Classic 摩托車手套",
+    "description": "博戈托經典摩托車手套",
+    "content": "博戈托經典摩托車手套在時尚的復古設計，是所有咖啡館賽車手和復古迷的完美選擇！特徵：復古外觀牛皮、手風琴拉伸板、填充手指加固、在高要求區域的雙層材料、軟襯裡、帶天鵝絨緊固件的袖口、保護等級1（EN 13594：2015）",
+    "price": 1050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "#6f4e37",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_9_br-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_br-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_br-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_br-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "#6f4e37",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_9_br-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_br-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_br-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_br-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "#6f4e37",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_9_br-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_br-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_br-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_br-4.jpg"
+        ],
+        "amount": 10
+      }
+      
+    ]
+  },
+  {
+    "id": 260,
+    "category": "騎士手套",
+    "sub_category": "四季防摔手套",
+    "title": "Bogotto Bolt 摩托車手套",
+    "description": "博戈托博爾特摩托車手套",
+    "content": "Bogotto 博爾特是一種城市手套，結合了皮革和牛仔布，提供高保護力和佩戴舒適性。特徵：由增強牛仔和山羊皮革製成的手套，Kp 關節保護器、指關節和手掌上的填充物，手掌上的絨面革， 增加抓地力、柔軟的內襯、帶天鵝絨緊固件的短袖口、保護等級1 （EN 13594：2015）",
+    "price": 1050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "#6f4e37",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_10_gra-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_gra-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_gra-3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "#6f4e37",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_10_gra-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_gra-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_gra-3.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "#6f4e37",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_10_gra-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_gra-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_9_gra-3.jpg"
+        ],
+        "amount": 10
+      }
+      
+    ]
+  },
+
   {
     "id": 301,
     "category": "騎士車靴",
