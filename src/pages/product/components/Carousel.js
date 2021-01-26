@@ -11,7 +11,12 @@ function ControlledCarousel(props) {
   }
   if (props.location.pathname === '/product')
     return (
-      <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel
+        activeIndex={index}
+        onSelect={handleSelect}
+        prevIcon={<span aria-hidden="true" />}
+        nextIcon={<span aria-hidden="true" />}
+      >
         <Carousel.Item style={{ height: 'calc(60vh - 80px )' }}>
           <img
             className="d-block w-100 "
@@ -20,8 +25,8 @@ function ControlledCarousel(props) {
           />
 
           <Carousel.Caption>
-            <h3 style={{ color: 'white' }}>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3 style={{ color: 'white' }}>配件商城</h3>
+            <p>人身部品 一次到位</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item style={{ height: 'calc(60vh - 80px )' }}>
@@ -32,8 +37,8 @@ function ControlledCarousel(props) {
           />
 
           <Carousel.Caption>
-            <h3 style={{ color: 'white' }}>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3 style={{ color: 'white' }}>配件商城</h3>
+            <p>人身部品 一次到位</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item style={{ height: 'calc(60vh - 80px )' }}>
@@ -44,10 +49,8 @@ function ControlledCarousel(props) {
           />
 
           <Carousel.Caption>
-            <h3 style={{ color: 'white' }}>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <h3 style={{ color: 'white' }}>配件商城</h3>
+            <p>人身部品 一次到位</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

@@ -78,7 +78,7 @@ function App() {
               </Route>
 
               {/* news */}
-              <Route path="/news/1">
+              <Route path="/news/2">
                 <News1 />
               </Route>
               <Route path="/news">

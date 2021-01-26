@@ -92,7 +92,7 @@ export default function FullWidthTabs() {
               <p>2021/01/11</p>
             </div>
           </Link>
-          <Link to="/news/1" style={{ color: 'black' }}>
+          <Link to="/news/2" style={{ color: 'black' }}>
             <div className="d-flex" style={{ justifyContent: 'space-between' }}>
               <p>[新車報到] 2021年式新色登場：「TMAX 560 」</p>
               <p>2021/01/07</p>
