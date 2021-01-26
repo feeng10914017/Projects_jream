@@ -2009,6 +2009,78 @@
   {
     "id": 302,
     "category": "騎士車靴",
+    "sub_category": "四季騎士車靴",
+    "title": "Ixon Assault 摩托車鞋",
+    "description": "Ixon Assault 摩托車鞋",
+    "content": "科赫曼的反叛者是一個實用的花邊靴子與短軸。特徵:牛皮革、Hipora® Z-缸套膜、齒輪的修補程式、指關節保護 16 釐米。石油和燃料耐鞋底、100%防水、 防風、透氣、非常實用的感謝來束縛系統、背上的反光片、尼龍搭扣帶上、抗菌唯一、穿孔-黑色版本大小可用︰ 36 至 47、黑色，白色，紅色版本︰ 39 至 47",
+    "price": 2050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Boo_f_3_b-1.jpg",
+          "http://localhost:3000/images/product/Boo_f_3_b-2.jpg",
+          "http://localhost:3000/images/product/Boo_f_3_b-3.jpg"],
+          
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Boo_f_3_b-1.jpg",
+          "http://localhost:3000/images/product/Boo_f_3_b-2.jpg",
+          "http://localhost:3000/images/product/Boo_f_3_b-3.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Boo_f_3_b-1.jpg",
+          "http://localhost:3000/images/product/Boo_f_3_b-2.jpg",
+          "http://localhost:3000/images/product/Boo_f_3_b-3.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "yellow",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Boo_f_3_y-1.jpg",
+          "http://localhost:3000/images/product/Boo_f_3_y-2.jpg",
+          "http://localhost:3000/images/product/Boo_f_3_y-3.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "yellow",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Boo_f_3_y-1.jpg",
+          "http://localhost:3000/images/product/Boo_f_3_y-2.jpg",
+          "http://localhost:3000/images/product/Boo_f_3_y-3.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "yellow",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Boo_f_3_y-1.jpg",
+          "http://localhost:3000/images/product/Boo_f_3_y-2.jpg",
+          "http://localhost:3000/images/product/Boo_f_3_y-3.jpg"],
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "id": 351,
+    "category": "騎士車靴",
     "sub_category": "冬季騎士車靴",
     "title": "Büse Sport 摩托車皮靴",
     "description": "Büse Sport 摩托車皮靴",
