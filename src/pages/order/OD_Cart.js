@@ -454,13 +454,13 @@ function OD_Cart(props) {
           </Button>
         )}
       </article>
-      <Button
+      {/* <Button
         className="finalBtn  place-center"
         variant="primary"
         onClick={setLocalStorage}
       >
         取資料
-      </Button>
+      </Button> */}
       {/* Modal */}
       <Modal
         size="sm"
