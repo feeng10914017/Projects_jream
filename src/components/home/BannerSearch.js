@@ -118,6 +118,7 @@ function BannerSearch(props) {
       locatinoStart !== '' &&
       locationEnd !== '' &&
       localStorage.setItem('lazyTime', JSON.stringify(lazyTime))
+    props.history.push('/motor')
   }
 
   const display = (
