@@ -58,7 +58,10 @@ function News2() {
               </p>
             </p>
 
-            <Link to="/news" className="position-absolute btn back_to_list">
+            <Link
+              to="/news"
+              className="position-absolute btn btn01 back_to_list"
+            >
               返回公告頁
             </Link>
           </div>
