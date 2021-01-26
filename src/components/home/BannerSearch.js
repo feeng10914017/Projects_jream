@@ -114,11 +114,10 @@ function BannerSearch(props) {
       rentalLocation,
       returnLocation,
     }
-    rentalDate !== '' &&
-      locatinoStart !== '' &&
-      locationEnd !== '' &&
+    if (rentalDate !== '' && locatinoStart !== '' && locationEnd !== '') {
       localStorage.setItem('lazyTime', JSON.stringify(lazyTime))
-    props.history.push('/motor')
+      props.history.push('/motor')
+    }
   }
 
   const display = (
