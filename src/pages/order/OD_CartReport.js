@@ -167,7 +167,7 @@ function OD_CartReport() {
   )
   const display = (
     <>
-      <article className="col-10 cartReport">
+      <article className="col-10 rentalReport">
         <OrderStep step="4" />
         <Card>
           <Card.Header>

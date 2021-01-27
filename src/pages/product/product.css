@@ -145,7 +145,7 @@
   cursor: pointer;
   border: rgb(129, 129, 129) solid 1px;
   border-radius: 3px;
-  color: rgb(145, 145, 145);
+  /* color: rgb(145, 145, 145); */
 }
 
 /* -------------Detail size selector------------- */

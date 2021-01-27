@@ -9,7 +9,7 @@ router.use(bodyParser.json())
 var mysql = require('mysql')
 var conn = mysql.createConnection({
   user: 'root',
-  password: '',
+  password: '12345',
   host: 'localhost',
   database: 'jream',
 })

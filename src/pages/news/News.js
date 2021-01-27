@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { Figure } from 'react-bootstrap'
 import { AiOutlineSearch } from 'react-icons/ai'
 import NewTab from '../../components/news/NewTab'
-import './News.css'
+
 function News() {
   return (
     <>
-      <div className="C-searchDiv position-relative">
+      <div>
         <Figure>
           <Figure.Image
             // width={'auto'}

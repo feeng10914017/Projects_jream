@@ -86,7 +86,7 @@ export default function FullWidthTabs() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <Link to="#" style={{ color: 'black' }}>
+          <Link to="/news/1" style={{ color: 'black' }}>
             <div className="d-flex" style={{ justifyContent: 'space-between' }}>
               <p>[會員快訊] 2021 會員專屬 農曆年全省道路救援方案</p>
               <p>2021/01/11</p>
