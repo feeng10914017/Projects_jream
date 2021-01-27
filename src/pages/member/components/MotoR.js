@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ListGroup, Button, Modal, Col, Row } from 'react-bootstrap'
 import Moto from '../images/159983596847-removebg-preview.png'
 import '../member.scss'
@@ -7,7 +7,62 @@ function MyVerticallyCenteredModal(props) {
   const [rentData, setRentData] = useState(
     JSON.parse(localStorage.getItem('rentalOrder'))
   )
+  const [lazyTime, setLazyTime] = useState(
+    JSON.parse(localStorage.getItem('lazyTime'))
+  )
+  const [credit, setCredit] = useState('')
   const motorCart = rentData.motorCart[0]
+  function CreditHidden(value) {
+    const Value1 = value.slice(0, 4)
+    const Value2 = value.slice(12, 16)
+    return Value1 + ' xxxx xxxx ' + Value2
+  }
+  const aa = <></>
+  const bb = (
+    <>
+      <Col lg={6}>
+        <Row>
+          <Col lg={4}>
+            <p>統一編號</p>
+          </Col>
+          <Col lg={8}>
+            <p>{rentData.invoiceValue1}</p>
+          </Col>
+        </Row>
+      </Col>
+    </>
+  )
+  const cc = (
+    <>
+      <Col lg={6}>
+        <Row>
+          <Col lg={4}>
+            <p>捐贈單位</p>
+          </Col>
+          <Col lg={8}>
+            <p>{rentData.invoiceValue1}</p>
+          </Col>
+        </Row>
+      </Col>
+    </>
+  )
+  const dd = (
+    <>
+      <Col lg={6}>
+        <Row>
+          <Col lg={4}>
+            <p>條碼載具</p>
+          </Col>
+          <Col lg={8}>
+            <p>{rentData.invoiceValue1}</p>
+          </Col>
+        </Row>
+      </Col>
+    </>
+  )
+  useEffect(() => {
+    setCredit(CreditHidden(rentData.cardNumber))
+  })
   return (
     <Modal
       {...props}
@@ -29,7 +84,6 @@ function MyVerticallyCenteredModal(props) {
                 <p>{rentData.serialNumber}</p>
               </Col>
             </Row>
-            {/* <div className="line"></div> */}{' '}
           </Col>
           <Col lg={6}>
             <Row>
@@ -40,7 +94,6 @@ function MyVerticallyCenteredModal(props) {
                 <p>{rentData.oldDate}</p>
               </Col>
             </Row>
-            {/* <div className="line"></div> */}{' '}
           </Col>
         </Row>
         <Row>
@@ -85,12 +138,29 @@ function MyVerticallyCenteredModal(props) {
                 <p>付款卡號</p>
               </Col>
               <Col lg={8}>
-                <p>{rentData.cardNumber}</p>
+                <p>{credit}</p>
               </Col>
             </Row>
             {/* <div className="line"></div> */}{' '}
           </Col>
         </Row>
+        <Row>
+          <Col lg={6}>
+            <Row>
+              <Col lg={4}>
+                <p>發票類型</p>
+              </Col>
+              <Col lg={8}>
+                <p>{rentData.invoiceTitle}</p>
+              </Col>
+            </Row>
+          </Col>
+          {rentData.invoiceTitle === '電子發票 - 個人' && aa}
+          {rentData.invoiceTitle === '電子發票 - 公司' && bb}
+          {rentData.invoiceTitle === '捐贈發票' && cc}
+          {rentData.invoiceTitle === '個人 - 手機條碼載具' && dd}
+        </Row>
+
         <Row>
           <Col>
             <Row>
@@ -139,7 +209,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>取車日期</p>
               </Col>
               <Col lg={8}>
-                <p>{motorCart.rentalDate}</p>
+                <p>{lazyTime.rentalDate}</p>
               </Col>
             </Row>
             {/* <div className="line"></div> */}{' '}
@@ -150,7 +220,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>還車日期</p>
               </Col>
               <Col lg={8}>
-                <p>{motorCart.returnDate}</p>
+                <p>{lazyTime.returnDate}</p>
               </Col>
             </Row>
             {/* <div className="line"></div> */}{' '}
@@ -163,7 +233,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>取車時間</p>
               </Col>
               <Col lg={8}>
-                <p>{motorCart.rentalTime}</p>
+                <p>{lazyTime.rentalTime}</p>
               </Col>
             </Row>
             {/* <div className="line"></div> */}{' '}
@@ -174,7 +244,7 @@ function MyVerticallyCenteredModal(props) {
                 <p>還車時間</p>
               </Col>
               <Col lg={8}>
-                <p>{motorCart.returnTime}</p>
+                <p>{lazyTime.returnTime}</p>
               </Col>
             </Row>
             {/* <div className="line"></div> */}{' '}
@@ -204,14 +274,16 @@ function MotoR({
     <>
       <ListGroup.Item>
         <td className="A-MotoRImg">
-          {/* <img
-            src={'http://localhost:3000/images/motor/smail_img/' + motorCart.img}
-            alt="Moto"
-          /> */}
           <img
-            src={'http://localhost:3000/images/motor/' + motorCart.img}
+            src={
+              'http://localhost:3000/images/motor/small_Img/' + motorCart.img
+            }
             alt="Moto"
           />
+          {/* <img
+            src={'http://localhost:3000/images/motor/' + motorCart.img}
+            alt="Moto"
+          /> */}
         </td>
         <td className="A-MotoRNum">
           <p>{rentData.serialNumber}</p>

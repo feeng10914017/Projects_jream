@@ -2,7 +2,7 @@
   {
     "id": 1,
     "category": "安全帽",
-    "sub_category": "全罩式",
+    "sub_category": "全罩式安全帽",
     "title": "LS2 Metro Evo FF324 Rapid 2019摩托車頭盔",
     "description": "LS2  Metro Evo FF324",
     "content": "LS2提供多種外殼尺寸，定制尺寸的EPS保護膜以及我們的高性能，高品質的填充墊以及3D激光切割塑料泡沫，可全天完美貼合和舒適，LS2遮陽板由3D光學正確的“ A級”聚合物製成，這是一種對撞擊能量具有高抵抗力並具有最大可見度的太空探索聚合物。我們的遮陽板穩定，耐刮擦和抗紫外線。所有這些與最終的PINLOCK技術相結合，提供了最先進的防霧標準，頸墊安裝在頭盔殼的背面，可確保頭部在頭盔中的舒適位置。萬一發生意外，它會結合適當關閉的下巴帶防止頭盔解開，密度不同的泡沫被3D激光切割，完全適合駕駛員的頭部形狀。",
@@ -79,9 +79,9 @@
   {
     "id": 2,
     "category": "安全帽",
-    "sub_category": "全罩式",
+    "sub_category": "全罩式安全帽",
     "title": "Bogotto V135  D-R2 頭盔",
-    "description": "Bogotto V135 D-R2頭盔",
+    "description": "Bogotto V135 D-R2",
     "content": "Bogotto V135摩托車頭盔可完美展現您的Cafe Racer外觀！該頭盔結合了經典的外觀和現代安全功能。玻璃纖維外殼、透明的防刮擦遮陽板、通風系統、可拆洗的內膽。",
     "price": 2500,
     "variances": [
@@ -190,7 +190,7 @@
   {
     "id": 3,
     "category": "安全帽",
-    "sub_category": "全罩式",
+    "sub_category": "全罩式安全帽",
     "title": "Bogotto  V151  SPN 頭盔",
     "description": "Bogotto V151 SPN頭盔",
     "content": "Bogotto V151 SPN摩托車頭盔採用永恆的設計，並具有大量通風孔。熱塑性外殼、透明的防刮擦遮陽板、準備就緒、可拆洗的舒適內膽、通風孔",
@@ -275,11 +275,607 @@
   {
     "id": 4,
     "category": "安全帽",
-    "sub_category": "半罩式",
+    "sub_category": "全罩式安全帽",
+    "title": "Bogotto V321靈魂捕捉者越野摩托車頭盔",
+    "description": "Bogotto V321靈魂捕捉者越野摩托車頭盔",
+    "content": "新型Bogotto V321 Soulcatcher MX頭盔兼具安全性，舒適性和奢華的設計，是您旅途中探險的理想伴侶！",
+    "price": 2400,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "yellow",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_4_y-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_4_y-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_4_y-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "yellow",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_4_y-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_4_y-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_4_y-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "yellow",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_4_y-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_4_y-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_4_y-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_4_r-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_4_r-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_4_r-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_4_r-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_4_r-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_4_r-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_4_r-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_4_r-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_4_r-3.jpg"
+       
+        ],
+        "amount": 10
+      }
+     
+     
+    ]
+  },
+  {
+    "id": 5,
+    "category": "安全帽",
+    "sub_category": "全罩式安全帽",
+    "title": "鯊魚Spartan GT Replikan頭盔",
+    "description": "鯊魚Spartan GT Replikan頭盔",
+    "content": "Spartan的玻璃纖維版本在設計，安全性和空氣動力學方面提供了最佳的Shark創新。",
+    "price": 2480,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "blue",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_5_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_5_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_5_b-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "blue",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_5_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_5_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_5_b-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "blue",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_5_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_5_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_5_b-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_5_r-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_5_r-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_5_r-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_5_r-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_5_r-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_5_r-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_5_r-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_5_r-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_5_r-3.jpg"
+       
+        ],
+        "amount": 10
+      }
+     
+     
+    ]
+  },
+  {
+    "id": 6,
+    "category": "安全帽",
+    "sub_category": "全罩式安全帽",
+    "title": "LS2 FF399 Valiant Prox頭盔",
+    "description": "LS2 FF399 Valiant Prox頭盔",
+    "content": "LS2提供多種外殼尺寸，定制尺寸的EPS保護膜以及我們的高性能，高品質的填充墊以及3D激光切割塑料泡沫，可全天完美貼合和舒適",
+    "price": 4200,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "white",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_6_w-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_6_w-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_6_w-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "white",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_6_w-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_6_w-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_6_w-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "white",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_6_w-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_6_w-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_6_w-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_6_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_6_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_6_b-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_6_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_6_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_6_b-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_6_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_6_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_6_b-3.jpg"
+       
+        ],
+        "amount": 10
+      }
+     
+     
+    ]
+  },
+  {
+    "id": 7,
+    "category": "安全帽",
+    "sub_category": "全罩式安全帽",
+    "title": "LS2 FF900 Valiant II軌道頭盔",
+    "description": "LS2 FF900 Valiant II軌道頭盔",
+    "content": "LS2 Valiant II 180度前翻式模塊化摩托車頭盔是當今市場上用途最廣泛的頭盔。",
+    "price": 3026,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "white",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_7_w-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_7_w-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_7_w-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "white",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_7_w-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_7_w-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_7_w-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "white",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_7_w-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_7_w-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_7_w-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "blue",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_7_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_7_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_7_b-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "blue",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_7_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_7_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_7_b-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "blue",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_7_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_7_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_7_b-3.jpg"
+       
+        ],
+        "amount": 10
+      }
+     
+     
+    ]
+  },
+  {
+    "id": 8,
+    "category": "安全帽",
+    "sub_category": "全罩式安全帽",
+    "title": "LS2 FF900 Valiant II鎚頭盔",
+    "description": "LS2 FF900 Valiant II鎚頭盔",
+    "content": "LS2 Valiant II 180度前翻式模塊化摩托車頭盔是當今市場上用途最廣泛的頭盔。",
+    "price": 2026,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "yellow",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_8_y-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_8_y-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_8_y-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "yellow",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_8_y-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_8_y-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_8_y-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "yellow",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_8_y-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_8_y-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_8_y-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_8_r-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_8_r-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_8_r-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_8_r-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_8_r-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_8_r-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_8_r-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_8_r-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_8_r-3.jpg"
+       
+        ],
+        "amount": 10
+      }
+     
+     
+    ]
+  },
+  
+  {
+    "id": 9,
+    "category": "安全帽",
+    "sub_category": "全罩式安全帽",
+    "title": "HJC RPHA 90頭盔",
+    "description": "HJC RPHA 90頭盔",
+    "content": "使用新型HJC RPH90系統頭盔，HJC希望證明頭盔友好型頭盔可以具有非常運動的外觀，而不會影響舒適性和控制元素。因此，視野幾乎被內部遮陽板完全覆蓋，從而將眼睛在明暗之間的前後來回移動降至最低。此外，它的兩面都塗有防霧塗層，並且可以通過頭盔下邊緣的滑蓋輕鬆操作。",
+    "price": 4030,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "white",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_9_w-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_9_w-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_9_w-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "white",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_9_w-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_9_w-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_9_w-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "white",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_9_w-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_9_w-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_9_w-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_9_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_9_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_9_b-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_9_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_9_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_9_b-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_9_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_9_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_9_b-3.jpg"
+       
+        ],
+        "amount": 10
+      }
+     
+     
+    ]
+  },
+  {
+    "id": 10,
+    "category": "安全帽",
+    "sub_category": "全罩式安全帽",
+    "title": "HJC RPHA 90 Tanisk頭盔",
+    "description": "HJC RPHA 90 Tanisk頭盔",
+    "content": "使用新型HJC RPH90系統頭盔，HJC希望證明頭盔友好型頭盔可以具有非常運動的外觀，而不會影響舒適性和控制元素。因此，視野幾乎被內部遮陽板完全覆蓋，從而將眼睛在明暗之間的前後來回移動降至最低。此外，它的兩面都塗有防霧塗層，並且可以通過頭盔下邊緣的滑蓋輕鬆操作。",
+    "price": 4030,
+    "variances": [
+      {
+        "p_id": 0,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_10_r-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_10_r-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_10_r-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_10_r-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_10_r-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_10_r-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_10_r-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_10_r-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_10_r-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_10_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_10_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_10_b-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_10_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_10_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_10_b-3.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Hel_f_10_b-1.jpg",
+          "http://localhost:3000/images/product/Hel_f_10_b-2.jpg",
+          "http://localhost:3000/images/product/Hel_f_10_b-3.jpg"
+       
+        ],
+        "amount": 10
+      }
+     
+     
+    ]
+  },
+  {
+    "id": 50,
+    "category": "安全帽",
+    "sub_category": "半罩式安全帽",
     "title": "Bogotto V586 Detri Jet 頭盔",
     "description": "Bogotto V586 Detri Jet 頭盔",
     "content": "無論您是穿越城市交通還是在鄉間道路上行駛，新型Bogotto V586 Detri噴氣頭盔都是不二之選。得益於遮陽板和通風孔，它非常適合在溫暖的天氣中騎行！ 熱塑性外殼、透明的防刮擦遮陽板、集成式遮陽板、可拆洗襯裡、頭部頂部的通風孔。",
-    "price": 1680,
+    "price": 3200,
     "variances": [
       {
         "p_id": 0,
@@ -411,13 +1007,13 @@
     ]
   },
   {
-    "id": 5,
+    "id": 51,
     "category": "安全帽",
-    "sub_category": "半罩式",
+    "sub_category": "半罩式安全帽",
     "title": "Bogotto V541 Scacco Jet 頭盔",
     "description": "Bogotto V541 Scacco Jet 頭盔",
     "content": "Bogotto V541 Scacco Jet頭盔具有現代復古設計，可為您在城市的旅途中佩戴帶來高舒適度。熱塑性外殼、高峰安裝按鈕、帶襯墊的下巴、可拆洗的臉頰墊、頭部後部的護目鏡環",
-    "price": 1430,
+    "price": 2430,
     "variances": [
       {
         "p_id": 0,
@@ -595,13 +1191,13 @@
     ]
   },
   {
-    "id": 6,
+    "id": 101,
     "category": "防摔衣",
     "sub_category": "四季防摔衣",
     "title": "Spidi Bolide 摩托車皮革夾克",
     "description": "Spidi Bolide 摩托車皮革夾克",
     "content": "Spidi Ignite 是安全實驗室開發的摩托車皮夾克,專為要求最苛刻的體育車手而設計。它由高品質 1.2 毫米厚的義大利皮革製成,提供外部防護罩,配備勇士技術和內部戰士精簡保護,EN1621-1 在肩部和肘部進行測試。肩上的戰士盾牌、固定格線襯裡、帶氯丁丁物插入件的衣領、50%防水服裝、拉鍊緊固件加入夾克/褲子、平均重量 2,5 公斤、夜間騎行的反射區。",
-    "price": 1430,
+    "price": 4500,
     "variances": [
       {
         "p_id": 0,
@@ -674,13 +1270,13 @@
     ]
   },
   {
-    "id": 7,
+    "id": 102,
     "category": "防摔衣",
     "sub_category": "四季防摔衣",
     "title": "斯皮迪埃沃裡德II 摩托車皮革夾克",
     "description": "斯皮迪埃沃裡德II 摩托車皮革夾克",
     "content": "SPIDI Evorider 2 是廣受歡迎的Evorider 夾克系列的新版和更新版。我們的設計師開發了夾克，以勾選每一個盒子的性能騎手時，尋找夏季賽道日夾克，沒有安全妥協。Evorider 2 在肩部和肘部有可拆卸的保護器，肩部有勇士外部滑塊。為了增加安全性，有一個口袋的背部保護器，以及一個近距拉鍊，以附加騎馬褲，和一個捕捉系統連接騎牛仔褲。50%防水服裝、襯裡的佈置、固定格線襯裡、平均重量2，5 公斤、可調腰部緊固、高韌性彈性彈性韌性尼龍6.6，極端耐磨性牛皮，1.1/1.3 毫米厚，​​高安全性能",
-    "price": 1430,
+    "price": 4300,
     "variances": [
       {
         "p_id": 0,
@@ -780,13 +1376,13 @@
     ]
   },
   {
-    "id": 8,
+    "id": 103,
     "category": "防摔衣",
     "sub_category": "四季防摔衣",
     "title": "Spidi Warrior 2 摩托車皮夾克",
     "description": "Spidi Warrior 2 摩托車皮夾克",
     "content": "SPIDI Evorider 2 是廣受歡迎的Evorider 夾克系列的新版和更新版。我們的設計師開發了夾克，以勾選每一個盒子的性能騎手時，尋找夏季賽道日夾克，沒有安全妥協。Evorider 2 在肩部和肘部有可拆卸的保護器，肩部有勇士外部滑塊。為了增加安全性，有一個口袋的背部保護器，以及一個近距拉鍊，50%防水服裝、可調節腰部閉合、聯合區域的靈活施工、來自義大利的優質皮革、彈性尼龍 6.6,撕裂強度高,耐磨性最高、穿孔網格。",
-    "price": 1430,
+    "price": 6000,
     "variances": [
       {
         "p_id": 0,
@@ -856,61 +1452,61 @@
     ]
   },
   {
-    "id": 9,
+    "id": 151,
     "category": "防摔衣",
     "sub_category": "冬季防摔衣",
     "title": "Dainese Air Frame D1 Tex 摩托車紡織夾克",
     "description": "Dainese Air Frame D1 Tex 摩托車紡織夾克",
     "content": "當天氣變熱, 沒有比空氣框架 d1 更好的夾克, 其特點是快速乾燥織物底盤與充足的網格面板, 真正讓氣流。熱適應性是通過可拆卸的防風襯墊提供的, 而舒適性是通過一個防浮套筒系統和柔軟的插入頸部和手腕。一般特性:1個內袋2個外口袋。人 機 工程學：防浮套調整手腕上有彈性和柔軟的插入物夾克緊固系統頸部、腰部和手腕調整、頸部柔軟的刀片主要材料:網狀織物刀片快速幹布安全設備:反光刀片:g1 和 g2 背保護器的口袋、肘部和肩部的可移動複合保護器 (1621.1 標準)、溫度調節: 透氣和穿孔的 sanitized®織物襯裡、穿孔面料、可拆卸防風襯墊",
-    "price": 1430,
+    "price": 6500,
     "variances": [
     
       {
-        "p_id": 6,
-        "color": "white",
-        "size": "XL",
-        "images": [
-          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
-          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
-       
-        ],
-        "amount": 10
-      },
-      {
-        "p_id": 7,
-        "color": "white",
-        "size": "L",
-        "images": [
-          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
-          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
-       
-        ],
-        "amount": 10
-      },
-      {
-        "p_id": 8,
-        "color": "white",
-        "size": "M",
-        "images": [
-          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
-          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
-       
-        ],
-        "amount": 10
-      },
-      {
         "p_id": 0,
-        "color": "red",
+        "color": "white",
         "size": "XL",
         "images": [
-          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
-          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
        
         ],
         "amount": 10
       },
       {
         "p_id": 1,
+        "color": "white",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "white",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
         "color": "red",
         "size": "L",
         "images": [
@@ -921,7 +1517,7 @@
         "amount": 10
       },
       {
-        "p_id": 2,
+        "p_id": 5,
         "color": "red",
         "size": "M",
         "images": [
@@ -932,7 +1528,7 @@
         "amount": 10
       },
       {
-        "p_id": 3,
+        "p_id": 6,
         "color": "blue",
         "size": "XL",
         "images": [
@@ -943,7 +1539,7 @@
         "amount": 10
       },
       {
-        "p_id": 4,
+        "p_id": 7,
         "color": "blue",
         "size": "L",
         "images": [
@@ -954,7 +1550,7 @@
         "amount": 10
       },
       {
-        "p_id": 5,
+        "p_id": 8,
         "color": "blue",
         "size": "M",
         "images": [
@@ -970,78 +1566,225 @@
     ]
   },
   {
-    "id": 9,
+    "id": 152,
     "category": "防摔衣",
     "sub_category": "冬季防摔衣",
-    "title": "Dainese Air Frame D1 Tex 摩托車紡織夾克",
-    "description": "Dainese Air Frame D1 Tex 摩托車紡織夾克",
-    "content": "當天氣變熱, 沒有比空氣框架 d1 更好的夾克, 其特點是快速乾燥織物底盤與充足的網格面板, 真正讓氣流。熱適應性是通過可拆卸的防風襯墊提供的, 而舒適性是通過一個防浮套筒系統和柔軟的插入頸部和手腕。一般特性:1個內袋2個外口袋。人 機 工程學：防浮套調整手腕上有彈性和柔軟的插入物夾克緊固系統頸部、腰部和手腕調整、頸部柔軟的刀片主要材料:網狀織物刀片快速幹布安全設備:反光刀片:g1 和 g2 背保護器的口袋、肘部和肩部的可移動複合保護器 (1621.1 標準)、溫度調節: 透氣和穿孔的 sanitized®織物襯裡、穿孔面料、可拆卸防風襯墊",
-    "price": 1430,
-    "variances": [
-    
-      {
-        "p_id": 6,
-        "color": "white",
-        "size": "XL",
-        "images": [
-          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
-          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
-       
-        ],
-        "amount": 10
-      },
-      {
-        "p_id": 7,
-        "color": "white",
-        "size": "L",
-        "images": [
-          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
-          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
-       
-        ],
-        "amount": 10
-      },
-      {
-        "p_id": 8,
-        "color": "white",
-        "size": "M",
-        "images": [
-          "http://localhost:3000/images/product/Suit_winter_1_white-1.jpg",
-          "http://localhost:3000/images/product/Suit_winter_1_white-2.jpg"
-       
-        ],
-        "amount": 10
-      },
+    "title": "Rukka R.O.R. 夾克",
+    "description": "Rukka R.O.R. 夾克",
+    "content": "材料100% 透氣, 防風, 防水戈爾-TEX®2層層壓, 帶150D 輕質聚酯外織物耐磨的 500D cordura 肩部和肘部的增強。保護rukka D3O ALLBACK 背保護器、肩部和肘部保護袋下切, 適合穿在下面的保護襯衫。特種設備:軟氯丁橡膠領、透氣孔與拉鍊在胸口, 在後面, 在胳膊和在邊與2路系統、頭上、下臂寬度調整、彈性插入物在手肘、帶拉鍊和防水 TEX®袖口的袖子，可調的腰帶與尼龍搭扣，連接 RV 所有周圍，2胸袋拉鍊和2下口袋拉鍊和魔術貼搭扣關閉，1大口袋在下背部與拉鍊和魔術貼，1透明的計時卡口袋在左邊袖子與拉鍊、內有拉鍊的防水袋, 包括手機口袋",
+    "price": 6350,
+    "variances": [ 
       {
         "p_id": 0,
-        "color": "red",
+        "color": "gray",
         "size": "XL",
         "images": [
-          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
-          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+          "http://localhost:3000/images/product/Suit_winter_2_gray-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_2_gray-2.jpg"
        
         ],
         "amount": 10
       },
       {
         "p_id": 1,
-        "color": "red",
+        "color": "gray",
         "size": "L",
         "images": [
-          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
-          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+          "http://localhost:3000/images/product/Suit_winter_2_gray-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_2_gray-2.jpg"
        
         ],
         "amount": 10
       },
       {
         "p_id": 2,
+        "color": "gray",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_2_gray-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_2_gray-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "yellow",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_2_y-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_2_y-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "yellow",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_2_y-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_2_y-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "yellow",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_2_y-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_2_y-2.jpg"
+       
+        ],
+        "amount": 10
+      }  
+    ]
+  },
+  {
+    "id": 153,
+    "category": "防摔衣",
+    "sub_category": "冬季防摔衣",
+    "title": "Rukka Offlane 摩托車紡織夾克",
+    "description": "Rukka Offlane 摩托車紡織夾克",
+    "content": "魯克卡®外巷夾克是專為冒險旅遊而開發的。它由耐磨和耐撕裂的 Cordura® 500D 材料製成，側面和上背部有拉伸刀片。Rukka® Offlane 夾克具有 100% 透氣、防風和防水可拆卸 Gore-Tex ® 內膜，由溫度調節制成，®襯裡。內護套在寒冷和潮濕的條件下是理想的選擇，在較溫暖的溫度下可輕鬆拆卸。夾克有幾個外袋，後面有一個。它配備了在肩膀，側面，胸部，背部和手臂下的多功能通風選項。RUKKA ® 離線夾克標配 RUKKA® D3O®肩部和肘部的 XTR 接頭保護器，以及 RUKKA® D3O® AIR ALLBACK 背面保護器。口袋可用於改裝兩側的 D3O® CP1 胸保護器。Offlane 摩托車夾克配有 360° 拉鍊，可連接到任何 Rukka 褲子上。特徵：耐磨的Cordura® 500D外織物、帶拉鍊和網狀膜的通風開口，實現最佳通風、上臂和下臂可調節寬度，帶壓螺柱、可調節腰帶，下用下帶可用天鵝絨緊固件調節、彈性插入手臂的彎曲，在肩膀和背部、五個外袋和四個內袋、彈性戈爾-特克斯® ATS 風暴衣領，這是牢固縫製，可以隱藏在一個小懸臂口袋，如果不需要、100%透氣、防風和防水Gore-Tex膜，帶OUTLAST®溫度調節、袖子結束與Velcro關閉和戈爾-特克斯®內袖口、上臂和背部的反射器",
+    "price": 6350,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "blue",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_3_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_3_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "blue",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_3_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_3_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "blue",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_3_blue-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_3_blue-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "yellowgreen",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_3_green-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_3_green-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "yellowgreen",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_3_green-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_3_green-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "yellowgreen",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_3_green-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_3_green-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 6,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_3_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_3_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 7,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Suit_winter_3_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_3_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 8,
         "color": "red",
         "size": "M",
         "images": [
-          "http://localhost:3000/images/product/Suit_winter_1_red-1.jpg",
-          "http://localhost:3000/images/product/Suit_winter_1_red-2.jpg"
+          "http://localhost:3000/images/product/Suit_winter_3_red-1.jpg",
+          "http://localhost:3000/images/product/Suit_winter_3_red-2.jpg"
        
+        ],
+        "amount": 10
+      }  
+    ]
+  },
+  {
+    "id": 201,
+    "category": "騎士手套",
+    "sub_category": "冬季防摔手套",
+    "title": "Dainese HP2 手套",
+    "description": "Dainese HP2 手套",
+    "content": "HP2 手套是所有山地滑雪者的完美服裝。外 d-幹膜是一個有效的屏障對雪, 而內部填充在 D-熱説明滑雪者感到溫暖, 即使在激烈的活動期間不被淋濕。特徵：尼龍纖維加固、觸控式螢幕相容索引/拇指 figertip undercuff 設計",
+    "price": 1020,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_w_1_b-1.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_w_1_b-1.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_w_1_b-1.jpg"
         ],
         "amount": 10
       },
@@ -1050,9 +1793,7 @@
         "color": "blue",
         "size": "XL",
         "images": [
-          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
-          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
-       
+          "http://localhost:3000/images/product/Glo_w_1_bl-1.jpg"
         ],
         "amount": 10
       },
@@ -1061,9 +1802,7 @@
         "color": "blue",
         "size": "L",
         "images": [
-          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
-          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
-       
+          "http://localhost:3000/images/product/Glo_w_1_bl-1.jpg"
         ],
         "amount": 10
       },
@@ -1072,15 +1811,282 @@
         "color": "blue",
         "size": "M",
         "images": [
-          "http://localhost:3000/images/product/Suit_winter_1_blue-1.jpg",
-          "http://localhost:3000/images/product/Suit_winter_1_blue-2.jpg"
+          "http://localhost:3000/images/product/Glo_w_1_bl-1.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 6,
+        "color": "pink",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_w_1_p-1.jpg"
        
         ],
         "amount": 10
+      },
+      {
+        "p_id": 7,
+        "color": "pink",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_w_1_p-1.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 8,
+        "color": "pink",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_w_1_p-1.jpg"
+       
+        ],
+        "amount": 10
+      }  
+    ]
+  },
+  {
+    "id": 251,
+    "category": "騎士手套",
+    "sub_category": "四季防摔手套",
+    "title": "Bogotto Origin RT 摩托車手套",
+    "description": "博戈托經典 RT 摩托車手套",
+    "content": "博戈托起源RT摩托車手套結合了運動復古設計與高安全性和最大的舒適性!特徵:皮革手套與復古的外觀、軟聚酯襯裡、硬塑膠指關節保護器、手的填充腳跟、在大量使用區域的雙層材料、手掌上的握把補丁、手指和袖口上的手風琴面板提供舒適和靈活性、尼龍搭扣",
+    "price": 1050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_1_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_b-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_b-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_b-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_1_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_b-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_b-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_b-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_1_b-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_b-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_b-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_b-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "tan",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_1_br-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_br-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_br-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_br-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "tan",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_1_br-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_br-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_br-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_br-4.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "tan",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Glo_l_1_br-1.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_br-2.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_br-3.jpg",
+          "http://localhost:3000/images/product/Glo_l_1_br-4.jpg"
+        ],
+        "amount": 10
       }
-
-
-     
+    ]
+  },
+  {
+    "id": 301,
+    "category": "騎士車靴",
+    "sub_category": "四季騎士車靴",
+    "title": "Redbike Rebell 摩托車靴",
+    "description": "Redbike Rebell 摩托車靴",
+    "content": "科赫曼的反叛者是一個實用的花邊靴子與短軸。特徵:腳跟加固、兩側的腳踝保護、耐磨開關放大、上部材料牛皮、帶天鵝絨蓋的前綁帶、腳踝增強填充、通過塑膠造型在外側加強關節、強大的開關放大、運動鞋底、軸高度:約18釐米、大小: 37 - 47",
+    "price": 2050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Boo_f_1_b-1.jpg",
+          "http://localhost:3000/images/product/Boo_f_1_b-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Boo_f_1_b-1.jpg",
+          "http://localhost:3000/images/product/Boo_f_1_b-2.jpg"
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Boo_f_1_b-1.jpg",
+          "http://localhost:3000/images/product/Boo_f_1_b-2.jpg"
+        ],
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "id": 302,
+    "category": "騎士車靴",
+    "sub_category": "四季騎士車靴",
+    "title": "Modeka Le Mans 摩托車皮靴",
+    "description": "Modeka Le Mans 摩托車皮靴",
+    "content": "科赫曼的反叛者是一個實用的花邊靴子與短軸。特徵:牛皮革、Hipora® Z-缸套膜、齒輪的修補程式、指關節保護 16 釐米。石油和燃料耐鞋底、100%防水、 防風、透氣",
+    "price": 2050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Boo_f_2_b-1.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Boo_f_2_b-1.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Boo_f_2_b-1.jpg"],
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "id": 302,
+    "category": "騎士車靴",
+    "sub_category": "冬季騎士車靴",
+    "title": "Büse Sport 摩托車皮靴",
+    "description": "Büse Sport 摩托車皮靴",
+    "content": "特徵：脛骨和腳踝由塑膠製成的加固,鞋跟加固,齒輪杠杆加固,金屬中可更換的滑塊邊緣,可單獨調節小腿寬度, 通過尼龍搭扣緊固件和拉伸板,側向拉鍊關閉蓋,舒適的填充在腳跟和腳背,腳後跟反射器。 材料：pu 塗層皮革。引導腿的高度:約27釐米 (大小 44)。唯一：堅固的橡膠賽車鞋底插入。",
+    "price": 2050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Boo_w_1_b-1.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Boo_w_1_b-1.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Boo_w_1_b-1.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "green",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Boo_w_1_g-1.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 3,
+        "color": "green",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Boo_w_1_g-1.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 4,
+        "color": "green",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Boo_w_1_g-1.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Boo_w_1_r-1.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Boo_w_1_r-1.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 5,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Boo_w_1_r-1.jpg"],
+        "amount": 10
+      }
     ]
   }
   

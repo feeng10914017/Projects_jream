@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Parallax } from 'react-parallax'
 import { Container, Row, Col } from 'react-bootstrap'
 import BackToTop from 'react-easy-back-to-top'
@@ -9,7 +9,8 @@ import Banner from '../components/home/video/homeBanner.mp4'
 //import components
 import BannerSearch from '../components/home/BannerSearch'
 import ContactUs from '../components/home/ContactUs'
-import NesMarquee from '../components/home/NesMarquee'
+import NewsMarquee from '../components/home/NewsMarquee'
+
 //import react-icon
 import { GiSelect } from 'react-icons/gi'
 import { RiMotorbikeFill, RiArrowRightSFill } from 'react-icons/ri'
@@ -48,10 +49,10 @@ function Home() {
         {/* bannerContent */}
         <Container className="bannerTitle">
           <Col lg={{ span: 5, offset: 7 }} md={{ span: 8, offset: 2 }}>
-            <h3>踏上夢想的旅程</h3>
-            <p>
+            <h3>- 踏上夢想的旅程 -</h3>
+            {/* <p>
               想騎乘的慾望，不應受到環境左右而引響，快將將一切拋置腦後，享受映入眼簾的美景與被風撫摸的快感吧！
-            </p>
+            </p> */}
             <BannerSearch />
           </Col>
         </Container>
@@ -62,7 +63,8 @@ function Home() {
       <section className="homeSquare1">
         <Container>
           {/* marquee */}
-          <NesMarquee />
+          <NewsMarquee />
+
           {/* step */}
           <article className="homeStep">
             <Row className="stepTitle">

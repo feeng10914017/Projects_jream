@@ -17,6 +17,7 @@ import Home from './pages/Home'
 import LogIn from './pages/member/Login'
 import News from './pages/news/News'
 import News1 from './pages/news/News1'
+import News2 from './pages/news/News2'
 
 import Motor from './pages/motor/Motor'
 import Motorcycle from './pages/motor/Motorcycle'
@@ -78,8 +79,11 @@ function App() {
               </Route>
 
               {/* news */}
-              <Route path="/news/2">
+              <Route path="/news/1">
                 <News1 />
+              </Route>
+              <Route path="/news/2">
+                <News2 />
               </Route>
               <Route path="/news">
                 <News />

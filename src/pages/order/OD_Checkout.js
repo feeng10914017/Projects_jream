@@ -110,22 +110,6 @@ function OD_Checkout() {
         </Card>
         <GrandTotal type="Prod" shipping={checkTypeValue} />
 
-        {/* Modal */}
-        <Modal
-          size="sm"
-          show={smShow}
-          onHide={() => setSmShow(false)}
-          aria-labelledby="example-modal-sizes-title-sm"
-          centered
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id="example-modal-sizes-title-sm">提醒</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <p>請選擇您的「付款」與「貨運方式」</p>
-          </Modal.Body>
-        </Modal>
-
         {/* Button */}
         <Row className="justify-content-center col-10 finalBtnParent">
           <Link to="/order">
@@ -156,8 +140,22 @@ function OD_Checkout() {
             </Button>
           </Link>
         </Row>
-        <Button onClick={() => setSmShow(true)}>Small modal</Button>
       </article>
+      {/* Modal */}
+      <Modal
+        size="sm"
+        show={smShow}
+        onHide={() => setSmShow(false)}
+        aria-labelledby="example-modal-sizes-title-sm"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-modal-sizes-title-sm">提醒</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>請選擇您的「付款」與「貨運方式」</p>
+        </Modal.Body>
+      </Modal>
     </>
   )
 

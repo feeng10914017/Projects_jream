@@ -3,6 +3,7 @@ import { withRouter, Link } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
 import { Form, Col, Card, ListGroup, Button } from 'react-bootstrap'
 import OrderR from './components/OrderR'
+import OrderRF from './components/OrderRF'
 
 function Orderrecord(auth, setAuth) {
   return (
@@ -32,7 +33,8 @@ function Orderrecord(auth, setAuth) {
           </th>
         </Card.Header>
         <ListGroup variant="flush" className="A-OrderList">
-          <OrderR />
+          {localStorage.getItem('CartOrder') && <OrderR />}
+          {/* <OrderRF /> */}
         </ListGroup>
       </Card>
       <Link to="/member">
