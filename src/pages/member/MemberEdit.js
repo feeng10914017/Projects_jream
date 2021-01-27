@@ -165,8 +165,8 @@ function Information() {
                 onChange={(e) => setMemberGender(e.target.value)}
               >
                 <option disabled>請選擇</option>
-                <option value="1">男</option>
-                <option value="2">女</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
               </select>
             </td>
           </tr>
@@ -237,9 +237,6 @@ function Information() {
           </tr>
         </tbody>
       </Table>
-      <Link to="/member">
-        <button>回首頁</button>
-      </Link>
     </>
   )
 }

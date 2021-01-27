@@ -6,7 +6,7 @@ import '../member.scss'
 function MemberNav() {
   return (
     <>
-      <Nav className="justify-content-center">
+      <Nav className="justify-content-center A-fontS">
         <Nav.Item>
           <Nav.Link as={NavLink} to="/member/Information">
             個人資料

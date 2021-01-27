@@ -22,7 +22,7 @@ function OD_Cart(props) {
     reactLocalStorage.setObject('motorCart', [
       {
         id: 1,
-        img: 'Leoncino_250_gray.jpg',
+        img: '2_HORNET600.jpg',
         company: 'SUZUKI',
         model: 'GSX - S1000S',
         color: 'BROWN',
@@ -454,13 +454,13 @@ function OD_Cart(props) {
           </Button>
         )}
       </article>
-      <Button
+      {/* <Button
         className="finalBtn  place-center"
         variant="primary"
         onClick={setLocalStorage}
       >
         取資料
-      </Button>
+      </Button> */}
       {/* Modal */}
       <Modal
         size="sm"

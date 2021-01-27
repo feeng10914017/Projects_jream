@@ -2,6 +2,7 @@ import React from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
 import MotoR from './components/MotoR'
+import MotoRF from './components/MotoRF'
 import { Form, Col, Card, ListGroup, Button } from 'react-bootstrap'
 
 function Rentrecord(auth, setAuth) {
@@ -32,15 +33,18 @@ function Rentrecord(auth, setAuth) {
           </th>
         </Card.Header>
         <ListGroup variant="flush" className="A-MotoList">
-          <MotoR />
-          <MotoR />
-          <MotoR />
-          <MotoR />
-          <MotoR />
+          {localStorage.getItem('rentalOrder') && <MotoR />}
+          {/* <MotoRF /> */}
         </ListGroup>
       </Card>
       <Link to="/member">
-        <button>回首頁</button>
+        <Button
+          variant="primary"
+          type="submit"
+          style={{ margin: '16px 16px 0 0' }}
+        >
+          回首頁
+        </Button>
       </Link>
     </>
   )

@@ -22,6 +22,7 @@ function OD_CKO_Credit(props) {
                 onChange={(e) => {
                   props.setCardNumber(e.target.value)
                 }}
+                minLength="12"
                 required
               />
             </Col>
@@ -43,6 +44,7 @@ function OD_CKO_Credit(props) {
                   onChange={(e) => {
                     props.setValidityMM(e.target.value)
                   }}
+                  maxLength="2"
                   required
                 />
               </Col>
@@ -59,6 +61,7 @@ function OD_CKO_Credit(props) {
                   onChange={(e) => {
                     props.setValidityYY(e.target.value)
                   }}
+                  maxLength="2"
                   required
                 />
               </Col>
@@ -79,6 +82,7 @@ function OD_CKO_Credit(props) {
                   onChange={(e) => {
                     props.setVerificationCode(e.target.value)
                   }}
+                  maxLength="3"
                   required
                 />
               </Col>

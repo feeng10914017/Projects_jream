@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
-import { Form, Col, Card, ListGroup } from 'react-bootstrap'
+import { Form, Col, Card, ListGroup, Button } from 'react-bootstrap'
 import FavoriteM from './components/FavoriteM'
 
 function Favorite(auth, setAuth) {
@@ -22,14 +22,17 @@ function Favorite(auth, setAuth) {
           </th>
         </Card.Header>
         <ListGroup variant="flush" className="A-FVList">
-          <FavoriteM />
-          <FavoriteM />
-          <FavoriteM />
-          <FavoriteM />
+          {/* <FavoriteM /> */}
         </ListGroup>
-      </Card>
+      </Card>{' '}
       <Link to="/member">
-        <button>回首頁</button>
+        <Button
+          variant="primary"
+          type="submit"
+          style={{ margin: '16px 16px 0 0' }}
+        >
+          回首頁
+        </Button>
       </Link>
     </>
   )
