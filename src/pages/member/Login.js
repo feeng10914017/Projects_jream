@@ -1,7 +1,6 @@
 import { React, useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import LoginG from './components/Login-G'
-
+import Swal from 'sweetalert2'
 // import PropTypes from 'prop-types'
 import './login.scss'
 
@@ -101,7 +100,33 @@ function Login(props) {
 
   useEffect(() => {
     if (localStorage.getItem('userData')) {
-      alert('登入成功')
+      let timerInterval
+      Swal.fire({
+        title: '登入成功',
+        html: '跳轉到會員頁面',
+        timer: 800,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading()
+          timerInterval = setInterval(() => {
+            const content = Swal.getContent()
+            if (content) {
+              const b = content.querySelector('b')
+              if (b) {
+                b.textContent = Swal.getTimerLeft()
+              }
+            }
+          }, 100)
+        },
+        willClose: () => {
+          clearInterval(timerInterval)
+        },
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log('I was closed by the timer')
+        }
+      })
       history.push('/member')
     } else {
       console.log('請重新輸入')
@@ -213,7 +238,33 @@ function Login(props) {
                 className="submit A-Btn Login-button"
                 onClick={() => {
                   window.location.reload()
-                  alert('註冊成功')
+                  let timerInterval
+                  Swal.fire({
+                    title: '註冊成功',
+                    html: '',
+                    timer: 800,
+                    timerProgressBar: true,
+                    didOpen: () => {
+                      Swal.showLoading()
+                      timerInterval = setInterval(() => {
+                        const content = Swal.getContent()
+                        if (content) {
+                          const b = content.querySelector('b')
+                          if (b) {
+                            b.textContent = Swal.getTimerLeft()
+                          }
+                        }
+                      }, 100)
+                    },
+                    willClose: () => {
+                      clearInterval(timerInterval)
+                    },
+                  }).then((result) => {
+                    /* Read more about handling dismissals below */
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                      console.log('I was closed by the timer')
+                    }
+                  })
                   if (member === true) {
                     setIsAuth(true)
                   }
