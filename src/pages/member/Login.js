@@ -170,7 +170,7 @@ function Login(props) {
                 <span className="m--in h5">登入</span>
               </div>
             </div>
-            <div className="form sign-up A-label">
+            <div className="form2 sign-up A-label">
               <h2 className="AL-h2">加入我們</h2>
               <label>
                 <span>Name</span>
