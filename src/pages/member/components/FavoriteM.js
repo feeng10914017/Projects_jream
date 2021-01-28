@@ -32,7 +32,7 @@ function FavoriteM({
           </td>
           <td className="A-FVTd1">
             <p>
-              <span> {motorCart.company} </span>
+              <span> {motorCart.model} </span>
             </p>
           </td>
           <td className="A-FVTd2">
