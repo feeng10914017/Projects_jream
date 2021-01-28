@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { Accordion, Form, Card } from 'react-bootstrap'
 import AccordionContext from 'react-bootstrap/AccordionContext'
 import { useAccordionToggle } from 'react-bootstrap/AccordionToggle'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
-
+import { AiOutlineSearch } from 'react-icons/ai' //search_icon
 import ProductData2 from '../ProductData2.json'
 import '../product.css'
 
@@ -94,19 +95,31 @@ function Sidenav() {
 
   return (
     <>
-      <Form.Control
-        className="searchingInp border col-12"
-        type="text"
-        style={{ marginTop: '10px' }}
-        placeholder="搜尋產品"
-        value={searchQuery}
-        onKeyDown={(e) => {
-          if (e.keyCode === 13) {
-            window.location.href = `${window.location.origin}/product?search=${searchQuery}`
-          }
-        }}
-        onChange={(e) => setSearchQuery(e.target.value)}
-      />
+      <div style={{ position: 'relative' }}>
+        <Link style={{ position: 'absolute', zIndex: '10' }}>
+          <AiOutlineSearch
+            style={{ fontSize: '28px', margin: '12px 10px', color: '#b02825' }}
+            onClick={() => {
+              window.location.href = `${window.location.origin}/product?search=${searchQuery}`
+            }}
+            // onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </Link>
+
+        <Form.Control
+          className="searchingInp border col-12 pl-5"
+          type="text"
+          style={{ marginTop: '10px' }}
+          placeholder="搜尋產品"
+          value={searchQuery}
+          onKeyDown={(e) => {
+            if (e.keyCode === 13) {
+              window.location.href = `${window.location.origin}/product?search=${searchQuery}`
+            }
+          }}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      </div>
       <Accordion className="nopadding P_Sidenav">{cards}</Accordion>
     </>
   )
