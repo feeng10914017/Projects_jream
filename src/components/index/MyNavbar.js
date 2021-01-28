@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from 'react'
-
+import Swal from 'sweetalert2'
 import { IoPersonOutline } from 'react-icons/io5'
 import { IoCartOutline } from 'react-icons/io5'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
@@ -37,8 +37,34 @@ function MyNavbar(props) {
           onClick={() => {
             localStorage.removeItem('userData')
             console.log('Logged out Success')
-            alert('登出成功')
-            sessionStorage.clear()
+            let timerInterval
+            Swal.fire({
+              title: '登出成功',
+              html: '跳轉到首頁',
+              timer: 800,
+              timerProgressBar: true,
+              didOpen: () => {
+                Swal.showLoading()
+                timerInterval = setInterval(() => {
+                  const content = Swal.getContent()
+                  if (content) {
+                    const b = content.querySelector('b')
+                    if (b) {
+                      b.textContent = Swal.getTimerLeft()
+                    }
+                  }
+                }, 100)
+              },
+              willClose: () => {
+                clearInterval(timerInterval)
+              },
+            }).then((result) => {
+              /* Read more about handling dismissals below */
+              if (result.dismiss === Swal.DismissReason.timer) {
+                console.log('I was closed by the timer')
+              }
+            })
+            sessionStorage.removeItem('userData')
             setAuth(false)
           }}
         >
