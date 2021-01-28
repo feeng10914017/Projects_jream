@@ -89,84 +89,91 @@ export default function FullWidthTabs() {
         {/* -------------------------------------------------------------------------------------- */}
 
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <Link to="/news/newspages/2" style={{ color: 'black' }}>
+          <Link to="#" style={{ color: 'black' }}>
             <div className="d-flex" style={{ justifyContent: 'space-between' }}>
-              <p>[新車報到] 2021年式新色登場：「TMAX 560 」</p>
-              <p>2021/01/07</p>
-            </div>
-          </Link>
-
-          <Link to="/news/newspages/1" style={{ color: 'black' }}>
-            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
-              <p>[會員快訊] 『會員專屬』一月行事曆</p>
-              <p>2021/01/01</p>
+              <p>[門市公告] 疑難雜症剋星的機車專家！YAMAHA YSP 金旺昇</p>
+              <p>2020/10/19</p>
             </div>
           </Link>
 
           <Link to="#" style={{ color: 'black' }}>
             <div className="d-flex" style={{ justifyContent: 'space-between' }}>
-              <p>[新車報到] Pure Torque：「2021 MT-07」</p>
-              <p>2020/12/25</p>
+              <p>[會員快訊] 北區會員 VIP專屬 👉🏻 租👆🏻送✌🏻</p>
+              <p>2020/10/10</p>
             </div>
           </Link>
 
           <Link to="#" style={{ color: 'black' }}>
             <div className="d-flex" style={{ justifyContent: 'space-between' }}>
-              <p>[門市公告] 技冠群倫的機車達人！</p>
-              <p>2020/12/12</p>
+              <p>[新車報到] SYM水冷「JET X 125」旗艦登場！</p>
+              <p>2020/09/20</p>
             </div>
           </Link>
 
           <Link to="#" style={{ color: 'black' }}>
             <div className="d-flex" style={{ justifyContent: 'space-between' }}>
-              <p>[門市公告] 下班之後的好去處！</p>
-              <p>2020/12/06</p>
+              <p>[新車報到] 全路面制霸！DUCATI「Multistrada V4」改款發表</p>
+              <p>2020/09/19</p>
             </div>
           </Link>
 
           <Link to="#" style={{ color: 'black' }}>
             <div className="d-flex" style={{ justifyContent: 'space-between' }}>
-              <p>[新車報到] CRF300L CRF300 RALLY導入確定</p>
-              <p>2020/11/16</p>
+              <p>[新車報到] 歐式跑旅羊 HONDA 2021年式「FORZA 125」</p>
+              <p>2020/09/18</p>
             </div>
           </Link>
 
           <Link to="#" style={{ color: 'black' }}>
             <div className="d-flex" style={{ justifyContent: 'space-between' }}>
-              <p>[門市公告] 工欲善其事必先利其器！</p>
-              <p>2020/11/05</p>
+              <p>[門市公告] 摩托百貨精品，改裝技研專家~汐止阿松重車</p>
+              <p>2020/09/11</p>
             </div>
           </Link>
 
           <Link to="#" style={{ color: 'black' }}>
             <div className="d-flex" style={{ justifyContent: 'space-between' }}>
-              <p>[門市公告] 視客若友，待客如親，不變的堅持！</p>
-              <p>2020/11/01</p>
+              <p>
+                [門市公告]
+                堅持獨到品味，走自己的路線~MAX車系改裝專門店~661豐連車業~
+              </p>
+              <p>2020/08/31</p>
             </div>
           </Link>
 
           <Link to="#" style={{ color: 'black' }}>
             <div className="d-flex" style={{ justifyContent: 'space-between' }}>
-              <p>[新車報到] 英國猛虎登場！Triumph「TIGER 850 SPORT」</p>
-              <p>2020/10/23</p>
+              <p>[新車報到] 德裔休旅羊 BMW 2021年式「C400GT」新色</p>
+              <p>2020/08/16</p>
             </div>
           </Link>
 
           <Link to="#" style={{ color: 'black' }}>
             <div className="d-flex" style={{ justifyContent: 'space-between' }}>
-              <p>[新車報到] 換臉大作戰！DUCATI「SuperSport 950」新面貌</p>
-              <p>2020/10/23</p>
+              <p>[新車報到] 由此開始的情懷！KAWASAKI「MEGURO K3」發表</p>
+              <p>2020/08/16</p>
+            </div>
+          </Link>
+
+          <Link to="#" style={{ color: 'black' }}>
+            <div className="d-flex" style={{ justifyContent: 'space-between' }}>
+              <p>[門市公告] 中區新手租賃、安駕出遊的好選擇 </p>
+              <p>2020/08/12</p>
             </div>
           </Link>
 
           <div className="d-flex" style={{ justifyContent: 'center' }}>
             <Pagination>
-              {/* <Pagination.Prev /> */}
-              <Pagination.Item active>{1}</Pagination.Item>
+              <Pagination.Prev />
+              <Pagination.Item>
+                <Link to="/news" style={{ color: '#b02825' }}>
+                  {1}
+                </Link>
+              </Pagination.Item>
 
               {/* <Pagination.Item href="/news/1">{2}</Pagination.Item> */}
-              <Pagination.Item>
-                <Link to="/news/allNews/2" style={{ color: '#b02825' }}>
+              <Pagination.Item active>
+                <Link to="#" style={{ color: 'white' }}>
                   {2}
                 </Link>
               </Pagination.Item>

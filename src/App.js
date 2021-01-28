@@ -16,6 +16,8 @@ import ScrollToTop from './components/index/ScrollToTop'
 import Home from './pages/Home'
 import LogIn from './pages/member/Login'
 import News from './pages/news/News'
+import AllNews from './pages/news/allNews'
+
 import News1 from './pages/news/News1'
 import News2 from './pages/news/News2'
 
@@ -79,11 +81,14 @@ function App() {
               </Route>
 
               {/* news */}
-              <Route path="/news/1">
+              <Route path="/news/newspages/1">
                 <News1 />
               </Route>
-              <Route path="/news/2">
+              <Route path="/news/newspages/2">
                 <News2 />
+              </Route>
+              <Route path="/news/allNews/2">
+                <AllNews />
               </Route>
               <Route path="/news">
                 <News />
