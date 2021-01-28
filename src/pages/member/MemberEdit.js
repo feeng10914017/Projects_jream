@@ -2,6 +2,7 @@ import React, { useState, userEffect } from 'react'
 import { Link, withRouter, useHistory, useParams } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
 import { Table, Button } from 'react-bootstrap'
+import Swal from 'sweetalert2'
 
 import './member.scss'
 
@@ -95,7 +96,7 @@ function Information() {
           setMemberEmail(data)
           console.log('data', data)
           localStorage.setItem('userData', JSON.stringify(data))
-          if (data) alert('更新成功')
+          if (data) Swal.fire('更新成功', '', 'success')
           history.push('/member/information')
         } else {
           console.log('error')
@@ -134,6 +135,7 @@ function Information() {
                 type="text"
                 defaultValue={memberData.memberName}
                 onChange={(e) => setMemberName(e.target.value)}
+                className="inputT"
               />
             </td>
           </tr>
@@ -144,6 +146,7 @@ function Information() {
                 type="text"
                 defaultValue={memberData.memberNickname}
                 onChange={(e) => setMeNickname(e.target.value)}
+                className="inputT"
               />
             </td>
           </tr>
@@ -154,6 +157,7 @@ function Information() {
                 type="date"
                 defaultValue={memberData.memberBirth}
                 onChange={(e) => setMemberBirth(e.target.value)}
+                className="inputT"
               />
             </td>
           </tr>
@@ -177,6 +181,7 @@ function Information() {
                 type="email"
                 defaultValue={memberData.memberEmail}
                 onChange={(e) => setMemberEmail(e.target.value)}
+                className="inputT"
               />
             </td>
           </tr>
@@ -187,6 +192,7 @@ function Information() {
                 type="text"
                 defaultValue={memberData.memberPhone}
                 onChange={(e) => setMemberPhone(e.target.value)}
+                className="inputT"
               />
             </td>
           </tr>
@@ -197,6 +203,7 @@ function Information() {
                 type="text"
                 defaultValue={memberData.memberTelephone}
                 onChange={(e) => setMemberTelephone(e.target.value)}
+                className="inputT"
               />
             </td>
           </tr>
@@ -208,6 +215,7 @@ function Information() {
                 defaultValue={memberData.memberAddress}
                 onChange={(e) => setMemberAddress(e.target.value)}
                 size="30"
+                className="inputT"
               />
             </td>
           </tr>

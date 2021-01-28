@@ -1,7 +1,6 @@
 import { React, useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import LoginG from './components/Login-G'
-
+import Swal from 'sweetalert2'
 // import PropTypes from 'prop-types'
 import './login.scss'
 
@@ -101,7 +100,33 @@ function Login(props) {
 
   useEffect(() => {
     if (localStorage.getItem('userData')) {
-      alert('登入成功')
+      let timerInterval
+      Swal.fire({
+        title: '登入成功',
+        html: '跳轉到會員頁面',
+        timer: 800,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading()
+          timerInterval = setInterval(() => {
+            const content = Swal.getContent()
+            if (content) {
+              const b = content.querySelector('b')
+              if (b) {
+                b.textContent = Swal.getTimerLeft()
+              }
+            }
+          }, 100)
+        },
+        willClose: () => {
+          clearInterval(timerInterval)
+        },
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log('I was closed by the timer')
+        }
+      })
       history.push('/member')
     } else {
       console.log('請重新輸入')
@@ -158,19 +183,19 @@ function Login(props) {
           <form noValidate validated={validated} onSubmit={handleSubmitS}>
             <div className="img">
               <div className="img__text m--up">
-                <h2 className="AL-h2-2">還沒加入會員嗎?</h2>
-                <p>加入會員獲得更多資訊</p>
+                <h2 className="AL-h2-2 h1">還沒加入會員嗎?</h2>
+                <p className="h6">加入會員獲得更多資訊</p>
               </div>
               <div className="img__text m--in">
-                <h2 className="AL-h2-2">已經是我們的會員?</h2>
-                <p>如果已經創建帳號，就直接登入吧~~</p>
+                <h2 className="AL-h2-2 h1">已經是我們的會員?</h2>
+                <p className="h6">如果已經創建帳號，就直接登入吧~~</p>
               </div>
               <div className="img__btn">
-                <span className="m--up">註冊</span>
-                <span className="m--in">登入</span>
+                <span className="m--up h5">註冊</span>
+                <span className="m--in h5">登入</span>
               </div>
             </div>
-            <div className="form sign-up A-label">
+            <div className="form2 sign-up A-label">
               <h2 className="AL-h2">加入我們</h2>
               <label>
                 <span>Name</span>
@@ -213,7 +238,33 @@ function Login(props) {
                 className="submit A-Btn Login-button"
                 onClick={() => {
                   window.location.reload()
-                  alert('註冊成功')
+                  let timerInterval
+                  Swal.fire({
+                    title: '註冊成功',
+                    html: '',
+                    timer: 800,
+                    timerProgressBar: true,
+                    didOpen: () => {
+                      Swal.showLoading()
+                      timerInterval = setInterval(() => {
+                        const content = Swal.getContent()
+                        if (content) {
+                          const b = content.querySelector('b')
+                          if (b) {
+                            b.textContent = Swal.getTimerLeft()
+                          }
+                        }
+                      }, 100)
+                    },
+                    willClose: () => {
+                      clearInterval(timerInterval)
+                    },
+                  }).then((result) => {
+                    /* Read more about handling dismissals below */
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                      console.log('I was closed by the timer')
+                    }
+                  })
                   if (member === true) {
                     setIsAuth(true)
                   }

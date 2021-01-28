@@ -9,7 +9,7 @@ function MyVerticallyCenteredModal(
     serialNumber = 'MC202101512546953214',
     orderTime = '2020/12/22 08:00:00',
     price = '1000',
-    cardNumber = '123445677890',
+    cardNumber = '1234XXXXXXXX',
     company = 'Ninja 400',
     rentalLocation = '台北濱江店',
     returnLocation = '台北濱江店',

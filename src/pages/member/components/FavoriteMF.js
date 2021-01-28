@@ -13,26 +13,21 @@ function FavoriteM({
   News = '2021 會員專屬 農曆年全省道路救援方案',
   News2 = '2021年式新色登場：「TMAX 560 」',
 }) {
-  const [rentData, setRentData] = useState(
-    JSON.parse(localStorage.getItem('rentalOrder'))
-  )
-  const motorCart = rentData.motorCart[0]
+  // const [rentData, setRentData] = useState(
+  //   JSON.parse(localStorage.getItem('rentalOrder'))
+  // )
+  // const motorCart = rentData.motorCart[0]
   return (
     <>
       <ListGroup.Item>
         <tr>
           <td className="A-FVImg" rowSpan="2">
-            <img
-              src={
-                'http://localhost:3000/images/motor/small_Img/' + motorCart.img
-              }
-              alt="Moto"
-            />
+            <img src={Moto} alt="Moto" />
             <FaStar className="A-FVStar" />
           </td>
           <td className="A-FVTd1">
             <p>
-              <span> {motorCart.company} </span>
+              <span> {MotoN} </span>
             </p>
           </td>
           <td className="A-FVTd2">
@@ -42,7 +37,7 @@ function FavoriteM({
           </td>
           <td className="A-FVTd3">
             <p>
-              價錢: <span>{motorCart.rentalPrice} /天</span>
+              價錢: <span>{Price} /天</span>
             </p>
           </td>
         </tr>
