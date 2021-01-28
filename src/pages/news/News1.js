@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineClockCircle, AiOutlineFolderOpen } from 'react-icons/ai'
-import RelatedNews from '../../components/news/RelatedNews'
+import RelatedMember from '../../components/news/RelatedMember'
 import { ImNewspaper } from 'react-icons/im'
 
 import '../../styles/news/news.scss'
@@ -65,7 +65,7 @@ function News1() {
           <div className="related_news">
             <h2 className="bh2">相關新聞</h2>
             <ul className="d-flex justify-content-between">
-              <RelatedNews />
+              <RelatedMember />
             </ul>
           </div>
         </div>

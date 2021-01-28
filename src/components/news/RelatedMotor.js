@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 import { AiOutlineClockCircle } from 'react-icons/ai'
 
-function RelatedNews(props) {
+function RelatedMotor(props) {
   console.log(444, props.related)
   let news = props.related ? props.related : ''
 
@@ -26,12 +26,12 @@ function RelatedNews(props) {
                 <AiOutlineClockCircle
                   style={{ height: '1.5rem', width: '1.5rem' }}
                 />
-                <p style={{ margin: '0 0 0 5px' }}>2021/01/11</p>
+                <p style={{ margin: '0 0 0 5px' }}>2020/12/25</p>
               </div>
             </div>
             <div className="related_title">
               <h6 style={{ whiteSpace: 'pre-wrap' }} className="bh6">
-                2021 會員專屬 農曆年全省道路救援方案
+                Pure Torque：「2021 MT-07」
               </h6>
             </div>
           </div>
@@ -78,12 +78,12 @@ function RelatedNews(props) {
                 <AiOutlineClockCircle
                   style={{ height: '1.5rem', width: '1.5rem' }}
                 />
-                <p style={{ margin: '0 0 0 5px' }}>2020/04/05</p>
+                <p style={{ margin: '0 0 0 5px' }}>2020/10/23</p>
               </div>
             </div>
             <div className="related_title">
               <h6 style={{ whiteSpace: 'pre-wrap' }} className="bh6">
-                堅持獨到品味，走自己的路線~MAX車系改裝專門店~661豐連車業~
+                英國猛虎登場！Triumph「TIGER 850 SPORT」
               </h6>
             </div>
           </div>
@@ -104,12 +104,12 @@ function RelatedNews(props) {
                 <AiOutlineClockCircle
                   style={{ height: '1.5rem', width: '1.5rem' }}
                 />
-                <p style={{ margin: '0 0 0 5px' }}>2019/05/21</p>
+                <p style={{ margin: '0 0 0 5px' }}>2020/10/23</p>
               </div>
             </div>
             <div className="related_title">
               <h6 style={{ whiteSpace: 'pre-wrap' }} className="bh6">
-                大型重型機車考照
+                換臉大作戰！DUCATI「SuperSport 950」新面貌
               </h6>
             </div>
           </div>
@@ -118,4 +118,4 @@ function RelatedNews(props) {
     </>
   )
 }
-export default RelatedNews
+export default RelatedMotor
