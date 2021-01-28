@@ -11,7 +11,7 @@ class MotorThreeDX extends React.Component {
     return (
       <div>
         <Coverflow
-          height={500}
+          height={432}
           displayQuantityOfSide={1}
           navigation={false}
           enableHeading={true}

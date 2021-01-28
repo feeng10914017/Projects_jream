@@ -3,6 +3,7 @@ import { withRouter, Link } from 'react-router-dom'
 import MemberNav from './components/MemberNav'
 import { Form, Col, Card, ListGroup, Button } from 'react-bootstrap'
 import FavoriteM from './components/FavoriteM'
+import FavoriteMF from './components/FavoriteMF'
 
 function Favorite(auth, setAuth) {
   return (
@@ -22,9 +23,10 @@ function Favorite(auth, setAuth) {
           </th>
         </Card.Header>
         <ListGroup variant="flush" className="A-FVList">
-          {/* <FavoriteM /> */}
+          {localStorage.getItem('rentalOrder') && <FavoriteM />}
+          <FavoriteMF />
         </ListGroup>
-      </Card>{' '}
+      </Card>
       <Link to="/member">
         <Button
           variant="primary"
