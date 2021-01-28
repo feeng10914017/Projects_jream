@@ -63,7 +63,7 @@ function MyVerticallyCenteredModal(
                 <p>訂單狀態</p>
               </Col>
               <Col lg={8}>
-                <p>待領車</p>
+                <p>已還車</p>
               </Col>
             </Row>
             {/* <div className="line"></div> */}

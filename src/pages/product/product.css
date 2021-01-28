@@ -96,7 +96,7 @@
 }
 
 .P_img-container:hover {
-  background-size: 150%;
+  background-size: 200%;
   border: 1px solid #ddd;
   cursor: zoom-in;
 }

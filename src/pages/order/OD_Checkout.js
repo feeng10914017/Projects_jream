@@ -87,7 +87,7 @@ function OD_Checkout() {
                     onClick={handleChangeChecked}
                   />
                   <p>
-                    <span>滿1000元免運費，運費 $0</span>
+                    <span>運費 $ 60</span>
                   </p>
                 </Row>
                 <div className="line"></div>
@@ -101,7 +101,7 @@ function OD_Checkout() {
                     onClick={handleChangeChecked}
                   />
                   <p>
-                    <span>滿1000元免運費，運費 $0</span>
+                    <span>運費 $ 150</span>
                   </p>
                 </Row>
               </Form.Group>

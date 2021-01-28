@@ -125,7 +125,7 @@ function OD_CartReport() {
       <Col lg={6}>
         <Row>
           <Col lg={4}>
-            <p>統依編號</p>
+            <p>統一編號</p>
           </Col>
           <Col lg={8}>
             <p>{invoiceValue1}</p>
