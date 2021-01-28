@@ -1753,6 +1753,96 @@
     ]
   },
   {
+    "id": 170,
+    "category": "防摔褲",
+    "sub_category": "四季防摔褲",
+    "title": "Arlen Ness Sugello摩托車皮褲",
+    "description": "Arlen Ness Sugello摩托車皮褲",
+    "content": "Arlen Ness Sugello摩托車褲子由高級牛皮製成，是高速和急轉彎的完美伴侶！特徵:、全粒面牛皮、T部和膝蓋處的Super Tense-Tex彈力面料、舒適，透氣的內部固定網眼襯裡、可拆卸的襯墊、經過認證的臀部和膝蓋內部保護器、膝蓋和后腰的彈力面料板、尾骨填充、腰部以下2個口袋、腰圍拉鍊、魔術貼腰圍調節器、特殊化、臀部和膝蓋的內部保護器、可移動的膝蓋滑塊、膝蓋上的外部鎂合金滑塊",
+    "price": 6350,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "red",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Pant_f_red-1.jpg",
+          "http://localhost:3000/images/product/Pant_f_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "red",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Pant_f_red-1.jpg",
+          "http://localhost:3000/images/product/Pant_f_red-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "red",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Pant_f_red-1.jpg",
+          "http://localhost:3000/images/product/Pant_f_red-2.jpg"
+       
+        ],
+        "amount": 10
+      }
+     
+    ]
+  },
+  {
+    "id": 180,
+    "category": "防摔褲",
+    "sub_category": "冬季防摔褲",
+    "title": "IXS Sport LT RS-1000摩托車皮革/紡織褲",
+    "description": "IXS Sport LT RS-1000摩托車皮革/紡織褲",
+    "content": "運動型紡織褲子，配以皮革增強。特徵：衝擊區域內的耐磨聚酯纖維與全粒面牛皮相結合，透氣的網眼襯裡可提供最佳的身體氣，候座椅上的雙層皮革；人體工程學，運動型合身部，膝蓋後部和小腿上有舒適的彈力襯墊，可增加活動性，鬆緊手風琴腰帶，長連接拉鍊，隱藏式擋風板的前拉鍊，拉鍊下擺寬度調節，魔術貼附件，用於膝蓋滑塊，肩部和肘部保護器impacTec ETP-02，已通過EN 1621-1：2012認證，等級2，髖部保護袋（可選配impacTec ETP-03（X99513-HIP），已通過EN 1621-2：2012認證，等級1），材料：滌綸、牛皮",
+    "price": 6350,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Pant_w_b-1.jpg",
+          "http://localhost:3000/images/product/Pant_w_b-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Pant_w_b-1.jpg",
+          "http://localhost:3000/images/product/Pant_w_b-2.jpg"
+       
+        ],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Pant_w_b-1.jpg",
+          "http://localhost:3000/images/product/Pant_w_b-2.jpg"
+       
+        ],
+        "amount": 10
+      }
+     
+    ]
+  },
+  {
     "id": 201,
     "category": "騎士手套",
     "sub_category": "冬季防摔手套",
@@ -2787,7 +2877,7 @@
         "amount": 10
       },
       {
-        "p_id": 5,
+        "p_id": 6,
         "color": "red",
         "size": "L",
         "images": [
@@ -2795,7 +2885,7 @@
         "amount": 10
       },
       {
-        "p_id": 5,
+        "p_id": 7,
         "color": "red",
         "size": "M",
         "images": [
@@ -2803,6 +2893,79 @@
         "amount": 10
       }
     ]
+  },
+  {
+    "id": 371,
+    "category": "護具",
+    "sub_category": "肘部護具",
+    "title": "Alpinestars肘滑器",
+    "description": "Alpinestars肘滑器",
+    "content": "特徵：肘部由塑膠製成的加固,鞋跟加固,齒輪杠杆加固,金屬中可更換的滑塊邊緣,可單獨調節手臂寬度, 通過尼龍搭扣緊固件和拉伸板,側向拉鍊關閉蓋,舒適的填充在腳跟和腳背,腳後跟反射器。 材料：pu 塗層皮革。引導腿的高度:約27釐米 (大小 44)。",
+    "price": 1050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "black",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Protect_h_1_b-1.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "black",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Protect_h_1_b-1.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "black",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Protect_h_1_b-1.jpg"],
+        "amount": 10
+      }
+     
+    ]
+  },
+  {
+    "id": 371,
+    "category": "護具",
+    "sub_category": "膝部護具",
+    "title": "Bogotto運動護膝",
+    "description": "Bogotto運動護膝",
+    "content": "特徵：脛骨和腳踝由塑膠製成的加固,鞋跟加固,齒輪杠杆加固,金屬中可更換的滑塊邊緣,可單獨調節小腿寬度, 通過尼龍搭扣緊固件和拉伸板,側向拉鍊關閉蓋,舒適的填充在腳跟和腳背,腳後跟反射器。 材料：pu 塗層皮革。引導腿的高度:約27釐米 (大小 44)。唯一：堅固的橡膠賽車鞋底插入。",
+    "price": 1050,
+    "variances": [ 
+      {
+        "p_id": 0,
+        "color": "blue",
+        "size": "XL",
+        "images": [
+          "http://localhost:3000/images/product/Protect_n_1_bl-1.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 1,
+        "color": "blue",
+        "size": "L",
+        "images": [
+          "http://localhost:3000/images/product/Protect_n_1_bl-1.jpg"],
+        "amount": 10
+      },
+      {
+        "p_id": 2,
+        "color": "blue",
+        "size": "M",
+        "images": [
+          "http://localhost:3000/images/product/Protect_n_1_bl-1.jpg"],
+        "amount": 10
+      }
+     
+    ]
   }
+  
   
 ]
