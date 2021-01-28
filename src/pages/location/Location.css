@@ -37,6 +37,7 @@ li {
 .SearchingBtn {
   position: absolute;
   right: 16px;
+  margin-top: 2px;
 }
 
 .L_nav-menu {
