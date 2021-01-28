@@ -13,7 +13,7 @@ function News2() {
         <div className="container pagination_news">
           <div className="pagination_news_content position-relative">
             <h4 className=" py-3 pagination_news bh1">
-              [新車報到] 2021年式新色登場：「TMAX 560 」
+              [新車報到] 英國猛虎登場！Triumph「TIGER 850 SPORT」
             </h4>
             <div className="news_index_detail d-flex justify-content-between pt-2">
               <div className="news_index_detail_icon_group d-flex justify-content-between">

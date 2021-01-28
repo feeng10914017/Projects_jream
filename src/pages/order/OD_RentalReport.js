@@ -340,7 +340,7 @@ function OD_RentalReport() {
               繼續逛逛
             </Button>
           </Link>
-          <Link to="/member">
+          <Link to="/member/rent-record">
             <Button
               className="finalBtn finalBtnTwo place-center"
               variant="primary"

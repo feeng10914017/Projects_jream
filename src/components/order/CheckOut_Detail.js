@@ -39,6 +39,8 @@ function CheckOut_Detail(props) {
       ? setProductShipping('60')
       : shipping[0] === 'delivery'
       ? setProductShipping('150')
+      : shipping[0] === 'none'
+      ? setProductShipping('0')
       : setProductShipping('error')
   }, [shipping])
   // 商品 小計

@@ -10,7 +10,7 @@ function FavoriteM({
   Displacement = '500',
   Price = '1000',
   MotoN = 'Ninja® 400',
-  News = '2021 會員專屬 農曆年全省道路救援方案',
+  News = '『會員專屬』一月行事曆',
   News2 = '2021年式新色登場：「TMAX 560 」',
 }) {
   const [rentData, setRentData] = useState(
@@ -51,12 +51,12 @@ function FavoriteM({
             <p>關於JREAM的最新消息</p>
             <ul>
               <li>
-                <Link to="/news/1">
+                <Link to="/news/newspages/1">
                   <p>{News}</p>
                 </Link>
               </li>
               <li>
-                <Link to="/news/2">
+                <Link to="/news/newspages/2">
                   <p>{News2}</p>
                 </Link>
               </li>

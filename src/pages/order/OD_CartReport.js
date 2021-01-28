@@ -349,7 +349,7 @@ function OD_CartReport() {
               繼續逛逛
             </Button>
           </Link>
-          <Link to="/member">
+          <Link to="/member/order-record">
             <Button
               className="finalBtn finalBtnTwo place-center"
               variant="primary"

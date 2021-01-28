@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Col } from 'react-bootstrap'
 import $ from 'jquery'
+import { Link } from 'react-router-dom'
+
 function NesMarquee() {
   const [replace, setReplace] = useState(0)
   function setTimeFunction() {
@@ -18,23 +20,28 @@ function NesMarquee() {
   }, [])
   const aa = (
     <>
-      <p>
-        [會員快訊]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2021&nbsp;&nbsp;&nbsp;會員專屬&nbsp;&nbsp;&nbsp;農曆年全省道路救援方案&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2021/01/11
-      </p>
+      <Link to="/news/newspages/1" style={{ color: 'black' }}>
+        <p>
+          [會員快訊]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2021&nbsp;&nbsp;&nbsp;會員專屬&nbsp;&nbsp;&nbsp;一月行事曆&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2021/01/01
+        </p>
+      </Link>
     </>
   )
   const bb = (
     <>
-      <p>
-        [新車報到]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2021年式新色登場：「TMAX&nbsp;&nbsp;&nbsp;560
-        」&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2021/01/07
-      </p>
+      <Link to="/news/newspages/2" style={{ color: 'black' }}>
+        <p>
+          [新車報到]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2021年式新色登場：「TMAX&nbsp;&nbsp;&nbsp;560
+          」&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2021/01/07
+        </p>
+      </Link>
     </>
   )
   const cc = (
     <>
       <p>
-        [門市公告]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深耕竹北二十八年，機車保養第一首選&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2020/07/07
+        [新車報到]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;英國猛虎登場！Triumph「TIGER 850
+        SPORT」&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2020/10/23
       </p>
     </>
   )

@@ -7,7 +7,7 @@ function MyVerticallyCenteredModal(
   props,
   {
     serialNumber = 'MC202101512546953214',
-    oldDate = '2020/12/22 08:00:00',
+    oldDate = '2020/12/22 08:00',
     rentalPrice = '1000',
     cardNumber = '1234 xxxx xxxx',
     company = 'Ninja 400',
@@ -224,7 +224,7 @@ function MyVerticallyCenteredModal(
 function MotoR({
   img = '',
   rentnumbering = 'MC202101512546953214',
-  time = '2020/12/25 08:00:00',
+  time = '2020/12/25 08:00',
   statusS = '租賃完成',
   status = '預約完成',
 }) {

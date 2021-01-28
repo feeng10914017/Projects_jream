@@ -57,6 +57,8 @@ function CheckOut_GrandTotal(props) {
       ? setProductShipping('60')
       : propsShipping[0] === 'delivery'
       ? setProductShipping('150')
+      : propsShipping[0] === 'none'
+      ? setProductShipping('0')
       : setProductShipping('error')
   }, [propsShipping])
 
