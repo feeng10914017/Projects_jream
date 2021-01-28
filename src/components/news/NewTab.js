@@ -145,7 +145,7 @@ export default function FullWidthTabs() {
             </div>
           </Link>
 
-          <Link to="#" style={{ color: 'black' }}>
+          <Link to="/news/newspages/3" style={{ color: 'black' }}>
             <div className="d-flex" style={{ justifyContent: 'space-between' }}>
               <p>[新車報到] 英國猛虎登場！Triumph「TIGER 850 SPORT」</p>
               <p>2020/10/23</p>
@@ -407,7 +407,7 @@ export default function FullWidthTabs() {
               <p>2020/11/16</p>
             </div>
           </Link>
-          <Link to="#" style={{ color: 'black' }}>
+          <Link to="/news/newspages/3" style={{ color: 'black' }}>
             <div className="d-flex" style={{ justifyContent: 'space-between' }}>
               <p>[新車報到] 英國猛虎登場！Triumph「TIGER 850 SPORT」</p>
               <p>2020/10/23</p>

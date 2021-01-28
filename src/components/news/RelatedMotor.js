@@ -15,7 +15,7 @@ function RelatedMotor(props) {
         <li>
           <div className="related_img">
             <img
-              src="http://localhost:3000/images/news/neww2.jpg"
+              src="http://localhost:3000/images/news/motor3.jpg"
               alt=""
               className="object-fit"
             />
@@ -63,11 +63,11 @@ function RelatedMotor(props) {
           </div>
         </li>
       </NavLink>
-      <NavLink to="/news/2" className="a">
+      <NavLink to="/news/newspages/3" className="a">
         <li>
           <div className="related_img">
             <img
-              src="http://localhost:3000/images/news/neww1.jpg"
+              src="http://localhost:3000/images/news/motor2.jpg"
               alt=""
               className="object-fit"
             />
@@ -93,7 +93,7 @@ function RelatedMotor(props) {
         <li>
           <div className="related_img">
             <img
-              src="http://localhost:3000/images/news/neww4.png"
+              src="http://localhost:3000/images/news/motor4.jpg"
               alt=""
               className="object-fit"
             />

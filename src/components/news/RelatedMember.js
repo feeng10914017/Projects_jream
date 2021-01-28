@@ -26,12 +26,12 @@ function RelatedMember(props) {
                 <AiOutlineClockCircle
                   style={{ height: '1.5rem', width: '1.5rem' }}
                 />
-                <p style={{ margin: '0 0 0 5px' }}>2021/01/11</p>
+                <p style={{ margin: '0 0 0 5px' }}>2020/10/10</p>
               </div>
             </div>
             <div className="related_title">
               <h6 style={{ whiteSpace: 'pre-wrap' }} className="bh6">
-                2021 會員專屬 農曆年全省道路救援方案
+                北區會員 VIP專屬 👉🏻 租👆🏻送✌🏻
               </h6>
             </div>
           </div>
@@ -52,12 +52,12 @@ function RelatedMember(props) {
                 <AiOutlineClockCircle
                   style={{ height: '1.5rem', width: '1.5rem' }}
                 />
-                <p style={{ margin: '0 0 0 5px' }}>2020/11/16</p>
+                <p style={{ margin: '0 0 0 5px' }}>2020/08/03</p>
               </div>
             </div>
             <div className="related_title">
               <h6 style={{ whiteSpace: 'pre-wrap' }} className="bh6">
-                CRF300L CRF300 RALLY導入確定
+                2020振興無極限 超狂翻倍購車專案
               </h6>
             </div>
           </div>
@@ -78,12 +78,12 @@ function RelatedMember(props) {
                 <AiOutlineClockCircle
                   style={{ height: '1.5rem', width: '1.5rem' }}
                 />
-                <p style={{ margin: '0 0 0 5px' }}>2020/04/05</p>
+                <p style={{ margin: '0 0 0 5px' }}>2020/07/13</p>
               </div>
             </div>
             <div className="related_title">
               <h6 style={{ whiteSpace: 'pre-wrap' }} className="bh6">
-                堅持獨到品味，走自己的路線~MAX車系改裝專門店~661豐連車業~
+                「YAMAHA LIFE APP」新註冊車主歡迎禮
               </h6>
             </div>
           </div>
