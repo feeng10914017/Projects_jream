@@ -10,6 +10,7 @@ import Banner from '../components/home/video/homeBanner.mp4'
 import BannerSearch from '../components/home/BannerSearch'
 import ContactUs from '../components/home/ContactUs'
 import NewsMarquee from '../components/home/NewsMarquee'
+// import testMarquee from '../components/home/testMarquee'
 
 //import react-icon
 import { GiSelect } from 'react-icons/gi'
@@ -183,6 +184,7 @@ function Home() {
               </div>
             </Col>
           </article>
+
           {/* ABOUT */}
           <article className="homeAbout">
             <Col md={{ span: 10, offset: 1 }}>
@@ -251,6 +253,8 @@ function Home() {
         margin="32px"
         fontSize="19px"
       />
+
+      {/* <testMarquee /> */}
     </>
   )
 }
