@@ -238,9 +238,6 @@ function Login(props) {
                 className="submit A-Btn Login-button"
                 onClick={() => {
                   window.location.reload()
-<<<<<<< HEAD
-                  alert('註冊成功')
-=======
                   let timerInterval
                   Swal.fire({
                     title: '註冊成功',
@@ -268,7 +265,6 @@ function Login(props) {
                       console.log('I was closed by the timer')
                     }
                   })
->>>>>>> a8c37a83b69ff93e45acb594dfc838af09bf64e8
                   if (member === true) {
                     setIsAuth(true)
                   }
