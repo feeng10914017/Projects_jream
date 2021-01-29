@@ -21,6 +21,7 @@ import AllNews from './pages/news/allNews'
 import News1 from './pages/news/News1'
 import News2 from './pages/news/News2'
 import News3 from './pages/news/News3'
+import News4 from './pages/news/News4'
 
 import Motor from './pages/motor/Motor'
 import Motorcycle from './pages/motor/Motorcycle'
@@ -90,6 +91,9 @@ function App() {
               </Route>
               <Route path="/news/newspages/3">
                 <News3 />
+              </Route>
+              <Route path="/news/newspages/4">
+                <News4 />
               </Route>
               <Route path="/news/allNews/2">
                 <AllNews />

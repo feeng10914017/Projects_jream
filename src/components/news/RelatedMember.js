@@ -37,11 +37,11 @@ function RelatedMember(props) {
           </div>
         </li>
       </NavLink>
-      <NavLink to="/news/2" className="a">
+      <NavLink to="/news/newspages/4" className="a">
         <li>
           <div className="related_img">
             <img
-              src="http://localhost:3000/images/news/bigpage.jpg"
+              src="http://localhost:3000/images/news/12345.jpg"
               alt=""
               className="object-fit"
             />
@@ -93,7 +93,7 @@ function RelatedMember(props) {
         <li>
           <div className="related_img">
             <img
-              src="http://localhost:3000/images/news/neww4.png"
+              src="http://localhost:3000/images/news/123456.jpg"
               alt=""
               className="object-fit"
             />
@@ -104,12 +104,12 @@ function RelatedMember(props) {
                 <AiOutlineClockCircle
                   style={{ height: '1.5rem', width: '1.5rem' }}
                 />
-                <p style={{ margin: '0 0 0 5px' }}>2019/05/21</p>
+                <p style={{ margin: '0 0 0 5px' }}>2020/07/08</p>
               </div>
             </div>
             <div className="related_title">
               <h6 style={{ whiteSpace: 'pre-wrap' }} className="bh6">
-                大型重型機車考照
+                2020 CB300R 新手購車專案 輕巧入手 質感跑格
               </h6>
             </div>
           </div>
